@@ -1,5 +1,7 @@
 package com.vet.view.table;
 
+import com.vet.model.Model;
+
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.util.List;
@@ -10,10 +12,10 @@ import javax.swing.table.TableColumn;
 
 
 public abstract class TableModel extends AbstractTableModel {
-    protected List<Object> vDados;
+    protected List<Model> vDados;
     protected String[] colunas;
 
-    public TableModel(List<Object> vDados, String[] colunas) {
+    public TableModel(List<Model> vDados, String[] colunas) {
         this.colunas = colunas;
         this.vDados = vDados;
     }
@@ -50,9 +52,9 @@ public abstract class TableModel extends AbstractTableModel {
         return vDados.get(indiceLinha);
     }
 
-    public abstract void addItem(Object obj);
+    public abstract void addItem(Model model);
 
-    public void standardAddItem(Object obj) {
+    public void standardAddItem(Model obj) {
         vDados.add(obj);
         int ultimoIndice = getRowCount() - 1;
         fireTableRowsInserted(ultimoIndice, ultimoIndice);
@@ -63,10 +65,10 @@ public abstract class TableModel extends AbstractTableModel {
         fireTableRowsDeleted(indiceLinha, indiceLinha);
     }
 
-    public void addListOfItems(List<Object> vItens) {
+    public void addListOfItems(List<Model> itens) {
         this.clear();
-        for (Object obj : vItens){
-            this.addItem(obj);
+        for (Model item : itens){
+            this.addItem(item);
         }
     }
 

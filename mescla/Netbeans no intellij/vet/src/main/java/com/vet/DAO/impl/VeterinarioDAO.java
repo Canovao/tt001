@@ -13,10 +13,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class VeterinarioDAO extends DAO {
-    private static DAO instance = null;
+public class VeterinarioDAO extends DAO<Veterinario> {
+    private static DAO<?> instance = null;
 
-    public static DAO getInstance(){
+    public static DAO<?> getInstance(){
         if(instance == null){
             instance = new VeterinarioDAO();
         }
@@ -48,20 +48,24 @@ public class VeterinarioDAO extends DAO {
     }
 
     @Override
-    public void update(Model model) {
-        Veterinario veterinario = (Veterinario) model;
+    public void update(Veterinario model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE veterinario SET nome=?, endereco=?, cep=?, email=?, telefone=? WHERE id=?");
-            stmt.setString(1, veterinario.getNome());
-            stmt.setString(2, veterinario.getEndereco());
-            stmt.setString(3, veterinario.getCep());
-            stmt.setString(4, veterinario.getEmail());
-            stmt.setString(5, veterinario.getTelefone());
-            stmt.setInt(6, veterinario.getId());
+            stmt.setString(1, model.getNome());
+            stmt.setString(2, model.getEndereco());
+            stmt.setString(3, model.getCep());
+            stmt.setString(4, model.getEmail());
+            stmt.setString(5, model.getTelefone());
+            stmt.setInt(6, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
         }
+    }
+
+    @Override
+    public Veterinario get(int id) {
+        return (Veterinario) DAO.retrieveById("veterinario", id);
     }
 }

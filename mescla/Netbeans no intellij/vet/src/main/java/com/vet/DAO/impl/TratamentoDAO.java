@@ -13,10 +13,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class TratamentoDAO extends DAO {
-    private static DAO instance = null;
+public class TratamentoDAO extends DAO<Tratamento> {
+    private static DAO<?> instance = null;
 
-    public static DAO getInstance(){
+    public static DAO<?> getInstance(){
         if(instance == null){
             instance = new TratamentoDAO();
         }
@@ -38,19 +38,23 @@ public class TratamentoDAO extends DAO {
     }
 
     @Override
-    public void update(Model model) {
-        Tratamento tratamento = (Tratamento) model;
+    public void update(Tratamento model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE tratamento SET dataFim=?, dataInicio=?, idAnimal=? WHERE id=?");
-            stmt.setDate(1, tratamento.getDataFim());
-            stmt.setDate(2, tratamento.getDataInicio());
-            stmt.setInt(3, tratamento.getIdAnimal());
-            stmt.setInt(4, tratamento.getId());
+            stmt.setDate(1, model.getDataFim());
+            stmt.setDate(2, model.getDataInicio());
+            stmt.setInt(3, model.getIdAnimal());
+            stmt.setInt(4, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
         }
+    }
+
+    @Override
+    public Tratamento get(int id) {
+        return (Tratamento) DAO.retrieveById("tratamento", id);
     }
 
     public Model build(ResultSet rs) throws SQLException {

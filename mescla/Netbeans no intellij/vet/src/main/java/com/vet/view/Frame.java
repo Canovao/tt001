@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-package com.mycompany.mavenproject1;
+package com.vet.view;
 
 /**
  *
@@ -1353,11 +1349,7 @@ public class Frame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Frame().setVisible(true);
-            }
-        });
+        java.awt.EventQueue.invokeLater(() -> new Frame().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

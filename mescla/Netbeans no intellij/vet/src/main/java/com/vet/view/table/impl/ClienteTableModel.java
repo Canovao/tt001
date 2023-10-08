@@ -2,12 +2,13 @@ package com.vet.view.table.impl;
 
 import java.util.List;
 
+import com.vet.model.Model;
 import com.vet.model.impl.Cliente;
 import com.vet.view.table.TableModel;
 
 public class ClienteTableModel extends TableModel {
 
-    public ClienteTableModel(List<Object> vDados) {
+    public ClienteTableModel(List<Model> vDados) {
         super(vDados, new String[]{"Id", "Nome", "Endereço", "CEP", "Email", "Telefone"});
     }
 
@@ -27,7 +28,7 @@ public class ClienteTableModel extends TableModel {
     }
 
     @Override
-    public void addItem(Object obj) {
+    public void addItem(Model obj) {
         standardAddItem(obj);
     }
 }

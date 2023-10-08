@@ -4,7 +4,6 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Cliente;
-import com.vet.model.impl.Especie;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,10 +13,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class ClienteDAO extends DAO {
-    private static DAO instance = null;
+public class ClienteDAO extends DAO<Cliente> {
+    private static DAO<?> instance = null;
 
-    public static DAO getInstance(){
+    public static DAO<?> getInstance(){
         if(instance == null){
             instance = new ClienteDAO();
         }
@@ -45,21 +44,25 @@ public class ClienteDAO extends DAO {
     }
 
     @Override
-    public void update(Model model) {
-        Cliente cliente = (Cliente) model;
+    public void update(Cliente model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE cliente SET nome=?, endereco=?, cep=?, email=?, telefone=? WHERE id=?");
-            stmt.setString(1, cliente.getNome());
-            stmt.setString(2, cliente.getEndereco());
-            stmt.setString(3, cliente.getCep());
-            stmt.setString(4, cliente.getEmail());
-            stmt.setString(5, cliente.getTelefone());
-            stmt.setInt(6, cliente.getId());
+            stmt.setString(1, model.getNome());
+            stmt.setString(2, model.getEndereco());
+            stmt.setString(3, model.getCep());
+            stmt.setString(4, model.getEmail());
+            stmt.setString(5, model.getTelefone());
+            stmt.setInt(6, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
         }
+    }
+
+    @Override
+    public Cliente get(int id) {
+        return (Cliente) DAO.retrieveById("cliente", id);
     }
 
     public Model build(ResultSet rs) throws SQLException {
