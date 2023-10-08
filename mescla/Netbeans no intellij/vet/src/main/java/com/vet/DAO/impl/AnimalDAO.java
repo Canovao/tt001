@@ -5,6 +5,7 @@ import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Animal;
 import com.vet.model.impl.Cliente;
+import com.vet.model.impl.Especie;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -42,9 +43,11 @@ public class AnimalDAO extends DAO {
 
     public List<Model> retrieveBySimilarName(String nome) {
         return DAO.retrieve("SELECT * FROM animal WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "animal");
-    }    
-        
-    public void update(Animal animal) {
+    }
+
+    @Override
+    public void update(Model model) {
+        Animal animal = (Animal) model;
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE animal SET nome=?, sexo=?, idade=?, idEspecie=?, idCliente=? WHERE id=?");

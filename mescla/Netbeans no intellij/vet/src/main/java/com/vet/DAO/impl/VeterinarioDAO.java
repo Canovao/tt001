@@ -41,9 +41,15 @@ public class VeterinarioDAO extends DAO {
 
     public List<Model> retrieveBySimilarName(String nome) {
         return DAO.retrieve("SELECT * FROM veterinario WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "veterinario");
-    }    
-        
-    public void update(Veterinario veterinario) {
+    }
+
+    public Model build(ResultSet rs) throws SQLException {
+        return new Veterinario(rs.getInt("id"), rs.getString("nome"), rs.getString("endereco"), rs.getString("cep"), rs.getString("email"), rs.getString("telefone"));
+    }
+
+    @Override
+    public void update(Model model) {
+        Veterinario veterinario = (Veterinario) model;
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE veterinario SET nome=?, endereco=?, cep=?, email=?, telefone=? WHERE id=?");
@@ -57,9 +63,5 @@ public class VeterinarioDAO extends DAO {
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
         }
-    }
-
-    public Model build(ResultSet rs) throws SQLException {
-        return new Veterinario(rs.getInt("id"), rs.getString("nome"), rs.getString("endereco"), rs.getString("cep"), rs.getString("email"), rs.getString("telefone"));
     }
 }

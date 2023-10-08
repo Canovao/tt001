@@ -4,6 +4,7 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Especie;
+import com.vet.model.impl.Tratamento;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -39,7 +40,9 @@ public class EspecieDAO extends DAO {
         return DAO.retrieve("SELECT * FROM especie WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "especie");
     }
 
-    public void update(Especie especie) {
+    @Override
+    public void update(Model model) {
+        Especie especie = (Especie) model;
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE especie SET nome=? WHERE id=?");

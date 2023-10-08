@@ -4,6 +4,7 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Consulta;
+import com.vet.model.impl.Especie;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -37,8 +38,10 @@ public class ConsultaDAO extends DAO {
         }
         return retrieveById("consulta", lastId("consulta","id"));
     }
-        
-    public void update(Consulta consulta) {
+
+    @Override
+    public void update(Model model) {
+        Consulta consulta = (Consulta) model;
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE consulta SET relato=?, dataConsulta=?, idTratamento=?, idVeterinario=? WHERE id=?");

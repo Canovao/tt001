@@ -1,7 +1,8 @@
-package com.vet.view.table;
+package view;
 
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JTable;
 import javax.swing.JViewport;
@@ -9,24 +10,15 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableColumn;
 
 
-public abstract class TableModel extends AbstractTableModel {
-    protected List<Object> vDados;
+public abstract class GenericTableModel extends AbstractTableModel {
+    protected ArrayList<Object> vDados;
     protected String[] colunas;
 
-    public TableModel(List<Object> vDados, String[] colunas) {
+    public GenericTableModel(List vDados, String[] colunas) {
         this.colunas = colunas;
-        this.vDados = vDados;
+        this.vDados = (ArrayList)vDados;
     }
 
-    @Override
-    public Class<?> getColumnClass(int columnIndex) {
-        return String.class;
-    }
-
-    @Override
-    public boolean isCellEditable(int rowIndex, int columnIndex) {
-        return false;
-    }
     @Override
     public int getColumnCount() {
         return colunas.length;
@@ -50,9 +42,7 @@ public abstract class TableModel extends AbstractTableModel {
         return vDados.get(indiceLinha);
     }
 
-    public abstract void addItem(Object obj);
-
-    public void standardAddItem(Object obj) {
+    public void addItem(Object obj) {
         vDados.add(obj);
         int ultimoIndice = getRowCount() - 1;
         fireTableRowsInserted(ultimoIndice, ultimoIndice);

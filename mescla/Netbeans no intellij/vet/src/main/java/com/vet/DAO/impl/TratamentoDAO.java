@@ -37,7 +37,9 @@ public class TratamentoDAO extends DAO {
         return retrieveById("tratamento", lastId("tratamento","id"));
     }
 
-    public void update(Tratamento tratamento) {
+    @Override
+    public void update(Model model) {
+        Tratamento tratamento = (Tratamento) model;
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE tratamento SET dataFim=?, dataInicio=?, idAnimal=? WHERE id=?");

@@ -4,6 +4,7 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Exame;
+import com.vet.model.impl.Tratamento;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -34,8 +35,10 @@ public class ExameDAO extends DAO {
         }
         return retrieveById("exame", lastId("exame","id"));
     }
-        
-    public void update(Exame exame) {
+
+    @Override
+    public void update(Model model) {
+        Exame exame = (Exame) model;
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE exame SET descricao=?, idConsulta=? WHERE id=?");
