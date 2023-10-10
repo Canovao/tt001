@@ -7,12 +7,17 @@ import com.vet.model.impl.Tratamento;
 import com.vet.model.impl.table.TratamentoTable;
 import com.vet.view.table.TableModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TratamentoTableModel extends TableModel {
 
     public TratamentoTableModel(List<Model> vDados) {
         super(vDados, new String[]{"Id", "Data início", "Data fim", "Animal"});
+    }
+
+    public TratamentoTableModel() {
+        super(new ArrayList<>(), new String[]{"Id", "Data início", "Data fim", "Animal"});
     }
 
     private String getAnimalNomeFromTratamento(Tratamento tratamento){

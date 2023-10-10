@@ -9,12 +9,17 @@ import com.vet.model.impl.Especie;
 import com.vet.model.impl.table.AnimalTable;
 import com.vet.view.table.TableModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnimalTableModel extends TableModel {
 
     public AnimalTableModel(List<Model> vDados) {
         super(vDados, new String[]{"Id", "Nome", "Idade", "Sexo", "Espécie", "Tutor"});
+    }
+
+    public AnimalTableModel() {
+        super(new ArrayList<>(), new String[]{"Id", "Nome", "Idade", "Sexo", "Espécie", "Tutor"});
     }
 
     private String getEspecieNomeFromAnimal(Animal animal){

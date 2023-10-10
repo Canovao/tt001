@@ -1,5 +1,6 @@
 package com.vet.view.table.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.vet.model.Model;
@@ -10,6 +11,10 @@ public class ClienteTableModel extends TableModel {
 
     public ClienteTableModel(List<Model> vDados) {
         super(vDados, new String[]{"Id", "Nome", "Endereço", "CEP", "Email", "Telefone"});
+    }
+
+    public ClienteTableModel() {
+        super(new ArrayList<>(), new String[]{"Id", "Nome", "Endereço", "CEP", "Email", "Telefone"});
     }
 
     @Override

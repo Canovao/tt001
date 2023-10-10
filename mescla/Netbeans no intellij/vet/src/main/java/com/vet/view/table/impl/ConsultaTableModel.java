@@ -7,12 +7,17 @@ import com.vet.model.impl.Veterinario;
 import com.vet.model.impl.table.ConsultaTable;
 import com.vet.view.table.TableModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ConsultaTableModel extends TableModel {
 
     public ConsultaTableModel(List<Model> vDados) {
         super(vDados, new String[]{"Id", "Data", "Relato", "Veterinário", "Tratamento"});
+    }
+
+    public ConsultaTableModel() {
+        super(new ArrayList<>(), new String[]{"Id", "Data", "Relato", "Veterinário", "Tratamento"});
     }
 
     private String getVeterinarioNomeFromConsulta(Consulta consulta){
