@@ -1,13 +1,11 @@
 
 a
-java:S1192'"KDefine a constant instead of duplicating this literal "tratamento" 4 times.(à¢÷š
+java:S1192'"KDefine a constant instead of duplicating this literal "tratamento" 5 times.(à¢÷š
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ
+j
+java:S2095-"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ôŞáûúÿÿÿÿ
 e
 java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¤İ‰†
-j
-java:S2095."OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ôŞáûúÿÿÿÿ
 ;
 java:S1452"&Remove usage of generic wildcard type.(Ìéë&
-@	java:S1065"+Replace this use of System.err by a logger.(ØşÿÌ
-X
-java:S1128";Remove this unused import 'com.vet.model.impl.Veterinario'.(ğÃº½8Ç÷²¼À1
+@	java:S1064"+Replace this use of System.err by a logger.(ØşÿÌ

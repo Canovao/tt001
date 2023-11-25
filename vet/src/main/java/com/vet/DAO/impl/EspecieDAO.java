@@ -24,7 +24,7 @@ public class EspecieDAO extends DAO<Especie> {
         return instance;
     }
 
-    public Model insert(String nome) {
+    public static Model insert(String nome) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("INSERT INTO especie (nome) VALUES (?)");
@@ -40,8 +40,7 @@ public class EspecieDAO extends DAO<Especie> {
         return DAO.retrieve("SELECT * FROM especie WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "especie");
     }
 
-    @Override
-    public void update(Especie model) {
+    public static void update(Especie model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE especie SET nome=? WHERE id=?");
@@ -63,7 +62,7 @@ public class EspecieDAO extends DAO<Especie> {
     }
 
     @Override
-    public String[] getAll() {
+    public String[] getAllToComboBox() {
         List<Especie> all = retrieve("SELECT * FROM especie", "especie").stream().map(Especie.class::cast).toList();
 
         String[] list = new String[all.size()];
@@ -73,5 +72,10 @@ public class EspecieDAO extends DAO<Especie> {
         }
 
         return list;
+    }
+
+    @Override
+    public List<Model> retrieveAll() {
+        return retrieveAll("especie");
     }
 }

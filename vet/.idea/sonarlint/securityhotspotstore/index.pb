@@ -33,3 +33,11 @@ k
 0src/main/java/com/vet/view/table/TableModel.java,f\b\fbd3a7c9b397eab114c330eca5a3a2a3d0a3cbe9
 U
 %src/main/java/com/vet/view/Frame.form,a\2\a24a6ef334c9bc15d8b64447a0dc9f6e05d51ede
+^
+.src/main/java/com/vet/model/impl/Consulta.java,1\7\17537499fb0011418b334bf5f53dccd3b2c69a5c
+b
+2src/main/java/com/vet/view/table/TableToFlush.java,7\f\7f3c567a61d16e1430a55e6b9c42931913e09b80
+`
+0src/main/java/com/vet/controller/Controller.java,a\9\a9417a087d3c35e9009c3bbc7380d4ea522d94d6
+[
++src/main/java/com/vet/model/impl/Exame.java,7\c\7c439b6e637b06dd13ebb3365f1aa345447bf8f0

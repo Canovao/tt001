@@ -6,7 +6,6 @@ import com.vet.model.Model;
 
 import java.sql.*;
 import java.text.MessageFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -15,34 +14,30 @@ import java.util.logging.Logger;
 public abstract class DAO<MODEL> {
     public static final String DBURL = "jdbc:h2:./vet.db";
     private static Connection con = getConnection();
-    public static SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
     protected abstract Model build(ResultSet rs) throws SQLException;
 
-    public abstract void update(MODEL model);
-
     public abstract MODEL get(int id);
 
-    public abstract String[] getAll();
+    public abstract String[] getAllToComboBox();
+
+    public abstract List<Model> retrieveAll();
+
+    protected static List<Model> retrieveAll(String table){
+        return retrieve(MessageFormat.format("SELECT * FROM {0}", table), table);
+    }
 
     public static Model buildObject(ResultSet rs, String table){
         Model model = null;
         try {
-            switch(table){
-                case "cliente":
-                    model = ClienteDAO.getInstance().build(rs);
-                case "animal":
-                    model = AnimalDAO.getInstance().build(rs);
-                case "consulta":
-                    model = ConsultaDAO.getInstance().build(rs);
-                case "especie":
-                    model = EspecieDAO.getInstance().build(rs);
-                case "exame":
-                    model = ExameDAO.getInstance().build(rs);
-                case "tratamento":
-                    model = TratamentoDAO.getInstance().build(rs);
-                case "veterinario":
-                    model = VeterinarioDAO.getInstance().build(rs);
+            switch (table) {
+                case "cliente" -> model = ClienteDAO.getInstance().build(rs);
+                case "animal" -> model = AnimalDAO.getInstance().build(rs);
+                case "consulta" -> model = ConsultaDAO.getInstance().build(rs);
+                case "especie" -> model = EspecieDAO.getInstance().build(rs);
+                case "exame" -> model = ExameDAO.getInstance().build(rs);
+                case "tratamento" -> model = TratamentoDAO.getInstance().build(rs);
+                case "veterinario" -> model = VeterinarioDAO.getInstance().build(rs);
             }
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());

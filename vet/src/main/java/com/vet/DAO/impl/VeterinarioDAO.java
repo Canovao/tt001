@@ -8,7 +8,6 @@ import com.vet.model.impl.Veterinario;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.MessageFormat;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,7 +23,7 @@ public class VeterinarioDAO extends DAO<Veterinario> {
         return instance;
     }
 
-    public Model insert(String nome, String end, String cep, String email, String telefone) {
+    public static Model insert(String nome, String end, String cep, String email, String telefone) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("INSERT INTO veterinario (nome, endereco, cep, email, telefone) VALUES (?,?,?,?,?)");
@@ -48,8 +47,7 @@ public class VeterinarioDAO extends DAO<Veterinario> {
         return new Veterinario(rs.getInt("id"), rs.getString("nome"), rs.getString("endereco"), rs.getString("cep"), rs.getString("email"), rs.getString("telefone"));
     }
 
-    @Override
-    public void update(Veterinario model) {
+    public static void update(Veterinario model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE veterinario SET nome=?, endereco=?, cep=?, email=?, telefone=? WHERE id=?");
@@ -71,7 +69,7 @@ public class VeterinarioDAO extends DAO<Veterinario> {
     }
 
     @Override
-    public String[] getAll() {
+    public String[] getAllToComboBox() {
         List<Veterinario> all = retrieve("SELECT * FROM veterinario", "veterinario").stream().map(Veterinario.class::cast).toList();
 
         String[] list = new String[all.size()];
@@ -81,5 +79,10 @@ public class VeterinarioDAO extends DAO<Veterinario> {
         }
 
         return list;
+    }
+
+    @Override
+    public List<Model> retrieveAll() {
+        return retrieveAll("veterinario");
     }
 }

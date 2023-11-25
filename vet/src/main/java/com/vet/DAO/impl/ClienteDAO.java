@@ -24,7 +24,7 @@ public class ClienteDAO extends DAO<Cliente> {
         return instance;
     }
 
-    public Model insert(String nome, String end, String cep, String email, String telefone) {
+    public static Model insert(String nome, String end, String cep, String email, String telefone) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("INSERT INTO cliente (nome, endereco, cep, email, telefone) VALUES (?,?,?,?,?)");
@@ -44,8 +44,7 @@ public class ClienteDAO extends DAO<Cliente> {
         return DAO.retrieve("SELECT * FROM cliente WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "cliente");
     }
 
-    @Override
-    public void update(Cliente model) {
+    public static void update(Cliente model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE cliente SET nome=?, endereco=?, cep=?, email=?, telefone=? WHERE id=?");
@@ -71,7 +70,7 @@ public class ClienteDAO extends DAO<Cliente> {
     }
 
     @Override
-    public String[] getAll() {
+    public String[] getAllToComboBox() {
         List<Cliente> all = retrieve("SELECT * FROM cliente", "cliente").stream().map(Cliente.class::cast).toList();
 
         String[] list = new String[all.size()];
@@ -81,5 +80,10 @@ public class ClienteDAO extends DAO<Cliente> {
         }
 
         return list;
+    }
+
+    @Override
+    public List<Model> retrieveAll() {
+        return retrieveAll("cliente");
     }
 }

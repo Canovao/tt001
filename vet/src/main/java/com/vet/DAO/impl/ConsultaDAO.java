@@ -25,7 +25,7 @@ public class ConsultaDAO extends DAO<Consulta> {
         return instance;
     }
 
-    public Model insert(String relato, Date dataConsulta, int idTratamento, int idVeterinario) {
+    public static Model insert(String relato, Date dataConsulta, int idTratamento, int idVeterinario) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("INSERT INTO consulta (relato, dataConsulta, idTratamento, idVeterinario) VALUES (?,?,?,?)");
@@ -40,8 +40,7 @@ public class ConsultaDAO extends DAO<Consulta> {
         return retrieveById("consulta", lastId("consulta","id"));
     }
 
-    @Override
-    public void update(Consulta model) {
+    public static void update(Consulta model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE consulta SET relato=?, dataConsulta=?, idTratamento=?, idVeterinario=? WHERE id=?");
@@ -66,7 +65,7 @@ public class ConsultaDAO extends DAO<Consulta> {
     }
 
     @Override
-    public String[] getAll() {
+    public String[] getAllToComboBox() {
         List<Consulta> all = retrieve("SELECT * FROM consulta", "consulta").stream().map(Consulta.class::cast).toList();
 
         String[] list = new String[all.size()];
@@ -76,5 +75,10 @@ public class ConsultaDAO extends DAO<Consulta> {
         }
 
         return list;
+    }
+
+    @Override
+    public List<Model> retrieveAll() {
+        return retrieveAll("consulta");
     }
 }

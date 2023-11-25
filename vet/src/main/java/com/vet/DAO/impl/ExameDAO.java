@@ -24,7 +24,7 @@ public class ExameDAO extends DAO<Exame> {
         return instance;
     }
 
-    public Model insert(String descricao, int idConsulta) {
+    public static Model insert(String descricao, int idConsulta) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("INSERT INTO exame (descricao, idConsulta) VALUES (?,?)");
@@ -37,8 +37,7 @@ public class ExameDAO extends DAO<Exame> {
         return retrieveById("exame", lastId("exame","id"));
     }
 
-    @Override
-    public void update(Exame model) {
+    public static void update(Exame model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE exame SET descricao=?, idConsulta=? WHERE id=?");
@@ -61,7 +60,7 @@ public class ExameDAO extends DAO<Exame> {
     }
 
     @Override
-    public String[] getAll() {
+    public String[] getAllToComboBox() {
         List<Exame> all = retrieve("SELECT * FROM exame", "exame").stream().map(Exame.class::cast).toList();
 
         String[] list = new String[all.size()];
@@ -71,5 +70,10 @@ public class ExameDAO extends DAO<Exame> {
         }
 
         return list;
+    }
+
+    @Override
+    public List<Model> retrieveAll() {
+        return retrieveAll("exame");
     }
 }

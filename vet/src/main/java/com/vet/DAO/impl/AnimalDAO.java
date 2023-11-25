@@ -24,7 +24,7 @@ public class AnimalDAO extends DAO<Animal> {
         return instance;
     }
 
-    public Model insert(String nome, String sexo, int idade, int idEspecie, int idCliente) {
+    public static Model insert(String nome, String sexo, int idade, int idEspecie, int idCliente) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("INSERT INTO animal (nome, sexo, idade, idEspecie, idCliente) VALUES (?,?,?,?,?)");
@@ -44,8 +44,7 @@ public class AnimalDAO extends DAO<Animal> {
         return DAO.retrieve("SELECT * FROM animal WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "animal");
     }
 
-    @Override
-    public void update(Animal model) {
+    public static void update(Animal model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE animal SET nome=?, sexo=?, idade=?, idEspecie=?, idCliente=? WHERE id=?");
@@ -71,7 +70,7 @@ public class AnimalDAO extends DAO<Animal> {
     }
 
     @Override
-    public String[] getAll() {
+    public String[] getAllToComboBox() {
         List<Animal> all = retrieve("SELECT * FROM animal", "animal").stream().map(Animal.class::cast).toList();
 
         String[] list = new String[all.size()];
@@ -81,5 +80,10 @@ public class AnimalDAO extends DAO<Animal> {
         }
 
         return list;
+    }
+
+    @Override
+    public List<Model> retrieveAll() {
+        return retrieveAll("animal");
     }
 }
