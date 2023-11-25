@@ -4,11 +4,13 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Consulta;
+import com.vet.model.impl.Especie;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -61,5 +63,18 @@ public class ConsultaDAO extends DAO<Consulta> {
 
     public Model build(ResultSet rs) throws SQLException {
         return new Consulta(rs.getInt("id"), rs.getDate("dataConsulta"), rs.getString("relato"), rs.getInt("idVeterinario"), rs.getInt("idTratamento"));
+    }
+
+    @Override
+    public String[] getAll() {
+        List<Consulta> all = retrieve("SELECT * FROM consulta", "consulta").stream().map(Consulta.class::cast).toList();
+
+        String[] list = new String[all.size()];
+
+        for(int i=0; i < list.length; i++){
+            list[i] = String.valueOf(all.get(i).getId()) + '|' + all.get(i).getRelato();
+        }
+
+        return list;
     }
 }

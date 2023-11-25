@@ -1,0 +1,13 @@
+
+b
+java:S1192("GDefine a constant instead of duplicating this literal "animal" 5 times.(ÔÆû‘ùÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ
+e
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¿©¯ª
+j
+java:S20953"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÙÅîèøÿÿÿÿ
+;
+java:S1452"&Remove usage of generic wildcard type.(Ìéë&
+@	java:S106<"+Replace this use of System.err by a logger.(ØşÿÌ
+Y
+java:S1128"7Remove this unused import 'com.vet.model.impl.Cliente'.(ÿ„‘ùøÿÿÿÿ8Øİ¼À1

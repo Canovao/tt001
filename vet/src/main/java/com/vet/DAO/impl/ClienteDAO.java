@@ -4,6 +4,7 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Cliente;
+import com.vet.model.impl.Consulta;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -67,5 +68,18 @@ public class ClienteDAO extends DAO<Cliente> {
 
     public Model build(ResultSet rs) throws SQLException {
         return new Cliente(rs.getInt("id"), rs.getString("nome"), rs.getString("endereco"), rs.getString("cep"), rs.getString("email"), rs.getString("telefone"));
+    }
+
+    @Override
+    public String[] getAll() {
+        List<Cliente> all = retrieve("SELECT * FROM cliente", "cliente").stream().map(Cliente.class::cast).toList();
+
+        String[] list = new String[all.size()];
+
+        for(int i=0; i < list.length; i++){
+            list[i] = String.valueOf(all.get(i).getId()) + '|' + all.get(i).getNome();
+        }
+
+        return list;
     }
 }

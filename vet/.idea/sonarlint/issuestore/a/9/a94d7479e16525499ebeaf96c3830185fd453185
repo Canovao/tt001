@@ -1,0 +1,13 @@
+
+f
+java:S1192("IDefine a constant instead of duplicating this literal "consulta" 4 times.(şïÛÛ8ñÄÔ»À1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8óÄÔ»À1
+l
+java:S2095/"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ü×óş8€ÅÔ»À1
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ûïŞùÿÿÿÿ8€ÅÔ»À1
+B
+java:S1452"&Remove usage of generic wildcard type.(Ìéë&8ƒÅÔ»À1
+G	java:S1067"+Replace this use of System.err by a logger.(ØşÿÌ8†ÅÔ»À1
+Y
+java:S1128"7Remove this unused import 'com.vet.model.impl.Especie'.(‰¤äèøÿÿÿÿ8£òŒ¼À1

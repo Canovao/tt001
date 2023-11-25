@@ -4,6 +4,7 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Especie;
+import com.vet.model.impl.Exame;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -59,5 +60,18 @@ public class EspecieDAO extends DAO<Especie> {
 
     public Model build(ResultSet rs) throws SQLException {
         return new Especie(rs.getInt("id"), rs.getString("nome"));
+    }
+
+    @Override
+    public String[] getAll() {
+        List<Especie> all = retrieve("SELECT * FROM especie", "especie").stream().map(Especie.class::cast).toList();
+
+        String[] list = new String[all.size()];
+
+        for(int i=0; i < list.length; i++){
+            list[i] = String.valueOf(all.get(i).getId()) + '|' + all.get(i).getNome();
+        }
+
+        return list;
     }
 }

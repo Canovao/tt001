@@ -8,6 +8,7 @@ import com.vet.model.impl.Veterinario;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.MessageFormat;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -67,5 +68,18 @@ public class VeterinarioDAO extends DAO<Veterinario> {
     @Override
     public Veterinario get(int id) {
         return (Veterinario) DAO.retrieveById("veterinario", id);
+    }
+
+    @Override
+    public String[] getAll() {
+        List<Veterinario> all = retrieve("SELECT * FROM veterinario", "veterinario").stream().map(Veterinario.class::cast).toList();
+
+        String[] list = new String[all.size()];
+
+        for(int i=0; i < list.length; i++){
+            list[i] = String.valueOf(all.get(i).getId()) + '|' + all.get(i).getNome();
+        }
+
+        return list;
     }
 }

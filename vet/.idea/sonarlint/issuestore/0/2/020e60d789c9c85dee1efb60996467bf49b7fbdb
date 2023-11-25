@@ -1,0 +1,33 @@
+
+i
+java:S11920"LDefine a constant instead of duplicating this literal "Exception: " 7 times.(ØşÿÌ8Å‡¶»À1
+r
+java:S1104"VMake dateFormat a static final constant or non-public and provide accessors if needed.(¶½~8Æ‡¶»À1
+L
+java:S1444"0Make this "public static dateFormat" field final(¶½~8Æ‡¶»À1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ìñÂ˜ûÿÿÿÿ8Ç‡¶»À1
+b
+java:S2259M"@A "NullPointerException" could be thrown; "rs" is nullable here.(íôÚÇşÿÿÿÿ8é‡¶»À1
+i
+java:S2095v"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8é‡¶»À1
+l
+java:S20958"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ŠÕ€Æ8é‡¶»À1
+i
+java:S2095f"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8é‡¶»À1
+e	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ñ¥ˆ½8ë‡¶»À1
+C
+java:S2885"'Make "dateFormat" an instance variable.(¶½~8ì‡¶»À1
+h	java:S128*"LEnd this switch case with an unconditional break, return or throw statement.(ÙÔŞ¼8î‡¶»À1
+m	java:S128("LEnd this switch case with an unconditional break, return or throw statement.(·ïÒ¬úÿÿÿÿ8î‡¶»À1
+g	java:S128&"LEnd this switch case with an unconditional break, return or throw statement.(–‡Ò08î‡¶»À1
+m	java:S128$"LEnd this switch case with an unconditional break, return or throw statement.(×Œ­Öùÿÿÿÿ8î‡¶»À1
+m	java:S128""LEnd this switch case with an unconditional break, return or throw statement.(¼›Èúÿÿÿÿ8î‡¶»À1
+m	java:S128 "LEnd this switch case with an unconditional break, return or throw statement.(Çƒ‚êøÿÿÿÿ8î‡¶»À1
+C	java:S131""Add a default case to this switch.(™¶àØÿÿÿÿÿ8î‡¶»À1
+G	java:S1060"+Replace this use of System.err by a logger.(ØşÿÌ8ğ‡¶»À1
+G	java:S106<"+Replace this use of System.err by a logger.(ØşÿÌ8ñ‡¶»À1
+G	java:S106Q"+Replace this use of System.err by a logger.(ØşÿÌ8ô‡¶»À1
+G	java:S106["+Replace this use of System.err by a logger.(ØşÿÌ8ô‡¶»À1
+G	java:S106i"+Replace this use of System.err by a logger.(ØşÿÌ8õ‡¶»À1
+G	java:S106|"+Replace this use of System.err by a logger.(ØşÿÌ8ö‡¶»À1
+H	java:S106…"+Replace this use of System.err by a logger.(ØşÿÌ8÷‡¶»À1

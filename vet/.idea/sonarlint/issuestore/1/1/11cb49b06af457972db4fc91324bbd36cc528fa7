@@ -1,485 +1,456 @@
 
-d
-java:S1192è"FDefine a constant instead of duplicating this literal "Email" 3 times.(×Ï„8ÏÕ²·À1
 m
-java:S1192š"JDefine a constant instead of duplicating this literal "Atualizar" 3 times.(ñ—üÿÿÿÿ8ÏÕ²·À1
-s
-java:S1192ƒ"PDefine a constant instead of duplicating this literal "JoÃ£o da Silva" 11 times.(«ìá¯ıÿÿÿÿ8ÏÕ²·À1
-g
-java:S1192ç"IDefine a constant instead of duplicating this literal "Consulta" 3 times.(ğº¤8ÏÕ²·À1
-k
-java:S1192ƒ"HDefine a constant instead of duplicating this literal "Item 4" 11 times.(«ìá¯ıÿÿÿÿ8ĞÕ²·À1
-k
-java:S1192ƒ"HDefine a constant instead of duplicating this literal "Item 3" 11 times.(«ìá¯ıÿÿÿÿ8ĞÕ²·À1
-k
-java:S1192ƒ"HDefine a constant instead of duplicating this literal "Item 2" 11 times.(«ìá¯ıÿÿÿÿ8ĞÕ²·À1
-j
-java:S1192„"GDefine a constant instead of duplicating this literal "Animal" 4 times.(İ°µÄşÿÿÿÿ8ĞÕ²·À1
-h
-java:S1192À"JDefine a constant instead of duplicating this literal "Cadastrar" 7 times.(í¡×«8ĞÕ²·À1
+java:S1192”"JDefine a constant instead of duplicating this literal "Atualizar" 3 times.(ñ—üÿÿÿÿ8ª›Ø»À1
 n
-java:S1192½"KDefine a constant instead of duplicating this literal "Tratamento" 5 times.(‚÷Œ¬ùÿÿÿÿ8ĞÕ²·À1
-l
-java:S1192‚"IDefine a constant instead of duplicating this literal "EspÃ©cie" 3 times.(À´Ûÿÿÿÿÿ8ĞÕ²·À1
+java:S1192ù"KDefine a constant instead of duplicating this literal "Tratamento" 4 times.(‚÷Œ¬ùÿÿÿÿ8ª›Ø»À1
+j
+java:S1192è"GDefine a constant instead of duplicating this literal "Animal" 3 times.(İ°µÄşÿÿÿÿ8ª›Ø»À1
+h
+java:S1192Â"JDefine a constant instead of duplicating this literal "Cadastrar" 7 times.(í¡×«8ª›Ø»À1
 k
-java:S1192ß"MDefine a constant instead of duplicating this literal "VeterinÃ¡rio" 6 times.(Ó8ĞÕ²·À1
-F
-java:S1604„"(Make this anonymous inner class a lambda(ıßè¬8ÓÕ²·À1
-K
-java:S1604Œ"(Make this anonymous inner class a lambda(Š¯áªùÿÿÿÿ8ÓÕ²·À1
-F
-java:S1604"(Make this anonymous inner class a lambda(•”«Û8ÓÕ²·À1
-F
-java:S1604–"(Make this anonymous inner class a lambda(ÆÒŠÑ8ÓÕ²·À1
-K
-java:S1604"(Make this anonymous inner class a lambda(óÈúÿÿÿÿ8ÓÕ²·À1
-K
-java:S1604‡"(Make this anonymous inner class a lambda(Ùúîªıÿÿÿÿ8ÓÕ²·À1
-K
-java:S1604"(Make this anonymous inner class a lambda(Ä•Êşúÿÿÿÿ8ÓÕ²·À1
-F
-java:S1604™"(Make this anonymous inner class a lambda(šç´ï8ÓÕ²·À1
-F
-java:S1604"(Make this anonymous inner class a lambda(‰å€¾8ÓÕ²·À1
-K
-java:S1604Ù"(Make this anonymous inner class a lambda(¸«±…şÿÿÿÿ8ÓÕ²·À1
-F
-java:S1604à"(Make this anonymous inner class a lambda(öŒÆ¥8ÓÕ²·À1
-F
-java:S1604ç"(Make this anonymous inner class a lambda(’¤å8ÓÕ²·À1
-K
-java:S1604ğ"(Make this anonymous inner class a lambda(äïµ˜üÿÿÿÿ8ÓÕ²·À1
-F
-java:S1604È"(Make this anonymous inner class a lambda(éô¸å8ÔÕ²·À1
+java:S1192¥"MDefine a constant instead of duplicating this literal "VeterinÃ¡rio" 5 times.(Ó8ª›Ø»À1
 }
-java:S1450Ğ
-"ZRemove the "animalPanel" field and declare it as a local variable in the relevant methods.(Ñ´…¢ÿÿÿÿÿ8‰Ù²·À1
+java:S1450Ş	"ZRemove the "animalPanel" field and declare it as a local variable in the relevant methods.(Ñ´…¢ÿÿÿÿÿ8ß›Ø»À1
 ‚
-java:S1450Ñ
-"_Remove the "animalScrollPane" field and declare it as a local variable in the relevant methods.(÷¢ ïÿÿÿÿÿ8ŠÙ²·À1
+java:S1450ß	"_Remove the "animalScrollPane" field and declare it as a local variable in the relevant methods.(÷¢ ïÿÿÿÿÿ8à›Ø»À1
 ‚
-java:S1450Ò
-"_Remove the "animalTabbedPane" field and declare it as a local variable in the relevant methods.(î ˆøÿÿÿÿ8ŠÙ²·À1
+java:S1450à	"_Remove the "animalTabbedPane" field and declare it as a local variable in the relevant methods.(î ˆøÿÿÿÿ8á›Ø»À1
 }
-java:S1450Ó
-"ZRemove the "animalTable" field and declare it as a local variable in the relevant methods.(µà¸ışÿÿÿÿ8‹Ù²·À1
+java:S1450á	"ZRemove the "animalTable" field and declare it as a local variable in the relevant methods.(µà¸ışÿÿÿÿ8â›Ø»À1
 Š
-java:S1450Ô
-"gRemove the "animalTratamentoComboBox" field and declare it as a local variable in the relevant methods.(§¼ßùÿÿÿÿ8ŒÙ²·À1
+java:S1450â	"gRemove the "animalTratamentoComboBox" field and declare it as a local variable in the relevant methods.(§¼ßùÿÿÿÿ8â›Ø»À1
 ‡
-java:S1450Õ
-"dRemove the "animalTratamentoLabel" field and declare it as a local variable in the relevant methods.(¿áñıÿÿÿÿ8Ù²·À1
+java:S1450ã	"dRemove the "animalTratamentoLabel" field and declare it as a local variable in the relevant methods.(¿áñıÿÿÿÿ8ã›Ø»À1
 ‚
-java:S1450Ö
-"_Remove the "anoConsultaLabel" field and declare it as a local variable in the relevant methods.(øÁˆÊúÿÿÿÿ8Ù²·À1
+java:S1450ä	"_Remove the "anoConsultaLabel" field and declare it as a local variable in the relevant methods.(øÁˆÊúÿÿÿÿ8ä›Ø»À1
 „
-java:S1450×
-"aRemove the "anoConsultaSpinner" field and declare it as a local variable in the relevant methods.(»åè¼ıÿÿÿÿ8Ù²·À1
+java:S1450å	"aRemove the "anoConsultaSpinner" field and declare it as a local variable in the relevant methods.(»åè¼ıÿÿÿÿ8æ›Ø»À1
 ‡
-java:S1450Ø
-"dRemove the "anoFimTratamentoLabel" field and declare it as a local variable in the relevant methods.(Êò°Ûşÿÿÿÿ8Ù²·À1
+java:S1450æ	"dRemove the "anoFimTratamentoLabel" field and declare it as a local variable in the relevant methods.(Êò°Ûşÿÿÿÿ8æ›Ø»À1
 ‰
-java:S1450Ù
-"fRemove the "anoFimTratamentoSpinner" field and declare it as a local variable in the relevant methods.(÷ıö©üÿÿÿÿ8‘Ù²·À1
+java:S1450ç	"fRemove the "anoFimTratamentoSpinner" field and declare it as a local variable in the relevant methods.(÷ıö©üÿÿÿÿ8ç›Ø»À1
 Š
-java:S1450Ú
-"gRemove the "anoInicioTratamentoLabel" field and declare it as a local variable in the relevant methods.(“Åß³ıÿÿÿÿ8’Ù²·À1
+java:S1450è	"gRemove the "anoInicioTratamentoLabel" field and declare it as a local variable in the relevant methods.(“Åß³ıÿÿÿÿ8è›Ø»À1
 ‡
-java:S1450Û
-"iRemove the "anoInicioTratamentoSpinner" field and declare it as a local variable in the relevant methods.(Äºˆ8“Ù²·À1
+java:S1450é	"iRemove the "anoInicioTratamentoSpinner" field and declare it as a local variable in the relevant methods.(Äºˆ8é›Ø»À1
 ‚
-java:S1450Ü
-"dRemove the "atualizarAnimalButton" field and declare it as a local variable in the relevant methods.(Ã¦Ê»8“Ù²·À1
+java:S1450ê	"dRemove the "atualizarAnimalButton" field and declare it as a local variable in the relevant methods.(Ã¦Ê»8ê›Ø»À1
 „
-java:S1450İ
-"fRemove the "atualizarAnimalComboBox" field and declare it as a local variable in the relevant methods.(Í½ÆÎ8”Ù²·À1
+java:S1450ë	"fRemove the "atualizarAnimalComboBox" field and declare it as a local variable in the relevant methods.(Í½ÆÎ8ê›Ø»À1
 †
-java:S1450Ş
-"cRemove the "atualizarAnimalLabel" field and declare it as a local variable in the relevant methods.(À•ùøøÿÿÿÿ8•Ù²·À1
+java:S1450ì	"cRemove the "atualizarAnimalLabel" field and declare it as a local variable in the relevant methods.(À•ùøøÿÿÿÿ8ë›Ø»À1
 †
-java:S1450ß
-"cRemove the "atualizarAnimalPanel" field and declare it as a local variable in the relevant methods.(Š‹Ìùÿÿÿÿ8–Ù²·À1
+java:S1450í	"cRemove the "atualizarAnimalPanel" field and declare it as a local variable in the relevant methods.(Š‹Ìùÿÿÿÿ8ì›Ø»À1
 …
-java:S1450à
-"gRemove the "atualizarCepClienteLabel" field and declare it as a local variable in the relevant methods.(ÌÍ–8—Ù²·À1
+java:S1450î	"gRemove the "atualizarCepClienteLabel" field and declare it as a local variable in the relevant methods.(ÌÍ–8í›Ø»À1
 
-java:S1450á
-"kRemove the "atualizarCepClienteTextField" field and declare it as a local variable in the relevant methods.(½¶¤´ùÿÿÿÿ8˜Ù²·À1
+java:S1450ï	"kRemove the "atualizarCepClienteTextField" field and declare it as a local variable in the relevant methods.(½¶¤´ùÿÿÿÿ8î›Ø»À1
 
-java:S1450â
-"kRemove the "atualizarCepVeterinarioLabel" field and declare it as a local variable in the relevant methods.(óíÛ”ıÿÿÿÿ8™Ù²·À1
+java:S1450ğ	"kRemove the "atualizarCepVeterinarioLabel" field and declare it as a local variable in the relevant methods.(óíÛ”ıÿÿÿÿ8î›Ø»À1
 
-java:S1450ã
-"oRemove the "atualizarCepVeterinarioTextField" field and declare it as a local variable in the relevant methods.(Ş‹Á“8šÙ²·À1
+java:S1450ñ	"oRemove the "atualizarCepVeterinarioTextField" field and declare it as a local variable in the relevant methods.(Ş‹Á“8ï›Ø»À1
 ˆ
-java:S1450ä
-"eRemove the "atualizarClienteButton" field and declare it as a local variable in the relevant methods.(ªºóäşÿÿÿÿ8›Ù²·À1
+java:S1450ò	"eRemove the "atualizarClienteButton" field and declare it as a local variable in the relevant methods.(ªºóäşÿÿÿÿ8ğ›Ø»À1
 …
-java:S1450å
-"gRemove the "atualizarClienteComboBox" field and declare it as a local variable in the relevant methods.(´Ÿ¿8œÙ²·À1
+java:S1450ó	"gRemove the "atualizarClienteComboBox" field and declare it as a local variable in the relevant methods.(´Ÿ¿8ñ›Ø»À1
 ‡
-java:S1450æ
-"dRemove the "atualizarClienteLabel" field and declare it as a local variable in the relevant methods.(Ä£ı»úÿÿÿÿ8Ù²·À1
+java:S1450ô	"dRemove the "atualizarClienteLabel" field and declare it as a local variable in the relevant methods.(Ä£ı»úÿÿÿÿ8ò›Ø»À1
 ‡
-java:S1450ç
-"dRemove the "atualizarClientePanel" field and declare it as a local variable in the relevant methods.(Ä¯›¥ÿÿÿÿÿ8Ù²·À1
+java:S1450õ	"dRemove the "atualizarClientePanel" field and declare it as a local variable in the relevant methods.(Ä¯›¥ÿÿÿÿÿ8ó›Ø»À1
 ‡
-java:S1450è
-"iRemove the "atualizarEmailClienteLabel" field and declare it as a local variable in the relevant methods.(ÒĞÌ¤8Ù²·À1
+java:S1450ö	"iRemove the "atualizarEmailClienteLabel" field and declare it as a local variable in the relevant methods.(ÒĞÌ¤8ó›Ø»À1
 
-java:S1450é
-"mRemove the "atualizarEmailClienteTextField" field and declare it as a local variable in the relevant methods.(“×ûêøÿÿÿÿ8ŸÙ²·À1
+java:S1450÷	"mRemove the "atualizarEmailClienteTextField" field and declare it as a local variable in the relevant methods.(“×ûêøÿÿÿÿ8ô›Ø»À1
 
-java:S1450ê
-"mRemove the "atualizarEmailVeterinarioLabel" field and declare it as a local variable in the relevant methods.(¢ƒĞÌøÿÿÿÿ8 Ù²·À1
+java:S1450ø	"mRemove the "atualizarEmailVeterinarioLabel" field and declare it as a local variable in the relevant methods.(¢ƒĞÌøÿÿÿÿ8õ›Ø»À1
 
-java:S1450ë
-"qRemove the "atualizarEmailVeterinarioTextField" field and declare it as a local variable in the relevant methods.(´‡Ï˜8¡Ù²·À1
+java:S1450ù	"qRemove the "atualizarEmailVeterinarioTextField" field and declare it as a local variable in the relevant methods.(´‡Ï˜8ö›Ø»À1
 Š
-java:S1450ì
-"lRemove the "atualizarEnderecoClienteLabel" field and declare it as a local variable in the relevant methods.(…„„ş8¢Ù²·À1
+java:S1450ú	"lRemove the "atualizarEnderecoClienteLabel" field and declare it as a local variable in the relevant methods.(…„„ş8÷›Ø»À1
 “
-java:S1450í
-"pRemove the "atualizarEnderecoClienteTextField" field and declare it as a local variable in the relevant methods.(÷€·øÿÿÿÿ8£Ù²·À1
+java:S1450û	"pRemove the "atualizarEnderecoClienteTextField" field and declare it as a local variable in the relevant methods.(÷€·øÿÿÿÿ8÷›Ø»À1
 
-java:S1450î
-"pRemove the "atualizarEnderecoVeterinarioLabel" field and declare it as a local variable in the relevant methods.(×É”¸8¤Ù²·À1
+java:S1450ü	"pRemove the "atualizarEnderecoVeterinarioLabel" field and declare it as a local variable in the relevant methods.(×É”¸8ø›Ø»À1
 —
-java:S1450ï
-"tRemove the "atualizarEnderecoVeterinarioTextField" field and declare it as a local variable in the relevant methods.(ˆüãùÿÿÿÿ8¥Ù²·À1
+java:S1450ı	"tRemove the "atualizarEnderecoVeterinarioTextField" field and declare it as a local variable in the relevant methods.(ˆüãùÿÿÿÿ8ù›Ø»À1
 …
-java:S1450ğ
-"gRemove the "atualizarEspecieComboBox" field and declare it as a local variable in the relevant methods.(Ô¼ïã8¦Ù²·À1
+java:S1450ş	"gRemove the "atualizarEspecieComboBox" field and declare it as a local variable in the relevant methods.(Ô¼ïã8ú›Ø»À1
 ‚
-java:S1450ñ
-"dRemove the "atualizarEspecieLabel" field and declare it as a local variable in the relevant methods.(ëÉ¯Ñ8§Ù²·À1
+java:S1450ÿ	"dRemove the "atualizarEspecieLabel" field and declare it as a local variable in the relevant methods.(ëÉ¯Ñ8ú›Ø»À1
 ‹
-java:S1450ò
-"hRemove the "atualizarIdadeAnimalLabel" field and declare it as a local variable in the relevant methods.(ŸƒÈıúÿÿÿÿ8¨Ù²·À1
+java:S1450€
+"hRemove the "atualizarIdadeAnimalLabel" field and declare it as a local variable in the relevant methods.(ŸƒÈıúÿÿÿÿ8û›Ø»À1
 ˆ
-java:S1450ó
-"jRemove the "atualizarIdadeAnimalSpinner" field and declare it as a local variable in the relevant methods.( ´±¦8¨Ù²·À1
+java:S1450
+"jRemove the "atualizarIdadeAnimalSpinner" field and declare it as a local variable in the relevant methods.( ´±¦8ü›Ø»À1
 …
-java:S1450ô
-"gRemove the "atualizarNomeAnimalLabel" field and declare it as a local variable in the relevant methods.(±ñÛ½8©Ù²·À1
+java:S1450‚
+"gRemove the "atualizarNomeAnimalLabel" field and declare it as a local variable in the relevant methods.(±ñÛ½8ı›Ø»À1
 
-java:S1450õ
-"kRemove the "atualizarNomeAnimalTextField" field and declare it as a local variable in the relevant methods.(µ–Òşÿÿÿÿ8ªÙ²·À1
+java:S1450ƒ
+"kRemove the "atualizarNomeAnimalTextField" field and declare it as a local variable in the relevant methods.(µ–Òşÿÿÿÿ8ş›Ø»À1
 †
-java:S1450ö
-"hRemove the "atualizarNomeClienteLabel" field and declare it as a local variable in the relevant methods.(®¹ğÑ8«Ù²·À1
+java:S1450„
+"hRemove the "atualizarNomeClienteLabel" field and declare it as a local variable in the relevant methods.(®¹ğÑ8ş›Ø»À1
 Š
-java:S1450÷
-"lRemove the "atualizarNomeClienteTextField" field and declare it as a local variable in the relevant methods.(ïæ‹ğ8¬Ù²·À1
+java:S1450…
+"lRemove the "atualizarNomeClienteTextField" field and declare it as a local variable in the relevant methods.(ïæ‹ğ8ÿ›Ø»À1
 Š
-java:S1450ø
-"lRemove the "atualizarNomeVeterinarioLabel" field and declare it as a local variable in the relevant methods.(Óùüè8­Ù²·À1
+java:S1450†
+"lRemove the "atualizarNomeVeterinarioLabel" field and declare it as a local variable in the relevant methods.(Óùüè8€œØ»À1
 
-java:S1450ù
-"pRemove the "atualizarNomeVeterinarioTextField" field and declare it as a local variable in the relevant methods.(ŒßˆÓ8®Ù²·À1
+java:S1450‡
+"pRemove the "atualizarNomeVeterinarioTextField" field and declare it as a local variable in the relevant methods.(ŒßˆÓ8œØ»À1
 
-java:S1450ú
-"jRemove the "atualizarSexoAnimalComboBox" field and declare it as a local variable in the relevant methods.(ÿ·Ô³úÿÿÿÿ8¯Ù²·À1
+java:S1450ˆ
+"jRemove the "atualizarSexoAnimalComboBox" field and declare it as a local variable in the relevant methods.(ÿ·Ô³úÿÿÿÿ8‚œØ»À1
 Š
-java:S1450û
-"gRemove the "atualizarSexoAnimalLabel" field and declare it as a local variable in the relevant methods.(·àáäşÿÿÿÿ8°Ù²·À1
+java:S1450‰
+"gRemove the "atualizarSexoAnimalLabel" field and declare it as a local variable in the relevant methods.(·àáäşÿÿÿÿ8‚œØ»À1
 Š
-java:S1450ü
-"lRemove the "atualizarTelefoneClienteLabel" field and declare it as a local variable in the relevant methods.(¡Ğë8°Ù²·À1
+java:S1450Š
+"lRemove the "atualizarTelefoneClienteLabel" field and declare it as a local variable in the relevant methods.(¡Ğë8ƒœØ»À1
 “
-java:S1450ı
-"pRemove the "atualizarTelefoneClienteTextField" field and declare it as a local variable in the relevant methods.(µø–Šúÿÿÿÿ8±Ù²·À1
+java:S1450‹
+"pRemove the "atualizarTelefoneClienteTextField" field and declare it as a local variable in the relevant methods.(µø–Šúÿÿÿÿ8„œØ»À1
 “
-java:S1450ş
-"pRemove the "atualizarTelefoneVeterinarioLabel" field and declare it as a local variable in the relevant methods.(À½ã½øÿÿÿÿ8²Ù²·À1
+java:S1450Œ
+"pRemove the "atualizarTelefoneVeterinarioLabel" field and declare it as a local variable in the relevant methods.(À½ã½øÿÿÿÿ8†œØ»À1
 —
-java:S1450ÿ
-"tRemove the "atualizarTelefoneVeterinarioTextField" field and declare it as a local variable in the relevant methods.(Ò ¯ëşÿÿÿÿ8³Ù²·À1
+java:S1450
+"tRemove the "atualizarTelefoneVeterinarioTextField" field and declare it as a local variable in the relevant methods.(Ò ¯ëşÿÿÿÿ8‡œØ»À1
 ƒ
-java:S1450€"eRemove the "atualizarTutorComboBox" field and declare it as a local variable in the relevant methods.(Å¼õ8´Ù²·À1
+java:S1450
+"eRemove the "atualizarTutorComboBox" field and declare it as a local variable in the relevant methods.(Å¼õ8ˆœØ»À1
 
-java:S1450"bRemove the "atualizarTutorLabel" field and declare it as a local variable in the relevant methods.(öÉîI8µÙ²·À1
+java:S1450
+"bRemove the "atualizarTutorLabel" field and declare it as a local variable in the relevant methods.(öÉîI8‰œØ»À1
 †
-java:S1450‚"cRemove the "atualizarVeterinario" field and declare it as a local variable in the relevant methods.(²„¨ïûÿÿÿÿ8¶Ù²·À1
+java:S1450
+"cRemove the "atualizarVeterinario" field and declare it as a local variable in the relevant methods.(²„¨ïûÿÿÿÿ8‹œØ»À1
 Œ
-java:S1450ƒ"iRemove the "atualizarVeterinarioButton" field and declare it as a local variable in the relevant methods.(ÃàÁÄüÿÿÿÿ8·Ù²·À1
+java:S1450‘
+"iRemove the "atualizarVeterinarioButton" field and declare it as a local variable in the relevant methods.(ÃàÁÄüÿÿÿÿ8ŒœØ»À1
 ‰
-java:S1450„"kRemove the "atualizarVeterinarioComboBox" field and declare it as a local variable in the relevant methods.(ÿ•Ñ¤8·Ù²·À1
+java:S1450’
+"kRemove the "atualizarVeterinarioComboBox" field and declare it as a local variable in the relevant methods.(ÿ•Ñ¤8œØ»À1
 †
-java:S1450…"hRemove the "atualizarVeterinarioLabel" field and declare it as a local variable in the relevant methods.(şÖåœ8¸Ù²·À1
+java:S1450“
+"hRemove the "atualizarVeterinarioLabel" field and declare it as a local variable in the relevant methods.(şÖåœ8œØ»À1
 ‚
-java:S1450†"dRemove the "cadastrarAnimalButton" field and declare it as a local variable in the relevant methods.(¾òñÉ8¹Ù²·À1
+java:S1450”
+"dRemove the "cadastrarAnimalButton" field and declare it as a local variable in the relevant methods.(¾òñÉ8œØ»À1
 
-java:S1450‡"cRemove the "cadastrarAnimalPanel" field and declare it as a local variable in the relevant methods.(›È8ºÙ²·À1
+java:S1450•
+"cRemove the "cadastrarAnimalPanel" field and declare it as a local variable in the relevant methods.(›È8‘œØ»À1
 ˆ
-java:S1450ˆ"eRemove the "cadastrarClienteButton" field and declare it as a local variable in the relevant methods.(è½Š¦üÿÿÿÿ8»Ù²·À1
+java:S1450–
+"eRemove the "cadastrarClienteButton" field and declare it as a local variable in the relevant methods.(è½Š¦üÿÿÿÿ8’œØ»À1
 ‡
-java:S1450‰"dRemove the "cadastrarClientePanel" field and declare it as a local variable in the relevant methods.(Ù®Êùùÿÿÿÿ8¼Ù²·À1
+java:S1450—
+"dRemove the "cadastrarClientePanel" field and declare it as a local variable in the relevant methods.(Ù®Êùùÿÿÿÿ8“œØ»À1
 ~
-java:S1450Š"`Remove the "cadastrarConsulta" field and declare it as a local variable in the relevant methods.(¿›ğ›8½Ù²·À1
+java:S1450˜
+"`Remove the "cadastrarConsulta" field and declare it as a local variable in the relevant methods.(¿›ğ›8”œØ»À1
 „
-java:S1450‹"fRemove the "cadastrarConsultaButton" field and declare it as a local variable in the relevant methods.(Èí‚•8¾Ù²·À1
+java:S1450™
+"fRemove the "cadastrarConsultaButton" field and declare it as a local variable in the relevant methods.(Èí‚•8•œØ»À1
 ˆ
-java:S1450Œ"eRemove the "cadastrarEspecieButton" field and declare it as a local variable in the relevant methods.(¯öÂùÿÿÿÿ8¾Ù²·À1
+java:S1450š
+"eRemove the "cadastrarEspecieButton" field and declare it as a local variable in the relevant methods.(¯öÂùÿÿÿÿ8–œØ»À1
 ˆ
-java:S1450"eRemove the "cadastrarEspeciesPanel" field and declare it as a local variable in the relevant methods.(ş¶¶çùÿÿÿÿ8¿Ù²·À1
+java:S1450›
+"eRemove the "cadastrarEspeciesPanel" field and declare it as a local variable in the relevant methods.(ş¶¶çùÿÿÿÿ8—œØ»À1
 
-java:S1450"cRemove the "cadastrarExameButton" field and declare it as a local variable in the relevant methods.(®ù±º8ÀÙ²·À1
+java:S1450œ
+"cRemove the "cadastrarExameButton" field and declare it as a local variable in the relevant methods.(®ù±º8—œØ»À1
 …
-java:S1450"bRemove the "cadastrarExamePanel" field and declare it as a local variable in the relevant methods.(ŠÄí‘úÿÿÿÿ8ÁÙ²·À1
+java:S1450
+"bRemove the "cadastrarExamePanel" field and declare it as a local variable in the relevant methods.(ŠÄí‘úÿÿÿÿ8˜œØ»À1
 †
-java:S1450"hRemove the "cadastrarTratamentoButton" field and declare it as a local variable in the relevant methods.(İà‘€8ÂÙ²·À1
+java:S1450
+"hRemove the "cadastrarTratamentoButton" field and declare it as a local variable in the relevant methods.(İà‘€8™œØ»À1
 …
-java:S1450‘"gRemove the "cadastrarTratamentoPanel" field and declare it as a local variable in the relevant methods.(È§”ô8ÃÙ²·À1
+java:S1450Ÿ
+"gRemove the "cadastrarTratamentoPanel" field and declare it as a local variable in the relevant methods.(È§”ô8šœØ»À1
 
-java:S1450’"cRemove the "cadastrarVeterinario" field and declare it as a local variable in the relevant methods.(¢ß©ƒ8ÄÙ²·À1
+java:S1450 
+"cRemove the "cadastrarVeterinario" field and declare it as a local variable in the relevant methods.(¢ß©ƒ8šœØ»À1
 Œ
-java:S1450“"iRemove the "cadastrarVeterinarioButton" field and declare it as a local variable in the relevant methods.(îİµ’ıÿÿÿÿ8ÄÙ²·À1
+java:S1450¡
+"iRemove the "cadastrarVeterinarioButton" field and declare it as a local variable in the relevant methods.(îİµ’ıÿÿÿÿ8›œØ»À1
 {
-java:S1450”"^Remove the "cepClienteLabel" field and declare it as a local variable in the relevant methods.(Ğ‰ÃT8ÅÙ²·À1
+java:S1450¢
+"^Remove the "cepClienteLabel" field and declare it as a local variable in the relevant methods.(Ğ‰ÃT8œœØ»À1
 €
-java:S1450•"bRemove the "cepClienteTextField" field and declare it as a local variable in the relevant methods.(Ëêã„8ÆÙ²·À1
+java:S1450£
+"bRemove the "cepClienteTextField" field and declare it as a local variable in the relevant methods.(Ëêã„8œØ»À1
 …
-java:S1450–"bRemove the "cepVeterinarioLabel" field and declare it as a local variable in the relevant methods.(Ì ãğşÿÿÿÿ8ÇÙ²·À1
+java:S1450¤
+"bRemove the "cepVeterinarioLabel" field and declare it as a local variable in the relevant methods.(Ì ãğşÿÿÿÿ8œØ»À1
 ‰
-java:S1450—"fRemove the "cepVeterinarioTextField" field and declare it as a local variable in the relevant methods.(¡½Øƒÿÿÿÿÿ8ÈÙ²·À1
+java:S1450¥
+"fRemove the "cepVeterinarioTextField" field and declare it as a local variable in the relevant methods.(¡½Øƒÿÿÿÿÿ8œØ»À1
 ~
-java:S1450˜"[Remove the "clientePanel" field and declare it as a local variable in the relevant methods.(‚€¹ëøÿÿÿÿ8ÉÙ²·À1
+java:S1450¦
+"[Remove the "clientePanel" field and declare it as a local variable in the relevant methods.(‚€¹ëøÿÿÿÿ8ŸœØ»À1
 ƒ
-java:S1450™"`Remove the "clienteScrollPane" field and declare it as a local variable in the relevant methods.(…ñÍüÿÿÿÿ8ÊÙ²·À1
+java:S1450§
+"`Remove the "clienteScrollPane" field and declare it as a local variable in the relevant methods.(…ñÍüÿÿÿÿ8 œØ»À1
 ƒ
-java:S1450š"`Remove the "clienteTabbedPane" field and declare it as a local variable in the relevant methods.(İ¬½‰üÿÿÿÿ8ËÙ²·À1
+java:S1450¨
+"`Remove the "clienteTabbedPane" field and declare it as a local variable in the relevant methods.(İ¬½‰üÿÿÿÿ8¡œØ»À1
 y
-java:S1450›"[Remove the "clienteTable" field and declare it as a local variable in the relevant methods.(²õˆ³8ÌÙ²·À1
+java:S1450©
+"[Remove the "clienteTable" field and declare it as a local variable in the relevant methods.(²õˆ³8¢œØ»À1
 ‡
-java:S1450œ"dRemove the "consultaExameComboBox" field and declare it as a local variable in the relevant methods.(Ê·Ç‹üÿÿÿÿ8ÌÙ²·À1
+java:S1450ª
+"dRemove the "consultaExameComboBox" field and declare it as a local variable in the relevant methods.(Ê·Ç‹üÿÿÿÿ8¢œØ»À1
 
-java:S1450"aRemove the "consultaExameLabel" field and declare it as a local variable in the relevant methods.(¢‚­º8ÍÙ²·À1
+java:S1450«
+"aRemove the "consultaExameLabel" field and declare it as a local variable in the relevant methods.(¢‚­º8£œØ»À1
 z
-java:S1450"\Remove the "consultaPanel" field and declare it as a local variable in the relevant methods.(³éëæ8ÎÙ²·À1
+java:S1450¬
+"\Remove the "consultaPanel" field and declare it as a local variable in the relevant methods.(³éëæ8¤œØ»À1
 
-java:S1450Ÿ"aRemove the "consultaScrollPane" field and declare it as a local variable in the relevant methods.(ŒŞ–—8ÏÙ²·À1
+java:S1450­
+"aRemove the "consultaScrollPane" field and declare it as a local variable in the relevant methods.(ŒŞ–—8¥œØ»À1
 „
-java:S1450 "aRemove the "consultaTabbedPane" field and declare it as a local variable in the relevant methods.(š¨ñ½şÿÿÿÿ8ĞÙ²·À1
+java:S1450®
+"aRemove the "consultaTabbedPane" field and declare it as a local variable in the relevant methods.(š¨ñ½şÿÿÿÿ8¦œØ»À1
 z
-java:S1450¡"\Remove the "consultaTable" field and declare it as a local variable in the relevant methods.(æÔÃ­8ÑÙ²·À1
+java:S1450¯
+"\Remove the "consultaTable" field and declare it as a local variable in the relevant methods.(æÔÃ­8§œØ»À1
 ~
-java:S1450¢"`Remove the "dataConsultaLabel" field and declare it as a local variable in the relevant methods.(Ê¤­ğ8ÒÙ²·À1
+java:S1450°
+"`Remove the "dataConsultaLabel" field and declare it as a local variable in the relevant methods.(Ê¤­ğ8§œØ»À1
 ƒ
-java:S1450£"eRemove the "dataFimTratamentoLabel" field and declare it as a local variable in the relevant methods.(œ´“£8ÓÙ²·À1
+java:S1450±
+"eRemove the "dataFimTratamentoLabel" field and declare it as a local variable in the relevant methods.(œ´“£8¨œØ»À1
 {
-java:S1450¤"^Remove the "dataInicioLabel" field and declare it as a local variable in the relevant methods.(ÆèÉS8ÓÙ²·À1
+java:S1450²
+"^Remove the "dataInicioLabel" field and declare it as a local variable in the relevant methods.(ÆèÉS8©œØ»À1
 
-java:S1450¥"jRemove the "descricaoCadastrarExamePane" field and declare it as a local variable in the relevant methods.(úØ‘Íıÿÿÿÿ8ÔÙ²·À1
+java:S1450³
+"jRemove the "descricaoCadastrarExamePane" field and declare it as a local variable in the relevant methods.(úØ‘Íıÿÿÿÿ8ªœØ»À1
 …
-java:S1450¦"bRemove the "descricaoExameLabel" field and declare it as a local variable in the relevant methods.(§ÎÔ¦üÿÿÿÿ8ÕÙ²·À1
+java:S1450´
+"bRemove the "descricaoExameLabel" field and declare it as a local variable in the relevant methods.(§ÎÔ¦üÿÿÿÿ8ªœØ»À1
 ‚
-java:S1450§"eRemove the "descricaoExameTextArea" field and declare it as a local variable in the relevant methods.(úÌô$8ÖÙ²·À1
+java:S1450µ
+"eRemove the "descricaoExameTextArea" field and declare it as a local variable in the relevant methods.(úÌô$8«œØ»À1
 ‚
-java:S1450¨"_Remove the "diaConsultaLabel" field and declare it as a local variable in the relevant methods.(ò„Ïàúÿÿÿÿ8×Ù²·À1
+java:S1450¶
+"_Remove the "diaConsultaLabel" field and declare it as a local variable in the relevant methods.(ò„Ïàúÿÿÿÿ8¬œØ»À1
 
-java:S1450©"aRemove the "diaConsultaSpinner" field and declare it as a local variable in the relevant methods.(ğ÷ÿü8ØÙ²·À1
+java:S1450·
+"aRemove the "diaConsultaSpinner" field and declare it as a local variable in the relevant methods.(ğ÷ÿü8­œØ»À1
 ‡
-java:S1450ª"dRemove the "diaFimTratamentoLabel" field and declare it as a local variable in the relevant methods.(¯âñÚüÿÿÿÿ8ÙÙ²·À1
+java:S1450¸
+"dRemove the "diaFimTratamentoLabel" field and declare it as a local variable in the relevant methods.(¯âñÚüÿÿÿÿ8­œØ»À1
 ‰
-java:S1450«"fRemove the "diaFimTratamentoSpinner" field and declare it as a local variable in the relevant methods.(…±Æ¥ÿÿÿÿÿ8ÚÙ²·À1
+java:S1450¹
+"fRemove the "diaFimTratamentoSpinner" field and declare it as a local variable in the relevant methods.(…±Æ¥ÿÿÿÿÿ8®œØ»À1
 „
-java:S1450¬"gRemove the "diaInicioTratamentoLabel" field and declare it as a local variable in the relevant methods.(¹œğ58ÛÙ²·À1
+java:S1450º
+"gRemove the "diaInicioTratamentoLabel" field and declare it as a local variable in the relevant methods.(¹œğ58¯œØ»À1
 Œ
-java:S1450­"iRemove the "diaInicioTratamentoSpinner" field and declare it as a local variable in the relevant methods.(¾©ßõıÿÿÿÿ8ÜÙ²·À1
+java:S1450»
+"iRemove the "diaInicioTratamentoSpinner" field and declare it as a local variable in the relevant methods.(¾©ßõıÿÿÿÿ8°œØ»À1
 ƒ
-java:S1450®"`Remove the "emailClienteLabel" field and declare it as a local variable in the relevant methods.(ÙÓÍúûÿÿÿÿ8İÙ²·À1
+java:S1450¼
+"`Remove the "emailClienteLabel" field and declare it as a local variable in the relevant methods.(ÙÓÍúûÿÿÿÿ8°œØ»À1
 ‡
-java:S1450¯"dRemove the "emailClienteTextField" field and declare it as a local variable in the relevant methods.(Á¨¤şÿÿÿÿ8İÙ²·À1
+java:S1450½
+"dRemove the "emailClienteTextField" field and declare it as a local variable in the relevant methods.(Á¨¤şÿÿÿÿ8±œØ»À1
 ‡
-java:S1450°"dRemove the "emailVeterinarioLabel" field and declare it as a local variable in the relevant methods.(Á³Ûûÿÿÿÿ8ŞÙ²·À1
+java:S1450¾
+"dRemove the "emailVeterinarioLabel" field and declare it as a local variable in the relevant methods.(Á³Ûûÿÿÿÿ8²œØ»À1
 ‹
-java:S1450±"hRemove the "emailVeterinarioTextField" field and declare it as a local variable in the relevant methods.(ş¨É©üÿÿÿÿ8ßÙ²·À1
+java:S1450¿
+"hRemove the "emailVeterinarioTextField" field and declare it as a local variable in the relevant methods.(ş¨É©üÿÿÿÿ8³œØ»À1
 †
-java:S1450²"cRemove the "enderecoClienteLabel" field and declare it as a local variable in the relevant methods.(õÆê¹úÿÿÿÿ8àÙ²·À1
+java:S1450À
+"cRemove the "enderecoClienteLabel" field and declare it as a local variable in the relevant methods.(õÆê¹úÿÿÿÿ8³œØ»À1
 …
-java:S1450³"gRemove the "enderecoClienteTextField" field and declare it as a local variable in the relevant methods.(·½˜Ñ8áÙ²·À1
+java:S1450Á
+"gRemove the "enderecoClienteTextField" field and declare it as a local variable in the relevant methods.(·½˜Ñ8´œØ»À1
 …
-java:S1450´"gRemove the "enderecoVeterinarioLabel" field and declare it as a local variable in the relevant methods.(Ğÿå8âÙ²·À1
+java:S1450Â
+"gRemove the "enderecoVeterinarioLabel" field and declare it as a local variable in the relevant methods.(Ğÿå8µœØ»À1
 ‰
-java:S1450µ"kRemove the "enderecoVeterinarioTextField" field and declare it as a local variable in the relevant methods.(­õ–³8ãÙ²·À1
+java:S1450Ã
+"kRemove the "enderecoVeterinarioTextField" field and declare it as a local variable in the relevant methods.(­õ–³8¶œØ»À1
 ‚
-java:S1450¶"dRemove the "especieAnimalComboBox" field and declare it as a local variable in the relevant methods.(Ôı—î8äÙ²·À1
+java:S1450Ä
+"dRemove the "especieAnimalComboBox" field and declare it as a local variable in the relevant methods.(Ôı—î8Š’¼À1
 „
-java:S1450·"aRemove the "especieAnimalLabel" field and declare it as a local variable in the relevant methods.(ùè¬£ÿÿÿÿÿ8äÙ²·À1
+java:S1450Å
+"aRemove the "especieAnimalLabel" field and declare it as a local variable in the relevant methods.(ùè¬£ÿÿÿÿÿ8·œØ»À1
 w
-java:S1450¸"YRemove the "examePanel" field and declare it as a local variable in the relevant methods.(şâËñ8åÙ²·À1
+java:S1450Æ
+"YRemove the "examePanel" field and declare it as a local variable in the relevant methods.(şâËñ8·œØ»À1
 |
-java:S1450¹"^Remove the "exameScrollPane" field and declare it as a local variable in the relevant methods.(Ç…æõ8æÙ²·À1
+java:S1450Ç
+"^Remove the "exameScrollPane" field and declare it as a local variable in the relevant methods.(Ç…æõ8¸œØ»À1
 
-java:S1450º"^Remove the "exameTabbedPane" field and declare it as a local variable in the relevant methods.(ø±Â¹ÿÿÿÿÿ8çÙ²·À1
+java:S1450È
+"^Remove the "exameTabbedPane" field and declare it as a local variable in the relevant methods.(ø±Â¹ÿÿÿÿÿ8¹œØ»À1
 w
-java:S1450»"YRemove the "exameTable" field and declare it as a local variable in the relevant methods.(†’Ş¼8èÙ²·À1
+java:S1450É
+"YRemove the "exameTable" field and declare it as a local variable in the relevant methods.(†’Ş¼8ºœØ»À1
 }
-java:S1450¼"_Remove the "idadeAnimalLabel" field and declare it as a local variable in the relevant methods.(ËôÍğ8éÙ²·À1
+java:S1450Ê
+"_Remove the "idadeAnimalLabel" field and declare it as a local variable in the relevant methods.(ËôÍğ8ºœØ»À1
 „
-java:S1450½"aRemove the "idadeAnimalSpinner" field and declare it as a local variable in the relevant methods.(â²ãÌüÿÿÿÿ8êÙ²·À1
+java:S1450Ë
+"aRemove the "idadeAnimalSpinner" field and declare it as a local variable in the relevant methods.(â²ãÌüÿÿÿÿ8»œØ»À1
 z
-java:S1450¾"WRemove the "logoIcon" field and declare it as a local variable in the relevant methods.(—ïºÒüÿÿÿÿ8ëÙ²·À1
+java:S1450Ì
+"WRemove the "logoIcon" field and declare it as a local variable in the relevant methods.(—ïºÒüÿÿÿÿ8¼œØ»À1
 €
-java:S1450¿"]Remove the "mainTabbedPane" field and declare it as a local variable in the relevant methods.(Ÿ¾È„øÿÿÿÿ8ìÙ²·À1
+java:S1450Í
+"]Remove the "mainTabbedPane" field and declare it as a local variable in the relevant methods.(Ÿ¾È„øÿÿÿÿ8½œØ»À1
 }
-java:S1450À"_Remove the "mesConsultaLabel" field and declare it as a local variable in the relevant methods.(¶¾ƒñ8íÙ²·À1
+java:S1450Î
+"_Remove the "mesConsultaLabel" field and declare it as a local variable in the relevant methods.(¶¾ƒñ8½œØ»À1
 „
-java:S1450Á"aRemove the "mesConsultaSpinner" field and declare it as a local variable in the relevant methods.(ö¢¢æøÿÿÿÿ8íÙ²·À1
+java:S1450Ï
+"aRemove the "mesConsultaSpinner" field and declare it as a local variable in the relevant methods.(ö¢¢æøÿÿÿÿ8¾œØ»À1
 ‡
-java:S1450Â"dRemove the "mesFimTratamentoLabel" field and declare it as a local variable in the relevant methods.(ù©‹úÿÿÿÿ8îÙ²·À1
+java:S1450Ğ
+"dRemove the "mesFimTratamentoLabel" field and declare it as a local variable in the relevant methods.(ù©‹úÿÿÿÿ8¿œØ»À1
 ‰
-java:S1450Ã"fRemove the "mesFimTratamentoSpinner" field and declare it as a local variable in the relevant methods.(Ä¯Â·úÿÿÿÿ8ïÙ²·À1
+java:S1450Ñ
+"fRemove the "mesFimTratamentoSpinner" field and declare it as a local variable in the relevant methods.(Ä¯Â·úÿÿÿÿ8ÀœØ»À1
 Š
-java:S1450Ä"gRemove the "mesInicioTratamentoLabel" field and declare it as a local variable in the relevant methods.(¸ˆÑªıÿÿÿÿ8ğÙ²·À1
+java:S1450Ò
+"gRemove the "mesInicioTratamentoLabel" field and declare it as a local variable in the relevant methods.(¸ˆÑªıÿÿÿÿ8ÀœØ»À1
 Œ
-java:S1450Å"iRemove the "mesInicioTratamentoSpinner" field and declare it as a local variable in the relevant methods.(èçâ£øÿÿÿÿ8ñÙ²·À1
+java:S1450Ó
+"iRemove the "mesInicioTratamentoSpinner" field and declare it as a local variable in the relevant methods.(èçâ£øÿÿÿÿ8ÁœØ»À1
 |
-java:S1450Æ"^Remove the "nomeAnimalLabel" field and declare it as a local variable in the relevant methods.(ÀÕ…8òÙ²·À1
+java:S1450Ô
+"^Remove the "nomeAnimalLabel" field and declare it as a local variable in the relevant methods.(ÀÕ…8ÂœØ»À1
 …
-java:S1450Ç"bRemove the "nomeAnimalTextField" field and declare it as a local variable in the relevant methods.(«°ïˆøÿÿÿÿ8óÙ²·À1
+java:S1450Õ
+"bRemove the "nomeAnimalTextField" field and declare it as a local variable in the relevant methods.(«°ïˆøÿÿÿÿ8ÃœØ»À1
 }
-java:S1450È"_Remove the "nomeClienteLabel" field and declare it as a local variable in the relevant methods.(•¦ıî8óÙ²·À1
+java:S1450Ö
+"_Remove the "nomeClienteLabel" field and declare it as a local variable in the relevant methods.(•¦ıî8ÃœØ»À1
 †
-java:S1450É"cRemove the "nomeClienteTextField" field and declare it as a local variable in the relevant methods.(ÂŠøÿÿÿÿ8ôÙ²·À1
+java:S1450×
+"cRemove the "nomeClienteTextField" field and declare it as a local variable in the relevant methods.(ÂŠøÿÿÿÿ8ÄœØ»À1
 }
-java:S1450Ê"_Remove the "nomeEspecieLabel" field and declare it as a local variable in the relevant methods.(Şâ¿»8õÙ²·À1
+java:S1450Ø
+"_Remove the "nomeEspecieLabel" field and declare it as a local variable in the relevant methods.(Şâ¿»8ÅœØ»À1
 
-java:S1450Ë"cRemove the "nomeEspecieTextField" field and declare it as a local variable in the relevant methods.(«øøÈ8öÙ²·À1
+java:S1450Ù
+"cRemove the "nomeEspecieTextField" field and declare it as a local variable in the relevant methods.(«øøÈ8ÆœØ»À1
 †
-java:S1450Ì"cRemove the "nomeVeterinarioLabel" field and declare it as a local variable in the relevant methods.(‰ûÈÇÿÿÿÿÿ8÷Ù²·À1
+java:S1450Ú
+"cRemove the "nomeVeterinarioLabel" field and declare it as a local variable in the relevant methods.(‰ûÈÇÿÿÿÿÿ8ÇœØ»À1
 Š
-java:S1450Í"gRemove the "nomeVeterinarioTextField" field and declare it as a local variable in the relevant methods.(‚ìà²üÿÿÿÿ8øÙ²·À1
+java:S1450Û
+"gRemove the "nomeVeterinarioTextField" field and declare it as a local variable in the relevant methods.(‚ìà²üÿÿÿÿ8ÈœØ»À1
 
-java:S1450Î"pRemove the "relatoCadastrarConsultaScrollPane" field and declare it as a local variable in the relevant methods.(Òº²-8ùÙ²·À1
+java:S1450Ü
+"pRemove the "relatoCadastrarConsultaScrollPane" field and declare it as a local variable in the relevant methods.(Òº²-8ÈœØ»À1
 …
-java:S1450Ï"bRemove the "relatoConsultaLabel" field and declare it as a local variable in the relevant methods.(¥ú¯¡ÿÿÿÿÿ8úÙ²·À1
+java:S1450İ
+"bRemove the "relatoConsultaLabel" field and declare it as a local variable in the relevant methods.(¥ú¯¡ÿÿÿÿÿ8ÉœØ»À1
 ˆ
-java:S1450Ğ"eRemove the "relatoConsultaTextArea" field and declare it as a local variable in the relevant methods.(’İ‹êÿÿÿÿÿ8úÙ²·À1
+java:S1450Ş
+"eRemove the "relatoConsultaTextArea" field and declare it as a local variable in the relevant methods.(’İ‹êÿÿÿÿÿ8ÊœØ»À1
 „
-java:S1450Ñ"aRemove the "sexoAnimalComboBox" field and declare it as a local variable in the relevant methods.(àÁ³üÿÿÿÿ8ûÙ²·À1
+java:S1450ß
+"aRemove the "sexoAnimalComboBox" field and declare it as a local variable in the relevant methods.(àÁ³üÿÿÿÿ8ËœØ»À1
 
-java:S1450Ò"^Remove the "sexoAnimalLabel" field and declare it as a local variable in the relevant methods.(À°úúÿÿÿÿ8üÙ²·À1
+java:S1450à
+"^Remove the "sexoAnimalLabel" field and declare it as a local variable in the relevant methods.(À°úúÿÿÿÿ8ÌœØ»À1
 †
-java:S1450Ó"cRemove the "telefoneClienteLabel" field and declare it as a local variable in the relevant methods.(ê”ßæùÿÿÿÿ8ıÙ²·À1
+java:S1450á
+"cRemove the "telefoneClienteLabel" field and declare it as a local variable in the relevant methods.(ê”ßæùÿÿÿÿ8ÌœØ»À1
 Š
-java:S1450Ô"gRemove the "telefoneClienteTextField" field and declare it as a local variable in the relevant methods.(ŸÈÖŞúÿÿÿÿ8şÙ²·À1
+java:S1450â
+"gRemove the "telefoneClienteTextField" field and declare it as a local variable in the relevant methods.(ŸÈÖŞúÿÿÿÿ8ÍœØ»À1
 Š
-java:S1450Õ"gRemove the "telefoneVeterinarioLabel" field and declare it as a local variable in the relevant methods.(ÿ²šõşÿÿÿÿ8ÿÙ²·À1
+java:S1450ã
+"gRemove the "telefoneVeterinarioLabel" field and declare it as a local variable in the relevant methods.(ÿ²šõşÿÿÿÿ8ÎœØ»À1
 
-java:S1450Ö"kRemove the "telefoneVeterinarioTextField" field and declare it as a local variable in the relevant methods.(ÓÔÌîúÿÿÿÿ8€Ú²·À1
+java:S1450ä
+"kRemove the "telefoneVeterinarioTextField" field and declare it as a local variable in the relevant methods.(ÓÔÌîúÿÿÿÿ8ÏœØ»À1
 Œ
-java:S1450×"iRemove the "tratamentoConsultaComboBox" field and declare it as a local variable in the relevant methods.(›†úÿÿÿÿÿ8Ú²·À1
+java:S1450å
+"iRemove the "tratamentoConsultaComboBox" field and declare it as a local variable in the relevant methods.(›†úÿÿÿÿÿ8ĞœØ»À1
 ‰
-java:S1450Ø"fRemove the "tratamentoConsultaLabel" field and declare it as a local variable in the relevant methods.(Û¶¡Ñøÿÿÿÿ8Ú²·À1
+java:S1450æ
+"fRemove the "tratamentoConsultaLabel" field and declare it as a local variable in the relevant methods.(Û¶¡Ñøÿÿÿÿ8ÑœØ»À1
 {
-java:S1450Ù"^Remove the "tratamentoPanel" field and declare it as a local variable in the relevant methods.(®œ¢|8‚Ú²·À1
+java:S1450ç
+"^Remove the "tratamentoPanel" field and declare it as a local variable in the relevant methods.(®œ¢|8ÒœØ»À1
 
-java:S1450Ú"cRemove the "tratamentoScrollPane" field and declare it as a local variable in the relevant methods.(†ÿÿ¾8ƒÚ²·À1
+java:S1450è
+"cRemove the "tratamentoScrollPane" field and declare it as a local variable in the relevant methods.(†ÿÿ¾8ÓœØ»À1
 †
-java:S1450Û"cRemove the "tratamentoTabbedPane" field and declare it as a local variable in the relevant methods.(‘öï‡üÿÿÿÿ8„Ú²·À1
+java:S1450é
+"cRemove the "tratamentoTabbedPane" field and declare it as a local variable in the relevant methods.(‘öï‡üÿÿÿÿ8êœØ»À1
 |
-java:S1450Ü"^Remove the "tratamentoTable" field and declare it as a local variable in the relevant methods.(†œØè8…Ú²·À1
+java:S1450ê
+"^Remove the "tratamentoTable" field and declare it as a local variable in the relevant methods.(†œØè8ëœØ»À1
 z
-java:S1450İ"\Remove the "tutorComboBox" field and declare it as a local variable in the relevant methods.(Ş¿î×8†Ú²·À1
+java:S1450ë
+"\Remove the "tutorComboBox" field and declare it as a local variable in the relevant methods.(Ş¿î×8ìœØ»À1
 |
-java:S1450Ş"YRemove the "tutorLabel" field and declare it as a local variable in the relevant methods.(ÀÂÍ¸ûÿÿÿÿ8‡Ú²·À1
+java:S1450ì
+"YRemove the "tutorLabel" field and declare it as a local variable in the relevant methods.(ÀÂÍ¸ûÿÿÿÿ8íœØ»À1
 ˆ
-java:S1450ß"jRemove the "veterinarioConsultaComboBox" field and declare it as a local variable in the relevant methods.(´Úúë8ˆÚ²·À1
+java:S1450í
+"jRemove the "veterinarioConsultaComboBox" field and declare it as a local variable in the relevant methods.(´Úúë8îœØ»À1
 …
-java:S1450à"gRemove the "veterinarioConsultaLabel" field and declare it as a local variable in the relevant methods.(­‰Ï›8‰Ú²·À1
+java:S1450î
+"gRemove the "veterinarioConsultaLabel" field and declare it as a local variable in the relevant methods.(­‰Ï›8îœØ»À1
 ‚
-java:S1450á"_Remove the "veterinarioPanel" field and declare it as a local variable in the relevant methods.(ìİçÓşÿÿÿÿ8‰Ú²·À1
+java:S1450ï
+"_Remove the "veterinarioPanel" field and declare it as a local variable in the relevant methods.(ìİçÓşÿÿÿÿ8ïœØ»À1
 ‡
-java:S1450â"dRemove the "veterinarioScrollPane" field and declare it as a local variable in the relevant methods.(€Ù¹¼ûÿÿÿÿ8ŠÚ²·À1
+java:S1450ğ
+"dRemove the "veterinarioScrollPane" field and declare it as a local variable in the relevant methods.(€Ù¹¼ûÿÿÿÿ8ğœØ»À1
 ‡
-java:S1450ã"dRemove the "veterinarioTabbedPane" field and declare it as a local variable in the relevant methods.(é— åúÿÿÿÿ8‹Ú²·À1
+java:S1450ñ
+"dRemove the "veterinarioTabbedPane" field and declare it as a local variable in the relevant methods.(é— åúÿÿÿÿ8ñœØ»À1
 }
-java:S1450ä"_Remove the "veterinarioTable" field and declare it as a local variable in the relevant methods.(—“©¢8ŒÚ²·À1
-H
-java:S1172ı	"*Remove this unused method parameter "evt".(½ÌÉÉ8Û²·À1
+java:S1450ò
+"_Remove the "veterinarioTable" field and declare it as a local variable in the relevant methods.(—“©¢8òœØ»À1
 U
-java:S1135ş	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8Û²·À1
-H
-java:S1172
-"*Remove this unused method parameter "evt".(ªÖƒ8Û²·À1
+java:S1135Œ	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ÓØ»À1
 U
-java:S1135‚
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8Û²·À1
-M
-java:S1172…
-"*Remove this unused method parameter "evt".(¥Ğ«¾úÿÿÿÿ8ŸÛ²·À1
+java:S1135	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ÔØ»À1
 U
-java:S1135†
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ŸÛ²·À1
-H
-java:S1172‰
-"*Remove this unused method parameter "evt".(ë‰ãÿ8ŸÛ²·À1
+java:S1135”	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ÔØ»À1
 U
-java:S1135Š
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8 Û²·À1
-M
-java:S1172
-"*Remove this unused method parameter "evt".(İûĞøÿÿÿÿ8 Û²·À1
+java:S1135˜	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ÕØ»À1
 U
-java:S1135
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8 Û²·À1
-H
-java:S1172‘
-"*Remove this unused method parameter "evt".(š¾ÚŸ8¡Û²·À1
+java:S1135œ	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ÕØ»À1
 U
-java:S1135’
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¡Û²·À1
-M
-java:S1172•
-"*Remove this unused method parameter "evt".(°ˆõşúÿÿÿÿ8¡Û²·À1
+java:S1135 	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ÕØ»À1
 U
-java:S1135–
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¡Û²·À1
-H
-java:S1172™
-"*Remove this unused method parameter "evt".(†æËò8¢Û²·À1
+java:S1135¤	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ÖØ»À1
 U
-java:S1135š
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¢Û²·À1
-H
-java:S1172
-"*Remove this unused method parameter "evt".(öÁÙÊ8¢Û²·À1
+java:S1135¨	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ÖØ»À1
 U
-java:S1135
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8£Û²·À1
-M
-java:S1172¡
-"*Remove this unused method parameter "evt".(Ø¦ÌÃøÿÿÿÿ8£Û²·À1
+java:S1135¬	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8×Ø»À1
 U
-java:S1135¢
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8£Û²·À1
-G
-java:S1172¥
-"*Remove this unused method parameter "evt".(ÆõŞ}8¤Û²·À1
+java:S1135°	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8×Ø»À1
 U
-java:S1135¦
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¤Û²·À1
-H
-java:S1172©
-"*Remove this unused method parameter "evt".(Ììà‰8¤Û²·À1
+java:S1135´	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ØØ»À1
 U
-java:S1135ª
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¤Û²·À1
-M
-java:S1172­
-"*Remove this unused method parameter "evt".(ìßÔÅşÿÿÿÿ8¥Û²·À1
+java:S1135¸	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ØØ»À1
 U
-java:S1135®
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¥Û²·À1
-H
-java:S1172±
-"*Remove this unused method parameter "evt".(ç©¸À8¥Û²·À1
+java:S1135¼	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ÙØ»À1
 U
-java:S1135²
-"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¦Û²·À1
-V
-java:S1128"4Remove this unused import 'com.vet.view.table.impl'.(Æ©ÄÔüÿÿÿÿ8­Û²·À1
+java:S1135À	"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¿‹’¼À1
 B
-java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8­Û²·À1
+java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8Îö¼À1
+O
+java:S1128	"-Remove this unused import 'java.util.Vector'.(ÿŒ¸Áÿÿÿÿÿ8Îö¼À1

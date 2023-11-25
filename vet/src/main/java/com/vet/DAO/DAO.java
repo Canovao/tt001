@@ -12,10 +12,9 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 public abstract class DAO<MODEL> {
     public static final String DBURL = "jdbc:h2:./vet.db";
-    private static Connection con;
+    private static Connection con = getConnection();
     public static SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
     protected abstract Model build(ResultSet rs) throws SQLException;
@@ -23,6 +22,8 @@ public abstract class DAO<MODEL> {
     public abstract void update(MODEL model);
 
     public abstract MODEL get(int id);
+
+    public abstract String[] getAll();
 
     public static Model buildObject(ResultSet rs, String table){
         Model model = null;
@@ -69,10 +70,6 @@ public abstract class DAO<MODEL> {
         return retrieve(MessageFormat.format("SELECT * FROM {0} WHERE id = {1}", table, lastId(table, "id")), table);
     }
 
-    public static List<Model> retrieveAll(String table) {
-        return retrieve(MessageFormat.format("SELECT * FROM {0}", table), table);
-    }
-
     protected static List<Model> retrieve(String query, String table) {
         List<Model> dataList = new ArrayList<>();
         ResultSet rs = getResultSet(query);
@@ -93,6 +90,7 @@ public abstract class DAO<MODEL> {
             } catch (SQLException e) {
                 System.err.println("Exception: " + e.getMessage());
             }
+            createTable();
         }
         return con;
     }
@@ -136,7 +134,7 @@ public abstract class DAO<MODEL> {
         }
     }
 
-    public static boolean createTable() {
+    public static void createTable() {
         try {
             PreparedStatement stmt;
             // Table cliente:
@@ -158,12 +156,10 @@ public abstract class DAO<MODEL> {
             stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS exame( id INTEGER PRIMARY KEY AUTO_INCREMENT, descricao VARCHAR, id_consulta INTEGER);");
             executeUpdate(stmt);
             // Table tratamento:
-            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS exame( id INTEGER PRIMARY KEY AUTO_INCREMENT, data_inicio DATE, data_fim DATE, id_animal INTEGER);");
+            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS tratamento( id INTEGER PRIMARY KEY AUTO_INCREMENT, data_inicio DATE, data_fim DATE, id_animal INTEGER);");
             executeUpdate(stmt);
-            return true;
         } catch (SQLException ex) {
             Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return false;
     }
 }

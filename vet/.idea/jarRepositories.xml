@@ -3,6 +3,11 @@
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
       <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://artefatos.getnet.com.br:443/artifactory/maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
       <option name="name" value="libs-release" />
       <option name="url" value="http://10.173.232.19:8081/artifactory/repo" />
     </remote-repository>
@@ -17,9 +22,19 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="libs-snapshot" />
+      <option name="name" value="libs-snapshot" />
+      <option name="url" value="https://artefatos.getnet.com.br:443/artifactory/maven" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="libs-release" />
+      <option name="name" value="libs-release" />
+      <option name="url" value="https://artefatos.getnet.com.br:443/artifactory/maven" />
     </remote-repository>
   </component>
 </project>

@@ -4,10 +4,12 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Exame;
+import com.vet.model.impl.Veterinario;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -56,5 +58,18 @@ public class ExameDAO extends DAO<Exame> {
 
     public Model build(ResultSet rs) throws SQLException {
         return new Exame(rs.getInt("id"), rs.getString("descricao"), rs.getInt("idConsulta"));
+    }
+
+    @Override
+    public String[] getAll() {
+        List<Exame> all = retrieve("SELECT * FROM exame", "exame").stream().map(Exame.class::cast).toList();
+
+        String[] list = new String[all.size()];
+
+        for(int i=0; i < list.length; i++){
+            list[i] = String.valueOf(all.get(i).getId()) + '|' + all.get(i).getDescricao();
+        }
+
+        return list;
     }
 }
