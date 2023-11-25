@@ -89,7 +89,6 @@ public abstract class TableModel extends AbstractTableModel {
         }
     }
 
-    // Daqui pra baixo metodos adaptados de ViniGodoy - Curitiba - PR
     public void selectAndScroll(JTable table, int rowIndex) {
         table.getSelectionModel().setSelectionInterval(rowIndex, rowIndex);
         scrollToVisible(table, rowIndex);

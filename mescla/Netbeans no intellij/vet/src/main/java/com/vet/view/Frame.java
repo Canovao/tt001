@@ -3,6 +3,7 @@ package com.vet.view;
 import com.vet.view.table.impl.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 /**
@@ -26,379 +27,358 @@ public class Frame extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        mainTabbedPane = new JTabbedPane();
-        clientePanel = new JPanel();
-        clienteTabbedPane = new JTabbedPane();
-        cadastrarClientePanel = new JPanel();
-        nomeClienteLabel = new JLabel();
-        nomeClienteTextField = new JTextField();
-        cepClienteLabel = new JLabel();
-        cepClienteTextField = new JTextField();
-        enderecoClienteLabel = new JLabel();
-        enderecoClienteTextField = new JTextField();
-        telefoneClienteLabel = new JLabel();
-        telefoneClienteTextField = new JTextField();
-        emailClienteTextField = new JTextField();
-        emailClienteLabel = new JLabel();
-        cadastrarClienteButton = new JButton();
-        atualizarClientePanel = new JPanel();
-        atualizarClienteLabel = new JLabel();
-        atualizarClienteComboBox = new JComboBox<>();
-        atualizarNomeClienteLabel = new JLabel();
-        atualizarNomeClienteTextField = new JTextField();
-        atualizarCepClienteLabel = new JLabel();
-        atualizarCepClienteTextField = new JTextField();
-        atualizarEnderecoClienteLabel = new JLabel();
-        atualizarEnderecoClienteTextField = new JTextField();
-        atualizarTelefoneClienteLabel = new JLabel();
-        atualizarTelefoneClienteTextField = new JTextField();
-        atualizarEmailClienteLabel = new JLabel();
-        atualizarEmailClienteTextField = new JTextField();
-        atualizarClienteButton = new JButton();
-        clienteScrollPane = new JScrollPane();
-        clienteTable = new JTable();
-        animalPanel = new JPanel();
-        animalTabbedPane = new JTabbedPane();
-        cadastrarAnimalPanel = new JPanel();
-        especieAnimalLabel = new JLabel();
-        nomeAnimalLabel = new JLabel();
-        tutorLabel = new JLabel();
-        idadeAnimalLabel = new JLabel();
-        sexoAnimalLabel = new JLabel();
-        nomeAnimalTextField = new JTextField();
-        cadastrarAnimalButton = new JButton();
-        sexoAnimalComboBox = new JComboBox<>();
-        idadeAnimalSpinner = new JSpinner();
-        especieAnimalComboBox = new JComboBox<>();
-        tutorComboBox = new JComboBox<>();
-        cadastrarEspeciesPanel = new JPanel();
-        nomeEspecieLabel = new JLabel();
-        nomeEspecieTextField = new JTextField();
-        cadastrarEspecieButton = new JButton();
-        atualizarAnimalPanel = new JPanel();
-        atualizarAnimalLabel = new JLabel();
-        atualizarAnimalComboBox = new JComboBox<>();
-        atualizarTutorLabel = new JLabel();
-        atualizarTutorComboBox = new JComboBox<>();
-        atualizarEspecieLabel = new JLabel();
-        atualizarEspecieComboBox = new JComboBox<>();
-        atualizarNomeAnimalLabel = new JLabel();
-        atualizarNomeAnimalTextField = new JTextField();
-        atualizarIdadeAnimalLabel = new JLabel();
-        atualizarIdadeAnimalSpinner = new JSpinner();
-        atualizarSexoAnimalLabel = new JLabel();
-        atualizarSexoAnimalComboBox = new JComboBox<>();
-        atualizarAnimalButton = new JButton();
-        animalScrollPane = new JScrollPane();
-        animalTable = new JTable();
-        veterinarioPanel = new JPanel();
-        veterinarioTabbedPane = new JTabbedPane();
-        cadastrarVeterinario = new JPanel();
-        nomeVeterinarioLabel = new JLabel();
-        nomeVeterinarioTextField = new JTextField();
-        cepVeterinarioLabel = new JLabel();
-        cepVeterinarioTextField = new JTextField();
-        enderecoVeterinarioLabel = new JLabel();
-        enderecoVeterinarioTextField = new JTextField();
-        telefoneVeterinarioLabel = new JLabel();
-        telefoneVeterinarioTextField = new JTextField();
-        emailVeterinarioTextField = new JTextField();
-        emailVeterinarioLabel = new JLabel();
-        cadastrarVeterinarioButton = new JButton();
-        atualizarVeterinario = new JPanel();
-        atualizarVeterinarioComboBox = new JComboBox<>();
-        atualizarVeterinarioLabel = new JLabel();
-        atualizarVeterinarioButton = new JButton();
-        atualizarEmailVeterinarioTextField = new JTextField();
-        atualizarEmailVeterinarioLabel = new JLabel();
-        atualizarTelefoneVeterinarioTextField = new JTextField();
-        atualizarTelefoneVeterinarioLabel = new JLabel();
-        atualizarEnderecoVeterinarioTextField = new JTextField();
-        atualizarEnderecoVeterinarioLabel = new JLabel();
-        atualizarCepVeterinarioTextField = new JTextField();
-        atualizarCepVeterinarioLabel = new JLabel();
-        atualizarNomeVeterinarioTextField = new JTextField();
-        atualizarNomeVeterinarioLabel = new JLabel();
-        veterinarioScrollPane = new JScrollPane();
-        veterinarioTable = new JTable();
-        consultaPanel = new JPanel();
-        consultaTabbedPane = new JTabbedPane();
-        cadastrarConsulta = new JPanel();
-        dataConsultaLabel = new JLabel();
-        relatoConsultaLabel = new JLabel();
-        veterinarioConsultaLabel = new JLabel();
-        cadastrarConsultaButton = new JButton();
-        tratamentoConsultaLabel = new JLabel();
-        tratamentoConsultaComboBox = new JComboBox<>();
-        veterinarioConsultaComboBox = new JComboBox<>();
-        diaConsultaSpinner = new JSpinner();
-        mesConsultaSpinner = new JSpinner();
-        anoConsultaSpinner = new JSpinner();
-        diaConsultaLabel = new JLabel();
-        mesConsultaLabel = new JLabel();
-        anoConsultaLabel = new JLabel();
-        relatoCadastrarConsultaScrollPane = new JScrollPane();
-        relatoConsultaTextArea = new JTextArea();
-        consultaScrollPane = new JScrollPane();
-        consultaTable = new JTable();
-        examePanel = new JPanel();
-        exameTabbedPane = new JTabbedPane();
-        cadastrarExamePanel = new JPanel();
-        descricaoExameLabel = new JLabel();
-        consultaExameLabel = new JLabel();
-        cadastrarExameButton = new JButton();
-        consultaExameComboBox = new JComboBox<>();
-        descricaoCadastrarExamePane = new JScrollPane();
-        descricaoExameTextArea = new JTextArea();
-        exameScrollPane = new JScrollPane();
-        exameTable = new JTable();
-        tratamentoPanel = new JPanel();
-        tratamentoTabbedPane = new JTabbedPane();
-        cadastrarTratamentoPanel = new JPanel();
-        dataFimTratamentoLabel = new JLabel();
-        animalTratamentoLabel = new JLabel();
-        animalTratamentoComboBox = new JComboBox<>();
-        dataInicioLabel = new JLabel();
-        cadastrarTratamentoButton = new JButton();
-        diaFimTratamentoSpinner = new JSpinner();
-        diaFimTratamentoLabel = new JLabel();
-        mesFimTratamentoLabel = new JLabel();
-        mesFimTratamentoSpinner = new JSpinner();
-        anoFimTratamentoLabel = new JLabel();
-        anoFimTratamentoSpinner = new JSpinner();
-        diaInicioTratamentoSpinner = new JSpinner();
-        diaInicioTratamentoLabel = new JLabel();
-        mesInicioTratamentoLabel = new JLabel();
-        mesInicioTratamentoSpinner = new JSpinner();
-        anoInicioTratamentoLabel = new JLabel();
-        anoInicioTratamentoSpinner = new JSpinner();
-        tratamentoScrollPane = new JScrollPane();
-        tratamentoTable = new JTable();
-        logoLabel = new JLabel();
+        mainTabbedPane = new javax.swing.JTabbedPane();
+        clientePanel = new javax.swing.JPanel();
+        clienteTabbedPane = new javax.swing.JTabbedPane();
+        cadastrarClientePanel = new javax.swing.JPanel();
+        nomeClienteLabel = new javax.swing.JLabel();
+        nomeClienteTextField = new javax.swing.JTextField();
+        cepClienteLabel = new javax.swing.JLabel();
+        cepClienteTextField = new javax.swing.JTextField();
+        enderecoClienteLabel = new javax.swing.JLabel();
+        enderecoClienteTextField = new javax.swing.JTextField();
+        telefoneClienteLabel = new javax.swing.JLabel();
+        telefoneClienteTextField = new javax.swing.JTextField();
+        emailClienteTextField = new javax.swing.JTextField();
+        emailClienteLabel = new javax.swing.JLabel();
+        cadastrarClienteButton = new javax.swing.JButton();
+        atualizarClientePanel = new javax.swing.JPanel();
+        atualizarClienteLabel = new javax.swing.JLabel();
+        atualizarClienteComboBox = new javax.swing.JComboBox<>();
+        atualizarNomeClienteLabel = new javax.swing.JLabel();
+        atualizarNomeClienteTextField = new javax.swing.JTextField();
+        atualizarCepClienteLabel = new javax.swing.JLabel();
+        atualizarCepClienteTextField = new javax.swing.JTextField();
+        atualizarEnderecoClienteLabel = new javax.swing.JLabel();
+        atualizarEnderecoClienteTextField = new javax.swing.JTextField();
+        atualizarTelefoneClienteLabel = new javax.swing.JLabel();
+        atualizarTelefoneClienteTextField = new javax.swing.JTextField();
+        atualizarEmailClienteLabel = new javax.swing.JLabel();
+        atualizarEmailClienteTextField = new javax.swing.JTextField();
+        atualizarClienteButton = new javax.swing.JButton();
+        clienteScrollPane = new javax.swing.JScrollPane();
+        clienteTable = new javax.swing.JTable();
+        animalPanel = new javax.swing.JPanel();
+        animalTabbedPane = new javax.swing.JTabbedPane();
+        cadastrarAnimalPanel = new javax.swing.JPanel();
+        especieAnimalLabel = new javax.swing.JLabel();
+        nomeAnimalLabel = new javax.swing.JLabel();
+        tutorLabel = new javax.swing.JLabel();
+        idadeAnimalLabel = new javax.swing.JLabel();
+        sexoAnimalLabel = new javax.swing.JLabel();
+        nomeAnimalTextField = new javax.swing.JTextField();
+        cadastrarAnimalButton = new javax.swing.JButton();
+        sexoAnimalComboBox = new javax.swing.JComboBox<>();
+        idadeAnimalSpinner = new javax.swing.JSpinner();
+        especieAnimalComboBox = new javax.swing.JComboBox<>();
+        tutorComboBox = new javax.swing.JComboBox<>();
+        cadastrarEspeciesPanel = new javax.swing.JPanel();
+        nomeEspecieLabel = new javax.swing.JLabel();
+        nomeEspecieTextField = new javax.swing.JTextField();
+        cadastrarEspecieButton = new javax.swing.JButton();
+        atualizarAnimalPanel = new javax.swing.JPanel();
+        atualizarAnimalLabel = new javax.swing.JLabel();
+        atualizarAnimalComboBox = new javax.swing.JComboBox<>();
+        atualizarTutorLabel = new javax.swing.JLabel();
+        atualizarTutorComboBox = new javax.swing.JComboBox<>();
+        atualizarEspecieLabel = new javax.swing.JLabel();
+        atualizarEspecieComboBox = new javax.swing.JComboBox<>();
+        atualizarNomeAnimalLabel = new javax.swing.JLabel();
+        atualizarNomeAnimalTextField = new javax.swing.JTextField();
+        atualizarIdadeAnimalLabel = new javax.swing.JLabel();
+        atualizarIdadeAnimalSpinner = new javax.swing.JSpinner();
+        atualizarSexoAnimalLabel = new javax.swing.JLabel();
+        atualizarSexoAnimalComboBox = new javax.swing.JComboBox<>();
+        atualizarAnimalButton = new javax.swing.JButton();
+        animalScrollPane = new javax.swing.JScrollPane();
+        animalTable = new javax.swing.JTable();
+        veterinarioPanel = new javax.swing.JPanel();
+        veterinarioTabbedPane = new javax.swing.JTabbedPane();
+        cadastrarVeterinario = new javax.swing.JPanel();
+        nomeVeterinarioLabel = new javax.swing.JLabel();
+        nomeVeterinarioTextField = new javax.swing.JTextField();
+        cepVeterinarioLabel = new javax.swing.JLabel();
+        cepVeterinarioTextField = new javax.swing.JTextField();
+        enderecoVeterinarioLabel = new javax.swing.JLabel();
+        enderecoVeterinarioTextField = new javax.swing.JTextField();
+        telefoneVeterinarioLabel = new javax.swing.JLabel();
+        telefoneVeterinarioTextField = new javax.swing.JTextField();
+        emailVeterinarioTextField = new javax.swing.JTextField();
+        emailVeterinarioLabel = new javax.swing.JLabel();
+        cadastrarVeterinarioButton = new javax.swing.JButton();
+        atualizarVeterinario = new javax.swing.JPanel();
+        atualizarVeterinarioComboBox = new javax.swing.JComboBox<>();
+        atualizarVeterinarioLabel = new javax.swing.JLabel();
+        atualizarVeterinarioButton = new javax.swing.JButton();
+        atualizarEmailVeterinarioTextField = new javax.swing.JTextField();
+        atualizarEmailVeterinarioLabel = new javax.swing.JLabel();
+        atualizarTelefoneVeterinarioTextField = new javax.swing.JTextField();
+        atualizarTelefoneVeterinarioLabel = new javax.swing.JLabel();
+        atualizarEnderecoVeterinarioTextField = new javax.swing.JTextField();
+        atualizarEnderecoVeterinarioLabel = new javax.swing.JLabel();
+        atualizarCepVeterinarioTextField = new javax.swing.JTextField();
+        atualizarCepVeterinarioLabel = new javax.swing.JLabel();
+        atualizarNomeVeterinarioTextField = new javax.swing.JTextField();
+        atualizarNomeVeterinarioLabel = new javax.swing.JLabel();
+        veterinarioScrollPane = new javax.swing.JScrollPane();
+        veterinarioTable = new javax.swing.JTable();
+        consultaPanel = new javax.swing.JPanel();
+        consultaTabbedPane = new javax.swing.JTabbedPane();
+        cadastrarConsulta = new javax.swing.JPanel();
+        dataConsultaLabel = new javax.swing.JLabel();
+        relatoConsultaLabel = new javax.swing.JLabel();
+        veterinarioConsultaLabel = new javax.swing.JLabel();
+        cadastrarConsultaButton = new javax.swing.JButton();
+        tratamentoConsultaLabel = new javax.swing.JLabel();
+        tratamentoConsultaComboBox = new javax.swing.JComboBox<>();
+        veterinarioConsultaComboBox = new javax.swing.JComboBox<>();
+        diaConsultaSpinner = new javax.swing.JSpinner();
+        mesConsultaSpinner = new javax.swing.JSpinner();
+        anoConsultaSpinner = new javax.swing.JSpinner();
+        diaConsultaLabel = new javax.swing.JLabel();
+        mesConsultaLabel = new javax.swing.JLabel();
+        anoConsultaLabel = new javax.swing.JLabel();
+        relatoCadastrarConsultaScrollPane = new javax.swing.JScrollPane();
+        relatoConsultaTextArea = new javax.swing.JTextArea();
+        consultaScrollPane = new javax.swing.JScrollPane();
+        consultaTable = new javax.swing.JTable();
+        examePanel = new javax.swing.JPanel();
+        exameTabbedPane = new javax.swing.JTabbedPane();
+        cadastrarExamePanel = new javax.swing.JPanel();
+        descricaoExameLabel = new javax.swing.JLabel();
+        consultaExameLabel = new javax.swing.JLabel();
+        cadastrarExameButton = new javax.swing.JButton();
+        consultaExameComboBox = new javax.swing.JComboBox<>();
+        descricaoCadastrarExamePane = new javax.swing.JScrollPane();
+        descricaoExameTextArea = new javax.swing.JTextArea();
+        exameScrollPane = new javax.swing.JScrollPane();
+        exameTable = new javax.swing.JTable();
+        tratamentoPanel = new javax.swing.JPanel();
+        tratamentoTabbedPane = new javax.swing.JTabbedPane();
+        cadastrarTratamentoPanel = new javax.swing.JPanel();
+        dataFimTratamentoLabel = new javax.swing.JLabel();
+        animalTratamentoLabel = new javax.swing.JLabel();
+        animalTratamentoComboBox = new javax.swing.JComboBox<>();
+        dataInicioLabel = new javax.swing.JLabel();
+        cadastrarTratamentoButton = new javax.swing.JButton();
+        diaFimTratamentoSpinner = new javax.swing.JSpinner();
+        diaFimTratamentoLabel = new javax.swing.JLabel();
+        mesFimTratamentoLabel = new javax.swing.JLabel();
+        mesFimTratamentoSpinner = new javax.swing.JSpinner();
+        anoFimTratamentoLabel = new javax.swing.JLabel();
+        anoFimTratamentoSpinner = new javax.swing.JSpinner();
+        diaInicioTratamentoSpinner = new javax.swing.JSpinner();
+        diaInicioTratamentoLabel = new javax.swing.JLabel();
+        mesInicioTratamentoLabel = new javax.swing.JLabel();
+        mesInicioTratamentoSpinner = new javax.swing.JSpinner();
+        anoInicioTratamentoLabel = new javax.swing.JLabel();
+        anoInicioTratamentoSpinner = new javax.swing.JSpinner();
+        tratamentoScrollPane = new javax.swing.JScrollPane();
+        tratamentoTable = new javax.swing.JTable();
+        logoIcon = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         nomeClienteLabel.setText("Nome Cliente");
 
-        nomeClienteTextField.setText("João da Silva");
-
         cepClienteLabel.setText("CEP Cliente");
-
-        cepClienteTextField.setText("9999-999");
 
         enderecoClienteLabel.setText("Endereço Cliente");
 
-        enderecoClienteTextField.setText("Rua tal");
-
         telefoneClienteLabel.setText("Telefone Cliente");
-
-        telefoneClienteTextField.setText("(19) 99999-9999");
-
-        emailClienteTextField.setText("email@exemplo.com");
 
         emailClienteLabel.setText("Email Cliente");
 
         cadastrarClienteButton.setText("Cadastrar");
 
-        GroupLayout cadastrarClientePanelLayout = new GroupLayout(cadastrarClientePanel);
+        javax.swing.GroupLayout cadastrarClientePanelLayout = new javax.swing.GroupLayout(cadastrarClientePanel);
         cadastrarClientePanel.setLayout(cadastrarClientePanelLayout);
         cadastrarClientePanelLayout.setHorizontalGroup(
-            cadastrarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(cadastrarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addGroup(GroupLayout.Alignment.TRAILING, cadastrarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addComponent(emailClienteTextField, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                        .addGroup(GroupLayout.Alignment.TRAILING, cadastrarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(telefoneClienteTextField, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                            .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
-                                .addGap(98, 98, 98)
-                                .addComponent(telefoneClienteLabel)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 113, GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(GroupLayout.Alignment.TRAILING, cadastrarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addGroup(cadastrarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                .addComponent(enderecoClienteTextField, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                                .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
-                                    .addGap(98, 98, 98)
-                                    .addComponent(enderecoClienteLabel)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 113, GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(cepClienteTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nomeClienteTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
-                            .addGap(107, 107, 107)
-                            .addGroup(cadastrarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                .addComponent(nomeClienteLabel)
-                                .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
-                                    .addGap(6, 6, 6)
-                                    .addComponent(cepClienteLabel))
-                                .addComponent(emailClienteLabel))
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 109, GroupLayout.PREFERRED_SIZE)))
+                .addGroup(cadastrarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
-                        .addGap(93, 93, 93)
-                        .addComponent(cadastrarClienteButton, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 108, GroupLayout.PREFERRED_SIZE)))
+                        .addGap(152, 152, 152)
+                        .addComponent(cadastrarClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(cadastrarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(emailClienteLabel))
+                            .addGroup(cadastrarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(emailClienteTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(telefoneClienteTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastrarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(enderecoClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cepClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nomeClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addGroup(cadastrarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(cepClienteLabel)
+                                            .addComponent(enderecoClienteLabel)
+                                            .addComponent(telefoneClienteLabel)))))))
+                    .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(nomeClienteLabel)))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
         cadastrarClientePanelLayout.setVerticalGroup(
-            cadastrarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarClientePanelLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(35, 35, 35)
                 .addComponent(nomeClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeClienteTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomeClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cepClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cepClienteTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cepClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(enderecoClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(enderecoClienteTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(enderecoClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(telefoneClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(telefoneClienteTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(telefoneClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailClienteTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cadastrarClienteButton, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(emailClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cadastrarClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(249, Short.MAX_VALUE))
         );
 
         clienteTabbedPane.addTab("Cadastrar Cliente", cadastrarClientePanel);
 
         atualizarClienteLabel.setText("Cliente");
 
-        atualizarClienteComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        atualizarClienteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
         atualizarClienteComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 atualizarClienteComboBoxActionPerformed(evt);
             }
         });
 
         atualizarNomeClienteLabel.setText("Nome Cliente");
 
-        atualizarNomeClienteTextField.setText("João da Silva");
+        atualizarNomeClienteTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atualizarNomeClienteTextFieldActionPerformed(evt);
+            }
+        });
 
         atualizarCepClienteLabel.setText("CEP Cliente");
 
-        atualizarCepClienteTextField.setText("9999-999");
-
         atualizarEnderecoClienteLabel.setText("Endereço Cliente");
-
-        atualizarEnderecoClienteTextField.setText("Rua tal");
 
         atualizarTelefoneClienteLabel.setText("Telefone Cliente");
 
-        atualizarTelefoneClienteTextField.setText("(19) 99999-9999");
-
         atualizarEmailClienteLabel.setText("Email Cliente");
-
-        atualizarEmailClienteTextField.setText("email@exemplo.com");
 
         atualizarClienteButton.setText("Atualizar");
 
-        GroupLayout atualizarClientePanelLayout = new GroupLayout(atualizarClientePanel);
+        javax.swing.GroupLayout atualizarClientePanelLayout = new javax.swing.GroupLayout(atualizarClientePanel);
         atualizarClientePanel.setLayout(atualizarClientePanelLayout);
         atualizarClientePanelLayout.setHorizontalGroup(
-            atualizarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(atualizarClientePanelLayout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(atualizarClienteLabel)
-                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(GroupLayout.Alignment.TRAILING, atualizarClientePanelLayout.createSequentialGroup()
+            atualizarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, atualizarClientePanelLayout.createSequentialGroup()
                 .addContainerGap(61, Short.MAX_VALUE)
-                .addGroup(atualizarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                    .addComponent(atualizarClienteComboBox, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                    .addGroup(atualizarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addGroup(GroupLayout.Alignment.TRAILING, atualizarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(atualizarEmailClienteTextField, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                            .addGroup(GroupLayout.Alignment.TRAILING, atualizarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                .addComponent(atualizarTelefoneClienteTextField, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                                .addGroup(atualizarClientePanelLayout.createSequentialGroup()
-                                    .addGap(98, 98, 98)
-                                    .addComponent(atualizarTelefoneClienteLabel)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 113, GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(GroupLayout.Alignment.TRAILING, atualizarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                .addGroup(atualizarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                    .addComponent(atualizarEnderecoClienteTextField, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(atualizarClientePanelLayout.createSequentialGroup()
-                                        .addGap(98, 98, 98)
-                                        .addComponent(atualizarEnderecoClienteLabel)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 113, GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(atualizarCepClienteTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(atualizarNomeClienteTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE))
+                .addGroup(atualizarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(atualizarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(atualizarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(atualizarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(atualizarEmailClienteTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(atualizarTelefoneClienteTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, atualizarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(atualizarEnderecoClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(atualizarCepClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(atualizarNomeClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(atualizarClientePanelLayout.createSequentialGroup()
-                                .addGap(107, 107, 107)
-                                .addGroup(atualizarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                    .addComponent(atualizarNomeClienteLabel)
-                                    .addGroup(atualizarClientePanelLayout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(atualizarCepClienteLabel))
-                                    .addComponent(atualizarEmailClienteLabel))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 109, GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(atualizarClientePanelLayout.createSequentialGroup()
-                            .addGap(93, 93, 93)
-                            .addComponent(atualizarClienteButton, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 108, GroupLayout.PREFERRED_SIZE))))
+                                .addGap(93, 93, 93)
+                                .addComponent(atualizarClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(atualizarClientePanelLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(atualizarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(atualizarNomeClienteLabel)
+                            .addComponent(atualizarCepClienteLabel)
+                            .addComponent(atualizarEnderecoClienteLabel)
+                            .addComponent(atualizarTelefoneClienteLabel)
+                            .addComponent(atualizarEmailClienteLabel))))
                 .addGap(52, 52, 52))
+            .addGroup(atualizarClientePanelLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(atualizarClienteLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         atualizarClientePanelLayout.setVerticalGroup(
-            atualizarClientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            atualizarClientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(atualizarClientePanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(31, 31, 31)
                 .addComponent(atualizarClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarClienteComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarNomeClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarNomeClienteTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarNomeClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarCepClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarCepClienteTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarCepClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarEnderecoClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarEnderecoClienteTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarEnderecoClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarTelefoneClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarTelefoneClienteTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarTelefoneClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarEmailClienteLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarEmailClienteTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarEmailClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(atualizarClienteButton, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addComponent(atualizarClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(197, Short.MAX_VALUE))
         );
 
         clienteTabbedPane.addTab("Atualizar cliente", atualizarClientePanel);
 
-        clienteTable.setModel(new ClienteTableModel());
+        clienteTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Nome", "CEP", "Endereço", "Telefone", "Email"
+            }
+        ));
         clienteScrollPane.setViewportView(clienteTable);
 
-        GroupLayout clientePanelLayout = new GroupLayout(clientePanel);
+        javax.swing.GroupLayout clientePanelLayout = new javax.swing.GroupLayout(clientePanel);
         clientePanel.setLayout(clientePanelLayout);
         clientePanelLayout.setHorizontalGroup(
-            clientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, clientePanelLayout.createSequentialGroup()
+            clientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(clienteScrollPane, GroupLayout.DEFAULT_SIZE, 638, Short.MAX_VALUE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(clienteTabbedPane, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addComponent(clienteScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 849, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(clienteTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         clientePanelLayout.setVerticalGroup(
-            clientePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            clientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(clienteTabbedPane)
             .addGroup(clientePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(clienteScrollPane, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(clienteScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Cliente", clientePanel);
@@ -413,470 +393,459 @@ public class Frame extends JFrame {
 
         sexoAnimalLabel.setText("Sexo Animal");
 
-        nomeAnimalTextField.setText("Rex");
-
         cadastrarAnimalButton.setText("Cadastrar");
 
-        sexoAnimalComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "M", "F" }));
+        sexoAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "F" }));
         sexoAnimalComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sexoAnimalComboBoxActionPerformed(evt);
             }
         });
 
-        especieAnimalComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        especieAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
         especieAnimalComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 especieAnimalComboBoxActionPerformed(evt);
             }
         });
 
-        tutorComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        tutorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
         tutorComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tutorComboBoxActionPerformed(evt);
             }
         });
 
-        GroupLayout cadastrarAnimalPanelLayout = new GroupLayout(cadastrarAnimalPanel);
+        javax.swing.GroupLayout cadastrarAnimalPanelLayout = new javax.swing.GroupLayout(cadastrarAnimalPanel);
         cadastrarAnimalPanel.setLayout(cadastrarAnimalPanelLayout);
         cadastrarAnimalPanelLayout.setHorizontalGroup(
-            cadastrarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(cadastrarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(nomeAnimalTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(especieAnimalComboBox, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tutorComboBox, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
+                .addGroup(cadastrarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addGroup(cadastrarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(tutorLabel)
+                        .addGap(65, 65, 65)
+                        .addGroup(cadastrarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(nomeAnimalTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                            .addComponent(especieAnimalComboBox, 0, 300, Short.MAX_VALUE)
+                            .addComponent(tutorComboBox, 0, 300, Short.MAX_VALUE)
                             .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
-                                .addGap(39, 39, 39)
-                                .addComponent(especieAnimalLabel))))
+                                .addGap(94, 94, 94)
+                                .addComponent(cadastrarAnimalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(especieAnimalLabel))
+                            .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(nomeAnimalLabel))
+                            .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(idadeAnimalLabel))
+                            .addComponent(idadeAnimalSpinner)
+                            .addComponent(sexoAnimalComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(sexoAnimalLabel)))
                     .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(idadeAnimalLabel))
-                    .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(nomeAnimalLabel))
-                    .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addGroup(cadastrarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(idadeAnimalSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addGroup(cadastrarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                .addComponent(sexoAnimalLabel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(sexoAnimalComboBox, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addComponent(cadastrarAnimalButton, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)))
+                        .addGap(73, 73, 73)
+                        .addComponent(tutorLabel)))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
         cadastrarAnimalPanelLayout.setVerticalGroup(
-            cadastrarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(tutorLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tutorComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tutorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(especieAnimalLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(especieAnimalComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
+                .addComponent(especieAnimalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomeAnimalLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeAnimalTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomeAnimalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(idadeAnimalLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(idadeAnimalSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(idadeAnimalSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(sexoAnimalLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sexoAnimalComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cadastrarAnimalButton, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sexoAnimalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cadastrarAnimalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         animalTabbedPane.addTab("Cadastrar Animal", cadastrarAnimalPanel);
 
         nomeEspecieLabel.setText("Nome Espécie");
 
-        nomeEspecieTextField.setText("Poodle");
-
         cadastrarEspecieButton.setText("Cadastrar");
 
-        GroupLayout cadastrarEspeciesPanelLayout = new GroupLayout(cadastrarEspeciesPanel);
+        javax.swing.GroupLayout cadastrarEspeciesPanelLayout = new javax.swing.GroupLayout(cadastrarEspeciesPanel);
         cadastrarEspeciesPanel.setLayout(cadastrarEspeciesPanelLayout);
         cadastrarEspeciesPanelLayout.setHorizontalGroup(
-            cadastrarEspeciesPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(cadastrarEspeciesPanelLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addGroup(cadastrarEspeciesPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(nomeEspecieTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                    .addGroup(cadastrarEspeciesPanelLayout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(nomeEspecieLabel))
+            cadastrarEspeciesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastrarEspeciesPanelLayout.createSequentialGroup()
+                .addContainerGap(62, Short.MAX_VALUE)
+                .addGroup(cadastrarEspeciesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nomeEspecieTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(cadastrarEspeciesPanelLayout.createSequentialGroup()
                         .addGap(93, 93, 93)
-                        .addComponent(cadastrarEspecieButton, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                        .addComponent(cadastrarEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(58, 58, 58))
+            .addGroup(cadastrarEspeciesPanelLayout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(nomeEspecieLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         cadastrarEspeciesPanelLayout.setVerticalGroup(
-            cadastrarEspeciesPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarEspeciesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarEspeciesPanelLayout.createSequentialGroup()
-                .addGap(92, 92, 92)
+                .addGap(32, 32, 32)
                 .addComponent(nomeEspecieLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeEspecieTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cadastrarEspecieButton, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(189, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomeEspecieTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cadastrarEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         animalTabbedPane.addTab("Cadastrar Especies", cadastrarEspeciesPanel);
 
         atualizarAnimalLabel.setText("Animal");
 
-        atualizarAnimalComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        atualizarAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
         atualizarAnimalComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 atualizarAnimalComboBoxActionPerformed(evt);
             }
         });
 
         atualizarTutorLabel.setText("Cliente tutor do Animal");
 
-        atualizarTutorComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        atualizarTutorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
         atualizarTutorComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 atualizarTutorComboBoxActionPerformed(evt);
             }
         });
 
         atualizarEspecieLabel.setText("Espécie");
 
-        atualizarEspecieComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        atualizarEspecieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
         atualizarEspecieComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 atualizarEspecieComboBoxActionPerformed(evt);
             }
         });
 
         atualizarNomeAnimalLabel.setText("Nome Animal");
 
-        atualizarNomeAnimalTextField.setText("Rex");
-
         atualizarIdadeAnimalLabel.setText("Idade Animal");
 
         atualizarSexoAnimalLabel.setText("Sexo Animal");
 
-        atualizarSexoAnimalComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "M", "F" }));
+        atualizarSexoAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "F" }));
 
         atualizarAnimalButton.setText("Atualizar");
 
-        GroupLayout atualizarAnimalPanelLayout = new GroupLayout(atualizarAnimalPanel);
+        javax.swing.GroupLayout atualizarAnimalPanelLayout = new javax.swing.GroupLayout(atualizarAnimalPanel);
         atualizarAnimalPanel.setLayout(atualizarAnimalPanelLayout);
         atualizarAnimalPanelLayout.setHorizontalGroup(
-            atualizarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            atualizarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
-                .addGroup(atualizarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(atualizarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
                         .addGap(55, 55, 55)
-                        .addGroup(atualizarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                            .addComponent(atualizarTutorComboBox, 0, 300, Short.MAX_VALUE)
-                            .addComponent(atualizarNomeAnimalTextField, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                            .addComponent(atualizarEspecieComboBox, 0, 300, Short.MAX_VALUE)
-                            .addComponent(atualizarAnimalComboBox, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(atualizarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(atualizarNomeAnimalTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                            .addComponent(atualizarEspecieComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 300, Short.MAX_VALUE)
+                            .addComponent(atualizarIdadeAnimalSpinner, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(atualizarTutorComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 300, Short.MAX_VALUE)
+                            .addComponent(atualizarAnimalComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(atualizarSexoAnimalComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, atualizarAnimalPanelLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(atualizarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(atualizarNomeAnimalLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(atualizarIdadeAnimalLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(atualizarSexoAnimalLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(atualizarTutorLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(atualizarEspecieLabel, javax.swing.GroupLayout.Alignment.LEADING)))))
                     .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(186, 186, 186)
-                        .addComponent(atualizarAnimalLabel))
+                        .addGap(154, 154, 154)
+                        .addComponent(atualizarAnimalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(atualizarTutorLabel))
-                    .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(185, 185, 185)
-                        .addComponent(atualizarEspecieLabel))
-                    .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(172, 172, 172)
-                        .addComponent(atualizarNomeAnimalLabel))
-                    .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(atualizarIdadeAnimalLabel))
-                    .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addGroup(atualizarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(atualizarIdadeAnimalSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addGroup(atualizarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                .addComponent(atualizarSexoAnimalLabel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(atualizarSexoAnimalComboBox, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(atualizarAnimalButton, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)))
+                        .addGap(64, 64, 64)
+                        .addComponent(atualizarAnimalLabel)))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
         atualizarAnimalPanelLayout.setVerticalGroup(
-            atualizarAnimalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            atualizarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(atualizarAnimalLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarAnimalComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarAnimalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarTutorLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarTutorComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarTutorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarEspecieLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(atualizarEspecieComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(atualizarEspecieComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarNomeAnimalLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarNomeAnimalTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarNomeAnimalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarIdadeAnimalLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarIdadeAnimalSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarIdadeAnimalSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarSexoAnimalLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarSexoAnimalComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarAnimalButton, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarSexoAnimalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(atualizarAnimalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         animalTabbedPane.addTab("Atualizar Animal", atualizarAnimalPanel);
 
-        animalTable.setModel(new AnimalTableModel());
-
+        animalTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Nome", "Tutor", "Idade", "Sexo", "Espécie"
+            }
+        ));
         animalScrollPane.setViewportView(animalTable);
 
-        GroupLayout animalPanelLayout = new GroupLayout(animalPanel);
+        javax.swing.GroupLayout animalPanelLayout = new javax.swing.GroupLayout(animalPanel);
         animalPanel.setLayout(animalPanelLayout);
         animalPanelLayout.setHorizontalGroup(
-            animalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, animalPanelLayout.createSequentialGroup()
+            animalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, animalPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(animalScrollPane, GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(animalTabbedPane, GroupLayout.PREFERRED_SIZE, 420, GroupLayout.PREFERRED_SIZE))
+                .addComponent(animalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(animalTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         animalPanelLayout.setVerticalGroup(
-            animalPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addComponent(animalTabbedPane, GroupLayout.PREFERRED_SIZE, 416, Short.MAX_VALUE)
+            animalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(animalTabbedPane)
             .addGroup(animalPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(animalScrollPane, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(animalScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Animal", animalPanel);
 
         nomeVeterinarioLabel.setText("Nome Veterinário");
 
-        nomeVeterinarioTextField.setText("João da Silva");
+        nomeVeterinarioTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeVeterinarioTextFieldActionPerformed(evt);
+            }
+        });
 
         cepVeterinarioLabel.setText("CEP Veterinário");
 
-        cepVeterinarioTextField.setText("9999-999");
-
         enderecoVeterinarioLabel.setText("Endereço Veterinário");
 
-        enderecoVeterinarioTextField.setText("Rua tal");
-
         telefoneVeterinarioLabel.setText("Telefone Veterinário");
-
-        telefoneVeterinarioTextField.setText("(19) 99999-9999");
-
-        emailVeterinarioTextField.setText("email@exemplo.com");
 
         emailVeterinarioLabel.setText("Email Veterinário");
 
         cadastrarVeterinarioButton.setText("Cadastrar");
 
-        GroupLayout cadastrarVeterinarioLayout = new GroupLayout(cadastrarVeterinario);
+        javax.swing.GroupLayout cadastrarVeterinarioLayout = new javax.swing.GroupLayout(cadastrarVeterinario);
         cadastrarVeterinario.setLayout(cadastrarVeterinarioLayout);
         cadastrarVeterinarioLayout.setHorizontalGroup(
-            cadastrarVeterinarioLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(cadastrarVeterinarioLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(cadastrarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(emailVeterinarioLabel))
+                        .addGap(56, 56, 56)
+                        .addGroup(cadastrarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(emailVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(telefoneVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cepVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nomeVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(enderecoVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(cadastrarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cepVeterinarioLabel)
+                                    .addComponent(enderecoVeterinarioLabel)
+                                    .addComponent(telefoneVeterinarioLabel)
+                                    .addComponent(emailVeterinarioLabel)))))
                     .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(cadastrarVeterinarioButton, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE))
+                        .addGap(158, 158, 158)
+                        .addComponent(cadastrarVeterinarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addComponent(nomeVeterinarioLabel))
-                    .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addComponent(cepVeterinarioLabel))
-                    .addComponent(emailVeterinarioTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(telefoneVeterinarioTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cepVeterinarioTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomeVeterinarioTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(enderecoVeterinarioTextField, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                    .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addComponent(telefoneVeterinarioLabel))
-                    .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(enderecoVeterinarioLabel)))
-                .addContainerGap(68, Short.MAX_VALUE))
+                        .addGap(64, 64, 64)
+                        .addComponent(nomeVeterinarioLabel)))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         cadastrarVeterinarioLayout.setVerticalGroup(
-            cadastrarVeterinarioLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, cadastrarVeterinarioLayout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
+            cadastrarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
                 .addComponent(nomeVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeVeterinarioTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomeVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cepVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cepVeterinarioTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cepVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(enderecoVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(enderecoVeterinarioTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(enderecoVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(telefoneVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(telefoneVeterinarioTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(telefoneVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailVeterinarioTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(emailVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(cadastrarVeterinarioButton, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addComponent(cadastrarVeterinarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(243, Short.MAX_VALUE))
         );
 
         veterinarioTabbedPane.addTab("Cadastrar Veterinário", cadastrarVeterinario);
 
-        atualizarVeterinarioComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
-        atualizarVeterinarioComboBox.addActionListener(this::atualizarVeterinarioComboBoxActionPerformed);
+        atualizarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        atualizarVeterinarioComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atualizarVeterinarioComboBoxActionPerformed(evt);
+            }
+        });
 
         atualizarVeterinarioLabel.setText("Veterinário");
 
         atualizarVeterinarioButton.setText("Atualizar");
 
-        atualizarEmailVeterinarioTextField.setText("email@exemplo.com");
-
         atualizarEmailVeterinarioLabel.setText("Email Veterinário");
-
-        atualizarTelefoneVeterinarioTextField.setText("(19) 99999-9999");
 
         atualizarTelefoneVeterinarioLabel.setText("Telefone Veterinário");
 
-        atualizarEnderecoVeterinarioTextField.setText("Rua tal");
-
         atualizarEnderecoVeterinarioLabel.setText("Endereço Veterinário");
-
-        atualizarCepVeterinarioTextField.setText("9999-999");
 
         atualizarCepVeterinarioLabel.setText("CEP Veterinário");
 
-        atualizarNomeVeterinarioTextField.setText("João da Silva");
-
         atualizarNomeVeterinarioLabel.setText("Nome Veterinário");
 
-        GroupLayout atualizarVeterinarioLayout = new GroupLayout(atualizarVeterinario);
+        javax.swing.GroupLayout atualizarVeterinarioLayout = new javax.swing.GroupLayout(atualizarVeterinario);
         atualizarVeterinario.setLayout(atualizarVeterinarioLayout);
         atualizarVeterinarioLayout.setHorizontalGroup(
-            atualizarVeterinarioLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            atualizarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addGroup(atualizarVeterinarioLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(atualizarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(atualizarVeterinarioLabel))
-                    .addGroup(atualizarVeterinarioLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                        .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
-                            .addGap(106, 106, 106)
-                            .addComponent(atualizarEmailVeterinarioLabel))
-                        .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
-                            .addGap(100, 100, 100)
-                            .addComponent(atualizarVeterinarioButton, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
-                            .addGap(103, 103, 103)
-                            .addComponent(atualizarNomeVeterinarioLabel))
-                        .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
-                            .addGap(109, 109, 109)
-                            .addComponent(atualizarCepVeterinarioLabel))
-                        .addComponent(atualizarEmailVeterinarioTextField)
-                        .addComponent(atualizarTelefoneVeterinarioTextField)
-                        .addComponent(atualizarCepVeterinarioTextField)
-                        .addComponent(atualizarNomeVeterinarioTextField)
-                        .addComponent(atualizarEnderecoVeterinarioTextField)
-                        .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
-                            .addGap(99, 99, 99)
-                            .addComponent(atualizarTelefoneVeterinarioLabel))
-                        .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
-                            .addGap(96, 96, 96)
-                            .addComponent(atualizarEnderecoVeterinarioLabel))
-                        .addComponent(atualizarVeterinarioComboBox, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(64, Short.MAX_VALUE))
+                        .addGap(156, 156, 156)
+                        .addComponent(atualizarVeterinarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addGroup(atualizarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(atualizarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(atualizarEmailVeterinarioTextField)
+                                .addComponent(atualizarTelefoneVeterinarioTextField)
+                                .addComponent(atualizarCepVeterinarioTextField)
+                                .addComponent(atualizarNomeVeterinarioTextField)
+                                .addComponent(atualizarEnderecoVeterinarioTextField)
+                                .addComponent(atualizarVeterinarioComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(atualizarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(atualizarNomeVeterinarioLabel)
+                                    .addComponent(atualizarCepVeterinarioLabel)
+                                    .addComponent(atualizarEnderecoVeterinarioLabel)
+                                    .addComponent(atualizarTelefoneVeterinarioLabel)
+                                    .addComponent(atualizarEmailVeterinarioLabel)))))
+                    .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(atualizarVeterinarioLabel)))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         atualizarVeterinarioLayout.setVerticalGroup(
-            atualizarVeterinarioLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, atualizarVeterinarioLayout.createSequentialGroup()
-                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            atualizarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
                 .addComponent(atualizarVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarVeterinarioComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarVeterinarioComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarNomeVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarNomeVeterinarioTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
+                .addComponent(atualizarNomeVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarCepVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarCepVeterinarioTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarCepVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarEnderecoVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarEnderecoVeterinarioTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarEnderecoVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarTelefoneVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarTelefoneVeterinarioTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarTelefoneVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarEmailVeterinarioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarEmailVeterinarioTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarEmailVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(atualizarVeterinarioButton, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(atualizarVeterinarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(192, Short.MAX_VALUE))
         );
 
         veterinarioTabbedPane.addTab("Atualizar Veterinário", atualizarVeterinario);
 
-        veterinarioTable.setModel(new VeterinarioTableModel());
+        veterinarioTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Nome", "CEP", "Endereço", "Telefone", "Email"
+            }
+        ));
         veterinarioScrollPane.setViewportView(veterinarioTable);
+        if (veterinarioTable.getColumnModel().getColumnCount() > 0) {
+            veterinarioTable.getColumnModel().getColumn(3).setHeaderValue("Veterinário");
+            veterinarioTable.getColumnModel().getColumn(4).setHeaderValue("Tratamento");
+            veterinarioTable.getColumnModel().getColumn(5).setHeaderValue("Email");
+        }
 
-        GroupLayout veterinarioPanelLayout = new GroupLayout(veterinarioPanel);
+        javax.swing.GroupLayout veterinarioPanelLayout = new javax.swing.GroupLayout(veterinarioPanel);
         veterinarioPanel.setLayout(veterinarioPanelLayout);
         veterinarioPanelLayout.setHorizontalGroup(
-            veterinarioPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, veterinarioPanelLayout.createSequentialGroup()
+            veterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, veterinarioPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(veterinarioScrollPane, GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(veterinarioTabbedPane, GroupLayout.PREFERRED_SIZE, 420, GroupLayout.PREFERRED_SIZE))
+                .addComponent(veterinarioScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(veterinarioTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         veterinarioPanelLayout.setVerticalGroup(
-            veterinarioPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            veterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(veterinarioTabbedPane)
             .addGroup(veterinarioPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(veterinarioScrollPane, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(veterinarioScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Veterinário", veterinarioPanel);
@@ -891,19 +860,25 @@ public class Frame extends JFrame {
 
         tratamentoConsultaLabel.setText("Tratamento");
 
-        tratamentoConsultaComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        tratamentoConsultaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
         tratamentoConsultaComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tratamentoConsultaComboBoxActionPerformed(evt);
             }
         });
 
-        veterinarioConsultaComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        veterinarioConsultaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
         veterinarioConsultaComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 veterinarioConsultaComboBoxActionPerformed(evt);
             }
         });
+
+        diaConsultaSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
+
+        mesConsultaSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
+
+        anoConsultaSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
 
         diaConsultaLabel.setText("Dia");
 
@@ -913,108 +888,112 @@ public class Frame extends JFrame {
 
         relatoConsultaTextArea.setColumns(20);
         relatoConsultaTextArea.setRows(5);
-        relatoConsultaTextArea.setText("Relato da consulta");
         relatoCadastrarConsultaScrollPane.setViewportView(relatoConsultaTextArea);
 
-        GroupLayout cadastrarConsultaLayout = new GroupLayout(cadastrarConsulta);
+        javax.swing.GroupLayout cadastrarConsultaLayout = new javax.swing.GroupLayout(cadastrarConsulta);
         cadastrarConsulta.setLayout(cadastrarConsultaLayout);
         cadastrarConsultaLayout.setHorizontalGroup(
-            cadastrarConsultaLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastrarConsultaLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(tratamentoConsultaComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(relatoCadastrarConsultaScrollPane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, cadastrarConsultaLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(relatoConsultaLabel)
+                            .addComponent(tratamentoConsultaLabel)
+                            .addComponent(veterinarioConsultaLabel)
+                            .addComponent(dataConsultaLabel)))
+                    .addComponent(veterinarioConsultaComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(cadastrarConsultaLayout.createSequentialGroup()
-                .addGroup(cadastrarConsultaLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cadastrarConsultaLayout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addComponent(diaConsultaLabel)
-                        .addGap(56, 56, 56)
-                        .addGroup(cadastrarConsultaLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                            .addComponent(mesConsultaLabel)
-                            .addComponent(dataConsultaLabel))
-                        .addGap(53, 53, 53)
-                        .addComponent(anoConsultaLabel))
+                        .addGap(155, 155, 155)
+                        .addComponent(cadastrarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cadastrarConsultaLayout.createSequentialGroup()
-                        .addGap(167, 167, 167)
-                        .addComponent(relatoConsultaLabel)))
-                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(GroupLayout.Alignment.TRAILING, cadastrarConsultaLayout.createSequentialGroup()
-                .addContainerGap(64, Short.MAX_VALUE)
-                .addGroup(cadastrarConsultaLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addGroup(GroupLayout.Alignment.TRAILING, cadastrarConsultaLayout.createSequentialGroup()
-                        .addComponent(diaConsultaSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(mesConsultaSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(anoConsultaSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addGap(104, 104, 104))
-                    .addGroup(GroupLayout.Alignment.TRAILING, cadastrarConsultaLayout.createSequentialGroup()
-                        .addGroup(cadastrarConsultaLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addGroup(GroupLayout.Alignment.TRAILING, cadastrarConsultaLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                .addComponent(tratamentoConsultaComboBox, 0, 300, Short.MAX_VALUE)
-                                .addComponent(veterinarioConsultaComboBox, 0, 300, Short.MAX_VALUE)
-                                .addGroup(cadastrarConsultaLayout.createSequentialGroup()
-                                    .addGap(119, 119, 119)
-                                    .addComponent(veterinarioConsultaLabel))
-                                .addGroup(cadastrarConsultaLayout.createSequentialGroup()
-                                    .addGap(115, 115, 115)
-                                    .addComponent(tratamentoConsultaLabel))
-                                .addComponent(relatoCadastrarConsultaScrollPane))
-                            .addGroup(GroupLayout.Alignment.TRAILING, cadastrarConsultaLayout.createSequentialGroup()
-                                .addComponent(cadastrarConsultaButton, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
-                                .addGap(100, 100, 100)))
-                        .addGap(56, 56, 56))))
+                        .addGap(75, 75, 75)
+                        .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(diaConsultaLabel)
+                            .addComponent(diaConsultaSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(mesConsultaSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                            .addComponent(mesConsultaLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(anoConsultaSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                            .addComponent(anoConsultaLabel))))
+                .addGap(117, 117, 117))
         );
         cadastrarConsultaLayout.setVerticalGroup(
-            cadastrarConsultaLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarConsultaLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(dataConsultaLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(cadastrarConsultaLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                .addGap(47, 47, 47)
+                .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(diaConsultaLabel)
                     .addComponent(mesConsultaLabel)
-                    .addComponent(anoConsultaLabel))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cadastrarConsultaLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(diaConsultaSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mesConsultaSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(anoConsultaSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(anoConsultaLabel)
+                    .addComponent(dataConsultaLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(diaConsultaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mesConsultaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(anoConsultaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(relatoConsultaLabel)
                 .addGap(11, 11, 11)
-                .addComponent(relatoCadastrarConsultaScrollPane, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(relatoCadastrarConsultaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tratamentoConsultaLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tratamentoConsultaComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tratamentoConsultaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(veterinarioConsultaLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(veterinarioConsultaComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cadastrarConsultaButton, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(veterinarioConsultaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cadastrarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(212, Short.MAX_VALUE))
         );
 
         consultaTabbedPane.addTab("Cadastrar Consulta", cadastrarConsulta);
 
-        consultaTable.setModel(new ConsultaTableModel());
+        consultaTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Data", "Relato", "Veterinário", "Tratamento"
+            }
+        ));
         consultaScrollPane.setViewportView(consultaTable);
+        if (consultaTable.getColumnModel().getColumnCount() > 0) {
+            consultaTable.getColumnModel().getColumn(3).setHeaderValue("Veterinário");
+            consultaTable.getColumnModel().getColumn(4).setHeaderValue("Tratamento");
+        }
 
-        GroupLayout consultaPanelLayout = new GroupLayout(consultaPanel);
+        javax.swing.GroupLayout consultaPanelLayout = new javax.swing.GroupLayout(consultaPanel);
         consultaPanel.setLayout(consultaPanelLayout);
         consultaPanelLayout.setHorizontalGroup(
-            consultaPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, consultaPanelLayout.createSequentialGroup()
+            consultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, consultaPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(consultaScrollPane, GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(consultaTabbedPane, GroupLayout.PREFERRED_SIZE, 420, GroupLayout.PREFERRED_SIZE))
+                .addComponent(consultaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(consultaTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         consultaPanelLayout.setVerticalGroup(
-            consultaPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            consultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(consultaTabbedPane)
             .addGroup(consultaPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(consultaScrollPane, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(consultaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Consulta", consultaPanel);
@@ -1025,77 +1004,86 @@ public class Frame extends JFrame {
 
         cadastrarExameButton.setText("Cadastrar");
 
-        consultaExameComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        consultaExameComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
         consultaExameComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 consultaExameComboBoxActionPerformed(evt);
             }
         });
 
         descricaoExameTextArea.setColumns(20);
         descricaoExameTextArea.setRows(5);
-        descricaoExameTextArea.setText("Descrição do exame");
         descricaoCadastrarExamePane.setViewportView(descricaoExameTextArea);
 
-        GroupLayout cadastrarExamePanelLayout = new GroupLayout(cadastrarExamePanel);
+        javax.swing.GroupLayout cadastrarExamePanelLayout = new javax.swing.GroupLayout(cadastrarExamePanel);
         cadastrarExamePanel.setLayout(cadastrarExamePanelLayout);
         cadastrarExamePanelLayout.setHorizontalGroup(
-            cadastrarExamePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, cadastrarExamePanelLayout.createSequentialGroup()
+            cadastrarExamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cadastrarExamePanelLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(descricaoExameLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastrarExamePanelLayout.createSequentialGroup()
                 .addContainerGap(62, Short.MAX_VALUE)
-                .addGroup(cadastrarExamePanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                    .addComponent(descricaoCadastrarExamePane, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                    .addGroup(cadastrarExamePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addGroup(cadastrarExamePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(consultaExameComboBox, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                            .addGroup(GroupLayout.Alignment.TRAILING, cadastrarExamePanelLayout.createSequentialGroup()
-                                .addComponent(cadastrarExameButton, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
-                                .addGap(103, 103, 103)))
+                .addGroup(cadastrarExamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cadastrarExamePanelLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(consultaExameLabel))
+                    .addGroup(cadastrarExamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(descricaoCadastrarExamePane, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(consultaExameComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(cadastrarExamePanelLayout.createSequentialGroup()
-                            .addGap(122, 122, 122)
-                            .addComponent(consultaExameLabel))
-                        .addGroup(cadastrarExamePanelLayout.createSequentialGroup()
-                            .addGap(118, 118, 118)
-                            .addComponent(descricaoExameLabel))))
+                            .addComponent(cadastrarExameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(103, 103, 103))))
                 .addGap(58, 58, 58))
         );
         cadastrarExamePanelLayout.setVerticalGroup(
-            cadastrarExamePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarExamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarExamePanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(descricaoExameLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(descricaoCadastrarExamePane, GroupLayout.PREFERRED_SIZE, 171, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(descricaoCadastrarExamePane, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(consultaExameLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(consultaExameComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cadastrarExameButton, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(consultaExameComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cadastrarExameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(228, Short.MAX_VALUE))
         );
 
         exameTabbedPane.addTab("Cadastrar Exame", cadastrarExamePanel);
 
-        exameTable.setModel(new ExameTableModel());
+        exameTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "ID", "Descrição", "Consulta"
+            }
+        ));
         exameScrollPane.setViewportView(exameTable);
 
-        GroupLayout examePanelLayout = new GroupLayout(examePanel);
+        javax.swing.GroupLayout examePanelLayout = new javax.swing.GroupLayout(examePanel);
         examePanel.setLayout(examePanelLayout);
         examePanelLayout.setHorizontalGroup(
-            examePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, examePanelLayout.createSequentialGroup()
+            examePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, examePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(exameScrollPane, GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(exameTabbedPane, GroupLayout.PREFERRED_SIZE, 420, GroupLayout.PREFERRED_SIZE))
+                .addComponent(exameScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(exameTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         examePanelLayout.setVerticalGroup(
-            examePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            examePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(exameTabbedPane)
             .addGroup(examePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(exameScrollPane, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(exameScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Exame", examePanel);
@@ -1104,9 +1092,9 @@ public class Frame extends JFrame {
 
         animalTratamentoLabel.setText("Animal");
 
-        animalTratamentoComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        animalTratamentoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
         animalTratamentoComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 animalTratamentoComboBoxActionPerformed(evt);
             }
         });
@@ -1115,155 +1103,171 @@ public class Frame extends JFrame {
 
         cadastrarTratamentoButton.setText("Cadastrar");
 
+        diaFimTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
+
         diaFimTratamentoLabel.setText("Dia");
 
         mesFimTratamentoLabel.setText("Mês");
 
+        mesFimTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
+
         anoFimTratamentoLabel.setText("Ano");
+
+        anoFimTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
+
+        diaInicioTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
 
         diaInicioTratamentoLabel.setText("Dia");
 
         mesInicioTratamentoLabel.setText("Mês");
 
+        mesInicioTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
+
         anoInicioTratamentoLabel.setText("Ano");
 
-        GroupLayout cadastrarTratamentoPanelLayout = new GroupLayout(cadastrarTratamentoPanel);
+        anoInicioTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
+
+        javax.swing.GroupLayout cadastrarTratamentoPanelLayout = new javax.swing.GroupLayout(cadastrarTratamentoPanel);
         cadastrarTratamentoPanel.setLayout(cadastrarTratamentoPanelLayout);
         cadastrarTratamentoPanelLayout.setHorizontalGroup(
-            cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, cadastrarTratamentoPanelLayout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
-                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                        .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGap(6, 6, 6)
+                        .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                                .addGap(55, 55, 55)
-                                .addComponent(diaFimTratamentoLabel)
-                                .addGap(56, 56, 56)
-                                .addComponent(mesFimTratamentoLabel)
-                                .addGap(53, 53, 53)
-                                .addComponent(anoFimTratamentoLabel))
-                            .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                    .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                        .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                                            .addGap(20, 20, 20)
-                                            .addComponent(diaInicioTratamentoLabel)
-                                            .addGap(56, 56, 56)
-                                            .addComponent(mesInicioTratamentoLabel)
-                                            .addGap(53, 53, 53)
-                                            .addComponent(anoInicioTratamentoLabel)
-                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 24, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(GroupLayout.Alignment.TRAILING, cadastrarTratamentoPanelLayout.createSequentialGroup()
-                                            .addComponent(diaInicioTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                                .addComponent(dataInicioLabel)
-                                                .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                                                    .addComponent(mesInicioTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                                    .addComponent(anoInicioTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                                        .addGap(85, 85, 85)
-                                        .addComponent(dataFimTratamentoLabel))
+                                        .addComponent(dataInicioLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                                        .addComponent(diaInicioTratamentoLabel))
+                                    .addComponent(diaInicioTratamentoSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                                        .addComponent(diaFimTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(mesFimTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(anoFimTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 49, GroupLayout.PREFERRED_SIZE))
-                    .addGroup(GroupLayout.Alignment.TRAILING, cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                            .addGap(127, 127, 127)
-                            .addComponent(animalTratamentoLabel))
-                        .addComponent(animalTratamentoComboBox, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE))
-                    .addGroup(GroupLayout.Alignment.TRAILING, cadastrarTratamentoPanelLayout.createSequentialGroup()
-                        .addComponent(cadastrarTratamentoButton, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
-                        .addGap(104, 104, 104)))
-                .addGap(55, 55, 55))
+                                        .addGap(82, 82, 82)
+                                        .addComponent(mesInicioTratamentoLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(anoInicioTratamentoLabel))
+                                    .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(mesInicioTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(anoInicioTratamentoSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))
+                            .addComponent(animalTratamentoLabel)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastrarTratamentoPanelLayout.createSequentialGroup()
+                                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
+                                        .addComponent(dataFimTratamentoLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(diaFimTratamentoLabel))
+                                    .addComponent(diaFimTratamentoSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(mesFimTratamentoSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(mesFimTratamentoLabel))
+                                .addGap(6, 6, 6)
+                                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(anoFimTratamentoSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(anoFimTratamentoLabel)))))
+                    .addComponent(animalTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(cadastrarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43))
         );
         cadastrarTratamentoPanelLayout.setVerticalGroup(
-            cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(dataInicioLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(diaInicioTratamentoLabel)
+                .addGap(57, 57, 57)
+                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(mesInicioTratamentoLabel)
-                    .addComponent(anoInicioTratamentoLabel))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(diaInicioTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mesInicioTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(anoInicioTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(dataFimTratamentoLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(anoInicioTratamentoLabel)
+                    .addComponent(dataInicioLabel)
+                    .addComponent(diaInicioTratamentoLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(diaInicioTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mesInicioTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(anoInicioTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(diaFimTratamentoLabel)
                     .addComponent(mesFimTratamentoLabel)
-                    .addComponent(anoFimTratamentoLabel))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(diaFimTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mesFimTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(anoFimTratamentoSpinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(anoFimTratamentoLabel)
+                    .addComponent(dataFimTratamentoLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(diaFimTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mesFimTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(anoFimTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(animalTratamentoLabel)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(animalTratamentoComboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cadastrarTratamentoButton, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(animalTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cadastrarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(315, Short.MAX_VALUE))
         );
 
         tratamentoTabbedPane.addTab("Cadastrar Tratamento", cadastrarTratamentoPanel);
 
-        tratamentoTable.setModel(new TratamentoTableModel());
+        tratamentoTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Data início", "Data fim", "Animal"
+            }
+        ));
         tratamentoScrollPane.setViewportView(tratamentoTable);
 
-        GroupLayout tratamentoPanelLayout = new GroupLayout(tratamentoPanel);
+        javax.swing.GroupLayout tratamentoPanelLayout = new javax.swing.GroupLayout(tratamentoPanel);
         tratamentoPanel.setLayout(tratamentoPanelLayout);
         tratamentoPanelLayout.setHorizontalGroup(
-            tratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, tratamentoPanelLayout.createSequentialGroup()
+            tratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tratamentoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tratamentoScrollPane, GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tratamentoTabbedPane, GroupLayout.PREFERRED_SIZE, 420, GroupLayout.PREFERRED_SIZE))
+                .addComponent(tratamentoScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tratamentoTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         tratamentoPanelLayout.setVerticalGroup(
-            tratamentoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            tratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(tratamentoTabbedPane)
             .addGroup(tratamentoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tratamentoScrollPane, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(tratamentoScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Tratamento", tratamentoPanel);
 
-        logoLabel.setText("LOGO DA CLÍNICA VETERINÁRIA");
+        logoIcon.setIcon(new ImageIcon("src/main/java/com/vet/img/clinicaveterinaria.png")); // NOI18N
+        logoIcon.setMaximumSize(new java.awt.Dimension(32, 32));
+        logoIcon.setMinimumSize(new java.awt.Dimension(32, 32));
+        logoIcon.setPreferredSize(new java.awt.Dimension(64, 64));
 
-        GroupLayout layout = new GroupLayout(getContentPane());
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addComponent(mainTabbedPane, GroupLayout.Alignment.TRAILING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mainTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(logoLabel)
-                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(logoIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(logoLabel)
+                .addComponent(logoIcon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(mainTabbedPane, GroupLayout.PREFERRED_SIZE, 439, GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainTabbedPane)
                 .addContainerGap())
         );
 
@@ -1273,14 +1277,6 @@ public class Frame extends JFrame {
     private void especieAnimalComboBoxActionPerformed(ActionEvent evt) {//GEN-FIRST:event_especieAnimalComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_especieAnimalComboBoxActionPerformed
-
-    private void tratamentoConsultaComboBoxActionPerformed(ActionEvent evt) {//GEN-FIRST:event_tratamentoConsultaComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tratamentoConsultaComboBoxActionPerformed
-
-    private void veterinarioConsultaComboBoxActionPerformed(ActionEvent evt) {//GEN-FIRST:event_veterinarioConsultaComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_veterinarioConsultaComboBoxActionPerformed
 
     private void tutorComboBoxActionPerformed(ActionEvent evt) {//GEN-FIRST:event_tutorComboBoxActionPerformed
         // TODO add your handling code here:
@@ -1318,6 +1314,22 @@ public class Frame extends JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_sexoAnimalComboBoxActionPerformed
 
+    private void atualizarNomeClienteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atualizarNomeClienteTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_atualizarNomeClienteTextFieldActionPerformed
+
+    private void nomeVeterinarioTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeVeterinarioTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeVeterinarioTextFieldActionPerformed
+
+    private void veterinarioConsultaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_veterinarioConsultaComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_veterinarioConsultaComboBoxActionPerformed
+
+    private void tratamentoConsultaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tratamentoConsultaComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tratamentoConsultaComboBoxActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1345,154 +1357,154 @@ public class Frame extends JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private JPanel animalPanel;
-    private JScrollPane animalScrollPane;
-    private JTabbedPane animalTabbedPane;
-    private JTable animalTable;
-    private JComboBox<String> animalTratamentoComboBox;
-    private JLabel animalTratamentoLabel;
-    private JLabel anoConsultaLabel;
-    private JSpinner anoConsultaSpinner;
-    private JLabel anoFimTratamentoLabel;
-    private JSpinner anoFimTratamentoSpinner;
-    private JLabel anoInicioTratamentoLabel;
-    private JSpinner anoInicioTratamentoSpinner;
-    private JButton atualizarAnimalButton;
-    private JComboBox<String> atualizarAnimalComboBox;
-    private JLabel atualizarAnimalLabel;
-    private JPanel atualizarAnimalPanel;
-    private JLabel atualizarCepClienteLabel;
-    private JTextField atualizarCepClienteTextField;
-    private JLabel atualizarCepVeterinarioLabel;
-    private JTextField atualizarCepVeterinarioTextField;
-    private JButton atualizarClienteButton;
-    private JComboBox<String> atualizarClienteComboBox;
-    private JLabel atualizarClienteLabel;
-    private JPanel atualizarClientePanel;
-    private JLabel atualizarEmailClienteLabel;
-    private JTextField atualizarEmailClienteTextField;
-    private JLabel atualizarEmailVeterinarioLabel;
-    private JTextField atualizarEmailVeterinarioTextField;
-    private JLabel atualizarEnderecoClienteLabel;
-    private JTextField atualizarEnderecoClienteTextField;
-    private JLabel atualizarEnderecoVeterinarioLabel;
-    private JTextField atualizarEnderecoVeterinarioTextField;
-    private JComboBox<String> atualizarEspecieComboBox;
-    private JLabel atualizarEspecieLabel;
-    private JLabel atualizarIdadeAnimalLabel;
-    private JSpinner atualizarIdadeAnimalSpinner;
-    private JLabel atualizarNomeAnimalLabel;
-    private JTextField atualizarNomeAnimalTextField;
-    private JLabel atualizarNomeClienteLabel;
-    private JTextField atualizarNomeClienteTextField;
-    private JLabel atualizarNomeVeterinarioLabel;
-    private JTextField atualizarNomeVeterinarioTextField;
-    private JComboBox<String> atualizarSexoAnimalComboBox;
-    private JLabel atualizarSexoAnimalLabel;
-    private JLabel atualizarTelefoneClienteLabel;
-    private JTextField atualizarTelefoneClienteTextField;
-    private JLabel atualizarTelefoneVeterinarioLabel;
-    private JTextField atualizarTelefoneVeterinarioTextField;
-    private JComboBox<String> atualizarTutorComboBox;
-    private JLabel atualizarTutorLabel;
-    private JPanel atualizarVeterinario;
-    private JButton atualizarVeterinarioButton;
-    private JComboBox<String> atualizarVeterinarioComboBox;
-    private JLabel atualizarVeterinarioLabel;
-    private JButton cadastrarAnimalButton;
-    private JPanel cadastrarAnimalPanel;
-    private JButton cadastrarClienteButton;
-    private JPanel cadastrarClientePanel;
-    private JPanel cadastrarConsulta;
-    private JButton cadastrarConsultaButton;
-    private JButton cadastrarEspecieButton;
-    private JPanel cadastrarEspeciesPanel;
-    private JButton cadastrarExameButton;
-    private JPanel cadastrarExamePanel;
-    private JButton cadastrarTratamentoButton;
-    private JPanel cadastrarTratamentoPanel;
-    private JPanel cadastrarVeterinario;
-    private JButton cadastrarVeterinarioButton;
-    private JLabel cepClienteLabel;
-    private JTextField cepClienteTextField;
-    private JLabel cepVeterinarioLabel;
-    private JTextField cepVeterinarioTextField;
-    private JPanel clientePanel;
-    private JScrollPane clienteScrollPane;
-    private JTabbedPane clienteTabbedPane;
-    private JTable clienteTable;
-    private JComboBox<String> consultaExameComboBox;
-    private JLabel consultaExameLabel;
-    private JPanel consultaPanel;
-    private JScrollPane consultaScrollPane;
-    private JTabbedPane consultaTabbedPane;
-    private JTable consultaTable;
-    private JLabel dataConsultaLabel;
-    private JLabel dataFimTratamentoLabel;
-    private JLabel dataInicioLabel;
-    private JScrollPane descricaoCadastrarExamePane;
-    private JLabel descricaoExameLabel;
-    private JTextArea descricaoExameTextArea;
-    private JLabel diaConsultaLabel;
-    private JSpinner diaConsultaSpinner;
-    private JLabel diaFimTratamentoLabel;
-    private JSpinner diaFimTratamentoSpinner;
-    private JLabel diaInicioTratamentoLabel;
-    private JSpinner diaInicioTratamentoSpinner;
-    private JLabel emailClienteLabel;
-    private JTextField emailClienteTextField;
-    private JLabel emailVeterinarioLabel;
-    private JTextField emailVeterinarioTextField;
-    private JLabel enderecoClienteLabel;
-    private JTextField enderecoClienteTextField;
-    private JLabel enderecoVeterinarioLabel;
-    private JTextField enderecoVeterinarioTextField;
-    private JComboBox<String> especieAnimalComboBox;
-    private JLabel especieAnimalLabel;
-    private JPanel examePanel;
-    private JScrollPane exameScrollPane;
-    private JTabbedPane exameTabbedPane;
-    private JTable exameTable;
-    private JLabel idadeAnimalLabel;
-    private JSpinner idadeAnimalSpinner;
-    private JLabel logoLabel;
-    private JTabbedPane mainTabbedPane;
-    private JLabel mesConsultaLabel;
-    private JSpinner mesConsultaSpinner;
-    private JLabel mesFimTratamentoLabel;
-    private JSpinner mesFimTratamentoSpinner;
-    private JLabel mesInicioTratamentoLabel;
-    private JSpinner mesInicioTratamentoSpinner;
-    private JLabel nomeAnimalLabel;
-    private JTextField nomeAnimalTextField;
-    private JLabel nomeClienteLabel;
-    private JTextField nomeClienteTextField;
-    private JLabel nomeEspecieLabel;
-    private JTextField nomeEspecieTextField;
-    private JLabel nomeVeterinarioLabel;
-    private JTextField nomeVeterinarioTextField;
-    private JScrollPane relatoCadastrarConsultaScrollPane;
-    private JLabel relatoConsultaLabel;
-    private JTextArea relatoConsultaTextArea;
-    private JComboBox<String> sexoAnimalComboBox;
-    private JLabel sexoAnimalLabel;
-    private JLabel telefoneClienteLabel;
-    private JTextField telefoneClienteTextField;
-    private JLabel telefoneVeterinarioLabel;
-    private JTextField telefoneVeterinarioTextField;
-    private JComboBox<String> tratamentoConsultaComboBox;
-    private JLabel tratamentoConsultaLabel;
-    private JPanel tratamentoPanel;
-    private JScrollPane tratamentoScrollPane;
-    private JTabbedPane tratamentoTabbedPane;
-    private JTable tratamentoTable;
-    private JComboBox<String> tutorComboBox;
-    private JLabel tutorLabel;
-    private JComboBox<String> veterinarioConsultaComboBox;
-    private JLabel veterinarioConsultaLabel;
-    private JPanel veterinarioPanel;
-    private JScrollPane veterinarioScrollPane;
-    private JTabbedPane veterinarioTabbedPane;
-    private JTable veterinarioTable;
+    private javax.swing.JPanel animalPanel;
+    private javax.swing.JScrollPane animalScrollPane;
+    private javax.swing.JTabbedPane animalTabbedPane;
+    private javax.swing.JTable animalTable;
+    private javax.swing.JComboBox<String> animalTratamentoComboBox;
+    private javax.swing.JLabel animalTratamentoLabel;
+    private javax.swing.JLabel anoConsultaLabel;
+    private javax.swing.JSpinner anoConsultaSpinner;
+    private javax.swing.JLabel anoFimTratamentoLabel;
+    private javax.swing.JSpinner anoFimTratamentoSpinner;
+    private javax.swing.JLabel anoInicioTratamentoLabel;
+    private javax.swing.JSpinner anoInicioTratamentoSpinner;
+    private javax.swing.JButton atualizarAnimalButton;
+    private javax.swing.JComboBox<String> atualizarAnimalComboBox;
+    private javax.swing.JLabel atualizarAnimalLabel;
+    private javax.swing.JPanel atualizarAnimalPanel;
+    private javax.swing.JLabel atualizarCepClienteLabel;
+    private javax.swing.JTextField atualizarCepClienteTextField;
+    private javax.swing.JLabel atualizarCepVeterinarioLabel;
+    private javax.swing.JTextField atualizarCepVeterinarioTextField;
+    private javax.swing.JButton atualizarClienteButton;
+    private javax.swing.JComboBox<String> atualizarClienteComboBox;
+    private javax.swing.JLabel atualizarClienteLabel;
+    private javax.swing.JPanel atualizarClientePanel;
+    private javax.swing.JLabel atualizarEmailClienteLabel;
+    private javax.swing.JTextField atualizarEmailClienteTextField;
+    private javax.swing.JLabel atualizarEmailVeterinarioLabel;
+    private javax.swing.JTextField atualizarEmailVeterinarioTextField;
+    private javax.swing.JLabel atualizarEnderecoClienteLabel;
+    private javax.swing.JTextField atualizarEnderecoClienteTextField;
+    private javax.swing.JLabel atualizarEnderecoVeterinarioLabel;
+    private javax.swing.JTextField atualizarEnderecoVeterinarioTextField;
+    private javax.swing.JComboBox<String> atualizarEspecieComboBox;
+    private javax.swing.JLabel atualizarEspecieLabel;
+    private javax.swing.JLabel atualizarIdadeAnimalLabel;
+    private javax.swing.JSpinner atualizarIdadeAnimalSpinner;
+    private javax.swing.JLabel atualizarNomeAnimalLabel;
+    private javax.swing.JTextField atualizarNomeAnimalTextField;
+    private javax.swing.JLabel atualizarNomeClienteLabel;
+    private javax.swing.JTextField atualizarNomeClienteTextField;
+    private javax.swing.JLabel atualizarNomeVeterinarioLabel;
+    private javax.swing.JTextField atualizarNomeVeterinarioTextField;
+    private javax.swing.JComboBox<String> atualizarSexoAnimalComboBox;
+    private javax.swing.JLabel atualizarSexoAnimalLabel;
+    private javax.swing.JLabel atualizarTelefoneClienteLabel;
+    private javax.swing.JTextField atualizarTelefoneClienteTextField;
+    private javax.swing.JLabel atualizarTelefoneVeterinarioLabel;
+    private javax.swing.JTextField atualizarTelefoneVeterinarioTextField;
+    private javax.swing.JComboBox<String> atualizarTutorComboBox;
+    private javax.swing.JLabel atualizarTutorLabel;
+    private javax.swing.JPanel atualizarVeterinario;
+    private javax.swing.JButton atualizarVeterinarioButton;
+    private javax.swing.JComboBox<String> atualizarVeterinarioComboBox;
+    private javax.swing.JLabel atualizarVeterinarioLabel;
+    private javax.swing.JButton cadastrarAnimalButton;
+    private javax.swing.JPanel cadastrarAnimalPanel;
+    private javax.swing.JButton cadastrarClienteButton;
+    private javax.swing.JPanel cadastrarClientePanel;
+    private javax.swing.JPanel cadastrarConsulta;
+    private javax.swing.JButton cadastrarConsultaButton;
+    private javax.swing.JButton cadastrarEspecieButton;
+    private javax.swing.JPanel cadastrarEspeciesPanel;
+    private javax.swing.JButton cadastrarExameButton;
+    private javax.swing.JPanel cadastrarExamePanel;
+    private javax.swing.JButton cadastrarTratamentoButton;
+    private javax.swing.JPanel cadastrarTratamentoPanel;
+    private javax.swing.JPanel cadastrarVeterinario;
+    private javax.swing.JButton cadastrarVeterinarioButton;
+    private javax.swing.JLabel cepClienteLabel;
+    private javax.swing.JTextField cepClienteTextField;
+    private javax.swing.JLabel cepVeterinarioLabel;
+    private javax.swing.JTextField cepVeterinarioTextField;
+    private javax.swing.JPanel clientePanel;
+    private javax.swing.JScrollPane clienteScrollPane;
+    private javax.swing.JTabbedPane clienteTabbedPane;
+    private javax.swing.JTable clienteTable;
+    private javax.swing.JComboBox<String> consultaExameComboBox;
+    private javax.swing.JLabel consultaExameLabel;
+    private javax.swing.JPanel consultaPanel;
+    private javax.swing.JScrollPane consultaScrollPane;
+    private javax.swing.JTabbedPane consultaTabbedPane;
+    private javax.swing.JTable consultaTable;
+    private javax.swing.JLabel dataConsultaLabel;
+    private javax.swing.JLabel dataFimTratamentoLabel;
+    private javax.swing.JLabel dataInicioLabel;
+    private javax.swing.JScrollPane descricaoCadastrarExamePane;
+    private javax.swing.JLabel descricaoExameLabel;
+    private javax.swing.JTextArea descricaoExameTextArea;
+    private javax.swing.JLabel diaConsultaLabel;
+    private javax.swing.JSpinner diaConsultaSpinner;
+    private javax.swing.JLabel diaFimTratamentoLabel;
+    private javax.swing.JSpinner diaFimTratamentoSpinner;
+    private javax.swing.JLabel diaInicioTratamentoLabel;
+    private javax.swing.JSpinner diaInicioTratamentoSpinner;
+    private javax.swing.JLabel emailClienteLabel;
+    private javax.swing.JTextField emailClienteTextField;
+    private javax.swing.JLabel emailVeterinarioLabel;
+    private javax.swing.JTextField emailVeterinarioTextField;
+    private javax.swing.JLabel enderecoClienteLabel;
+    private javax.swing.JTextField enderecoClienteTextField;
+    private javax.swing.JLabel enderecoVeterinarioLabel;
+    private javax.swing.JTextField enderecoVeterinarioTextField;
+    private javax.swing.JComboBox<String> especieAnimalComboBox;
+    private javax.swing.JLabel especieAnimalLabel;
+    private javax.swing.JPanel examePanel;
+    private javax.swing.JScrollPane exameScrollPane;
+    private javax.swing.JTabbedPane exameTabbedPane;
+    private javax.swing.JTable exameTable;
+    private javax.swing.JLabel idadeAnimalLabel;
+    private javax.swing.JSpinner idadeAnimalSpinner;
+    private javax.swing.JLabel logoIcon;
+    private javax.swing.JTabbedPane mainTabbedPane;
+    private javax.swing.JLabel mesConsultaLabel;
+    private javax.swing.JSpinner mesConsultaSpinner;
+    private javax.swing.JLabel mesFimTratamentoLabel;
+    private javax.swing.JSpinner mesFimTratamentoSpinner;
+    private javax.swing.JLabel mesInicioTratamentoLabel;
+    private javax.swing.JSpinner mesInicioTratamentoSpinner;
+    private javax.swing.JLabel nomeAnimalLabel;
+    private javax.swing.JTextField nomeAnimalTextField;
+    private javax.swing.JLabel nomeClienteLabel;
+    private javax.swing.JTextField nomeClienteTextField;
+    private javax.swing.JLabel nomeEspecieLabel;
+    private javax.swing.JTextField nomeEspecieTextField;
+    private javax.swing.JLabel nomeVeterinarioLabel;
+    private javax.swing.JTextField nomeVeterinarioTextField;
+    private javax.swing.JScrollPane relatoCadastrarConsultaScrollPane;
+    private javax.swing.JLabel relatoConsultaLabel;
+    private javax.swing.JTextArea relatoConsultaTextArea;
+    private javax.swing.JComboBox<String> sexoAnimalComboBox;
+    private javax.swing.JLabel sexoAnimalLabel;
+    private javax.swing.JLabel telefoneClienteLabel;
+    private javax.swing.JTextField telefoneClienteTextField;
+    private javax.swing.JLabel telefoneVeterinarioLabel;
+    private javax.swing.JTextField telefoneVeterinarioTextField;
+    private javax.swing.JComboBox<String> tratamentoConsultaComboBox;
+    private javax.swing.JLabel tratamentoConsultaLabel;
+    private javax.swing.JPanel tratamentoPanel;
+    private javax.swing.JScrollPane tratamentoScrollPane;
+    private javax.swing.JTabbedPane tratamentoTabbedPane;
+    private javax.swing.JTable tratamentoTable;
+    private javax.swing.JComboBox<String> tutorComboBox;
+    private javax.swing.JLabel tutorLabel;
+    private javax.swing.JComboBox<String> veterinarioConsultaComboBox;
+    private javax.swing.JLabel veterinarioConsultaLabel;
+    private javax.swing.JPanel veterinarioPanel;
+    private javax.swing.JScrollPane veterinarioScrollPane;
+    private javax.swing.JTabbedPane veterinarioTabbedPane;
+    private javax.swing.JTable veterinarioTable;
     // End of variables declaration//GEN-END:variables
 }
