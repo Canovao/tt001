@@ -13,10 +13,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class EspecieDAO extends DAO {
-    private static DAO instance = null;
+public class EspecieDAO extends DAO<Especie> {
+    private static DAO<?> instance = null;
 
-    public static DAO getInstance(){
+    public static DAO<?> getInstance(){
         if(instance == null){
             instance = new EspecieDAO();
         }
@@ -39,16 +39,22 @@ public class EspecieDAO extends DAO {
         return DAO.retrieve("SELECT * FROM especie WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "especie");
     }
 
-    public void update(Especie especie) {
+    @Override
+    public void update(Especie model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE especie SET nome=? WHERE id=?");
-            stmt.setString(1, especie.getNome());
-            stmt.setInt(2, especie.getId());
+            stmt.setString(1, model.getNome());
+            stmt.setInt(2, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
         }
+    }
+
+    @Override
+    public Especie get(int id) {
+        return (Especie) DAO.retrieveById("especie", id);
     }
 
     public Model build(ResultSet rs) throws SQLException {

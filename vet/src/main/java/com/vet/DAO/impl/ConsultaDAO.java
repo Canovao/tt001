@@ -13,10 +13,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class ConsultaDAO extends DAO {
-    private static DAO instance = null;
+public class ConsultaDAO extends DAO<Consulta> {
+    private static DAO<?> instance = null;
 
-    public static DAO getInstance(){
+    public static DAO<?> getInstance(){
         if(instance == null){
             instance = new ConsultaDAO();
         }
@@ -37,20 +37,26 @@ public class ConsultaDAO extends DAO {
         }
         return retrieveById("consulta", lastId("consulta","id"));
     }
-        
-    public void update(Consulta consulta) {
+
+    @Override
+    public void update(Consulta model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE consulta SET relato=?, dataConsulta=?, idTratamento=?, idVeterinario=? WHERE id=?");
-            stmt.setString(1, consulta.getRelato());
-            stmt.setDate(2, consulta.getDataConsulta());
-            stmt.setInt(3, consulta.getIdTratamento());
-            stmt.setInt(4, consulta.getIdVeterinario());
-            stmt.setInt(5, consulta.getId());
+            stmt.setString(1, model.getRelato());
+            stmt.setDate(2, model.getDataConsulta());
+            stmt.setInt(3, model.getIdTratamento());
+            stmt.setInt(4, model.getIdVeterinario());
+            stmt.setInt(5, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
         }
+    }
+
+    @Override
+    public Consulta get(int id) {
+        return (Consulta) DAO.retrieveById("consulta", id);
     }
 
     public Model build(ResultSet rs) throws SQLException {

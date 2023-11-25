@@ -4,7 +4,6 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Animal;
-import com.vet.model.impl.Cliente;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,10 +13,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class AnimalDAO extends DAO {
-    private static DAO instance = null;
+public class AnimalDAO extends DAO<Animal> {
+    private static DAO<?> instance = null;
 
-    public static DAO getInstance(){
+    public static DAO<?> getInstance(){
         if(instance == null){
             instance = new AnimalDAO();
         }
@@ -42,22 +41,28 @@ public class AnimalDAO extends DAO {
 
     public List<Model> retrieveBySimilarName(String nome) {
         return DAO.retrieve("SELECT * FROM animal WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "animal");
-    }    
-        
-    public void update(Animal animal) {
+    }
+
+    @Override
+    public void update(Animal model) {
         try {
             PreparedStatement stmt;
             stmt = DAO.getConnection().prepareStatement("UPDATE animal SET nome=?, sexo=?, idade=?, idEspecie=?, idCliente=? WHERE id=?");
-            stmt.setString(1, animal.getNome());
-            stmt.setString(2, animal.getSexo());
-            stmt.setInt(3, animal.getIdade());
-            stmt.setInt(4, animal.getIdEspecie());
-            stmt.setInt(5, animal.getIdCliente());
-            stmt.setInt(6, animal.getId());
+            stmt.setString(1, model.getNome());
+            stmt.setString(2, model.getSexo());
+            stmt.setInt(3, model.getIdade());
+            stmt.setInt(4, model.getIdEspecie());
+            stmt.setInt(5, model.getIdCliente());
+            stmt.setInt(6, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
         }
+    }
+
+    @Override
+    public Animal get(int id) {
+        return (Animal) DAO.retrieveById("animal", id);
     }
 
     public Model build(ResultSet rs) throws SQLException {
