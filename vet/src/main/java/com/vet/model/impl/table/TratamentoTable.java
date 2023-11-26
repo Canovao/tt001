@@ -15,4 +15,16 @@ public class TratamentoTable extends Model {
     private Date dataInicio;
     private Date dataFim;
     private String animal;
+    private String cliente;
+
+    @Override
+    public String toString() {
+        return "TratamentoTable{" +
+                "id=" + id +
+                ", dataInicio=" + dataInicio +
+                ", dataFim=" + dataFim +
+                ", animal='" + animal + '\'' +
+                ", cliente='" + cliente + '\'' +
+                '}';
+    }
 }

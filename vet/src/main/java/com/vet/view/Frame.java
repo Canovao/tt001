@@ -64,8 +64,19 @@ public class Frame extends JFrame {
         atualizarEmailClienteLabel = new javax.swing.JLabel();
         atualizarEmailClienteTextField = new javax.swing.JTextField();
         atualizarClienteButton = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        desativarClienteLabel = new javax.swing.JLabel();
+        desativarClienteComboBox = new javax.swing.JComboBox<>();
+        desativarClienteButton = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        ativarClienteLabel = new javax.swing.JLabel();
+        ativarClienteComboBox = new javax.swing.JComboBox<>();
+        ativarClienteButton = new javax.swing.JButton();
         clienteScrollPane = new javax.swing.JScrollPane();
         clienteTable = new javax.swing.JTable();
+        filterByNameClienteLabel = new javax.swing.JLabel();
+        filterByNameClienteTextField = new javax.swing.JTextField();
+        clearFilterByNameClienteButton = new javax.swing.JButton();
         animalPanel = new javax.swing.JPanel();
         animalTabbedPane = new javax.swing.JTabbedPane();
         cadastrarAnimalPanel = new javax.swing.JPanel();
@@ -98,8 +109,36 @@ public class Frame extends JFrame {
         atualizarSexoAnimalLabel = new javax.swing.JLabel();
         atualizarSexoAnimalComboBox = new javax.swing.JComboBox<>();
         atualizarAnimalButton = new javax.swing.JButton();
+        atualizarEspeciesPanel = new javax.swing.JPanel();
+        atualizarNomeEspecieLabel = new javax.swing.JLabel();
+        atualizarNomeEspecieTextField = new javax.swing.JTextField();
+        atualizarNomeEspecieButton = new javax.swing.JButton();
+        selecionarEspecieAtualizarLabel = new javax.swing.JLabel();
+        selecionarEspecieAtualizarComboBox = new javax.swing.JComboBox<>();
+        desativarAnimalPanel = new javax.swing.JPanel();
+        desativarAnimalLabel = new javax.swing.JLabel();
+        desativarAnimalComboBox = new javax.swing.JComboBox<>();
+        desativarAnimalButton = new javax.swing.JButton();
+        ativarAnimalPanel = new javax.swing.JPanel();
+        ativarAnimalLabel = new javax.swing.JLabel();
+        ativarAnimalComboBox = new javax.swing.JComboBox<>();
+        ativarAnimalButton = new javax.swing.JButton();
+        desativarEspeciePanel = new javax.swing.JPanel();
+        desativarEspecieLabel = new javax.swing.JLabel();
+        desativarEspecieComboBox = new javax.swing.JComboBox<>();
+        desativarEspecieButton = new javax.swing.JButton();
+        ativarEspeciePanel = new javax.swing.JPanel();
+        ativarEspecieLabel = new javax.swing.JLabel();
+        ativarEspecieComboBox = new javax.swing.JComboBox<>();
+        ativarEspecieButton = new javax.swing.JButton();
         animalScrollPane = new javax.swing.JScrollPane();
         animalTable = new javax.swing.JTable();
+        filterByNameAnimalLabel = new javax.swing.JLabel();
+        filterByNameAnimalTextField = new javax.swing.JTextField();
+        clearFilterByNameAnimalButton = new javax.swing.JButton();
+        filterByTutorAnimalLabel = new javax.swing.JLabel();
+        filterByTutorAnimalTextField = new javax.swing.JTextField();
+        clearFilterByTutorAnimalButton = new javax.swing.JButton();
         veterinarioPanel = new javax.swing.JPanel();
         veterinarioTabbedPane = new javax.swing.JTabbedPane();
         cadastrarVeterinario = new javax.swing.JPanel();
@@ -128,8 +167,19 @@ public class Frame extends JFrame {
         atualizarCepVeterinarioLabel = new javax.swing.JLabel();
         atualizarNomeVeterinarioTextField = new javax.swing.JTextField();
         atualizarNomeVeterinarioLabel = new javax.swing.JLabel();
+        desativarVeterinarioPanel = new javax.swing.JPanel();
+        desativarVeterinarioLabel = new javax.swing.JLabel();
+        desativarVeterinarioComboBox = new javax.swing.JComboBox<>();
+        desativarVeterinarioButton = new javax.swing.JButton();
+        ativarVeterinarioPanel = new javax.swing.JPanel();
+        ativarVeterinarioLabel = new javax.swing.JLabel();
+        ativarVeterinarioComboBox = new javax.swing.JComboBox<>();
+        ativarVeterinarioButton = new javax.swing.JButton();
         veterinarioScrollPane = new javax.swing.JScrollPane();
         veterinarioTable = new javax.swing.JTable();
+        filterByNameVeterinarioLabel = new javax.swing.JLabel();
+        filterByNameVeterinarioTextField = new javax.swing.JTextField();
+        clearFilterByNameVeterinarioButton = new javax.swing.JButton();
         consultaPanel = new javax.swing.JPanel();
         consultaTabbedPane = new javax.swing.JTabbedPane();
         cadastrarConsulta = new javax.swing.JPanel();
@@ -148,8 +198,25 @@ public class Frame extends JFrame {
         anoConsultaLabel = new javax.swing.JLabel();
         relatoCadastrarConsultaScrollPane = new javax.swing.JScrollPane();
         relatoConsultaTextArea = new javax.swing.JTextArea();
+        horarioConsultaSpinner = new javax.swing.JSpinner();
+        horarioConsultaLabel = new javax.swing.JLabel();
+        desativarConsultaPanel = new javax.swing.JPanel();
+        finalizarConsultaLabel = new javax.swing.JLabel();
+        finalizarConsultaComboBox = new javax.swing.JComboBox<>();
+        finalizarConsultaButton = new javax.swing.JButton();
         consultaScrollPane = new javax.swing.JScrollPane();
         consultaTable = new javax.swing.JTable();
+        filterByClienteConsultaLabel = new javax.swing.JLabel();
+        filterByClienteConsultaTextField = new javax.swing.JTextField();
+        clearFilterByClienteConsultaButton = new javax.swing.JButton();
+        filterByVeterinarioConsultaLabel = new javax.swing.JLabel();
+        filterByVeterinarioConsultaTextField = new javax.swing.JTextField();
+        clearFilterByVeterinarioConsultaButton = new javax.swing.JButton();
+        filterByAnimalConsultaLabel = new javax.swing.JLabel();
+        filterByAnimalConsultaTextField = new javax.swing.JTextField();
+        clearFilterByAnimalConsultaButton = new javax.swing.JButton();
+        orderByDataConsultaToggleButton = new javax.swing.JToggleButton();
+        orderByDataConsultaToggleButton1 = new javax.swing.JToggleButton();
         examePanel = new javax.swing.JPanel();
         exameTabbedPane = new javax.swing.JTabbedPane();
         cadastrarExamePanel = new javax.swing.JPanel();
@@ -161,6 +228,15 @@ public class Frame extends JFrame {
         descricaoExameTextArea = new javax.swing.JTextArea();
         exameScrollPane = new javax.swing.JScrollPane();
         exameTable = new javax.swing.JTable();
+        filterByClienteExameLabel = new javax.swing.JLabel();
+        filterByClienteExameTextField = new javax.swing.JTextField();
+        clearFilterByClienteExameButton = new javax.swing.JButton();
+        filterByVeterinarioExameLabel = new javax.swing.JLabel();
+        filterByVeterinarioExameTextField = new javax.swing.JTextField();
+        clearFilterByVeterinarioExameButton = new javax.swing.JButton();
+        filterByAnimalExameLabel = new javax.swing.JLabel();
+        filterByAnimalExameTextField = new javax.swing.JTextField();
+        clearFilterByAnimalExameButton = new javax.swing.JButton();
         tratamentoPanel = new javax.swing.JPanel();
         tratamentoTabbedPane = new javax.swing.JTabbedPane();
         cadastrarTratamentoPanel = new javax.swing.JPanel();
@@ -181,8 +257,19 @@ public class Frame extends JFrame {
         mesInicioTratamentoSpinner = new javax.swing.JSpinner();
         anoInicioTratamentoLabel = new javax.swing.JLabel();
         anoInicioTratamentoSpinner = new javax.swing.JSpinner();
+        dataFimTratamentoIndeterminadaCheckBox = new javax.swing.JCheckBox();
+        jPanel1 = new javax.swing.JPanel();
+        finalizarTratamentoComboBox = new javax.swing.JComboBox<>();
+        finalizarTratamentoLabel = new javax.swing.JLabel();
+        finalizarTratamentoButton = new javax.swing.JButton();
         tratamentoScrollPane = new javax.swing.JScrollPane();
         tratamentoTable = new javax.swing.JTable();
+        filterByClienteTratamentoLabel = new javax.swing.JLabel();
+        filterByClienteTratamentoTextField = new javax.swing.JTextField();
+        clearFilterByClienteTratamentoButton = new javax.swing.JButton();
+        filterByAnimalTratamentoLabel = new javax.swing.JLabel();
+        filterByAnimalTratamentoTextField = new javax.swing.JTextField();
+        clearFilterByAnimalTratamentoButton = new javax.swing.JButton();
         logoIcon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -258,7 +345,7 @@ public class Frame extends JFrame {
                 .addComponent(emailClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cadastrarClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(249, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
 
         clienteTabbedPane.addTab("Cadastrar Cliente", cadastrarClientePanel);
@@ -342,23 +429,123 @@ public class Frame extends JFrame {
                 .addComponent(atualizarEmailClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(atualizarClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
 
-        clienteTabbedPane.addTab("Atualizar cliente", atualizarClientePanel);
-        clienteTabbedPane.addChangeListener(e -> clienteTabbedPaneChangeListener());
+        clienteTabbedPane.addTab("Atualizar Cliente", atualizarClientePanel);
+
+        desativarClienteLabel.setText("Cliente");
+
+        desativarClienteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        desativarClienteComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                desativarClienteComboBoxActionPerformed(evt);
+            }
+        });
+
+        desativarClienteButton.setText("Desativar");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(desativarClienteComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(desativarClienteLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(desativarClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(desativarClienteLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(desativarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(desativarClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(434, Short.MAX_VALUE))
+        );
+
+        clienteTabbedPane.addTab("Desativar Cliente", jPanel3);
+
+        ativarClienteLabel.setText("Cliente");
+
+        ativarClienteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        ativarClienteButton.setText("Ativar");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ativarClienteComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(ativarClienteLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(ativarClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(ativarClienteLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ativarClienteComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ativarClienteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(434, Short.MAX_VALUE))
+        );
+
+        clienteTabbedPane.addTab("Ativar Cliente", jPanel4);
 
         clienteTable.setModel(clienteTableModel);
         clienteScrollPane.setViewportView(clienteTable);
+
+        filterByNameClienteLabel.setText("Filtrar por nome");
+
+        clearFilterByNameClienteButton.setText("X");
+        clearFilterByNameClienteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByNameClienteButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout clientePanelLayout = new javax.swing.GroupLayout(clientePanel);
         clientePanel.setLayout(clientePanelLayout);
         clientePanelLayout.setHorizontalGroup(
             clientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(clienteScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 849, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(clientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(clientePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(clienteScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 849, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(clientePanelLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(filterByNameClienteLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(filterByNameClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(clearFilterByNameClienteButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(clienteTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -367,7 +554,12 @@ public class Frame extends JFrame {
             .addComponent(clienteTabbedPane)
             .addGroup(clientePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(clienteScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(clientePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(filterByNameClienteLabel)
+                    .addComponent(filterByNameClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByNameClienteButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(clienteScrollPane))
         );
 
         mainTabbedPane.addTab("Cliente", clientePanel);
@@ -422,7 +614,7 @@ public class Frame extends JFrame {
                     .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
                         .addGap(73, 73, 73)
                         .addComponent(tutorLabel)))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         cadastrarAnimalPanelLayout.setVerticalGroup(
             cadastrarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -489,7 +681,7 @@ public class Frame extends JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        animalTabbedPane.addTab("Cadastrar Especies", cadastrarEspeciesPanel);
+        animalTabbedPane.addTab("Cadastrar Espécies", cadastrarEspeciesPanel);
 
         atualizarAnimalLabel.setText("Animal");
 
@@ -543,7 +735,7 @@ public class Frame extends JFrame {
                     .addGroup(atualizarAnimalPanelLayout.createSequentialGroup()
                         .addGap(64, 64, 64)
                         .addComponent(atualizarAnimalLabel)))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         atualizarAnimalPanelLayout.setVerticalGroup(
             atualizarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -579,17 +771,262 @@ public class Frame extends JFrame {
 
         animalTabbedPane.addTab("Atualizar Animal", atualizarAnimalPanel);
 
+        atualizarNomeEspecieLabel.setText("Nome Espécie");
+
+        atualizarNomeEspecieButton.setText("Atualizar");
+
+        selecionarEspecieAtualizarLabel.setText("Espécie");
+
+        selecionarEspecieAtualizarComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout atualizarEspeciesPanelLayout = new javax.swing.GroupLayout(atualizarEspeciesPanel);
+        atualizarEspeciesPanel.setLayout(atualizarEspeciesPanelLayout);
+        atualizarEspeciesPanelLayout.setHorizontalGroup(
+            atualizarEspeciesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(atualizarEspeciesPanelLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addGroup(atualizarEspeciesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(atualizarEspeciesPanelLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(atualizarNomeEspecieLabel))
+                    .addComponent(atualizarNomeEspecieTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(atualizarEspeciesPanelLayout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(atualizarNomeEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(atualizarEspeciesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(selecionarEspecieAtualizarComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 300, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, atualizarEspeciesPanelLayout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(selecionarEspecieAtualizarLabel))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        atualizarEspeciesPanelLayout.setVerticalGroup(
+            atualizarEspeciesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(atualizarEspeciesPanelLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(selecionarEspecieAtualizarLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(selecionarEspecieAtualizarComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(atualizarNomeEspecieLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(atualizarNomeEspecieTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(atualizarNomeEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        animalTabbedPane.addTab("Atualizar Espécies", atualizarEspeciesPanel);
+
+        desativarAnimalLabel.setText("Animal");
+
+        desativarAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+
+        desativarAnimalButton.setText("Desativar");
+
+        javax.swing.GroupLayout desativarAnimalPanelLayout = new javax.swing.GroupLayout(desativarAnimalPanel);
+        desativarAnimalPanel.setLayout(desativarAnimalPanelLayout);
+        desativarAnimalPanelLayout.setHorizontalGroup(
+            desativarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desativarAnimalPanelLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(desativarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(desativarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(desativarAnimalComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(desativarAnimalPanelLayout.createSequentialGroup()
+                            .addGap(9, 9, 9)
+                            .addComponent(desativarAnimalLabel)))
+                    .addGroup(desativarAnimalPanelLayout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(desativarAnimalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(71, 71, 71))
+        );
+        desativarAnimalPanelLayout.setVerticalGroup(
+            desativarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desativarAnimalPanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(desativarAnimalLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(desativarAnimalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(desativarAnimalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(389, Short.MAX_VALUE))
+        );
+
+        animalTabbedPane.addTab("Desativar Animal", desativarAnimalPanel);
+
+        ativarAnimalLabel.setText("Animal");
+
+        ativarAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+
+        ativarAnimalButton.setText("Ativar");
+
+        javax.swing.GroupLayout ativarAnimalPanelLayout = new javax.swing.GroupLayout(ativarAnimalPanel);
+        ativarAnimalPanel.setLayout(ativarAnimalPanelLayout);
+        ativarAnimalPanelLayout.setHorizontalGroup(
+            ativarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ativarAnimalPanelLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(ativarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ativarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(ativarAnimalComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(ativarAnimalPanelLayout.createSequentialGroup()
+                            .addGap(9, 9, 9)
+                            .addComponent(ativarAnimalLabel)))
+                    .addGroup(ativarAnimalPanelLayout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(ativarAnimalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(71, 71, 71))
+        );
+        ativarAnimalPanelLayout.setVerticalGroup(
+            ativarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ativarAnimalPanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(ativarAnimalLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ativarAnimalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ativarAnimalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(389, Short.MAX_VALUE))
+        );
+
+        animalTabbedPane.addTab("Ativar Animal", ativarAnimalPanel);
+
+        desativarEspecieLabel.setText("Espécie");
+
+        desativarEspecieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+
+        desativarEspecieButton.setText("Desativar");
+
+        javax.swing.GroupLayout desativarEspeciePanelLayout = new javax.swing.GroupLayout(desativarEspeciePanel);
+        desativarEspeciePanel.setLayout(desativarEspeciePanelLayout);
+        desativarEspeciePanelLayout.setHorizontalGroup(
+            desativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desativarEspeciePanelLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(desativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(desativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(desativarEspecieComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(desativarEspeciePanelLayout.createSequentialGroup()
+                            .addGap(9, 9, 9)
+                            .addComponent(desativarEspecieLabel)))
+                    .addGroup(desativarEspeciePanelLayout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(desativarEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(71, 71, 71))
+        );
+        desativarEspeciePanelLayout.setVerticalGroup(
+            desativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desativarEspeciePanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(desativarEspecieLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(desativarEspecieComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(desativarEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(389, Short.MAX_VALUE))
+        );
+
+        animalTabbedPane.addTab("Desativar Espécie", desativarEspeciePanel);
+
+        ativarEspecieLabel.setText("Espécie");
+
+        ativarEspecieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+
+        ativarEspecieButton.setText("Ativar");
+
+        javax.swing.GroupLayout ativarEspeciePanelLayout = new javax.swing.GroupLayout(ativarEspeciePanel);
+        ativarEspeciePanel.setLayout(ativarEspeciePanelLayout);
+        ativarEspeciePanelLayout.setHorizontalGroup(
+            ativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ativarEspeciePanelLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(ativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(ativarEspecieComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(ativarEspeciePanelLayout.createSequentialGroup()
+                            .addGap(9, 9, 9)
+                            .addComponent(ativarEspecieLabel)))
+                    .addGroup(ativarEspeciePanelLayout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(ativarEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(71, 71, 71))
+        );
+        ativarEspeciePanelLayout.setVerticalGroup(
+            ativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ativarEspeciePanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(ativarEspecieLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ativarEspecieComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ativarEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(389, Short.MAX_VALUE))
+        );
+
+        animalTabbedPane.addTab("Ativar Espécie", ativarEspeciePanel);
+
         animalTable.setModel(animalTableModel);
         animalScrollPane.setViewportView(animalTable);
+
+        filterByNameAnimalLabel.setText("Filtrar por nome");
+
+        filterByNameAnimalTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByNameAnimalTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByNameAnimalButton.setText("X");
+        clearFilterByNameAnimalButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByNameAnimalButtonActionPerformed(evt);
+            }
+        });
+
+        filterByTutorAnimalLabel.setText("Filtrar por tutor");
+
+        filterByTutorAnimalTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByTutorAnimalTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByTutorAnimalButton.setText("X");
+        clearFilterByTutorAnimalButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByTutorAnimalButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout animalPanelLayout = new javax.swing.GroupLayout(animalPanel);
         animalPanel.setLayout(animalPanelLayout);
         animalPanelLayout.setHorizontalGroup(
             animalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, animalPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(animalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(animalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(animalPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(animalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(animalPanelLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(filterByNameAnimalLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(filterByNameAnimalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(clearFilterByNameAnimalButton)
+                        .addGap(18, 18, 18)
+                        .addComponent(filterByTutorAnimalLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(filterByTutorAnimalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(clearFilterByTutorAnimalButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(animalTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         animalPanelLayout.setVerticalGroup(
@@ -597,7 +1034,16 @@ public class Frame extends JFrame {
             .addComponent(animalTabbedPane)
             .addGroup(animalPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(animalScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(animalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(filterByNameAnimalLabel)
+                    .addComponent(filterByNameAnimalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByNameAnimalButton)
+                    .addGroup(animalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(filterByTutorAnimalLabel)
+                        .addComponent(filterByTutorAnimalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(clearFilterByTutorAnimalButton)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(animalScrollPane))
         );
 
         mainTabbedPane.addTab("Animal", animalPanel);
@@ -642,7 +1088,7 @@ public class Frame extends JFrame {
                     .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
                         .addGap(64, 64, 64)
                         .addComponent(nomeVeterinarioLabel)))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         cadastrarVeterinarioLayout.setVerticalGroup(
             cadastrarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -669,7 +1115,7 @@ public class Frame extends JFrame {
                 .addComponent(emailVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(cadastrarVeterinarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         veterinarioTabbedPane.addTab("Cadastrar Veterinário", cadastrarVeterinario);
@@ -722,7 +1168,7 @@ public class Frame extends JFrame {
                     .addGroup(atualizarVeterinarioLayout.createSequentialGroup()
                         .addGap(64, 64, 64)
                         .addComponent(atualizarVeterinarioLabel)))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         atualizarVeterinarioLayout.setVerticalGroup(
             atualizarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -753,27 +1199,123 @@ public class Frame extends JFrame {
                 .addComponent(atualizarEmailVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(atualizarVeterinarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(192, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         veterinarioTabbedPane.addTab("Atualizar Veterinário", atualizarVeterinario);
 
+        desativarVeterinarioLabel.setText("Veterinário");
+
+        desativarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+
+        desativarVeterinarioButton.setText("Desativar");
+
+        javax.swing.GroupLayout desativarVeterinarioPanelLayout = new javax.swing.GroupLayout(desativarVeterinarioPanel);
+        desativarVeterinarioPanel.setLayout(desativarVeterinarioPanelLayout);
+        desativarVeterinarioPanelLayout.setHorizontalGroup(
+            desativarVeterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desativarVeterinarioPanelLayout.createSequentialGroup()
+                .addGroup(desativarVeterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(desativarVeterinarioPanelLayout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addGroup(desativarVeterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(desativarVeterinarioComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(desativarVeterinarioPanelLayout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(desativarVeterinarioLabel))))
+                    .addGroup(desativarVeterinarioPanelLayout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(desativarVeterinarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        desativarVeterinarioPanelLayout.setVerticalGroup(
+            desativarVeterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desativarVeterinarioPanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(desativarVeterinarioLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(desativarVeterinarioComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(desativarVeterinarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        veterinarioTabbedPane.addTab("Desativar Veterinário", desativarVeterinarioPanel);
+
+        ativarVeterinarioLabel.setText("Veterinário");
+
+        ativarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+
+        ativarVeterinarioButton.setText("Ativar");
+
+        javax.swing.GroupLayout ativarVeterinarioPanelLayout = new javax.swing.GroupLayout(ativarVeterinarioPanel);
+        ativarVeterinarioPanel.setLayout(ativarVeterinarioPanelLayout);
+        ativarVeterinarioPanelLayout.setHorizontalGroup(
+            ativarVeterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ativarVeterinarioPanelLayout.createSequentialGroup()
+                .addGroup(ativarVeterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ativarVeterinarioPanelLayout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addGroup(ativarVeterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ativarVeterinarioComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ativarVeterinarioPanelLayout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(ativarVeterinarioLabel))))
+                    .addGroup(ativarVeterinarioPanelLayout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(ativarVeterinarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        ativarVeterinarioPanelLayout.setVerticalGroup(
+            ativarVeterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ativarVeterinarioPanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(ativarVeterinarioLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ativarVeterinarioComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ativarVeterinarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        veterinarioTabbedPane.addTab("Ativar Veterinário", ativarVeterinarioPanel);
+
         veterinarioTable.setModel(veterinarioTableModel);
         veterinarioScrollPane.setViewportView(veterinarioTable);
-        if (veterinarioTable.getColumnModel().getColumnCount() > 0) {
-            veterinarioTable.getColumnModel().getColumn(3).setHeaderValue("Veterinário");
-            veterinarioTable.getColumnModel().getColumn(4).setHeaderValue("Tratamento");
-            veterinarioTable.getColumnModel().getColumn(5).setHeaderValue("Email");
-        }
+
+        filterByNameVeterinarioLabel.setText("Filtrar por nome");
+
+        filterByNameVeterinarioTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByNameVeterinarioTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByNameVeterinarioButton.setText("X");
+        clearFilterByNameVeterinarioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByNameVeterinarioButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout veterinarioPanelLayout = new javax.swing.GroupLayout(veterinarioPanel);
         veterinarioPanel.setLayout(veterinarioPanelLayout);
         veterinarioPanelLayout.setHorizontalGroup(
             veterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, veterinarioPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(veterinarioScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(veterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(veterinarioPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(veterinarioScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(veterinarioPanelLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(filterByNameVeterinarioLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(filterByNameVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(clearFilterByNameVeterinarioButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(veterinarioTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         veterinarioPanelLayout.setVerticalGroup(
@@ -781,7 +1323,12 @@ public class Frame extends JFrame {
             .addComponent(veterinarioTabbedPane)
             .addGroup(veterinarioPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(veterinarioScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(veterinarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(filterByNameVeterinarioLabel)
+                    .addComponent(filterByNameVeterinarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByNameVeterinarioButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(veterinarioScrollPane))
         );
 
         mainTabbedPane.addTab("Veterinário", veterinarioPanel);
@@ -817,31 +1364,40 @@ public class Frame extends JFrame {
         relatoConsultaTextArea.setRows(5);
         relatoCadastrarConsultaScrollPane.setViewportView(relatoConsultaTextArea);
 
+        horarioConsultaLabel.setText("Horário");
+
         javax.swing.GroupLayout cadastrarConsultaLayout = new javax.swing.GroupLayout(cadastrarConsulta);
         cadastrarConsulta.setLayout(cadastrarConsultaLayout);
         cadastrarConsultaLayout.setHorizontalGroup(
             cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastrarConsultaLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(tratamentoConsultaComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(relatoCadastrarConsultaScrollPane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, cadastrarConsultaLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(relatoConsultaLabel)
-                            .addComponent(tratamentoConsultaLabel)
-                            .addComponent(veterinarioConsultaLabel)
-                            .addComponent(dataConsultaLabel)))
-                    .addComponent(veterinarioConsultaComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(cadastrarConsultaLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(tratamentoConsultaComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(relatoCadastrarConsultaScrollPane, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, cadastrarConsultaLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(relatoConsultaLabel)
+                                    .addComponent(tratamentoConsultaLabel)
+                                    .addComponent(veterinarioConsultaLabel)))
+                            .addComponent(veterinarioConsultaComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(horarioConsultaSpinner, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGroup(cadastrarConsultaLayout.createSequentialGroup()
+                            .addGap(93, 93, 93)
+                            .addComponent(cadastrarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(11, 11, 11)))
+                    .addComponent(dataConsultaLabel))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(cadastrarConsultaLayout.createSequentialGroup()
+                .addGap(75, 75, 75)
                 .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cadastrarConsultaLayout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(cadastrarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(horarioConsultaLabel)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(cadastrarConsultaLayout.createSequentialGroup()
-                        .addGap(75, 75, 75)
                         .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(diaConsultaLabel)
                             .addComponent(diaConsultaSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE))
@@ -852,8 +1408,8 @@ public class Frame extends JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(anoConsultaSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-                            .addComponent(anoConsultaLabel))))
-                .addGap(117, 117, 117))
+                            .addComponent(anoConsultaLabel))
+                        .addGap(117, 117, 117))))
         );
         cadastrarConsultaLayout.setVerticalGroup(
             cadastrarConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -870,6 +1426,10 @@ public class Frame extends JFrame {
                     .addComponent(mesConsultaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(anoConsultaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(horarioConsultaLabel)
+                .addGap(12, 12, 12)
+                .addComponent(horarioConsultaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(relatoConsultaLabel)
                 .addGap(11, 11, 11)
                 .addComponent(relatoCadastrarConsultaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -883,35 +1443,169 @@ public class Frame extends JFrame {
                 .addComponent(veterinarioConsultaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cadastrarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(212, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         consultaTabbedPane.addTab("Cadastrar Consulta", cadastrarConsulta);
         consultaTabbedPane.addChangeListener(e -> consultaTabbedPaneChangeListener());
 
+        finalizarConsultaLabel.setText("Consulta");
+
+        finalizarConsultaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+
+        finalizarConsultaButton.setText("Finalizar");
+
+        javax.swing.GroupLayout desativarConsultaPanelLayout = new javax.swing.GroupLayout(desativarConsultaPanel);
+        desativarConsultaPanel.setLayout(desativarConsultaPanelLayout);
+        desativarConsultaPanelLayout.setHorizontalGroup(
+            desativarConsultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desativarConsultaPanelLayout.createSequentialGroup()
+                .addGroup(desativarConsultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(desativarConsultaPanelLayout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addGroup(desativarConsultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(finalizarConsultaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(desativarConsultaPanelLayout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(finalizarConsultaLabel))))
+                    .addGroup(desativarConsultaPanelLayout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(finalizarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        desativarConsultaPanelLayout.setVerticalGroup(
+            desativarConsultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desativarConsultaPanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(finalizarConsultaLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(finalizarConsultaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(finalizarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        consultaTabbedPane.addTab("Finalizar Consulta", desativarConsultaPanel);
+
         consultaTable.setModel(consultaTableModel);
         consultaScrollPane.setViewportView(consultaTable);
-        if (consultaTable.getColumnModel().getColumnCount() > 0) {
-            consultaTable.getColumnModel().getColumn(3).setHeaderValue("Veterinário");
-            consultaTable.getColumnModel().getColumn(4).setHeaderValue("Tratamento");
-        }
+
+        filterByClienteConsultaLabel.setText("Filtrar por Cliente");
+
+        filterByClienteConsultaTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByClienteConsultaTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByClienteConsultaButton.setText("X");
+        clearFilterByClienteConsultaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByClienteConsultaButtonActionPerformed(evt);
+            }
+        });
+
+        filterByVeterinarioConsultaLabel.setText("Filtrar por Veterinario");
+
+        filterByVeterinarioConsultaTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByVeterinarioConsultaTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByVeterinarioConsultaButton.setText("X");
+        clearFilterByVeterinarioConsultaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByVeterinarioConsultaButtonActionPerformed(evt);
+            }
+        });
+
+        filterByAnimalConsultaLabel.setText("Filtrar por Animal");
+
+        filterByAnimalConsultaTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByAnimalConsultaTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByAnimalConsultaButton.setText("X");
+        clearFilterByAnimalConsultaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByAnimalConsultaButtonActionPerformed(evt);
+            }
+        });
+
+        orderByDataConsultaToggleButton.setText("Ordenar por Data");
+
+        orderByDataConsultaToggleButton1.setText("Ordenar por Terminado");
+        orderByDataConsultaToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orderByDataConsultaToggleButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout consultaPanelLayout = new javax.swing.GroupLayout(consultaPanel);
         consultaPanel.setLayout(consultaPanelLayout);
         consultaPanelLayout.setHorizontalGroup(
             consultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, consultaPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(consultaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(consultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(consultaPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(consultaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(consultaPanelLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(consultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(consultaPanelLayout.createSequentialGroup()
+                                .addComponent(filterByAnimalConsultaLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(filterByAnimalConsultaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(clearFilterByAnimalConsultaButton))
+                            .addGroup(consultaPanelLayout.createSequentialGroup()
+                                .addComponent(filterByClienteConsultaLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(filterByClienteConsultaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(clearFilterByClienteConsultaButton)))
+                        .addGap(18, 18, 18)
+                        .addGroup(consultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(consultaPanelLayout.createSequentialGroup()
+                                .addComponent(filterByVeterinarioConsultaLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(filterByVeterinarioConsultaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(clearFilterByVeterinarioConsultaButton))
+                            .addGroup(consultaPanelLayout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addComponent(orderByDataConsultaToggleButton)
+                                .addGap(18, 18, 18)
+                                .addComponent(orderByDataConsultaToggleButton1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(consultaTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         consultaPanelLayout.setVerticalGroup(
             consultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(consultaTabbedPane)
-            .addGroup(consultaPanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, consultaPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(consultaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(consultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(filterByClienteConsultaLabel)
+                    .addComponent(filterByClienteConsultaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByClienteConsultaButton)
+                    .addComponent(filterByVeterinarioConsultaLabel)
+                    .addComponent(filterByVeterinarioConsultaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByVeterinarioConsultaButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(consultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(filterByAnimalConsultaLabel)
+                    .addComponent(filterByAnimalConsultaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByAnimalConsultaButton)
+                    .addComponent(orderByDataConsultaToggleButton)
+                    .addComponent(orderByDataConsultaToggleButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(consultaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         mainTabbedPane.addTab("Consulta", consultaPanel);
@@ -973,14 +1667,83 @@ public class Frame extends JFrame {
         exameTable.setModel(exameTableModel);
         exameScrollPane.setViewportView(exameTable);
 
+        filterByClienteExameLabel.setText("Filtrar por Cliente");
+
+        filterByClienteExameTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByClienteExameTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByClienteExameButton.setText("X");
+        clearFilterByClienteExameButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByClienteExameButtonActionPerformed(evt);
+            }
+        });
+
+        filterByVeterinarioExameLabel.setText("Filtrar por Veterinario");
+
+        filterByVeterinarioExameTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByVeterinarioExameTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByVeterinarioExameButton.setText("X");
+        clearFilterByVeterinarioExameButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByVeterinarioExameButtonActionPerformed(evt);
+            }
+        });
+
+        filterByAnimalExameLabel.setText("Filtrar por Animal");
+
+        filterByAnimalExameTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByAnimalExameTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByAnimalExameButton.setText("X");
+        clearFilterByAnimalExameButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByAnimalExameButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout examePanelLayout = new javax.swing.GroupLayout(examePanel);
         examePanel.setLayout(examePanelLayout);
         examePanelLayout.setHorizontalGroup(
             examePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, examePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(exameScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(examePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(examePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(exameScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(examePanelLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(examePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(examePanelLayout.createSequentialGroup()
+                                .addComponent(filterByAnimalExameLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(filterByAnimalExameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(clearFilterByAnimalExameButton))
+                            .addGroup(examePanelLayout.createSequentialGroup()
+                                .addComponent(filterByClienteExameLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(filterByClienteExameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(clearFilterByClienteExameButton)))
+                        .addGap(18, 18, 18)
+                        .addComponent(filterByVeterinarioExameLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(filterByVeterinarioExameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(clearFilterByVeterinarioExameButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(exameTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         examePanelLayout.setVerticalGroup(
@@ -988,7 +1751,20 @@ public class Frame extends JFrame {
             .addComponent(exameTabbedPane)
             .addGroup(examePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(exameScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(examePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(filterByClienteExameLabel)
+                    .addComponent(filterByClienteExameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByClienteExameButton)
+                    .addComponent(filterByVeterinarioExameLabel)
+                    .addComponent(filterByVeterinarioExameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByVeterinarioExameButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(examePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(filterByAnimalExameLabel)
+                    .addComponent(filterByAnimalExameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByAnimalExameButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(exameScrollPane))
         );
 
         mainTabbedPane.addTab("Exame", examePanel);
@@ -1028,16 +1804,21 @@ public class Frame extends JFrame {
 
         anoInicioTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
 
+        dataFimTratamentoIndeterminadaCheckBox.setText("Data fim Indeterminada");
+
         javax.swing.GroupLayout cadastrarTratamentoPanelLayout = new javax.swing.GroupLayout(cadastrarTratamentoPanel);
         cadastrarTratamentoPanel.setLayout(cadastrarTratamentoPanelLayout);
         cadastrarTratamentoPanelLayout.setHorizontalGroup(
             cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addGap(47, 47, 47)
                 .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addComponent(dataFimTratamentoIndeterminadaCheckBox)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
                         .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(animalTratamentoComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
                                 .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
@@ -1056,7 +1837,9 @@ public class Frame extends JFrame {
                                         .addComponent(mesInicioTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(anoInicioTratamentoSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))
-                            .addComponent(animalTratamentoLabel)
+                            .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
+                                .addComponent(animalTratamentoLabel)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastrarTratamentoPanelLayout.createSequentialGroup()
                                 .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
@@ -1071,17 +1854,17 @@ public class Frame extends JFrame {
                                 .addGap(6, 6, 6)
                                 .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(anoFimTratamentoSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(anoFimTratamentoLabel)))))
-                    .addComponent(animalTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(cadastrarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(43, 43, 43))
+                                    .addComponent(anoFimTratamentoLabel))))
+                        .addGap(59, 59, 59))))
+            .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(cadastrarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         cadastrarTratamentoPanelLayout.setVerticalGroup(
             cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarTratamentoPanelLayout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addGap(48, 48, 48)
                 .addGroup(cadastrarTratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(mesInicioTratamentoLabel)
                     .addComponent(anoInicioTratamentoLabel)
@@ -1103,29 +1886,115 @@ public class Frame extends JFrame {
                     .addComponent(diaFimTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(mesFimTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(anoFimTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dataFimTratamentoIndeterminadaCheckBox)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(animalTratamentoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(animalTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cadastrarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(315, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tratamentoTabbedPane.addTab("Cadastrar Tratamento", cadastrarTratamentoPanel);
         tratamentoTabbedPane.addChangeListener(e -> tratamentoTabbedPaneChangeListener());
 
+        finalizarTratamentoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+
+        finalizarTratamentoLabel.setText("Tratamento");
+
+        finalizarTratamentoButton.setText("Finalizar");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(finalizarTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(finalizarTratamentoLabel))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(finalizarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(finalizarTratamentoLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(finalizarTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(finalizarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(467, Short.MAX_VALUE))
+        );
+
+        tratamentoTabbedPane.addTab("Finalizar Tratamento", jPanel1);
+
         tratamentoTable.setModel(tratamentoTableModel);
         tratamentoScrollPane.setViewportView(tratamentoTable);
+
+        filterByClienteTratamentoLabel.setText("Filtrar por Cliente");
+
+        filterByClienteTratamentoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByClienteTratamentoTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByClienteTratamentoButton.setText("X");
+        clearFilterByClienteTratamentoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByClienteTratamentoButtonActionPerformed(evt);
+            }
+        });
+
+        filterByAnimalTratamentoLabel.setText("Filtrar por Animal");
+
+        filterByAnimalTratamentoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterByAnimalTratamentoTextFieldActionPerformed(evt);
+            }
+        });
+
+        clearFilterByAnimalTratamentoButton.setText("X");
+        clearFilterByAnimalTratamentoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearFilterByAnimalTratamentoButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout tratamentoPanelLayout = new javax.swing.GroupLayout(tratamentoPanel);
         tratamentoPanel.setLayout(tratamentoPanelLayout);
         tratamentoPanelLayout.setHorizontalGroup(
             tratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tratamentoPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tratamentoScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(tratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tratamentoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(tratamentoScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(tratamentoPanelLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(filterByClienteTratamentoLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(filterByClienteTratamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(clearFilterByClienteTratamentoButton)
+                        .addGap(18, 18, 18)
+                        .addComponent(filterByAnimalTratamentoLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(filterByAnimalTratamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(clearFilterByAnimalTratamentoButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(tratamentoTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         tratamentoPanelLayout.setVerticalGroup(
@@ -1133,7 +2002,15 @@ public class Frame extends JFrame {
             .addComponent(tratamentoTabbedPane)
             .addGroup(tratamentoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tratamentoScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(tratamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(filterByClienteTratamentoLabel)
+                    .addComponent(filterByClienteTratamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByClienteTratamentoButton)
+                    .addComponent(filterByAnimalTratamentoLabel)
+                    .addComponent(filterByAnimalTratamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearFilterByAnimalTratamentoButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tratamentoScrollPane))
         );
 
         mainTabbedPane.addTab("Tratamento", tratamentoPanel);
@@ -1167,6 +2044,150 @@ public class Frame extends JFrame {
         flushAll();
         this.setTitle("Clínica Veterinária");
     }// </editor-fold>//GEN-END:initComponents
+
+    private void filterByNameClienteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByNameClienteTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByNameClienteTextFieldActionPerformed
+
+    private void clearFilterByNameClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByNameClienteButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByNameClienteButtonActionPerformed
+
+    private void filterByNameAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByNameAnimalTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByNameAnimalTextFieldActionPerformed
+
+    private void clearFilterByNameAnimalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByNameAnimalButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByNameAnimalButtonActionPerformed
+
+    private void filterByTutorAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByTutorAnimalTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByTutorAnimalTextFieldActionPerformed
+
+    private void clearFilterByTutorAnimalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByTutorAnimalButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByTutorAnimalButtonActionPerformed
+
+    private void filterByNameVeterinarioTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByNameVeterinarioTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByNameVeterinarioTextFieldActionPerformed
+
+    private void clearFilterByNameVeterinarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByNameVeterinarioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByNameVeterinarioButtonActionPerformed
+
+    private void filterByClienteConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByClienteConsultaTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByClienteConsultaTextFieldActionPerformed
+
+    private void clearFilterByClienteConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByClienteConsultaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByClienteConsultaButtonActionPerformed
+
+    private void filterByVeterinarioConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByVeterinarioConsultaTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByVeterinarioConsultaTextFieldActionPerformed
+
+    private void clearFilterByVeterinarioConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByVeterinarioConsultaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByVeterinarioConsultaButtonActionPerformed
+
+    private void filterByAnimalConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByAnimalConsultaTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByAnimalConsultaTextFieldActionPerformed
+
+    private void clearFilterByAnimalConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByAnimalConsultaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByAnimalConsultaButtonActionPerformed
+
+    private void orderByDataConsultaToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderByDataConsultaToggleButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_orderByDataConsultaToggleButton1ActionPerformed
+
+    private void filterByClienteExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByClienteExameTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByClienteExameTextFieldActionPerformed
+
+    private void clearFilterByClienteExameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByClienteExameButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByClienteExameButtonActionPerformed
+
+    private void filterByVeterinarioExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByVeterinarioExameTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByVeterinarioExameTextFieldActionPerformed
+
+    private void clearFilterByVeterinarioExameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByVeterinarioExameButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByVeterinarioExameButtonActionPerformed
+
+    private void filterByAnimalExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByAnimalExameTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByAnimalExameTextFieldActionPerformed
+
+    private void clearFilterByAnimalExameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByAnimalExameButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByAnimalExameButtonActionPerformed
+
+    private void finalizarTratamentoComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarTratamentoComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_finalizarTratamentoComboBoxActionPerformed
+
+    private void filterByClienteTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByClienteTratamentoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByClienteTratamentoTextFieldActionPerformed
+
+    private void clearFilterByClienteTratamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByClienteTratamentoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByClienteTratamentoButtonActionPerformed
+
+    private void filterByAnimalTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByAnimalTratamentoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filterByAnimalTratamentoTextFieldActionPerformed
+
+    private void clearFilterByAnimalTratamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByAnimalTratamentoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearFilterByAnimalTratamentoButtonActionPerformed
+
+    private void desativarClienteComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desativarClienteComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desativarClienteComboBoxActionPerformed
+
+    private void ativarClienteComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativarClienteComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ativarClienteComboBoxActionPerformed
+
+    private void selecionarEspecieAtualizarComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecionarEspecieAtualizarComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_selecionarEspecieAtualizarComboBoxActionPerformed
+
+    private void desativarAnimalComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desativarAnimalComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desativarAnimalComboBoxActionPerformed
+
+    private void ativarAnimalComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativarAnimalComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ativarAnimalComboBoxActionPerformed
+
+    private void desativarEspecieComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desativarEspecieComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desativarEspecieComboBoxActionPerformed
+
+    private void ativarEspecieComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativarEspecieComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ativarEspecieComboBoxActionPerformed
+
+    private void desativarVeterinarioComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desativarVeterinarioComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desativarVeterinarioComboBoxActionPerformed
+
+    private void ativarVeterinarioComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativarVeterinarioComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ativarVeterinarioComboBoxActionPerformed
+
+    private void finalizarConsultaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarConsultaComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_finalizarConsultaComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1207,6 +2228,21 @@ public class Frame extends JFrame {
     private javax.swing.JSpinner anoFimTratamentoSpinner;
     private javax.swing.JLabel anoInicioTratamentoLabel;
     private javax.swing.JSpinner anoInicioTratamentoSpinner;
+    private javax.swing.JButton ativarAnimalButton;
+    private javax.swing.JComboBox<String> ativarAnimalComboBox;
+    private javax.swing.JLabel ativarAnimalLabel;
+    private javax.swing.JPanel ativarAnimalPanel;
+    private javax.swing.JButton ativarClienteButton;
+    private javax.swing.JComboBox<String> ativarClienteComboBox;
+    private javax.swing.JLabel ativarClienteLabel;
+    private javax.swing.JButton ativarEspecieButton;
+    private javax.swing.JComboBox<String> ativarEspecieComboBox;
+    private javax.swing.JLabel ativarEspecieLabel;
+    private javax.swing.JPanel ativarEspeciePanel;
+    private javax.swing.JButton ativarVeterinarioButton;
+    private javax.swing.JComboBox<String> ativarVeterinarioComboBox;
+    private javax.swing.JLabel ativarVeterinarioLabel;
+    private javax.swing.JPanel ativarVeterinarioPanel;
     private javax.swing.JButton atualizarAnimalButton;
     private javax.swing.JComboBox<String> atualizarAnimalComboBox;
     private javax.swing.JLabel atualizarAnimalLabel;
@@ -1229,12 +2265,16 @@ public class Frame extends JFrame {
     private javax.swing.JTextField atualizarEnderecoVeterinarioTextField;
     private javax.swing.JComboBox<String> atualizarEspecieComboBox;
     private javax.swing.JLabel atualizarEspecieLabel;
+    private javax.swing.JPanel atualizarEspeciesPanel;
     private javax.swing.JLabel atualizarIdadeAnimalLabel;
     private javax.swing.JSpinner atualizarIdadeAnimalSpinner;
     private javax.swing.JLabel atualizarNomeAnimalLabel;
     private javax.swing.JTextField atualizarNomeAnimalTextField;
     private javax.swing.JLabel atualizarNomeClienteLabel;
     private javax.swing.JTextField atualizarNomeClienteTextField;
+    private javax.swing.JButton atualizarNomeEspecieButton;
+    private javax.swing.JLabel atualizarNomeEspecieLabel;
+    private javax.swing.JTextField atualizarNomeEspecieTextField;
     private javax.swing.JLabel atualizarNomeVeterinarioLabel;
     private javax.swing.JTextField atualizarNomeVeterinarioTextField;
     private javax.swing.JComboBox<String> atualizarSexoAnimalComboBox;
@@ -1267,6 +2307,18 @@ public class Frame extends JFrame {
     private javax.swing.JTextField cepClienteTextField;
     private javax.swing.JLabel cepVeterinarioLabel;
     private javax.swing.JTextField cepVeterinarioTextField;
+    private javax.swing.JButton clearFilterByAnimalConsultaButton;
+    private javax.swing.JButton clearFilterByAnimalExameButton;
+    private javax.swing.JButton clearFilterByAnimalTratamentoButton;
+    private javax.swing.JButton clearFilterByClienteConsultaButton;
+    private javax.swing.JButton clearFilterByClienteExameButton;
+    private javax.swing.JButton clearFilterByClienteTratamentoButton;
+    private javax.swing.JButton clearFilterByNameAnimalButton;
+    private javax.swing.JButton clearFilterByNameClienteButton;
+    private javax.swing.JButton clearFilterByNameVeterinarioButton;
+    private javax.swing.JButton clearFilterByTutorAnimalButton;
+    private javax.swing.JButton clearFilterByVeterinarioConsultaButton;
+    private javax.swing.JButton clearFilterByVeterinarioExameButton;
     private javax.swing.JPanel clientePanel;
     private javax.swing.JScrollPane clienteScrollPane;
     private javax.swing.JTabbedPane clienteTabbedPane;
@@ -1278,8 +2330,25 @@ public class Frame extends JFrame {
     private javax.swing.JTabbedPane consultaTabbedPane;
     private javax.swing.JTable consultaTable;
     private javax.swing.JLabel dataConsultaLabel;
+    private javax.swing.JCheckBox dataFimTratamentoIndeterminadaCheckBox;
     private javax.swing.JLabel dataFimTratamentoLabel;
     private javax.swing.JLabel dataInicioLabel;
+    private javax.swing.JButton desativarAnimalButton;
+    private javax.swing.JComboBox<String> desativarAnimalComboBox;
+    private javax.swing.JLabel desativarAnimalLabel;
+    private javax.swing.JPanel desativarAnimalPanel;
+    private javax.swing.JButton desativarClienteButton;
+    private javax.swing.JComboBox<String> desativarClienteComboBox;
+    private javax.swing.JLabel desativarClienteLabel;
+    private javax.swing.JPanel desativarConsultaPanel;
+    private javax.swing.JButton desativarEspecieButton;
+    private javax.swing.JComboBox<String> desativarEspecieComboBox;
+    private javax.swing.JLabel desativarEspecieLabel;
+    private javax.swing.JPanel desativarEspeciePanel;
+    private javax.swing.JButton desativarVeterinarioButton;
+    private javax.swing.JComboBox<String> desativarVeterinarioComboBox;
+    private javax.swing.JLabel desativarVeterinarioLabel;
+    private javax.swing.JPanel desativarVeterinarioPanel;
     private javax.swing.JScrollPane descricaoCadastrarExamePane;
     private javax.swing.JLabel descricaoExameLabel;
     private javax.swing.JTextArea descricaoExameTextArea;
@@ -1303,8 +2372,43 @@ public class Frame extends JFrame {
     private javax.swing.JScrollPane exameScrollPane;
     private javax.swing.JTabbedPane exameTabbedPane;
     private javax.swing.JTable exameTable;
+    private javax.swing.JLabel filterByAnimalConsultaLabel;
+    private javax.swing.JTextField filterByAnimalConsultaTextField;
+    private javax.swing.JLabel filterByAnimalExameLabel;
+    private javax.swing.JTextField filterByAnimalExameTextField;
+    private javax.swing.JLabel filterByAnimalTratamentoLabel;
+    private javax.swing.JTextField filterByAnimalTratamentoTextField;
+    private javax.swing.JLabel filterByClienteConsultaLabel;
+    private javax.swing.JTextField filterByClienteConsultaTextField;
+    private javax.swing.JLabel filterByClienteExameLabel;
+    private javax.swing.JTextField filterByClienteExameTextField;
+    private javax.swing.JLabel filterByClienteTratamentoLabel;
+    private javax.swing.JTextField filterByClienteTratamentoTextField;
+    private javax.swing.JLabel filterByNameAnimalLabel;
+    private javax.swing.JTextField filterByNameAnimalTextField;
+    private javax.swing.JLabel filterByNameClienteLabel;
+    private javax.swing.JTextField filterByNameClienteTextField;
+    private javax.swing.JLabel filterByNameVeterinarioLabel;
+    private javax.swing.JTextField filterByNameVeterinarioTextField;
+    private javax.swing.JLabel filterByTutorAnimalLabel;
+    private javax.swing.JTextField filterByTutorAnimalTextField;
+    private javax.swing.JLabel filterByVeterinarioConsultaLabel;
+    private javax.swing.JTextField filterByVeterinarioConsultaTextField;
+    private javax.swing.JLabel filterByVeterinarioExameLabel;
+    private javax.swing.JTextField filterByVeterinarioExameTextField;
+    private javax.swing.JButton finalizarConsultaButton;
+    private javax.swing.JComboBox<String> finalizarConsultaComboBox;
+    private javax.swing.JLabel finalizarConsultaLabel;
+    private javax.swing.JButton finalizarTratamentoButton;
+    private javax.swing.JComboBox<String> finalizarTratamentoComboBox;
+    private javax.swing.JLabel finalizarTratamentoLabel;
+    private javax.swing.JLabel horarioConsultaLabel;
+    private javax.swing.JSpinner horarioConsultaSpinner;
     private javax.swing.JLabel idadeAnimalLabel;
     private javax.swing.JSpinner idadeAnimalSpinner;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel logoIcon;
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JLabel mesConsultaLabel;
@@ -1321,9 +2425,13 @@ public class Frame extends JFrame {
     private javax.swing.JTextField nomeEspecieTextField;
     private javax.swing.JLabel nomeVeterinarioLabel;
     private javax.swing.JTextField nomeVeterinarioTextField;
+    private javax.swing.JToggleButton orderByDataConsultaToggleButton;
+    private javax.swing.JToggleButton orderByDataConsultaToggleButton1;
     private javax.swing.JScrollPane relatoCadastrarConsultaScrollPane;
     private javax.swing.JLabel relatoConsultaLabel;
     private javax.swing.JTextArea relatoConsultaTextArea;
+    private javax.swing.JComboBox<String> selecionarEspecieAtualizarComboBox;
+    private javax.swing.JLabel selecionarEspecieAtualizarLabel;
     private javax.swing.JComboBox<String> sexoAnimalComboBox;
     private javax.swing.JLabel sexoAnimalLabel;
     private javax.swing.JLabel telefoneClienteLabel;
@@ -1533,7 +2641,8 @@ public class Frame extends JFrame {
                         anoConsultaSpinner.getValue(),
                         relatoConsultaTextArea.getText(),
                         veterinarioConsultaComboBox.getSelectedItem(),
-                        tratamentoConsultaComboBox.getSelectedItem()
+                        tratamentoConsultaComboBox.getSelectedItem(),
+                        horarioConsultaSpinner.getValue()
                 )
         ){
             flush(TableToFlush.CONSULTA);

@@ -3,8 +3,7 @@ package com.vet.DAO.impl;
 
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
-import com.vet.model.impl.Consulta;
-import com.vet.model.impl.Especie;
+import com.vet.model.impl.*;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -25,14 +24,16 @@ public class ConsultaDAO extends DAO<Consulta> {
         return instance;
     }
 
-    public static Model insert(String relato, Date dataConsulta, int idTratamento, int idVeterinario) {
+    public static Model insert(String relato, Date dataConsulta, int idTratamento, int idVeterinario, int horario, int terminado) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("INSERT INTO consulta (relato, dataConsulta, idTratamento, idVeterinario) VALUES (?,?,?,?)");
+            stmt = DAO.getConnection().prepareStatement("INSERT INTO consulta (relato, data_consulta, horario, id_tratamento, id_veterinario, terminado) VALUES (?,?,?,?,?,?)");
             stmt.setString(1, relato);
             stmt.setDate(2, dataConsulta);
-            stmt.setInt(3, idTratamento);
-            stmt.setInt(4, idVeterinario);
+            stmt.setInt(3, horario);
+            stmt.setInt(4, idTratamento);
+            stmt.setInt(5, idVeterinario);
+            stmt.setInt(6, terminado);
             executeUpdate(stmt);
         } catch (SQLException ex) {
             Logger.getLogger(ConsultaDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -43,7 +44,7 @@ public class ConsultaDAO extends DAO<Consulta> {
     public static void update(Consulta model) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("UPDATE consulta SET relato=?, dataConsulta=?, idTratamento=?, idVeterinario=? WHERE id=?");
+            stmt = DAO.getConnection().prepareStatement("UPDATE consulta SET relato=?, data_consulta=?, id_tratamento=?, id_veterinario=? WHERE id=?");
             stmt.setString(1, model.getRelato());
             stmt.setDate(2, model.getDataConsulta());
             stmt.setInt(3, model.getIdTratamento());
@@ -61,7 +62,7 @@ public class ConsultaDAO extends DAO<Consulta> {
     }
 
     public Model build(ResultSet rs) throws SQLException {
-        return new Consulta(rs.getInt("id"), rs.getDate("dataConsulta"), rs.getString("relato"), rs.getInt("idVeterinario"), rs.getInt("idTratamento"));
+        return new Consulta(rs.getInt("id"), rs.getDate("data_consulta"), rs.getInt("horario"), rs.getString("relato"), rs.getInt("id_veterinario"), rs.getInt("id_tratamento"), rs.getInt("terminado"));
     }
 
     @Override
@@ -80,5 +81,20 @@ public class ConsultaDAO extends DAO<Consulta> {
     @Override
     public List<Model> retrieveAll() {
         return retrieveAll("consulta");
+    }
+
+    public static String getVeterinarioNomeFromConsulta(Consulta consulta){
+        return ((Veterinario) VeterinarioDAO.getInstance().get(consulta.getIdVeterinario())).getNome();
+    }
+
+    public static String getClienteNomeFromConsulta(Consulta consulta){
+        int idAnimal = ((Tratamento) TratamentoDAO.getInstance().get(consulta.getIdTratamento())).getIdAnimal();
+        int idCliente = ((Animal) AnimalDAO.getInstance().get(idAnimal)).getIdCliente();
+        return ((Cliente) ClienteDAO.getInstance().get(idCliente)).getNome();
+    }
+
+    public static String getAnimalNomeFromConsulta(Consulta consulta){
+        int idAnimal = ((Tratamento) TratamentoDAO.getInstance().get(consulta.getIdTratamento())).getIdAnimal();
+        return ((Animal) AnimalDAO.getInstance().get(idAnimal)).getNome();
     }
 }

@@ -1,21 +1,19 @@
 
 i
-java:S1192+"LDefine a constant instead of duplicating this literal "Exception: " 7 times.(ØşÿÌ8Û½¸ÀÀ1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ìñÂ˜ûÿÿÿÿ8İ½¸ÀÀ1
+java:S1192+"LDefine a constant instead of duplicating this literal "Exception: " 7 times.(ØşÿÌ8òÅìâÀ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ìñÂ˜ûÿÿÿÿ8ôÅìâÀ1
 b
-java:S2259H"@A "NullPointerException" could be thrown; "rs" is nullable here.(íôÚÇşÿÿÿÿ8ğ½¸ÀÀ1
-l
-java:S20953"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ŠÕ€Æ8ğ½¸ÀÀ1
+java:S2259C"@A "NullPointerException" could be thrown; "rs" is nullable here.(íôÚÇşÿÿÿÿ8ŠÆìâÀ1
 i
-java:S2095q"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8ğ½¸ÀÀ1
+java:S2095\"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8ŠÆìâÀ1
 i
-java:S2095a"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8ğ½¸ÀÀ1
-e	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ñ¥ˆ½8ñ½¸ÀÀ1
-C	java:S131!""Add a default case to this switch.(™¶àØÿÿÿÿÿ8ô½¸ÀÀ1
-G	java:S106+"+Replace this use of System.err by a logger.(ØşÿÌ8õ½¸ÀÀ1
-G	java:S1067"+Replace this use of System.err by a logger.(ØşÿÌ8õ½¸ÀÀ1
-G	java:S106L"+Replace this use of System.err by a logger.(ØşÿÌ8÷½¸ÀÀ1
-G	java:S106V"+Replace this use of System.err by a logger.(ØşÿÌ8ø½¸ÀÀ1
-G	java:S106d"+Replace this use of System.err by a logger.(ØşÿÌ8ù½¸ÀÀ1
-G	java:S106w"+Replace this use of System.err by a logger.(ØşÿÌ8ú½¸ÀÀ1
-H	java:S106€"+Replace this use of System.err by a logger.(ØşÿÌ8ú½¸ÀÀ1
+java:S2095l"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8ŠÆìâÀ1
+e	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ñ¥ˆ½8ŒÆìâÀ1
+C	java:S131!""Add a default case to this switch.(™¶àØÿÿÿÿÿ8ÆìâÀ1
+G	java:S106+"+Replace this use of System.err by a logger.(ØşÿÌ8ÆìâÀ1
+G	java:S1066"+Replace this use of System.err by a logger.(ØşÿÌ8‘ÆìâÀ1
+G	java:S106G"+Replace this use of System.err by a logger.(ØşÿÌ8“ÆìâÀ1
+G	java:S106Q"+Replace this use of System.err by a logger.(ØşÿÌ8“ÆìâÀ1
+G	java:S106_"+Replace this use of System.err by a logger.(ØşÿÌ8”ÆìâÀ1
+G	java:S106r"+Replace this use of System.err by a logger.(ØşÿÌ8–ÆìâÀ1
+G	java:S106{"+Replace this use of System.err by a logger.(ØşÿÌ8–ÆìâÀ1

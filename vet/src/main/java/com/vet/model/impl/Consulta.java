@@ -14,18 +14,22 @@ import java.sql.Date;
 public class Consulta extends Model {
     private int id;
     private Date dataConsulta;
+    private int horario;
     private String relato;
     private int idVeterinario;
     private int idTratamento;
+    private int terminado;
 
     @Override
     public String toString() {
         return "Consulta{" +
                 "id=" + id +
-                ", data=" + dataConsulta +
+                ", dataConsulta=" + dataConsulta +
+                ", horario=" + horario +
                 ", relato='" + relato + '\'' +
                 ", idVeterinario=" + idVeterinario +
                 ", idTratamento=" + idTratamento +
+                ", terminado=" + terminado +
                 '}';
     }
 }

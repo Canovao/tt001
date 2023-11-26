@@ -44,7 +44,7 @@ public class VeterinarioDAO extends DAO<Veterinario> {
     }
 
     public Model build(ResultSet rs) throws SQLException {
-        return new Veterinario(rs.getInt("id"), rs.getString("nome"), rs.getString("endereco"), rs.getString("cep"), rs.getString("email"), rs.getString("telefone"));
+        return new Veterinario(rs.getInt("id"), rs.getString("nome"), rs.getString("endereco"), rs.getString("cep"), rs.getString("email"), rs.getString("telefone"), String.valueOf(rs.getInt("ativo")));
     }
 
     public static void update(Veterinario model) {
@@ -70,7 +70,7 @@ public class VeterinarioDAO extends DAO<Veterinario> {
 
     @Override
     public String[] getAllToComboBox() {
-        List<Veterinario> all = retrieve("SELECT * FROM veterinario", "veterinario").stream().map(Veterinario.class::cast).toList();
+        List<Veterinario> all = retrieve("SELECT * FROM veterinario WHERE ativo = 1", "veterinario").stream().map(Veterinario.class::cast).toList();
 
         String[] list = new String[all.size()];
 

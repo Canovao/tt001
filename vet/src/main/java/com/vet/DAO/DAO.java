@@ -48,8 +48,7 @@ public abstract class DAO<MODEL> {
     public static void deleteById(Model model, String table) {
         PreparedStatement stmt;
         try {
-            stmt = DAO.getConnection().prepareStatement("DELETE FROM "+ table +" WHERE id = ?");
-            stmt.setInt(1, model.getId());
+            stmt = DAO.getConnection().prepareStatement(MessageFormat.format("DELETE FROM {0} WHERE id = {1}", table, model.getId()));
             executeUpdate(stmt);
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
@@ -59,10 +58,6 @@ public abstract class DAO<MODEL> {
     protected static Model retrieveById(String table, int id) {
         List<Model> dataList = retrieve(MessageFormat.format("SELECT * FROM {0} WHERE id = {1}", table, id), table);
         return (dataList.isEmpty() ? null : dataList.get(0));
-    }
-
-    public static List<Model> retrieveLast(String table){
-        return retrieve(MessageFormat.format("SELECT * FROM {0} WHERE id = {1}", table, lastId(table, "id")), table);
     }
 
     protected static List<Model> retrieve(String query, String table) {
@@ -133,19 +128,19 @@ public abstract class DAO<MODEL> {
         try {
             PreparedStatement stmt;
             // Table cliente:
-            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS cliente( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR, endereco VARCHAR, cep VARCHAR, email VARCHAR, telefone VARCHAR);");
+            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS cliente( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR, endereco VARCHAR, cep VARCHAR, email VARCHAR, telefone VARCHAR, ativo INTEGER);");
             executeUpdate(stmt);
             // Table animal:
-            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS animal( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR, idade INTEGER, sexo VARCHAR, id_especie INTEGER, id_cliente INTEGER);");
+            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS animal( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR, ano_nascimento INTEGER, sexo VARCHAR, id_especie INTEGER, id_cliente INTEGER, ativo INTEGER);");
             executeUpdate(stmt);
             // Table especie:
-            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS especie( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR);");
+            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS especie( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR, ativo INTEGER);");
             executeUpdate(stmt);
             // Table veterinario:
-            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS veterinario( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR, endereco VARCHAR, cep VARCHAR, email VARCHAR, telefone VARCHAR); ");
+            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS veterinario( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR, endereco VARCHAR, cep VARCHAR, email VARCHAR, telefone VARCHAR, ativo INTEGER); ");
             executeUpdate(stmt);        
             // Table consulta:
-            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS consulta( id INTEGER PRIMARY KEY AUTO_INCREMENT, data_consulta DATE, relato VARCHAR, id_veterinario INTEGER, id_tratamento INTEGER);");
+            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS consulta( id INTEGER PRIMARY KEY AUTO_INCREMENT, data_consulta DATE, horario INTEGER, relato VARCHAR, id_veterinario INTEGER, id_tratamento INTEGER, terminado INTEGER);");
             executeUpdate(stmt);            
              // Table exame:
             stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS exame( id INTEGER PRIMARY KEY AUTO_INCREMENT, descricao VARCHAR, id_consulta INTEGER);");

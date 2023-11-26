@@ -18,7 +18,7 @@ public class Exame extends Model {
     public String toString() {
         return "Exame{" +
                 "id=" + id +
-                ", desc='" + descricao + '\'' +
+                ", descricao='" + descricao + '\'' +
                 ", idConsulta=" + idConsulta +
                 '}';
     }

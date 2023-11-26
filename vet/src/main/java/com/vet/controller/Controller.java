@@ -24,7 +24,7 @@ public final class Controller {
         if (verifyTextInputs(inputs, "Ao atualizar um Cliente\nTodos os campos devem ser preenchidos!")) {
             Cliente cliente = new Cliente(
                     getIdFromIdString(id),
-                    nome, endereco, cep, email, telefone
+                    nome, endereco, cep, email, telefone, "1"
             );
 
             ClienteDAO.update(cliente);
@@ -53,7 +53,7 @@ public final class Controller {
         if (verifyTextInputs(inputs, "Ao atualizar um Veterinário\nTodos os campos devem ser preenchidos!")) {
             Veterinario veterinario = new Veterinario(
                     getIdFromIdString(id),
-                    nome, endereco, cep, email, telefone
+                    nome, endereco, cep, email, telefone, "1"
             );
 
             VeterinarioDAO.update(veterinario);
@@ -74,15 +74,6 @@ public final class Controller {
 
             return true;
         } else {
-            return false;
-        }
-    }
-
-    private static boolean isPositive(Integer input, String errorMessage){
-        if (input >= 0){
-            return true;
-        } else {
-            showMessageDialog(null, errorMessage, "Erro", JOptionPane.WARNING_MESSAGE);
             return false;
         }
     }
@@ -113,9 +104,9 @@ public final class Controller {
         }
     }
 
-    public static boolean addAnimal(List<JTextField> inputs, String nome, Object idade, Object sexo, Object idEspecie, Object idCliente) {
-        if (verifyTextInputs(inputs, "Ao cadastrar um Animal\nTodos os campos devem ser preenchidos!") && isPositive((Integer) idade, "Ao cadastrar um Animal\nA idade deve ser maior ou igual a zero!")) {
-            AnimalDAO.insert(nome, (String) sexo, (Integer) idade, getIdFromIdString(idEspecie), getIdFromIdString(idCliente));
+    public static boolean addAnimal(List<JTextField> inputs, String nome, Object anoNascimento, Object sexo, Object idEspecie, Object idCliente) {
+        if (verifyTextInputs(inputs, "Ao cadastrar um Animal\nTodos os campos devem ser preenchidos!")) {
+            AnimalDAO.insert(nome, (String) sexo, (Integer) anoNascimento, getIdFromIdString(idEspecie), getIdFromIdString(idCliente));
 
             clearInputs(inputs);
 
@@ -125,15 +116,16 @@ public final class Controller {
         }
     }
 
-    public static boolean updateAnimal(List<JTextField> inputs, Object id, String nome, Object idade, Object sexo, Object idEspecie, Object idCliente) {
-        if (verifyTextInputs(inputs, "Ao atualizar um Animal\nTodos os campos devem ser preenchidos!") && isPositive((Integer) idade, "Ao cadastrar um Animal\nA idade deve ser maior ou igual a zero!")) {
+    public static boolean updateAnimal(List<JTextField> inputs, Object id, String nome, Object anoNascimento, Object sexo, Object idEspecie, Object idCliente) {
+        if (verifyTextInputs(inputs, "Ao atualizar um Animal\nTodos os campos devem ser preenchidos!")) {
             Animal animal = new Animal(
                     getIdFromIdString(id),
                     nome,
-                    (Integer) idade,
+                    (Integer) anoNascimento,
                     (String) sexo,
                     getIdFromIdString(idEspecie),
-                    getIdFromIdString(idCliente)
+                    getIdFromIdString(idCliente),
+                    "1"
             );
 
             AnimalDAO.update(animal);
@@ -154,14 +146,14 @@ public final class Controller {
         }
     }
 
-    public static boolean addConsulta(Object dia, Object mes, Object ano, String relato, Object idVeterinario, Object idTratamento) {
+    public static boolean addConsulta(Object dia, Object mes, Object ano, String relato, Object idVeterinario, Object idTratamento, Object horario) {
         if (relato.isEmpty() || relato.isBlank()) {
             showMessageDialog(null, "Ao cadastrar uma Consulta\nTodos os campos devem ser preenchidos!", "Erro", JOptionPane.WARNING_MESSAGE);
             return false;
         } else {
             try{
                 Date data = new Date((Integer)dia, (Integer)mes, (Integer)ano);
-                ConsultaDAO.insert(relato, data, getIdFromIdString(idVeterinario), getIdFromIdString(idTratamento));
+                ConsultaDAO.insert(relato, data, getIdFromIdString(idVeterinario), getIdFromIdString(idTratamento), (Integer)horario, 0);
                 return true;
             }catch (Error e){
                 showMessageDialog(null, "Data da Consulta inválida!", "Erro", JOptionPane.WARNING_MESSAGE);

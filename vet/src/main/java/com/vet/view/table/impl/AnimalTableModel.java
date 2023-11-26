@@ -1,46 +1,33 @@
 package com.vet.view.table.impl;
 
-import com.vet.DAO.impl.ClienteDAO;
-import com.vet.DAO.impl.EspecieDAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Animal;
-import com.vet.model.impl.Cliente;
-import com.vet.model.impl.Especie;
 import com.vet.model.impl.table.AnimalTable;
 import com.vet.view.table.TableModel;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import static com.vet.DAO.impl.AnimalDAO.getClienteNomeFromAnimal;
+import static com.vet.DAO.impl.AnimalDAO.getEspecieNomeFromAnimal;
 
 public class AnimalTableModel extends TableModel {
 
-    public AnimalTableModel(List<Model> vDados) {
-        super(vDados, new String[]{"Id", "Nome", "Idade", "Sexo", "Espécie", "Tutor"});
-    }
-
     public AnimalTableModel() {
-        super(new ArrayList<>(), new String[]{"Id", "Nome", "Idade", "Sexo", "Espécie", "Tutor"});
-    }
-
-    private String getEspecieNomeFromAnimal(Animal animal){
-        return ((Especie) EspecieDAO.getInstance().get(animal.getIdEspecie())).getNome();
-    }
-
-    private String getClienteNomeFromAnimal(Animal animal){
-        return ((Cliente) ClienteDAO.getInstance().get(animal.getIdCliente())).getNome();
+        super(new ArrayList<>(), new String[]{"Id", "Nome", "Ano de nascimento", "Sexo", "Espécie", "Tutor", "Ativo"});
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Animal animal = (Animal) vDados.get(rowIndex);
+        AnimalTable animal = (AnimalTable) vDados.get(rowIndex);
 
         return switch (columnIndex) {
             case 0 -> animal.getId();
             case 1 -> animal.getNome();
-            case 2 -> animal.getIdade();
+            case 2 -> animal.getAnoNascimento();
             case 3 -> animal.getSexo();
-            case 4 -> getEspecieNomeFromAnimal(animal);
-            case 5 -> getClienteNomeFromAnimal(animal);
+            case 4 -> animal.getEspecie();
+            case 5 -> animal.getCliente();
+            case 6 -> animal.getAtivo();
             default -> throw new IndexOutOfBoundsException("columnIndex out of bounds");
         };
     }
@@ -51,10 +38,11 @@ public class AnimalTableModel extends TableModel {
         standardAddItem(new AnimalTable(
                 animal.getId(),
                 animal.getNome(),
-                animal.getIdade(),
+                animal.getAnoNascimento(),
                 animal.getSexo(),
                 getEspecieNomeFromAnimal(animal),
-                getClienteNomeFromAnimal(animal)
+                getClienteNomeFromAnimal(animal),
+                (animal.getAtivo().equalsIgnoreCase("1")) ? "Sim": "Não"
         ));
     }
 }

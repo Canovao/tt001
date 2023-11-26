@@ -9,12 +9,8 @@ import java.util.List;
 
 public class VeterinarioTableModel extends TableModel {
 
-    public VeterinarioTableModel(List<Model> vDados) {
-        super(vDados, new String[]{"Id", "Nome", "Endereço", "CEP", "Email", "Telefone"});
-    }
-
     public VeterinarioTableModel() {
-        super(new ArrayList<>(), new String[]{"Id", "Nome", "Endereço", "CEP", "Email", "Telefone"});
+        super(new ArrayList<>(), new String[]{"Id", "Nome", "Endereço", "CEP", "Email", "Telefone", "Ativo"});
     }
 
     @Override
@@ -28,12 +24,15 @@ public class VeterinarioTableModel extends TableModel {
             case 3 -> veterinario.getCep();
             case 4 -> veterinario.getEmail();
             case 5 -> veterinario.getTelefone();
+            case 6 -> veterinario.getAtivo();
             default -> throw new IndexOutOfBoundsException("columnIndex out of bounds");
         };
     }
 
     @Override
     public void addItem(Model obj) {
+        Veterinario veterinario = (Veterinario) obj;
+        veterinario.setAtivo((veterinario.getAtivo().equalsIgnoreCase("1")) ? "Sim": "Não");
         standardAddItem(obj);
     }
 }

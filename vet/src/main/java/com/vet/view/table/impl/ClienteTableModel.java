@@ -9,12 +9,8 @@ import com.vet.view.table.TableModel;
 
 public class ClienteTableModel extends TableModel {
 
-    public ClienteTableModel(List<Model> vDados) {
-        super(vDados, new String[]{"Id", "Nome", "Endereço", "CEP", "Email", "Telefone"});
-    }
-
     public ClienteTableModel() {
-        super(new ArrayList<>(), new String[]{"Id", "Nome", "Endereço", "CEP", "Email", "Telefone"});
+        super(new ArrayList<>(), new String[]{"Id", "Nome", "Endereço", "CEP", "Email", "Telefone", "Ativo"});
     }
 
     @Override
@@ -28,12 +24,15 @@ public class ClienteTableModel extends TableModel {
             case 3 -> cliente.getCep();
             case 4 -> cliente.getEmail();
             case 5 -> cliente.getTelefone();
+            case 6 -> cliente.getAtivo();
             default -> throw new IndexOutOfBoundsException("columnIndex out of bounds");
         };
     }
 
     @Override
     public void addItem(Model obj) {
+        Cliente cliente = (Cliente) obj;
+        cliente.setAtivo((cliente.getAtivo().equalsIgnoreCase("1")) ? "Sim": "Não");
         standardAddItem(obj);
     }
 }

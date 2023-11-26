@@ -1,18 +1,12 @@
 
 X
-java:S1141»"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ç•ŸÄÀ1
-D
-java:S1181¦"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ8‹îƒÄÀ1
+java:S1141³"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ç•ŸÄÀ1
 O
-java:S1874£",Remove this use of "Date"; it is deprecated.(ñüô‹ÿÿÿÿÿ8š­€ÄÀ1
-M	java:S106¨"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8ÎÏ‚ÄÀ1
-D
-java:S1181Ä"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ8åÍÒŞÀ1
+java:S1874›",Remove this use of "Date"; it is deprecated.(ñüô‹ÿÿÿÿÿ8š­€ÄÀ1
+M	java:S106 "+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8ÎÏ‚ÄÀ1
 J
-java:S1874º",Remove this use of "Date"; it is deprecated.(úÈ·¡8Ü›šÄÀ1
-D
-java:S1181¿"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ8åÍÒŞÀ1
+java:S1874²",Remove this use of "Date"; it is deprecated.(úÈ·¡8Ü›šÄÀ1
 J
-java:S1874¼",Remove this use of "Date"; it is deprecated.(Îà™8ƒ–ŸÄÀ1
-M	java:S106Á"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8Ü›šÄÀ1
-M	java:S106Æ"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8„–ŸÄÀ1
+java:S1874´",Remove this use of "Date"; it is deprecated.(Îà™8ƒ–ŸÄÀ1
+M	java:S106¹"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8Ü›šÄÀ1
+M	java:S106¾"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8„–ŸÄÀ1

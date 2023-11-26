@@ -16,6 +16,7 @@ public class Veterinario extends Model {
     private String cep;
     private String email;
     private String telefone;
+    private String ativo;
 
     @Override
     public String toString() {
@@ -23,9 +24,10 @@ public class Veterinario extends Model {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", endereco='" + endereco + '\'' +
-                ", telefone='" + telefone + '\'' +
                 ", cep='" + cep + '\'' +
                 ", email='" + email + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", ativo=" + ativo +
                 '}';
     }
 }

@@ -12,20 +12,22 @@ import lombok.Setter;
 public class Animal extends Model {
     private int id;
     private String nome;
-    private int idade;
+    private int anoNascimento;
     private String sexo;
     private int idEspecie;
     private int idCliente;
+    private String ativo;
 
     @Override
     public String toString() {
         return "Animal{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", idade=" + idade +
+                ", anoNascimento=" + anoNascimento +
                 ", sexo='" + sexo + '\'' +
                 ", idEspecie=" + idEspecie +
                 ", idCliente=" + idCliente +
+                ", ativo=" + ativo +
                 '}';
     }
 }

@@ -1,45 +1,45 @@
 package com.vet.view.table.impl;
 
-import com.vet.DAO.impl.ConsultaDAO;
-import com.vet.DAO.impl.EspecieDAO;
 import com.vet.model.Model;
-import com.vet.model.impl.Animal;
-import com.vet.model.impl.Consulta;
-import com.vet.model.impl.Especie;
-import com.vet.model.impl.Exame;
+import com.vet.model.impl.*;
+import com.vet.model.impl.table.ExameTable;
 import com.vet.view.table.TableModel;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import static com.vet.DAO.impl.ExameDAO.*;
 
 public class ExameTableModel extends TableModel {
 
-    public ExameTableModel(List<Model> vDados) {
-        super(vDados, new String[]{"Id", "Descrição", "Relato Consulta"});
-    }
-
     public ExameTableModel() {
-        super(new ArrayList<>(), new String[]{"Id", "Descrição", "Relato Consulta"});
-    }
-
-    private String getConsultaRelatoFromExame(Exame exame){
-        return ((Consulta) ConsultaDAO.getInstance().get(exame.getIdConsulta())).getRelato();
+        super(new ArrayList<>(), new String[]{"Id", "Descrição", "Cliente", "Animal", "Veterinario", "Relato Consulta"});
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Exame exame = (Exame) vDados.get(rowIndex);
+        ExameTable exame = (ExameTable) vDados.get(rowIndex);
 
         return switch (columnIndex) {
             case 0 -> exame.getId();
             case 1 -> exame.getDescricao();
-            case 2 -> getConsultaRelatoFromExame(exame);
+            case 2 -> exame.getCliente();
+            case 3 -> exame.getAnimal();
+            case 4 -> exame.getVeterinario();
+            case 5 -> exame.getRelatoConsulta();
             default -> throw new IndexOutOfBoundsException("columnIndex out of bounds");
         };
     }
 
     @Override
-    public void addItem(Model obj) {
-        standardAddItem(obj);
+    public void addItem(Model model) {
+        Exame exame = (Exame) model;
+        standardAddItem(new ExameTable(
+                exame.getId(),
+                exame.getDescricao(),
+                getClienteNomeFromExame(exame),
+                getAnimalNomeFromExame(exame),
+                getVeterinarioNomeFromExame(exame),
+                getConsultaRelatoFromExame(exame)
+        ));
     }
 }

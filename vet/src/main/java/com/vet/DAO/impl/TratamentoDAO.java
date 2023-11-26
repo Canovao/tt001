@@ -3,6 +3,8 @@ package com.vet.DAO.impl;
 
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
+import com.vet.model.impl.Animal;
+import com.vet.model.impl.Cliente;
 import com.vet.model.impl.Tratamento;
 import com.vet.model.impl.Veterinario;
 
@@ -42,7 +44,7 @@ public class TratamentoDAO extends DAO<Tratamento> {
     public static void update(Tratamento model) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("UPDATE tratamento SET dataFim=?, dataInicio=?, idAnimal=? WHERE id=?");
+            stmt = DAO.getConnection().prepareStatement("UPDATE tratamento SET data_fim=?, data_inicio=?, id_animal=? WHERE id=?");
             stmt.setDate(1, model.getDataFim());
             stmt.setDate(2, model.getDataInicio());
             stmt.setInt(3, model.getIdAnimal());
@@ -59,7 +61,7 @@ public class TratamentoDAO extends DAO<Tratamento> {
     }
 
     public Model build(ResultSet rs) throws SQLException {
-        return new Tratamento(rs.getInt("id"), rs.getDate("dataFim"), rs.getDate("dataInicio"), rs.getInt("idAnimal"));
+        return new Tratamento(rs.getInt("id"), rs.getDate("data_fim"), rs.getDate("data_inicio"), rs.getInt("id_animal"));
     }
 
     @Override
@@ -78,5 +80,19 @@ public class TratamentoDAO extends DAO<Tratamento> {
     @Override
     public List<Model> retrieveAll() {
         return retrieveAll("tratamento");
+    }
+
+
+    public static String getAnimalNomeFromTratamento(Tratamento tratamento){
+        return ((Animal) AnimalDAO.getInstance().get(tratamento.getIdAnimal())).getNome();
+    }
+
+    public static String getClienteNomeFromTratamento(Tratamento tratamento){
+        int idCliente = ((Animal) AnimalDAO.getInstance().get(tratamento.getIdAnimal())).getIdCliente();
+        return ((Cliente) ClienteDAO.getInstance().get(idCliente)).getNome();
+    }
+
+    public List<Tratamento> getAllUnfinished(){
+        return retrieve("SELECT * FROM tratamento WHERE data_fim = null", "tratamento").stream().map(Tratamento.class::cast).toList();
     }
 }

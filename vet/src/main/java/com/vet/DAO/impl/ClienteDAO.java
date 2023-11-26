@@ -66,12 +66,12 @@ public class ClienteDAO extends DAO<Cliente> {
     }
 
     public Model build(ResultSet rs) throws SQLException {
-        return new Cliente(rs.getInt("id"), rs.getString("nome"), rs.getString("endereco"), rs.getString("cep"), rs.getString("email"), rs.getString("telefone"));
+        return new Cliente(rs.getInt("id"), rs.getString("nome"), rs.getString("endereco"), rs.getString("cep"), rs.getString("email"), rs.getString("telefone"), String.valueOf(rs.getInt("ativo")));
     }
 
     @Override
     public String[] getAllToComboBox() {
-        List<Cliente> all = retrieve("SELECT * FROM cliente", "cliente").stream().map(Cliente.class::cast).toList();
+        List<Cliente> all = retrieve("SELECT * FROM cliente WHERE ativo = 1", "cliente").stream().map(Cliente.class::cast).toList();
 
         String[] list = new String[all.size()];
 

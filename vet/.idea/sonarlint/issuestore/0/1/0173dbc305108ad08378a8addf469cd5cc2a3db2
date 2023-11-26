@@ -9,5 +9,3 @@ java:S2095."OUse try-with-resources or close this "PreparedStatement" in a "fin
 ;
 java:S1452"&Remove usage of generic wildcard type.(Ìéë&
 @	java:S1063"+Replace this use of System.err by a logger.(ØşÿÌ
-R
-java:S1128"5Remove this unused import 'com.vet.model.impl.Exame'.(¼¸öê8ƒ¢İÃÀ1

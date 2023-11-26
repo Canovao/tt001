@@ -16,6 +16,7 @@ public class Cliente extends Model {
     private String cep;
     private String email;
     private String telefone;
+    private String ativo;
 
 
     @Override
@@ -27,6 +28,7 @@ public class Cliente extends Model {
                 ", cep='" + cep + '\'' +
                 ", email='" + email + '\'' +
                 ", telefone='" + telefone + '\'' +
+                ", ativo=" + ativo +
                 '}';
     }
 }

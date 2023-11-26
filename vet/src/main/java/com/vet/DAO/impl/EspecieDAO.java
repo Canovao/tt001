@@ -58,12 +58,12 @@ public class EspecieDAO extends DAO<Especie> {
     }
 
     public Model build(ResultSet rs) throws SQLException {
-        return new Especie(rs.getInt("id"), rs.getString("nome"));
+        return new Especie(rs.getInt("id"), rs.getString("nome"), String.valueOf(rs.getInt("ativo")));
     }
 
     @Override
     public String[] getAllToComboBox() {
-        List<Especie> all = retrieve("SELECT * FROM especie", "especie").stream().map(Especie.class::cast).toList();
+        List<Especie> all = retrieve("SELECT * FROM especie WHERE ativo = 1", "especie").stream().map(Especie.class::cast).toList();
 
         String[] list = new String[all.size()];
 
