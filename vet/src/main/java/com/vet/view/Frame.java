@@ -432,14 +432,10 @@ public class Frame extends JFrame {
 
         desativarClienteLabel.setText("Cliente");
 
-        desativarClienteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
-        desativarClienteComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                desativarClienteComboBoxActionPerformed(evt);
-            }
-        });
+        desativarClienteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(ClienteDAO.getInstance().getAllToComboBox()));
 
         desativarClienteButton.setText("Desativar");
+        desativarClienteButton.addActionListener(e -> desativarCliente());
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -476,8 +472,9 @@ public class Frame extends JFrame {
 
         ativarClienteLabel.setText("Cliente");
 
-        ativarClienteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        ativarClienteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(ClienteDAO.getInstance().getAllInactive()));
         ativarClienteButton.setText("Ativar");
+        ativarClienteButton.addActionListener(e -> ativarCliente());
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -519,11 +516,7 @@ public class Frame extends JFrame {
         filterByNameClienteLabel.setText("Filtrar por nome");
 
         clearFilterByNameClienteButton.setText("X");
-        clearFilterByNameClienteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByNameClienteButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByNameClienteButton.addActionListener(this::clearFilterByNameClienteButtonActionPerformed);
 
         javax.swing.GroupLayout clientePanelLayout = new javax.swing.GroupLayout(clientePanel);
         clientePanel.setLayout(clientePanelLayout);
@@ -771,10 +764,11 @@ public class Frame extends JFrame {
         atualizarNomeEspecieLabel.setText("Nome Espécie");
 
         atualizarNomeEspecieButton.setText("Atualizar");
+        atualizarNomeEspecieButton.addActionListener(e -> atualizarEspecie());
 
         selecionarEspecieAtualizarLabel.setText("Espécie");
 
-        selecionarEspecieAtualizarComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        selecionarEspecieAtualizarComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(EspecieDAO.getInstance().getAllToComboBox()));
 
         javax.swing.GroupLayout atualizarEspeciesPanelLayout = new javax.swing.GroupLayout(atualizarEspeciesPanel);
         atualizarEspeciesPanel.setLayout(atualizarEspeciesPanelLayout);
@@ -817,9 +811,10 @@ public class Frame extends JFrame {
 
         desativarAnimalLabel.setText("Animal");
 
-        desativarAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        desativarAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(AnimalDAO.getInstance().getAllToComboBox()));
 
         desativarAnimalButton.setText("Desativar");
+        desativarAnimalButton.addActionListener(e -> desativarAnimal());
 
         javax.swing.GroupLayout desativarAnimalPanelLayout = new javax.swing.GroupLayout(desativarAnimalPanel);
         desativarAnimalPanel.setLayout(desativarAnimalPanelLayout);
@@ -855,9 +850,10 @@ public class Frame extends JFrame {
 
         ativarAnimalLabel.setText("Animal");
 
-        ativarAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        ativarAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(AnimalDAO.getInstance().getAllInactive()));
 
         ativarAnimalButton.setText("Ativar");
+        ativarAnimalButton.addActionListener(e -> ativarAnimal());
 
         javax.swing.GroupLayout ativarAnimalPanelLayout = new javax.swing.GroupLayout(ativarAnimalPanel);
         ativarAnimalPanel.setLayout(ativarAnimalPanelLayout);
@@ -893,9 +889,10 @@ public class Frame extends JFrame {
 
         desativarEspecieLabel.setText("Espécie");
 
-        desativarEspecieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        desativarEspecieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(EspecieDAO.getInstance().getAllToComboBox()));
 
         desativarEspecieButton.setText("Desativar");
+        desativarEspecieButton.addActionListener(e -> desativarEspecie());
 
         javax.swing.GroupLayout desativarEspeciePanelLayout = new javax.swing.GroupLayout(desativarEspeciePanel);
         desativarEspeciePanel.setLayout(desativarEspeciePanelLayout);
@@ -931,9 +928,10 @@ public class Frame extends JFrame {
 
         ativarEspecieLabel.setText("Espécie");
 
-        ativarEspecieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        ativarEspecieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(EspecieDAO.getInstance().getAllInactive()));
 
         ativarEspecieButton.setText("Ativar");
+        ativarEspecieButton.addActionListener(e -> ativarEspecie());
 
         javax.swing.GroupLayout ativarEspeciePanelLayout = new javax.swing.GroupLayout(ativarEspeciePanel);
         ativarEspeciePanel.setLayout(ativarEspeciePanelLayout);
@@ -972,33 +970,17 @@ public class Frame extends JFrame {
 
         filterByNameAnimalLabel.setText("Filtrar por nome");
 
-        filterByNameAnimalTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByNameAnimalTextFieldActionPerformed(evt);
-            }
-        });
+        filterByNameAnimalTextField.addActionListener(this::filterByNameAnimalTextFieldActionPerformed);
 
         clearFilterByNameAnimalButton.setText("X");
-        clearFilterByNameAnimalButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByNameAnimalButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByNameAnimalButton.addActionListener(this::clearFilterByNameAnimalButtonActionPerformed);
 
         filterByTutorAnimalLabel.setText("Filtrar por tutor");
 
-        filterByTutorAnimalTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByTutorAnimalTextFieldActionPerformed(evt);
-            }
-        });
+        filterByTutorAnimalTextField.addActionListener(this::filterByTutorAnimalTextFieldActionPerformed);
 
         clearFilterByTutorAnimalButton.setText("X");
-        clearFilterByTutorAnimalButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByTutorAnimalButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByTutorAnimalButton.addActionListener(this::clearFilterByTutorAnimalButtonActionPerformed);
 
         javax.swing.GroupLayout animalPanelLayout = new javax.swing.GroupLayout(animalPanel);
         animalPanel.setLayout(animalPanelLayout);
@@ -1203,9 +1185,10 @@ public class Frame extends JFrame {
 
         desativarVeterinarioLabel.setText("Veterinário");
 
-        desativarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        desativarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(VeterinarioDAO.getInstance().getAllToComboBox()));
 
         desativarVeterinarioButton.setText("Desativar");
+        desativarVeterinarioButton.addActionListener(e -> desativarVeterinario());
 
         javax.swing.GroupLayout desativarVeterinarioPanelLayout = new javax.swing.GroupLayout(desativarVeterinarioPanel);
         desativarVeterinarioPanel.setLayout(desativarVeterinarioPanelLayout);
@@ -1241,9 +1224,10 @@ public class Frame extends JFrame {
 
         ativarVeterinarioLabel.setText("Veterinário");
 
-        ativarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        ativarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(VeterinarioDAO.getInstance().getAllInactive()));
 
         ativarVeterinarioButton.setText("Ativar");
+        ativarVeterinarioButton.addActionListener(e -> ativarVeterinario());
 
         javax.swing.GroupLayout ativarVeterinarioPanelLayout = new javax.swing.GroupLayout(ativarVeterinarioPanel);
         ativarVeterinarioPanel.setLayout(ativarVeterinarioPanelLayout);
@@ -1282,18 +1266,10 @@ public class Frame extends JFrame {
 
         filterByNameVeterinarioLabel.setText("Filtrar por nome");
 
-        filterByNameVeterinarioTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByNameVeterinarioTextFieldActionPerformed(evt);
-            }
-        });
+        filterByNameVeterinarioTextField.addActionListener(this::filterByNameVeterinarioTextFieldActionPerformed);
 
         clearFilterByNameVeterinarioButton.setText("X");
-        clearFilterByNameVeterinarioButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByNameVeterinarioButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByNameVeterinarioButton.addActionListener(this::clearFilterByNameVeterinarioButtonActionPerformed);
 
         javax.swing.GroupLayout veterinarioPanelLayout = new javax.swing.GroupLayout(veterinarioPanel);
         veterinarioPanel.setLayout(veterinarioPanelLayout);
@@ -1448,9 +1424,10 @@ public class Frame extends JFrame {
 
         finalizarConsultaLabel.setText("Consulta");
 
-        finalizarConsultaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        finalizarConsultaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(ConsultaDAO.getInstance().getAllUnfinished()));
 
         finalizarConsultaButton.setText("Finalizar");
+        finalizarConsultaButton.addActionListener(e -> finalizarConsulta());
 
         javax.swing.GroupLayout desativarConsultaPanelLayout = new javax.swing.GroupLayout(desativarConsultaPanel);
         desativarConsultaPanel.setLayout(desativarConsultaPanelLayout);
@@ -1489,57 +1466,29 @@ public class Frame extends JFrame {
 
         filterByClienteConsultaLabel.setText("Filtrar por Cliente");
 
-        filterByClienteConsultaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByClienteConsultaTextFieldActionPerformed(evt);
-            }
-        });
+        filterByClienteConsultaTextField.addActionListener(this::filterByClienteConsultaTextFieldActionPerformed);
 
         clearFilterByClienteConsultaButton.setText("X");
-        clearFilterByClienteConsultaButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByClienteConsultaButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByClienteConsultaButton.addActionListener(this::clearFilterByClienteConsultaButtonActionPerformed);
 
         filterByVeterinarioConsultaLabel.setText("Filtrar por Veterinario");
 
-        filterByVeterinarioConsultaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByVeterinarioConsultaTextFieldActionPerformed(evt);
-            }
-        });
+        filterByVeterinarioConsultaTextField.addActionListener(this::filterByVeterinarioConsultaTextFieldActionPerformed);
 
         clearFilterByVeterinarioConsultaButton.setText("X");
-        clearFilterByVeterinarioConsultaButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByVeterinarioConsultaButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByVeterinarioConsultaButton.addActionListener(this::clearFilterByVeterinarioConsultaButtonActionPerformed);
 
         filterByAnimalConsultaLabel.setText("Filtrar por Animal");
 
-        filterByAnimalConsultaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByAnimalConsultaTextFieldActionPerformed(evt);
-            }
-        });
+        filterByAnimalConsultaTextField.addActionListener(this::filterByAnimalConsultaTextFieldActionPerformed);
 
         clearFilterByAnimalConsultaButton.setText("X");
-        clearFilterByAnimalConsultaButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByAnimalConsultaButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByAnimalConsultaButton.addActionListener(this::clearFilterByAnimalConsultaButtonActionPerformed);
 
         orderByDataConsultaToggleButton.setText("Ordenar por Data");
 
         orderByDataConsultaToggleButton1.setText("Ordenar por Terminado");
-        orderByDataConsultaToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                orderByDataConsultaToggleButton1ActionPerformed(evt);
-            }
-        });
+        orderByDataConsultaToggleButton1.addActionListener(this::orderByDataConsultaToggleButton1ActionPerformed);
 
         javax.swing.GroupLayout consultaPanelLayout = new javax.swing.GroupLayout(consultaPanel);
         consultaPanel.setLayout(consultaPanelLayout);
@@ -1666,48 +1615,24 @@ public class Frame extends JFrame {
 
         filterByClienteExameLabel.setText("Filtrar por Cliente");
 
-        filterByClienteExameTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByClienteExameTextFieldActionPerformed(evt);
-            }
-        });
+        filterByClienteExameTextField.addActionListener(this::filterByClienteExameTextFieldActionPerformed);
 
         clearFilterByClienteExameButton.setText("X");
-        clearFilterByClienteExameButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByClienteExameButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByClienteExameButton.addActionListener(this::clearFilterByClienteExameButtonActionPerformed);
 
         filterByVeterinarioExameLabel.setText("Filtrar por Veterinario");
 
-        filterByVeterinarioExameTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByVeterinarioExameTextFieldActionPerformed(evt);
-            }
-        });
+        filterByVeterinarioExameTextField.addActionListener(this::filterByVeterinarioExameTextFieldActionPerformed);
 
         clearFilterByVeterinarioExameButton.setText("X");
-        clearFilterByVeterinarioExameButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByVeterinarioExameButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByVeterinarioExameButton.addActionListener(this::clearFilterByVeterinarioExameButtonActionPerformed);
 
         filterByAnimalExameLabel.setText("Filtrar por Animal");
 
-        filterByAnimalExameTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByAnimalExameTextFieldActionPerformed(evt);
-            }
-        });
+        filterByAnimalExameTextField.addActionListener(this::filterByAnimalExameTextFieldActionPerformed);
 
         clearFilterByAnimalExameButton.setText("X");
-        clearFilterByAnimalExameButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByAnimalExameButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByAnimalExameButton.addActionListener(this::clearFilterByAnimalExameButtonActionPerformed);
 
         javax.swing.GroupLayout examePanelLayout = new javax.swing.GroupLayout(examePanel);
         examePanel.setLayout(examePanelLayout);
@@ -1897,11 +1822,12 @@ public class Frame extends JFrame {
         tratamentoTabbedPane.addTab("Cadastrar Tratamento", cadastrarTratamentoPanel);
         tratamentoTabbedPane.addChangeListener(e -> tratamentoTabbedPaneChangeListener());
 
-        finalizarTratamentoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva", "Item 2", "Item 3", "Item 4" }));
+        finalizarTratamentoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(TratamentoDAO.getInstance().getAllUnfinished()));
 
         finalizarTratamentoLabel.setText("Tratamento");
 
         finalizarTratamentoButton.setText("Finalizar");
+        finalizarTratamentoButton.addActionListener(e -> finalizarTratamento());
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1940,33 +1866,17 @@ public class Frame extends JFrame {
 
         filterByClienteTratamentoLabel.setText("Filtrar por Cliente");
 
-        filterByClienteTratamentoTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByClienteTratamentoTextFieldActionPerformed(evt);
-            }
-        });
+        filterByClienteTratamentoTextField.addActionListener(this::filterByClienteTratamentoTextFieldActionPerformed);
 
         clearFilterByClienteTratamentoButton.setText("X");
-        clearFilterByClienteTratamentoButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByClienteTratamentoButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByClienteTratamentoButton.addActionListener(this::clearFilterByClienteTratamentoButtonActionPerformed);
 
         filterByAnimalTratamentoLabel.setText("Filtrar por Animal");
 
-        filterByAnimalTratamentoTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterByAnimalTratamentoTextFieldActionPerformed(evt);
-            }
-        });
+        filterByAnimalTratamentoTextField.addActionListener(this::filterByAnimalTratamentoTextFieldActionPerformed);
 
         clearFilterByAnimalTratamentoButton.setText("X");
-        clearFilterByAnimalTratamentoButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearFilterByAnimalTratamentoButtonActionPerformed(evt);
-            }
-        });
+        clearFilterByAnimalTratamentoButton.addActionListener(this::clearFilterByAnimalTratamentoButtonActionPerformed);
 
         javax.swing.GroupLayout tratamentoPanelLayout = new javax.swing.GroupLayout(tratamentoPanel);
         tratamentoPanel.setLayout(tratamentoPanelLayout);
