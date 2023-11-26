@@ -2,14 +2,10 @@ package com.vet.view;
 
 import com.vet.DAO.impl.*;
 import com.vet.controller.Controller;
-import com.vet.model.impl.Consulta;
 import com.vet.view.table.TableToFlush;
 import com.vet.view.table.impl.*;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -83,12 +79,12 @@ public class Frame extends JFrame {
         especieAnimalLabel = new javax.swing.JLabel();
         nomeAnimalLabel = new javax.swing.JLabel();
         tutorLabel = new javax.swing.JLabel();
-        idadeAnimalLabel = new javax.swing.JLabel();
+        anoNascimentoAnimalLabel = new javax.swing.JLabel();
         sexoAnimalLabel = new javax.swing.JLabel();
         nomeAnimalTextField = new javax.swing.JTextField();
         cadastrarAnimalButton = new javax.swing.JButton();
         sexoAnimalComboBox = new javax.swing.JComboBox<>();
-        idadeAnimalSpinner = new javax.swing.JSpinner();
+        anoNascimentoAnimalSpinner = new javax.swing.JSpinner();
         especieAnimalComboBox = new javax.swing.JComboBox<>();
         tutorComboBox = new javax.swing.JComboBox<>();
         cadastrarEspeciesPanel = new javax.swing.JPanel();
@@ -104,8 +100,8 @@ public class Frame extends JFrame {
         atualizarEspecieComboBox = new javax.swing.JComboBox<>();
         atualizarNomeAnimalLabel = new javax.swing.JLabel();
         atualizarNomeAnimalTextField = new javax.swing.JTextField();
-        atualizarIdadeAnimalLabel = new javax.swing.JLabel();
-        atualizarIdadeAnimalSpinner = new javax.swing.JSpinner();
+        atualizarAnoNascimentoAnimalLabel = new javax.swing.JLabel();
+        atualizarAnoNascimentoAnimalSpinner = new javax.swing.JSpinner();
         atualizarSexoAnimalLabel = new javax.swing.JLabel();
         atualizarSexoAnimalComboBox = new javax.swing.JComboBox<>();
         atualizarAnimalButton = new javax.swing.JButton();
@@ -572,7 +568,7 @@ public class Frame extends JFrame {
 
         tutorLabel.setText("Cliente tutor do Animal");
 
-        idadeAnimalLabel.setText("Idade Animal");
+        anoNascimentoAnimalLabel.setText("Ano de nascimento do Animal");
 
         sexoAnimalLabel.setText("Sexo Animal");
 
@@ -608,8 +604,8 @@ public class Frame extends JFrame {
                                 .addComponent(nomeAnimalLabel))
                             .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(idadeAnimalLabel))
-                            .addComponent(idadeAnimalSpinner)
+                                .addComponent(anoNascimentoAnimalLabel))
+                            .addComponent(anoNascimentoAnimalSpinner)
                             .addComponent(sexoAnimalComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(sexoAnimalLabel)))
                     .addGroup(cadastrarAnimalPanelLayout.createSequentialGroup()
@@ -633,9 +629,9 @@ public class Frame extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomeAnimalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(idadeAnimalLabel)
+                .addComponent(anoNascimentoAnimalLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(idadeAnimalSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(anoNascimentoAnimalSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(sexoAnimalLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -698,7 +694,7 @@ public class Frame extends JFrame {
 
         atualizarNomeAnimalLabel.setText("Nome Animal");
 
-        atualizarIdadeAnimalLabel.setText("Idade Animal");
+        atualizarAnoNascimentoAnimalLabel.setText("Ano de nascimento do Animal");
 
         atualizarSexoAnimalLabel.setText("Sexo Animal");
 
@@ -718,7 +714,7 @@ public class Frame extends JFrame {
                         .addGroup(atualizarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(atualizarNomeAnimalTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                             .addComponent(atualizarEspecieComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 300, Short.MAX_VALUE)
-                            .addComponent(atualizarIdadeAnimalSpinner, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(atualizarAnoNascimentoAnimalSpinner, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(atualizarTutorComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 300, Short.MAX_VALUE)
                             .addComponent(atualizarAnimalComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(atualizarSexoAnimalComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -726,7 +722,7 @@ public class Frame extends JFrame {
                                 .addGap(6, 6, 6)
                                 .addGroup(atualizarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(atualizarNomeAnimalLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(atualizarIdadeAnimalLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(atualizarAnoNascimentoAnimalLabel, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(atualizarSexoAnimalLabel, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(atualizarTutorLabel, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(atualizarEspecieLabel, javax.swing.GroupLayout.Alignment.LEADING)))))
@@ -758,9 +754,9 @@ public class Frame extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarNomeAnimalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarIdadeAnimalLabel)
+                .addComponent(atualizarAnoNascimentoAnimalLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(atualizarIdadeAnimalSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(atualizarAnoNascimentoAnimalSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarSexoAnimalLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2267,8 +2263,8 @@ public class Frame extends JFrame {
     private javax.swing.JComboBox<String> atualizarEspecieComboBox;
     private javax.swing.JLabel atualizarEspecieLabel;
     private javax.swing.JPanel atualizarEspeciesPanel;
-    private javax.swing.JLabel atualizarIdadeAnimalLabel;
-    private javax.swing.JSpinner atualizarIdadeAnimalSpinner;
+    private javax.swing.JLabel atualizarAnoNascimentoAnimalLabel;
+    private javax.swing.JSpinner atualizarAnoNascimentoAnimalSpinner;
     private javax.swing.JLabel atualizarNomeAnimalLabel;
     private javax.swing.JTextField atualizarNomeAnimalTextField;
     private javax.swing.JLabel atualizarNomeClienteLabel;
@@ -2405,8 +2401,8 @@ public class Frame extends JFrame {
     private javax.swing.JLabel finalizarTratamentoLabel;
     private javax.swing.JLabel horarioConsultaLabel;
     private javax.swing.JSpinner horarioConsultaSpinner;
-    private javax.swing.JLabel idadeAnimalLabel;
-    private javax.swing.JSpinner idadeAnimalSpinner;
+    private javax.swing.JLabel anoNascimentoAnimalLabel;
+    private javax.swing.JSpinner anoNascimentoAnimalSpinner;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -2553,7 +2549,7 @@ public class Frame extends JFrame {
         if(
                 Controller.addAnimal(inputs,
                         nomeAnimalTextField.getText(),
-                        idadeAnimalSpinner.getValue(),
+                        anoNascimentoAnimalSpinner.getValue(),
                         sexoAnimalComboBox.getSelectedItem(),
                         especieAnimalComboBox.getSelectedItem(),
                         tutorComboBox.getSelectedItem()
@@ -2571,7 +2567,7 @@ public class Frame extends JFrame {
                 Controller.updateAnimal(inputs,
                         atualizarAnimalComboBox.getSelectedItem(),
                         atualizarNomeAnimalTextField.getText(),
-                        atualizarIdadeAnimalSpinner.getValue(),
+                        atualizarAnoNascimentoAnimalSpinner.getValue(),
                         atualizarSexoAnimalComboBox.getSelectedItem(),
                         atualizarEspecieComboBox.getSelectedItem(),
                         atualizarTutorComboBox.getSelectedItem()
