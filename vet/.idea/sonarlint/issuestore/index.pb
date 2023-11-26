@@ -23,8 +23,6 @@ _
 -src/main/java/com/vet/model/impl/Especie.java,8\6\863c5ddf6d1d7886d1d4d5608dd7c445a9fc8b7a
 \
 ,src/main/java/com/vet/model/impl/Animal.java,7\f\7f78f52c16fc80ccdad39d16da96ab29c0e23892
-?
-vet.db.trace.db,6\9\690b0cb6e44331a7c3f830ea0f2c9993c9dff3fd
 k
 ;src/main/java/com/vet/view/table/impl/AnimalTableModel.java,c\c\cc03aa514c4fc2f840f56ad8fe45d198156e0485
 `

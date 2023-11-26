@@ -82,7 +82,7 @@ public final class Controller {
         if (input >= 0){
             return true;
         } else {
-            showMessageDialog(null, errorMessage);
+            showMessageDialog(null, errorMessage, "Erro", JOptionPane.WARNING_MESSAGE);
             return false;
         }
     }
@@ -99,7 +99,7 @@ public final class Controller {
         for(var item: inputs){
             if(item.isEmpty() || item.isBlank()){
                 proceed = false;
-                showMessageDialog(null, errorMessage);
+                showMessageDialog(null, errorMessage, "Erro", JOptionPane.WARNING_MESSAGE);
                 break;
             }
         }
@@ -156,7 +156,7 @@ public final class Controller {
 
     public static boolean addConsulta(Object dia, Object mes, Object ano, String relato, Object idVeterinario, Object idTratamento) {
         if (relato.isEmpty() || relato.isBlank()) {
-            showMessageDialog(null, "Ao cadastrar uma Consulta\nTodos os campos devem ser preenchidos!");
+            showMessageDialog(null, "Ao cadastrar uma Consulta\nTodos os campos devem ser preenchidos!", "Erro", JOptionPane.WARNING_MESSAGE);
             return false;
         } else {
             try{
@@ -164,7 +164,7 @@ public final class Controller {
                 ConsultaDAO.insert(relato, data, getIdFromIdString(idVeterinario), getIdFromIdString(idTratamento));
                 return true;
             }catch (Error e){
-                showMessageDialog(null, "Data da Consulta inválida!");
+                showMessageDialog(null, "Data da Consulta inválida!", "Erro", JOptionPane.WARNING_MESSAGE);
                 System.err.println(e.getMessage());
                 return false;
             }
@@ -173,7 +173,7 @@ public final class Controller {
 
     public static boolean addExame(String descricao, Object idConsulta) {
         if (descricao.isEmpty() || descricao.isBlank()) {
-            showMessageDialog(null, "Ao cadastrar um Exame\nTodos os campos devem ser preenchidos!");
+            showMessageDialog(null, "Ao cadastrar um Exame\nTodos os campos devem ser preenchidos!", "Erro", JOptionPane.WARNING_MESSAGE);
             ExameDAO.insert(descricao, getIdFromIdString(idConsulta));
             return true;
         } else {
@@ -189,12 +189,12 @@ public final class Controller {
                 TratamentoDAO.insert(dataInicio, dataFim, getIdFromIdString(idAnimal));
                 return true;
             }catch (Error e){
-                showMessageDialog(null, "Data de fim do Tratamento inválida!");
+                showMessageDialog(null, "Data de fim do Tratamento inválida!", "Erro", JOptionPane.WARNING_MESSAGE);
                 System.err.println(e.getMessage());
                 return false;
             }
         }catch (Error e){
-            showMessageDialog(null, "Data de início do Tratamento inválida!");
+            showMessageDialog(null, "Data de início do Tratamento inválida!", "Erro", JOptionPane.WARNING_MESSAGE);
             System.err.println(e.getMessage());
             return false;
         }
