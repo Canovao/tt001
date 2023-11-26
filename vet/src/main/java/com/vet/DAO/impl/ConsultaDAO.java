@@ -9,6 +9,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,12 +17,82 @@ import java.util.logging.Logger;
 
 public class ConsultaDAO extends DAO<Consulta> {
     private static DAO<?> instance = null;
+    private static String retrieveByClienteName = "";
+    private static String retrieveByAnimalName = "";
+    private static String retrieveByVeterinarioName = "";
 
     public static DAO<?> getInstance(){
         if(instance == null){
             instance = new ConsultaDAO();
         }
         return instance;
+    }
+
+    private static List<Consulta> doFilterByClienteNameStep(List<Consulta> consultas){
+        if (!retrieveByClienteName.isBlank() && !retrieveByClienteName.isEmpty()) {
+            List<Integer> clientesIds = ClienteDAO.retrieveBySimilarName(retrieveByClienteName)
+                    .stream()
+                    .map(Cliente.class::cast)
+                    .filter(e -> e.getNome().contains(retrieveByClienteName))
+                    .map(Cliente::getId).toList();
+
+            List<Animal> animaisToRemove = new ArrayList<>();
+
+            for (var item : animais) {
+                if (!clientesIds.contains(item.getIdCliente())) {
+                    animaisToRemove.add(item);
+                }
+            }
+
+            for (var item : animaisToRemove) {
+                animais.remove(item);
+            }
+        }
+        return animais;
+    }
+
+    private static List<Consulta> doFilterByVeterinarioNameStep(List<Consulta> consultas) {
+        if (!retrieveByClienteName.isBlank() && !retrieveByClienteName.isEmpty()) {
+            List<Integer> clientesIds = ClienteDAO.retrieveBySimilarName(retrieveByClienteName)
+                    .stream()
+                    .map(Cliente.class::cast)
+                    .filter(e -> e.getNome().contains(retrieveByClienteName))
+                    .map(Cliente::getId).toList();
+
+            List<Animal> animaisToRemove = new ArrayList<>();
+
+            for (var item : animais) {
+                if (!clientesIds.contains(item.getIdCliente())) {
+                    animaisToRemove.add(item);
+                }
+            }
+
+            for (var item : animaisToRemove) {
+                animais.remove(item);
+            }
+        }
+        return animais;
+    }
+
+    private static List<Consulta> doFilterByAnimalNameStep(List<Consulta> consultas) {
+    }
+
+    public static List<Model> retrieveByClienteName(String nome){
+        retrieveByClienteName = nome;
+
+    }
+
+    public static List<Model> retrieveByVeterinarioName(String nome){
+        retrieveByVeterinarioName = nome;
+
+        List<Consulta> consultas = doFilterByVeterinarioNameStep(retrieveAll("consulta").stream().map(Consulta.class::cast).toList());
+
+        return consultas;
+    }
+
+    public static List<Model> retrieveByAnimalName(String nome){
+        retrieveByAnimalName = nome;
+
     }
 
     public static Model insert(String relato, Date dataConsulta, int idTratamento, int idVeterinario, int horario, int terminado) {

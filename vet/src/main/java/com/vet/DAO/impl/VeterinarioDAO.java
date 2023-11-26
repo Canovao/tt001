@@ -41,7 +41,7 @@ public class VeterinarioDAO extends DAO<Veterinario> {
         return retrieveById("veterinario", lastId("veterinario","id"));
     }
 
-    public List<Model> retrieveBySimilarName(String nome) {
+    public static List<Model> retrieveBySimilarName(String nome) {
         return DAO.retrieve("SELECT * FROM veterinario WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "veterinario");
     }
 

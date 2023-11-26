@@ -40,7 +40,7 @@ public class ClienteDAO extends DAO<Cliente> {
         return retrieveById("cliente", lastId("cliente","id"));
     }
 
-    public List<Model> retrieveBySimilarName(String nome) {
+    public static List<Model> retrieveBySimilarName(String nome) {
         return DAO.retrieve("SELECT * FROM cliente WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "cliente");
     }
 

@@ -1953,105 +1953,121 @@ public class Frame extends JFrame {
         this.setTitle("Clínica Veterinária");
     }
 
-    private void filterByNameClienteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByNameClienteTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByNameClienteTextFieldActionPerformed
-
-    private void clearFilterByNameClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByNameClienteButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByNameClienteButtonActionPerformed
-
-    private void filterByNameAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByNameAnimalTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByNameAnimalTextFieldActionPerformed
-
-    private void clearFilterByNameAnimalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByNameAnimalButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByNameAnimalButtonActionPerformed
-
-    private void filterByTutorAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByTutorAnimalTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByTutorAnimalTextFieldActionPerformed
-
-    private void clearFilterByTutorAnimalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByTutorAnimalButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByTutorAnimalButtonActionPerformed
-
-    private void filterByNameVeterinarioTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByNameVeterinarioTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByNameVeterinarioTextFieldActionPerformed
-
-    private void clearFilterByNameVeterinarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByNameVeterinarioButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByNameVeterinarioButtonActionPerformed
-
-    private void filterByClienteConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByClienteConsultaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByClienteConsultaTextFieldActionPerformed
-
-    private void clearFilterByClienteConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByClienteConsultaButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByClienteConsultaButtonActionPerformed
-
-    private void filterByVeterinarioConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByVeterinarioConsultaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByVeterinarioConsultaTextFieldActionPerformed
-
-    private void clearFilterByVeterinarioConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByVeterinarioConsultaButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByVeterinarioConsultaButtonActionPerformed
-
-    private void filterByAnimalConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByAnimalConsultaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByAnimalConsultaTextFieldActionPerformed
-
-    private void clearFilterByAnimalConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByAnimalConsultaButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByAnimalConsultaButtonActionPerformed
-
-    private void orderByTerminadoConsultaToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    private void filterByNameClienteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        clienteTableModel.clear();
+        clienteTableModel.addListOfItems(ClienteDAO.retrieveBySimilarName(filterByNameClienteTextField.getText()));
     }
 
-    private void filterByClienteExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByClienteExameTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByClienteExameTextFieldActionPerformed
+    private void clearFilterByNameClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByNameClienteTextField.setText("");
+    }
 
-    private void clearFilterByClienteExameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByClienteExameButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByClienteExameButtonActionPerformed
+    private void filterByNameAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        animalTableModel.clear();
+        animalTableModel.addListOfItems(AnimalDAO.retrieveByAnimalName(filterByNameAnimalTextField.getText()));
+    }
 
-    private void filterByVeterinarioExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByVeterinarioExameTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByVeterinarioExameTextFieldActionPerformed
+    private void clearFilterByNameAnimalButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByNameAnimalTextField.setText("");
+    }
 
-    private void clearFilterByVeterinarioExameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByVeterinarioExameButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByVeterinarioExameButtonActionPerformed
+    private void filterByTutorAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        animalTableModel.clear();
+        animalTableModel.addListOfItems(AnimalDAO.retrieveByClienteName(filterByTutorAnimalTextField.getText()));
+    }
 
-    private void filterByAnimalExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByAnimalExameTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByAnimalExameTextFieldActionPerformed
+    private void clearFilterByTutorAnimalButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByTutorAnimalTextField.setText("");
+    }
 
-    private void clearFilterByAnimalExameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByAnimalExameButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByAnimalExameButtonActionPerformed
+    private void filterByNameVeterinarioTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        veterinarioTableModel.clear();
+        veterinarioTableModel.addListOfItems(VeterinarioDAO.retrieveBySimilarName(filterByNameVeterinarioTextField.getText()));
+    }
 
-    private void filterByClienteTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByClienteTratamentoTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByClienteTratamentoTextFieldActionPerformed
+    private void clearFilterByNameVeterinarioButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByNameVeterinarioTextField.setText("");
+    }
 
-    private void clearFilterByClienteTratamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByClienteTratamentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByClienteTratamentoButtonActionPerformed
+    private void filterByClienteConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        consultaTableModel.clear();
+        consultaTableModel.addListOfItems(ConsultaDAO.retrieveByClienteName(filterByClienteConsultaTextField.getText()));
+    }
 
-    private void filterByAnimalTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByAnimalTratamentoTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filterByAnimalTratamentoTextFieldActionPerformed
+    private void clearFilterByClienteConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByClienteConsultaTextField.setText("");
+    }
 
-    private void clearFilterByAnimalTratamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterByAnimalTratamentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearFilterByAnimalTratamentoButtonActionPerformed
+    private void filterByVeterinarioConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        consultaTableModel.clear();
+        consultaTableModel.addListOfItems(ConsultaDAO.retrieveByVeterinarioName(filterByVeterinarioConsultaTextField.getText()));
+    }
+
+    private void clearFilterByVeterinarioConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByVeterinarioConsultaTextField.setText("");
+    }
+
+    private void filterByAnimalConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        consultaTableModel.clear();
+        consultaTableModel.addListOfItems(ConsultaDAO.retrieveByAnimalName(filterByAnimalConsultaTextField.getText()));
+    }
+
+    private void clearFilterByAnimalConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByAnimalConsultaTextField.setText("");
+    }
+
+    private void orderByTerminadoConsultaToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        if(orderByTerminadoConsultaToggleButton.isSelected()){
+            ConsultaDAO.addOrderByClause("terminado ASC");
+        } else {
+            ConsultaDAO.removeOrderByClause("terminado ASC");
+        }
+    }
+
+    private void filterByClienteExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        exameTableModel.clear();
+        exameTableModel.addListOfItems(ExameDAO.retrieveByClienteName(filterByClienteExameTextField.getText()));
+    }
+
+    private void clearFilterByClienteExameButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByClienteExameTextField.setText("");
+    }
+
+    private void filterByVeterinarioExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        exameTableModel.clear();
+        exameTableModel.addListOfItems(ExameDAO.retrieveByVeterinarioName(filterByVeterinarioExameTextField.getText()));
+    }
+
+    private void clearFilterByVeterinarioExameButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByVeterinarioExameTextField.setText("");
+    }
+
+    private void filterByAnimalExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        exameTableModel.clear();
+        exameTableModel.addListOfItems(ExameDAO.retrieveByAnimalName(filterByAnimalExameTextField.getText()));
+    }
+
+    private void clearFilterByAnimalExameButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByClienteTratamentoTextField.setText("");
+    }
+
+    private void filterByClienteTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        tratamentoTableModel.clear();
+        tratamentoTableModel.addListOfItems(TratamentoDAO.retrieveByClienteName(filterByClienteTratamentoTextField.getText()));
+    }
+
+    private void clearFilterByClienteTratamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByClienteTratamentoTextField.setText("");
+    }
+
+    private void filterByAnimalTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        tratamentoTableModel.clear();
+        tratamentoTableModel.addListOfItems(TratamentoDAO.retrieveByAnimalTratamento(filterByAnimalTratamentoTextField.getText()));
+    }
+
+    private void clearFilterByAnimalTratamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        filterByAnimalTratamentoTextField.setText("");
+    }
 
     /**
      * @param args the command line arguments

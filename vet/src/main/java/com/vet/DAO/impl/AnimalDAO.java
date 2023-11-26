@@ -6,10 +6,12 @@ import com.vet.model.Model;
 import com.vet.model.impl.Animal;
 import com.vet.model.impl.Cliente;
 import com.vet.model.impl.Especie;
+import com.vet.model.impl.table.AnimalTable;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,6 +19,9 @@ import java.util.logging.Logger;
 
 public class AnimalDAO extends DAO<Animal> {
     private static DAO<?> instance = null;
+
+    private static String retrieveByAnimalName = "";
+    private static String retrieveByClienteName = "";
 
     public static DAO<?> getInstance(){
         if(instance == null){
@@ -42,8 +47,67 @@ public class AnimalDAO extends DAO<Animal> {
         return retrieveById("animal", lastId("animal","id"));
     }
 
-    public List<Model> retrieveBySimilarName(String nome) {
-        return DAO.retrieve("SELECT * FROM animal WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "animal");
+    private static List<Animal> doFilterByClienteNameStep(List<Animal> animais){
+        if (!retrieveByClienteName.isBlank() && !retrieveByClienteName.isEmpty()) {
+            List<Integer> clientesIds = ClienteDAO.retrieveBySimilarName(retrieveByClienteName)
+                    .stream()
+                    .map(Cliente.class::cast)
+                    .filter(e -> e.getNome().contains(retrieveByClienteName))
+                    .map(Cliente::getId).toList();
+
+            List<Animal> animaisToRemove = new ArrayList<>();
+
+            for (var item : animais) {
+                if (!clientesIds.contains(item.getIdCliente())) {
+                    animaisToRemove.add(item);
+                }
+            }
+
+            for (var item : animaisToRemove) {
+                animais.remove(item);
+            }
+        }
+        return animais;
+    }
+
+    public static List<Model> retrieveByAnimalName(String nome) {
+        retrieveByAnimalName = nome;
+
+        List<Animal> animais = doFilterByClienteNameStep(
+                DAO.retrieve("SELECT * FROM animal WHERE UPPER(nome) LIKE UPPER('%" + retrieveByAnimalName + "%')", "animal").stream().map(Animal.class::cast).toList()
+        );
+
+        return buildAnimaisTableFromAnimais(animais);
+    }
+
+    public static List<Model> retrieveByClienteName(String nome) {
+        retrieveByClienteName = nome;
+
+        List<Animal> animais = doFilterByClienteNameStep(
+                DAO.retrieve("SELECT * FROM animal WHERE UPPER(nome) LIKE UPPER('%" + retrieveByAnimalName + "%')", "animal").stream().map(Animal.class::cast).toList()
+        );
+
+        return buildAnimaisTableFromAnimais(animais);
+    }
+
+    public static List<Model> buildAnimaisTableFromAnimais(List<Animal> animais){
+        List<Model> animalTables = new ArrayList<>();
+
+        for(var item: animais){
+            animalTables.add(
+                    new AnimalTable(
+                            item.getId(),
+                            item.getNome(),
+                            item.getAnoNascimento(),
+                            item.getSexo(),
+                            ((Especie) EspecieDAO.getInstance().get(item.getIdEspecie())).getNome(),
+                            ((Cliente) ClienteDAO.getInstance().get(item.getIdCliente())).getNome(),
+                            item.getAtivo()
+                    )
+            );
+        }
+
+        return animalTables;
     }
 
     public static void update(Animal model) {

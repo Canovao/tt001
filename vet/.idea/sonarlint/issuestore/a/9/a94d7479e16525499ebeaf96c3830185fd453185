@@ -1,11 +1,35 @@
 
 f
-java:S1192)"IDefine a constant instead of duplicating this literal "consulta" 5 times.(şïÛÛ8ÒàÿãÀ1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8ÔàÿãÀ1
+java:S1192X"IDefine a constant instead of duplicating this literal "consulta" 6 times.(‰ÖøÆ8´®üëÀ1
+~
+java:S1488X"aImmediately return this expression instead of assigning it to the temporary variable "consultas".(‰ÖøÆ8òşëÀ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8«ÑûëÀ1
 l
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€ô­¥8âàÿãÀ1
+java:S2095v"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ƒ²§ğ8¹ÑûëÀ1
 l
-java:S2095/"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ƒ²§ğ8âàÿãÀ1
+java:S2095e"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€ô­¥8¹ÑûëÀ1
+
+java:S1186M"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚¿²8ºÑûëÀ1
+‹
+java:S41446"iUpdate this method so that its implementation is not identical to "doFilterByClienteNameStep" on line 31.(Ìÿ…ÿÿÿÿÿ8ºÑûëÀ1
+…
+java:S1450"cRemove the "retrieveByAnimalName" field and declare it as a local variable in the relevant methods.(»Æù…ÿÿÿÿÿ8ºÑûëÀ1
+…
+java:S1450"hRemove the "retrieveByVeterinarioName" field and declare it as a local variable in the relevant methods.(½ÒÁ˜8ºÑûëÀ1
 B
-java:S1452"&Remove usage of generic wildcard type.(Ìéë&8äàÿãÀ1
-G	java:S1067"+Replace this use of System.err by a logger.(ØşÿÌ8èàÿãÀ1
+java:S1452"&Remove usage of generic wildcard type.(Ìéë&8¼ÑûëÀ1
+M
+java:S1172"0Remove this unused method parameter "consultas".(…ÓÉ‹8½ÑûëÀ1
+R
+java:S11726"0Remove this unused method parameter "consultas".(Ìÿ…ÿÿÿÿÿ8¿ÑûëÀ1
+M
+java:S1172M"0Remove this unused method parameter "consultas".(‚¿²8ÀÑûëÀ1
+G	java:S106~"+Replace this use of System.err by a logger.(ØşÿÌ8ÃÑûëÀ1
+Z
+java:S1068"8Remove this unused "retrieveByAnimalName" private field.(»Æù…ÿÿÿÿÿ8ÈÑûëÀ1
+Z
+java:S1068"=Remove this unused "retrieveByVeterinarioName" private field.(½ÒÁ˜8ÈÑûëÀ1
+[
+java:S1144">Remove this unused private "doFilterByClienteNameStep" method.(…ÓÉ‹8ÈÑûëÀ1
+Z
+java:S1144M"=Remove this unused private "doFilterByAnimalNameStep" method.(‚¿²8ÈÑûëÀ1

@@ -1,11 +1,11 @@
 
-b
-java:S1192*"GDefine a constant instead of duplicating this literal "animal" 6 times.(ÔÆû‘ùÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ
+i
+java:S1192/"GDefine a constant instead of duplicating this literal "animal" 7 times.(ÔÆû‘ùÿÿÿÿ8ü¼éÀ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8ş¼éÀ1
 l
-java:S20954"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(İÂ’è8Ä£ÇåÀ1
-j
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(äóùùÿÿÿÿ
-;
-java:S1452"&Remove usage of generic wildcard type.(Ìéë&
-@	java:S106>"+Replace this use of System.err by a logger.(ØşÿÌ
+java:S2095t"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(İÂ’è8Ÿ¼éÀ1
+q
+java:S2095$"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(äóùùÿÿÿÿ8Ÿ¼éÀ1
+B
+java:S1452"&Remove usage of generic wildcard type.(Ìéë&8’Ÿ¼éÀ1
+G	java:S106~"+Replace this use of System.err by a logger.(ØşÿÌ8šŸ¼éÀ1
