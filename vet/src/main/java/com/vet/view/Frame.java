@@ -515,6 +515,7 @@ public class Frame extends JFrame {
         );
 
         clienteTabbedPane.addTab("Ativar Cliente", jPanel4);
+        clienteTabbedPane.addChangeListener(e -> clienteTabbedPaneChangeListener());
 
         clienteTable.setModel(clienteTableModel);
         clienteScrollPane.setViewportView(clienteTable);
@@ -2685,6 +2686,7 @@ public class Frame extends JFrame {
     private void mainTabbedPaneChangeListener(){
         flushAll();
     }
+
     private void animalTabbedPaneChangeListener(){
 
     }
