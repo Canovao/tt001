@@ -2,10 +2,10 @@
 j
 java:S1192("HDefine a constant instead of duplicating this literal "cliente" 6 times.(ÜÂìÿÿÿÿÿ8“Û²»À1
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ
+k
+java:S20952"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¾Æ‡;8ûÆåÀ1
 e
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(»ßé‰
-e
-java:S20952"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¸É±š
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(™Ëõ
 ;
-java:S1452"&Remove usage of generic wildcard type.(Ìéë&
-@	java:S106;"+Replace this use of System.err by a logger.(ØşÿÌ
+java:S1452"&Remove usage of generic wildcard type.(Ìéë&
+@	java:S106<"+Replace this use of System.err by a logger.(ØşÿÌ

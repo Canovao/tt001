@@ -2,10 +2,10 @@
 a
 java:S1192)"KDefine a constant instead of duplicating this literal "tratamento" 6 times.(à¢÷š
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ
-d
-java:S2095/"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(«­ÊP
 e
 java:S2095!"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¤Ý‰†
+d
+java:S2095/"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(«­ÊP
 ;
 java:S1452"&Remove usage of generic wildcard type.(Ìéë&
 @	java:S1066"+Replace this use of System.err by a logger.(ØþÿÌ

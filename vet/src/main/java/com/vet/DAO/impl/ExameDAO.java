@@ -65,7 +65,7 @@ public class ExameDAO extends DAO<Exame> {
         String[] list = new String[all.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = String.valueOf(all.get(i).getId()) + '|' + all.get(i).getDescricao();
+            list[i] = all.get(i).getId() + " | " + all.get(i).getDescricao();
         }
 
         return list;

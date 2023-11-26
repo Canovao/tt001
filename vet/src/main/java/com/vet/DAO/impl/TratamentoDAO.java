@@ -71,7 +71,7 @@ public class TratamentoDAO extends DAO<Tratamento> {
         String[] list = new String[all.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = String.valueOf(all.get(i).getId()) + '|' + AnimalDAO.getInstance().get(all.get(i).getIdAnimal());
+            list[i] = all.get(i).getId() + " | " + AnimalDAO.getInstance().get(all.get(i).getIdAnimal());
         }
 
         return list;

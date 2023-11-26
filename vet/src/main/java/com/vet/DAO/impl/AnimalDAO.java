@@ -28,12 +28,13 @@ public class AnimalDAO extends DAO<Animal> {
     public static Model insert(String nome, String sexo, int anoNascimento, int idEspecie, int idCliente) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("INSERT INTO animal (nome, sexo, ano_nascimento, id_especie, id_cliente) VALUES (?,?,?,?,?)");
+            stmt = DAO.getConnection().prepareStatement("INSERT INTO animal (nome, sexo, ano_nascimento, id_especie, id_cliente, ativo) VALUES (?,?,?,?,?,?)");
             stmt.setString(1, nome);
             stmt.setString(2, sexo);
             stmt.setInt(3, anoNascimento);
             stmt.setInt(4, idEspecie);
             stmt.setInt(5, idCliente);
+            stmt.setInt(6, 1);
             executeUpdate(stmt);
         } catch (SQLException ex) {
             Logger.getLogger(AnimalDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -48,13 +49,14 @@ public class AnimalDAO extends DAO<Animal> {
     public static void update(Animal model) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("UPDATE animal SET nome=?, sexo=?, ano_nascimento=?, id_especie=?, id_cliente=? WHERE id=?");
+            stmt = DAO.getConnection().prepareStatement("UPDATE animal SET nome=?, sexo=?, ano_nascimento=?, id_especie=?, id_cliente=?, ativo=? WHERE id=?");
             stmt.setString(1, model.getNome());
             stmt.setString(2, model.getSexo());
             stmt.setInt(3, model.getAnoNascimento());
             stmt.setInt(4, model.getIdEspecie());
             stmt.setInt(5, model.getIdCliente());
-            stmt.setInt(6, model.getId());
+            stmt.setInt(6, Integer.parseInt(model.getAtivo()));
+            stmt.setInt(7, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
@@ -77,7 +79,7 @@ public class AnimalDAO extends DAO<Animal> {
         String[] list = new String[all.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = String.valueOf(all.get(i).getId()) + '|' + all.get(i).getNome();
+            list[i] = all.get(i).getId() + " | " + all.get(i).getNome();
         }
 
         return list;

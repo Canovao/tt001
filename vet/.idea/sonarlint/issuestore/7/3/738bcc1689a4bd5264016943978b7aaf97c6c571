@@ -1,9 +1,11 @@
 
 b
-java:S1192)"GDefine a constant instead of duplicating this literal "animal" 6 times.(ÔÆû‘ùÿÿÿÿ
+java:S1192*"GDefine a constant instead of duplicating this literal "animal" 6 times.(ÔÆû‘ùÿÿÿÿ
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ
+l
+java:S20954"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(İÂ’è8Ä£ÇåÀ1
 j
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’âæ„ûÿÿÿÿ
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(äóùùÿÿÿÿ
 ;
 java:S1452"&Remove usage of generic wildcard type.(Ìéë&
-@	java:S106<"+Replace this use of System.err by a logger.(ØşÿÌ
+@	java:S106>"+Replace this use of System.err by a logger.(ØşÿÌ

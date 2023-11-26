@@ -4,7 +4,6 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Cliente;
-import com.vet.model.impl.Consulta;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -27,12 +26,13 @@ public class ClienteDAO extends DAO<Cliente> {
     public static Model insert(String nome, String end, String cep, String email, String telefone) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("INSERT INTO cliente (nome, endereco, cep, email, telefone) VALUES (?,?,?,?,?)");
+            stmt = DAO.getConnection().prepareStatement("INSERT INTO cliente (nome, endereco, cep, email, telefone, ativo) VALUES (?,?,?,?,?,?)");
             stmt.setString(1, nome);
             stmt.setString(2, end);
             stmt.setString(3, cep);
             stmt.setString(4, email);
             stmt.setString(5, telefone);
+            stmt.setInt(6, 1);
             executeUpdate(stmt);
         } catch (SQLException ex) {
             Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -47,13 +47,14 @@ public class ClienteDAO extends DAO<Cliente> {
     public static void update(Cliente model) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("UPDATE cliente SET nome=?, endereco=?, cep=?, email=?, telefone=? WHERE id=?");
+            stmt = DAO.getConnection().prepareStatement("UPDATE cliente SET nome=?, endereco=?, cep=?, email=?, telefone=?, ativo=? WHERE id=?");
             stmt.setString(1, model.getNome());
             stmt.setString(2, model.getEndereco());
             stmt.setString(3, model.getCep());
             stmt.setString(4, model.getEmail());
             stmt.setString(5, model.getTelefone());
-            stmt.setInt(6, model.getId());
+            stmt.setInt(6, Integer.parseInt(model.getAtivo()));
+            stmt.setInt(7, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
@@ -76,7 +77,7 @@ public class ClienteDAO extends DAO<Cliente> {
         String[] list = new String[all.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = String.valueOf(all.get(i).getId()) + '|' + all.get(i).getNome();
+            list[i] = all.get(i).getId() + " | " + all.get(i).getNome();
         }
 
         return list;

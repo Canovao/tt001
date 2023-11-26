@@ -5,9 +5,9 @@ java:S1192+"LDefine a constant instead of duplicating this literal "Exception: 
 b
 java:S2259C"@A "NullPointerException" could be thrown; "rs" is nullable here.(íôÚÇşÿÿÿÿ8ŠÆìâÀ1
 i
-java:S2095\"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8ŠÆìâÀ1
-i
 java:S2095l"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8ŠÆìâÀ1
+i
+java:S2095\"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8ŠÆìâÀ1
 e	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ñ¥ˆ½8ŒÆìâÀ1
 C	java:S131!""Add a default case to this switch.(™¶àØÿÿÿÿÿ8ÆìâÀ1
 G	java:S106+"+Replace this use of System.err by a logger.(ØşÿÌ8ÆìâÀ1

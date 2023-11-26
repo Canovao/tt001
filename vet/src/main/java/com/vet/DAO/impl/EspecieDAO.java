@@ -4,7 +4,6 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.Especie;
-import com.vet.model.impl.Exame;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -27,8 +26,9 @@ public class EspecieDAO extends DAO<Especie> {
     public static Model insert(String nome) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("INSERT INTO especie (nome) VALUES (?)");
+            stmt = DAO.getConnection().prepareStatement("INSERT INTO especie (nome, ativo) VALUES (?,?)");
             stmt.setString(1, nome);
+            stmt.setInt(2, 1);
             executeUpdate(stmt);
         } catch (SQLException ex) {
             Logger.getLogger(EspecieDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -36,15 +36,12 @@ public class EspecieDAO extends DAO<Especie> {
         return retrieveById("especie", lastId("especie","id"));
     }
 
-    public List<Model> retrieveBySimilarName(String nome) {
-        return DAO.retrieve("SELECT * FROM especie WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "especie");
-    }
-
     public static void update(Especie model) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("UPDATE especie SET nome=? WHERE id=?");
+            stmt = DAO.getConnection().prepareStatement("UPDATE especie SET nome=?, ativo=? WHERE id=?");
             stmt.setString(1, model.getNome());
+            stmt.setInt(3, Integer.parseInt(model.getAtivo()));
             stmt.setInt(2, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
@@ -68,7 +65,7 @@ public class EspecieDAO extends DAO<Especie> {
         String[] list = new String[all.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = String.valueOf(all.get(i).getId()) + '|' + all.get(i).getNome();
+            list[i] = all.get(i).getId() + " | " + all.get(i).getNome();
         }
 
         return list;
