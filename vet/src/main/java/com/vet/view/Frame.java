@@ -212,7 +212,7 @@ public class Frame extends JFrame {
         filterByAnimalConsultaTextField = new javax.swing.JTextField();
         clearFilterByAnimalConsultaButton = new javax.swing.JButton();
         orderByDataConsultaToggleButton = new javax.swing.JToggleButton();
-        orderByDataConsultaToggleButton1 = new javax.swing.JToggleButton();
+        orderByTerminadoConsultaToggleButton = new javax.swing.JToggleButton();
         examePanel = new javax.swing.JPanel();
         exameTabbedPane = new javax.swing.JTabbedPane();
         cadastrarExamePanel = new javax.swing.JPanel();
@@ -514,6 +514,7 @@ public class Frame extends JFrame {
         clienteScrollPane.setViewportView(clienteTable);
 
         filterByNameClienteLabel.setText("Filtrar por nome");
+        filterByNameClienteTextField.addActionListener(this::filterByNameClienteTextFieldActionPerformed);
 
         clearFilterByNameClienteButton.setText("X");
         clearFilterByNameClienteButton.addActionListener(this::clearFilterByNameClienteButtonActionPerformed);
@@ -1487,8 +1488,8 @@ public class Frame extends JFrame {
 
         orderByDataConsultaToggleButton.setText("Ordenar por Data");
 
-        orderByDataConsultaToggleButton1.setText("Ordenar por Terminado");
-        orderByDataConsultaToggleButton1.addActionListener(this::orderByDataConsultaToggleButton1ActionPerformed);
+        orderByTerminadoConsultaToggleButton.setText("Ordenar por Terminado");
+        orderByTerminadoConsultaToggleButton.addActionListener(this::orderByTerminadoConsultaToggleButtonActionPerformed);
 
         javax.swing.GroupLayout consultaPanelLayout = new javax.swing.GroupLayout(consultaPanel);
         consultaPanel.setLayout(consultaPanelLayout);
@@ -1527,7 +1528,7 @@ public class Frame extends JFrame {
                                 .addGap(46, 46, 46)
                                 .addComponent(orderByDataConsultaToggleButton)
                                 .addGap(18, 18, 18)
-                                .addComponent(orderByDataConsultaToggleButton1)))
+                                .addComponent(orderByTerminadoConsultaToggleButton)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(consultaTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1549,7 +1550,7 @@ public class Frame extends JFrame {
                     .addComponent(filterByAnimalConsultaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clearFilterByAnimalConsultaButton)
                     .addComponent(orderByDataConsultaToggleButton)
-                    .addComponent(orderByDataConsultaToggleButton1))
+                    .addComponent(orderByTerminadoConsultaToggleButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(consultaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1922,7 +1923,7 @@ public class Frame extends JFrame {
 
         mainTabbedPane.addTab("Tratamento", tratamentoPanel);
 
-        logoIcon.setIcon(new ImageIcon("src/main/java/com/vet/img/clinicaveterinaria.png")); // NOI18N
+        logoIcon.setIcon(new ImageIcon("src/main/java/com/vet/img/clinicaveterinaria.png"));
         logoIcon.setMaximumSize(new java.awt.Dimension(32, 32));
         logoIcon.setMinimumSize(new java.awt.Dimension(32, 32));
         logoIcon.setPreferredSize(new java.awt.Dimension(64, 64));
@@ -1950,7 +1951,7 @@ public class Frame extends JFrame {
         pack();
         flushAll();
         this.setTitle("Clínica Veterinária");
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void filterByNameClienteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByNameClienteTextFieldActionPerformed
         // TODO add your handling code here:
@@ -2008,9 +2009,9 @@ public class Frame extends JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_clearFilterByAnimalConsultaButtonActionPerformed
 
-    private void orderByDataConsultaToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderByDataConsultaToggleButton1ActionPerformed
+    private void orderByTerminadoConsultaToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_orderByDataConsultaToggleButton1ActionPerformed
+    }
 
     private void filterByClienteExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByClienteExameTextFieldActionPerformed
         // TODO add your handling code here:
@@ -2036,10 +2037,6 @@ public class Frame extends JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_clearFilterByAnimalExameButtonActionPerformed
 
-    private void finalizarTratamentoComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarTratamentoComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_finalizarTratamentoComboBoxActionPerformed
-
     private void filterByClienteTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterByClienteTratamentoTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_filterByClienteTratamentoTextFieldActionPerformed
@@ -2056,55 +2053,10 @@ public class Frame extends JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_clearFilterByAnimalTratamentoButtonActionPerformed
 
-    private void desativarClienteComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desativarClienteComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_desativarClienteComboBoxActionPerformed
-
-    private void ativarClienteComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativarClienteComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ativarClienteComboBoxActionPerformed
-
-    private void selecionarEspecieAtualizarComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecionarEspecieAtualizarComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_selecionarEspecieAtualizarComboBoxActionPerformed
-
-    private void desativarAnimalComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desativarAnimalComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_desativarAnimalComboBoxActionPerformed
-
-    private void ativarAnimalComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativarAnimalComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ativarAnimalComboBoxActionPerformed
-
-    private void desativarEspecieComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desativarEspecieComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_desativarEspecieComboBoxActionPerformed
-
-    private void ativarEspecieComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativarEspecieComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ativarEspecieComboBoxActionPerformed
-
-    private void desativarVeterinarioComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desativarVeterinarioComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_desativarVeterinarioComboBoxActionPerformed
-
-    private void ativarVeterinarioComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativarVeterinarioComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ativarVeterinarioComboBoxActionPerformed
-
-    private void finalizarConsultaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarConsultaComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_finalizarConsultaComboBoxActionPerformed
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -2116,13 +2068,9 @@ public class Frame extends JFrame {
                  UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Frame().setVisible(true));
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel animalPanel;
     private javax.swing.JScrollPane animalScrollPane;
     private javax.swing.JTabbedPane animalTabbedPane;
@@ -2333,7 +2281,7 @@ public class Frame extends JFrame {
     private javax.swing.JLabel nomeVeterinarioLabel;
     private javax.swing.JTextField nomeVeterinarioTextField;
     private javax.swing.JToggleButton orderByDataConsultaToggleButton;
-    private javax.swing.JToggleButton orderByDataConsultaToggleButton1;
+    private javax.swing.JToggleButton orderByTerminadoConsultaToggleButton;
     private javax.swing.JScrollPane relatoCadastrarConsultaScrollPane;
     private javax.swing.JLabel relatoConsultaLabel;
     private javax.swing.JTextArea relatoConsultaTextArea;
