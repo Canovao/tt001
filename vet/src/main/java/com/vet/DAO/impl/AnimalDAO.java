@@ -18,12 +18,12 @@ import java.util.logging.Logger;
 
 
 public class AnimalDAO extends DAO<Animal> {
-    private static DAO<?> instance = null;
+    private static AnimalDAO instance = null;
 
     private static String retrieveByAnimalName = "";
     private static String retrieveByClienteName = "";
 
-    public static DAO<?> getInstance(){
+    public static AnimalDAO getInstance(){
         if(instance == null){
             instance = new AnimalDAO();
         }
@@ -70,41 +70,31 @@ public class AnimalDAO extends DAO<Animal> {
         return animais;
     }
 
+    private static List<Model> baseRetrieveBy(){
+        return buildAnimaisTableFromAnimais(
+                doFilterByClienteNameStep(
+                        DAO.retrieve("SELECT * FROM animal WHERE UPPER(nome) LIKE UPPER('%" + retrieveByAnimalName + "%')", "animal").stream().map(Animal.class::cast).toList()
+                )
+        ).stream().map(Model.class::cast).toList();
+    }
+
     public static List<Model> retrieveByAnimalName(String nome) {
         retrieveByAnimalName = nome;
 
-        List<Animal> animais = doFilterByClienteNameStep(
-                DAO.retrieve("SELECT * FROM animal WHERE UPPER(nome) LIKE UPPER('%" + retrieveByAnimalName + "%')", "animal").stream().map(Animal.class::cast).toList()
-        );
-
-        return buildAnimaisTableFromAnimais(animais);
+        return baseRetrieveBy();
     }
 
     public static List<Model> retrieveByClienteName(String nome) {
         retrieveByClienteName = nome;
 
-        List<Animal> animais = doFilterByClienteNameStep(
-                DAO.retrieve("SELECT * FROM animal WHERE UPPER(nome) LIKE UPPER('%" + retrieveByAnimalName + "%')", "animal").stream().map(Animal.class::cast).toList()
-        );
-
-        return buildAnimaisTableFromAnimais(animais);
+        return baseRetrieveBy();
     }
 
-    public static List<Model> buildAnimaisTableFromAnimais(List<Animal> animais){
-        List<Model> animalTables = new ArrayList<>();
+    public static List<AnimalTable> buildAnimaisTableFromAnimais(List<Animal> animais){
+        List<AnimalTable> animalTables = new ArrayList<>();
 
         for(var item: animais){
-            animalTables.add(
-                    new AnimalTable(
-                            item.getId(),
-                            item.getNome(),
-                            item.getAnoNascimento(),
-                            item.getSexo(),
-                            ((Especie) EspecieDAO.getInstance().get(item.getIdEspecie())).getNome(),
-                            ((Cliente) ClienteDAO.getInstance().get(item.getIdCliente())).getNome(),
-                            item.getAtivo()
-                    )
-            );
+            animalTables.add(buildAnimalTableFromAnimal(item));
         }
 
         return animalTables;
@@ -127,6 +117,18 @@ public class AnimalDAO extends DAO<Animal> {
         }
     }
 
+    public static AnimalTable buildAnimalTableFromAnimal(Animal animal) {
+        return new AnimalTable(
+                animal.getId(),
+                animal.getNome(),
+                animal.getAnoNascimento(),
+                animal.getSexo(),
+                getEspecieNomeFromAnimal(animal),
+                getClienteNomeFromAnimal(animal),
+                (animal.getAtivo().equalsIgnoreCase("1")) ? "Sim": "Não"
+        );
+    }
+
     @Override
     public Animal get(int id) {
         return (Animal) DAO.retrieveById("animal", id);
@@ -140,10 +142,15 @@ public class AnimalDAO extends DAO<Animal> {
     public String[] getAllToComboBox() {
         List<Animal> all = retrieve("SELECT * FROM animal WHERE ativo = 1", "animal").stream().map(Animal.class::cast).toList();
 
-        String[] list = new String[all.size()];
+        return buildToComboBox(all);
+    }
+
+    @Override
+    public String[] buildToComboBox(List<Animal> animals) {
+        String[] list = new String[animals.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = all.get(i).getId() + " | " + all.get(i).getNome();
+            list[i] = animals.get(i).getId() + "|" + animals.get(i).getNome();
         }
 
         return list;
@@ -156,10 +163,10 @@ public class AnimalDAO extends DAO<Animal> {
 
 
     public static String getEspecieNomeFromAnimal(Animal animal){
-        return ((Especie) EspecieDAO.getInstance().get(animal.getIdEspecie())).getNome();
+        return EspecieDAO.getInstance().get(animal.getIdEspecie()).getNome();
     }
 
     public static String getClienteNomeFromAnimal(Animal animal){
-        return ((Cliente) ClienteDAO.getInstance().get(animal.getIdCliente())).getNome();
+        return ClienteDAO.getInstance().get(animal.getIdCliente()).getNome();
     }
 }

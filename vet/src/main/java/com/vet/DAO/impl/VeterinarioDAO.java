@@ -15,9 +15,9 @@ import java.util.logging.Logger;
 
 
 public class VeterinarioDAO extends DAO<Veterinario> {
-    private static DAO<?> instance = null;
+    private static VeterinarioDAO instance = null;
 
-    public static DAO<?> getInstance(){
+    public static VeterinarioDAO getInstance(){
         if(instance == null){
             instance = new VeterinarioDAO();
         }
@@ -75,10 +75,15 @@ public class VeterinarioDAO extends DAO<Veterinario> {
     public String[] getAllToComboBox() {
         List<Veterinario> all = retrieve("SELECT * FROM veterinario WHERE ativo = 1", "veterinario").stream().map(Veterinario.class::cast).toList();
 
-        String[] list = new String[all.size()];
+        return buildToComboBox(all);
+    }
+
+    @Override
+    public String[] buildToComboBox(List<Veterinario> veterinarios) {
+        String[] list = new String[veterinarios.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = all.get(i).getId() + " | " + all.get(i).getNome();
+            list[i] = veterinarios.get(i).getId() + "|" + veterinarios.get(i).getNome();
         }
 
         return list;

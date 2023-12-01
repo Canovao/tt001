@@ -3,28 +3,89 @@ package com.vet.DAO.impl;
 
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
-import com.vet.model.impl.Animal;
-import com.vet.model.impl.Cliente;
-import com.vet.model.impl.Tratamento;
-import com.vet.model.impl.Veterinario;
+import com.vet.model.impl.*;
+import com.vet.model.impl.table.TratamentoTable;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
 public class TratamentoDAO extends DAO<Tratamento> {
-    private static DAO<?> instance = null;
+    private static TratamentoDAO instance = null;
+    private static String retrieveByClienteName = "";
+    private static String retrieveByAnimalName = "";
 
-    public static DAO<?> getInstance(){
+    public static TratamentoDAO getInstance(){
         if(instance == null){
             instance = new TratamentoDAO();
         }
         return instance;
+    }
+
+    private static List<Tratamento> doFilterByClienteNameStep(List<Tratamento> tratamentos){
+        if (!retrieveByClienteName.isBlank() && !retrieveByClienteName.isEmpty()) {
+            List<Integer> animaisIds = new ArrayList<>();
+
+            for(var item: tratamentos){
+                int idCliente = AnimalDAO.getInstance().get(item.getIdAnimal()).getIdCliente();
+                if(ClienteDAO.getInstance().get(idCliente).getNome().contains(retrieveByClienteName)){
+                    animaisIds.add(item.getIdAnimal());
+                }
+            }
+
+            tratamentos = tratamentos.stream().filter(c -> animaisIds.contains(c.getIdAnimal())).toList();
+        }
+        return tratamentos;
+    }
+
+    private static List<Tratamento> doFilterByAnimalNameStep(List<Tratamento> tratamentos) {
+        if (!retrieveByAnimalName.isBlank() && !retrieveByAnimalName.isEmpty()) {
+            List<Integer> animaisIds = new ArrayList<>();
+
+            for(var item: tratamentos){
+                if(AnimalDAO.getInstance().get(item.getIdAnimal()).getNome().contains(retrieveByAnimalName)){
+                    animaisIds.add(item.getIdAnimal());
+                }
+            }
+
+            tratamentos = tratamentos.stream().filter(c -> animaisIds.contains(c.getIdAnimal())).toList();
+        }
+        return doFilterByClienteNameStep(tratamentos);
+    }
+
+    private static List<Model> baseRetrieveBy(){
+        return buildTratamentosTableFromTratamentos(
+                doFilterByAnimalNameStep(retrieveAll("tratamento").stream().map(Tratamento.class::cast).toList())
+        ).stream().map(Model.class::cast).toList();
+    }
+
+    public static List<Model> retrieveByClienteName(String nome){
+        retrieveByClienteName = nome;
+
+        return baseRetrieveBy();
+    }
+
+    public static List<Model> retrieveByAnimalName(String nome){
+        retrieveByAnimalName = nome;
+
+        return baseRetrieveBy();
+    }
+
+    private static List<TratamentoTable> buildTratamentosTableFromTratamentos(List<Tratamento> tratamentos) {
+        List<TratamentoTable> tratamentoTables = new ArrayList<>();
+
+        for(var item: tratamentos){
+            tratamentoTables.add(buildTratamentoTableFromTratamento(item));
+        }
+
+        return tratamentoTables;
     }
 
     public static Model insert(Date dataInicio, Date dataFim, int idAnimal) {
@@ -55,6 +116,16 @@ public class TratamentoDAO extends DAO<Tratamento> {
         }
     }
 
+    public static TratamentoTable buildTratamentoTableFromTratamento(Tratamento tratamento) {
+        return new TratamentoTable(
+                tratamento.getId(),
+                tratamento.getDataInicio(),
+                tratamento.getDataFim(),
+                getClienteNomeFromTratamento(tratamento),
+                getAnimalNomeFromTratamento(tratamento)
+        );
+    }
+
     @Override
     public Tratamento get(int id) {
         return (Tratamento) DAO.retrieveById("tratamento", id);
@@ -68,10 +139,16 @@ public class TratamentoDAO extends DAO<Tratamento> {
     public String[] getAllToComboBox() {
         List<Tratamento> all = retrieve("SELECT * FROM tratamento", "tratamento").stream().map(Tratamento.class::cast).toList();
 
-        String[] list = new String[all.size()];
+        return buildToComboBox(all);
+    }
+
+    @Override
+    public String[] buildToComboBox(List<Tratamento> tratamentos) {
+        String[] list = new String[tratamentos.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = all.get(i).getId() + " | " + AnimalDAO.getInstance().get(all.get(i).getIdAnimal());
+            Animal animal = AnimalDAO.getInstance().get(tratamentos.get(i).getIdAnimal());
+            list[i] = tratamentos.get(i).getId() + "|" + (animal).getNome() + "|" + ClienteDAO.getInstance().get(animal.getIdCliente()).getNome();
         }
 
         return list;
@@ -84,15 +161,17 @@ public class TratamentoDAO extends DAO<Tratamento> {
 
 
     public static String getAnimalNomeFromTratamento(Tratamento tratamento){
-        return ((Animal) AnimalDAO.getInstance().get(tratamento.getIdAnimal())).getNome();
+        return AnimalDAO.getInstance().get(tratamento.getIdAnimal()).getNome();
     }
 
     public static String getClienteNomeFromTratamento(Tratamento tratamento){
-        int idCliente = ((Animal) AnimalDAO.getInstance().get(tratamento.getIdAnimal())).getIdCliente();
-        return ((Cliente) ClienteDAO.getInstance().get(idCliente)).getNome();
+        int idCliente = AnimalDAO.getInstance().get(tratamento.getIdAnimal()).getIdCliente();
+        return ClienteDAO.getInstance().get(idCliente).getNome();
     }
 
-    public List<Tratamento> getAllUnfinished(){
-        return retrieve("SELECT * FROM tratamento WHERE data_fim = null", "tratamento").stream().map(Tratamento.class::cast).toList();
+    public String[] getAllUnfinished(){
+        List<Tratamento> all = retrieve("SELECT * FROM tratamento WHERE data_fim = null", "tratamento").stream().map(Tratamento.class::cast).toList();
+
+        return buildToComboBox(all);
     }
 }

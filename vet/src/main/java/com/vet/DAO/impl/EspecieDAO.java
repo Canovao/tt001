@@ -14,9 +14,9 @@ import java.util.logging.Logger;
 
 
 public class EspecieDAO extends DAO<Especie> {
-    private static DAO<?> instance = null;
+    private static EspecieDAO instance = null;
 
-    public static DAO<?> getInstance(){
+    public static EspecieDAO getInstance(){
         if(instance == null){
             instance = new EspecieDAO();
         }
@@ -62,10 +62,15 @@ public class EspecieDAO extends DAO<Especie> {
     public String[] getAllToComboBox() {
         List<Especie> all = retrieve("SELECT * FROM especie WHERE ativo = 1", "especie").stream().map(Especie.class::cast).toList();
 
-        String[] list = new String[all.size()];
+        return buildToComboBox(all);
+    }
+
+    @Override
+    public String[] buildToComboBox(List<Especie> especies) {
+        String[] list = new String[especies.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = all.get(i).getId() + " | " + all.get(i).getNome();
+            list[i] = especies.get(i).getId() + "|" + especies.get(i).getNome();
         }
 
         return list;

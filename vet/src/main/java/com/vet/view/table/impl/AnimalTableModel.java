@@ -7,8 +7,7 @@ import com.vet.view.table.TableModel;
 
 import java.util.ArrayList;
 
-import static com.vet.DAO.impl.AnimalDAO.getClienteNomeFromAnimal;
-import static com.vet.DAO.impl.AnimalDAO.getEspecieNomeFromAnimal;
+import com.vet.DAO.impl.AnimalDAO;
 
 public class AnimalTableModel extends TableModel {
 
@@ -34,15 +33,6 @@ public class AnimalTableModel extends TableModel {
 
     @Override
     public void addItem(Model model) {
-        Animal animal = (Animal) model;
-        standardAddItem(new AnimalTable(
-                animal.getId(),
-                animal.getNome(),
-                animal.getAnoNascimento(),
-                animal.getSexo(),
-                getEspecieNomeFromAnimal(animal),
-                getClienteNomeFromAnimal(animal),
-                (animal.getAtivo().equalsIgnoreCase("1")) ? "Sim": "Não"
-        ));
+        standardAddItem(AnimalDAO.buildAnimalTableFromAnimal((Animal) model));
     }
 }

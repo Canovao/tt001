@@ -7,7 +7,7 @@ import com.vet.view.table.TableModel;
 
 import java.util.ArrayList;
 
-import static com.vet.DAO.impl.ExameDAO.*;
+import com.vet.DAO.impl.ExameDAO;
 
 public class ExameTableModel extends TableModel {
 
@@ -32,14 +32,6 @@ public class ExameTableModel extends TableModel {
 
     @Override
     public void addItem(Model model) {
-        Exame exame = (Exame) model;
-        standardAddItem(new ExameTable(
-                exame.getId(),
-                exame.getDescricao(),
-                getClienteNomeFromExame(exame),
-                getAnimalNomeFromExame(exame),
-                getVeterinarioNomeFromExame(exame),
-                getConsultaRelatoFromExame(exame)
-        ));
+        standardAddItem(ExameDAO.buildExameTableFromExame((Exame) model));
     }
 }

@@ -7,7 +7,7 @@ import com.vet.view.table.TableModel;
 
 import java.util.ArrayList;
 
-import static com.vet.DAO.impl.ConsultaDAO.*;
+import com.vet.DAO.impl.ConsultaDAO;
 
 public class ConsultaTableModel extends TableModel {
 
@@ -35,17 +35,6 @@ public class ConsultaTableModel extends TableModel {
 
     @Override
     public void addItem(Model model) {
-        Consulta consulta = (Consulta) model;
-        standardAddItem(new ConsultaTable(
-            consulta.getId(),
-            consulta.getDataConsulta(),
-            consulta.getHorario(),
-            consulta.getRelato(),
-            getClienteNomeFromConsulta(consulta),
-            getAnimalNomeFromConsulta(consulta),
-            getVeterinarioNomeFromConsulta(consulta),
-            consulta.getIdTratamento(),
-            (consulta.getTerminado() == 1) ? "Sim": "Não"
-        ));
+        standardAddItem(ConsultaDAO.buildConsultaTableFromConsulta((Consulta) model));
     }
 }

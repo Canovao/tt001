@@ -21,6 +21,8 @@ public abstract class DAO<MODEL> {
 
     public abstract String[] getAllToComboBox();
 
+    public abstract String[] buildToComboBox(List<MODEL> models);
+
     public abstract List<Model> retrieveAll();
 
     protected static List<Model> retrieveAll(String table){

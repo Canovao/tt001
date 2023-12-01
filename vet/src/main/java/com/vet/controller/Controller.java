@@ -17,7 +17,7 @@ public final class Controller {
     private Controller(){}
 
     private static Integer getIdFromIdString(Object id){
-        return Integer.valueOf(((String) id).split("|")[0]);
+        return Integer.valueOf(((String) id).split("\\|")[0].trim());
     }
 
     public static boolean updateCliente(List<JTextField> inputs, Object id, String nome, String endereco, String cep, String email, String telefone){
@@ -190,5 +190,13 @@ public final class Controller {
             System.err.println(e.getMessage());
             return false;
         }
+    }
+
+    public static String[] getAllTratamentosUnfinished() {
+        return TratamentoDAO.getInstance().getAllUnfinished();
+    }
+
+    public static String[] getAllClientesToComboBox() {
+        return ClienteDAO.getInstance().getAllToComboBox();
     }
 }

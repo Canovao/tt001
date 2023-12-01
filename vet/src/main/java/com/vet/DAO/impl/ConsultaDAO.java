@@ -4,24 +4,27 @@ package com.vet.DAO.impl;
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
 import com.vet.model.impl.*;
+import com.vet.model.impl.table.ConsultaTable;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
 public class ConsultaDAO extends DAO<Consulta> {
-    private static DAO<?> instance = null;
+    private static ConsultaDAO instance = null;
     private static String retrieveByClienteName = "";
     private static String retrieveByAnimalName = "";
     private static String retrieveByVeterinarioName = "";
+    private static String orderByClause = null;
 
-    public static DAO<?> getInstance(){
+    public static ConsultaDAO getInstance(){
         if(instance == null){
             instance = new ConsultaDAO();
         }
@@ -30,69 +33,100 @@ public class ConsultaDAO extends DAO<Consulta> {
 
     private static List<Consulta> doFilterByClienteNameStep(List<Consulta> consultas){
         if (!retrieveByClienteName.isBlank() && !retrieveByClienteName.isEmpty()) {
-            List<Integer> clientesIds = ClienteDAO.retrieveBySimilarName(retrieveByClienteName)
-                    .stream()
-                    .map(Cliente.class::cast)
-                    .filter(e -> e.getNome().contains(retrieveByClienteName))
-                    .map(Cliente::getId).toList();
+            List<Integer> tratamentoIds = new ArrayList<>();
 
-            List<Animal> animaisToRemove = new ArrayList<>();
-
-            for (var item : animais) {
-                if (!clientesIds.contains(item.getIdCliente())) {
-                    animaisToRemove.add(item);
+            for(var item: consultas){
+                int idAnimal = TratamentoDAO.getInstance().get(item.getIdTratamento()).getIdAnimal();
+                int idCliente = AnimalDAO.getInstance().get(idAnimal).getIdCliente();
+                if(ClienteDAO.getInstance().get(idCliente).getNome().contains(retrieveByClienteName)){
+                    tratamentoIds.add(item.getIdTratamento());
                 }
             }
 
-            for (var item : animaisToRemove) {
-                animais.remove(item);
-            }
+            consultas = consultas.stream().filter(c -> tratamentoIds.contains(c.getIdTratamento())).toList();
         }
-        return animais;
+        return consultas;
     }
 
     private static List<Consulta> doFilterByVeterinarioNameStep(List<Consulta> consultas) {
-        if (!retrieveByClienteName.isBlank() && !retrieveByClienteName.isEmpty()) {
-            List<Integer> clientesIds = ClienteDAO.retrieveBySimilarName(retrieveByClienteName)
-                    .stream()
-                    .map(Cliente.class::cast)
-                    .filter(e -> e.getNome().contains(retrieveByClienteName))
-                    .map(Cliente::getId).toList();
+        if (!retrieveByVeterinarioName.isBlank() && !retrieveByVeterinarioName.isEmpty()) {
+            List<Integer> veterinariosIds = new ArrayList<>();
 
-            List<Animal> animaisToRemove = new ArrayList<>();
-
-            for (var item : animais) {
-                if (!clientesIds.contains(item.getIdCliente())) {
-                    animaisToRemove.add(item);
+            for(var item: consultas){
+                if(VeterinarioDAO.getInstance().get(item.getIdVeterinario()).getNome().contains(retrieveByVeterinarioName)){
+                    veterinariosIds.add(item.getIdVeterinario());
                 }
             }
 
-            for (var item : animaisToRemove) {
-                animais.remove(item);
-            }
+            consultas = consultas.stream().filter(c -> veterinariosIds.contains(c.getIdVeterinario())).toList();
         }
-        return animais;
+        return doFilterByAnimalNameStep(consultas);
     }
 
     private static List<Consulta> doFilterByAnimalNameStep(List<Consulta> consultas) {
+        if (!retrieveByAnimalName.isBlank() && !retrieveByAnimalName.isEmpty()) {
+            List<Integer> tratamentoIds = new ArrayList<>();
+
+            for(var item: consultas){
+                int idAnimal = TratamentoDAO.getInstance().get(item.getIdTratamento()).getIdAnimal();
+                if(AnimalDAO.getInstance().get(idAnimal).getNome().contains(retrieveByAnimalName)){
+                    tratamentoIds.add(item.getIdTratamento());
+                }
+            }
+
+            consultas = consultas.stream().filter(c -> tratamentoIds.contains(c.getIdTratamento())).toList();
+        }
+        return doFilterByClienteNameStep(consultas);
+    }
+
+    private static List<Model> baseRetrieveBy(){
+        return buildConsultasTableFromConsultas(
+                doFilterByVeterinarioNameStep(retrieveAll("consulta", orderByClause).stream().map(Consulta.class::cast).toList())
+        ).stream().map(Model.class::cast).toList();
     }
 
     public static List<Model> retrieveByClienteName(String nome){
         retrieveByClienteName = nome;
 
+        return baseRetrieveBy();
     }
+
+    private static List<Model> retrieveAll(String table, String orderByClause) {
+        return retrieveAll(table)
+                .stream()
+                .sorted(Comparator.comparing(model -> {
+                    if (orderByClause != null && orderByClause.equalsIgnoreCase("terminado ASC")) {
+                        return ((Consulta) model).getTerminado();
+                    } else {
+                        return 0;
+                    }
+                }))
+                .toList();
+    }
+
 
     public static List<Model> retrieveByVeterinarioName(String nome){
         retrieveByVeterinarioName = nome;
 
-        List<Consulta> consultas = doFilterByVeterinarioNameStep(retrieveAll("consulta").stream().map(Consulta.class::cast).toList());
-
-        return consultas;
+        return baseRetrieveBy();
     }
 
     public static List<Model> retrieveByAnimalName(String nome){
         retrieveByAnimalName = nome;
 
+        return buildConsultasTableFromConsultas(
+                doFilterByVeterinarioNameStep(retrieveAll("consulta", orderByClause).stream().map(Consulta.class::cast).toList())
+        ).stream().map(Model.class::cast).toList();
+    }
+
+    private static List<ConsultaTable> buildConsultasTableFromConsultas(List<Consulta> consultas) {
+        List<ConsultaTable> consultaTables = new ArrayList<>();
+
+        for(var item: consultas){
+            consultaTables.add(buildConsultaTableFromConsulta(item));
+        }
+
+        return consultaTables;
     }
 
     public static Model insert(String relato, Date dataConsulta, int idTratamento, int idVeterinario, int horario, int terminado) {
@@ -127,6 +161,28 @@ public class ConsultaDAO extends DAO<Consulta> {
         }
     }
 
+    public static void addOrderByClause() {
+        orderByClause = "terminado ASC";
+    }
+
+    public static void removeOrderByClause() {
+        orderByClause = null;
+    }
+
+    public static ConsultaTable buildConsultaTableFromConsulta(Consulta consulta) {
+        return new ConsultaTable(
+                consulta.getId(),
+                consulta.getDataConsulta(),
+                consulta.getHorario(),
+                consulta.getRelato(),
+                getClienteNomeFromConsulta(consulta),
+                getAnimalNomeFromConsulta(consulta),
+                getVeterinarioNomeFromConsulta(consulta),
+                consulta.getIdTratamento(),
+                (consulta.getTerminado() == 1) ? "Sim": "Não"
+        );
+    }
+
     @Override
     public Consulta get(int id) {
         return (Consulta) DAO.retrieveById("consulta", id);
@@ -140,10 +196,15 @@ public class ConsultaDAO extends DAO<Consulta> {
     public String[] getAllToComboBox() {
         List<Consulta> all = retrieve("SELECT * FROM consulta", "consulta").stream().map(Consulta.class::cast).toList();
 
-        String[] list = new String[all.size()];
+        return buildToComboBox(all);
+    }
+
+    @Override
+    public String[] buildToComboBox(List<Consulta> consultas) {
+        String[] list = new String[consultas.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = all.get(i).getId() + " | " + all.get(i).getRelato();
+            list[i] = consultas.get(i).getId() + "|" + consultas.get(i).getRelato();
         }
 
         return list;
@@ -155,17 +216,17 @@ public class ConsultaDAO extends DAO<Consulta> {
     }
 
     public static String getVeterinarioNomeFromConsulta(Consulta consulta){
-        return ((Veterinario) VeterinarioDAO.getInstance().get(consulta.getIdVeterinario())).getNome();
+        return VeterinarioDAO.getInstance().get(consulta.getIdVeterinario()).getNome();
     }
 
     public static String getClienteNomeFromConsulta(Consulta consulta){
-        int idAnimal = ((Tratamento) TratamentoDAO.getInstance().get(consulta.getIdTratamento())).getIdAnimal();
-        int idCliente = ((Animal) AnimalDAO.getInstance().get(idAnimal)).getIdCliente();
-        return ((Cliente) ClienteDAO.getInstance().get(idCliente)).getNome();
+        int idAnimal = TratamentoDAO.getInstance().get(consulta.getIdTratamento()).getIdAnimal();
+        int idCliente = AnimalDAO.getInstance().get(idAnimal).getIdCliente();
+        return ClienteDAO.getInstance().get(idCliente).getNome();
     }
 
     public static String getAnimalNomeFromConsulta(Consulta consulta){
-        int idAnimal = ((Tratamento) TratamentoDAO.getInstance().get(consulta.getIdTratamento())).getIdAnimal();
-        return ((Animal) AnimalDAO.getInstance().get(idAnimal)).getNome();
+        int idAnimal = TratamentoDAO.getInstance().get(consulta.getIdTratamento()).getIdAnimal();
+        return AnimalDAO.getInstance().get(idAnimal).getNome();
     }
 }

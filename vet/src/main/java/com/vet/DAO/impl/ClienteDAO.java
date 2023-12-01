@@ -3,6 +3,7 @@ package com.vet.DAO.impl;
 
 import com.vet.DAO.DAO;
 import com.vet.model.Model;
+import com.vet.model.impl.Animal;
 import com.vet.model.impl.Cliente;
 
 import java.sql.PreparedStatement;
@@ -14,9 +15,9 @@ import java.util.logging.Logger;
 
 
 public class ClienteDAO extends DAO<Cliente> {
-    private static DAO<?> instance = null;
+    private static ClienteDAO instance = null;
 
-    public static DAO<?> getInstance(){
+    public static ClienteDAO getInstance(){
         if(instance == null){
             instance = new ClienteDAO();
         }
@@ -74,10 +75,15 @@ public class ClienteDAO extends DAO<Cliente> {
     public String[] getAllToComboBox() {
         List<Cliente> all = retrieve("SELECT * FROM cliente WHERE ativo = 1", "cliente").stream().map(Cliente.class::cast).toList();
 
-        String[] list = new String[all.size()];
+        return buildToComboBox(all);
+    }
+
+    @Override
+    public String[] buildToComboBox(List<Cliente> clientes) {
+        String[] list = new String[clientes.size()];
 
         for(int i=0; i < list.length; i++){
-            list[i] = all.get(i).getId() + " | " + all.get(i).getNome();
+            list[i] = clientes.get(i).getId() + "|" + clientes.get(i).getNome();
         }
 
         return list;

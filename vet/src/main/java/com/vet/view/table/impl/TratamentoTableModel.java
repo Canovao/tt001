@@ -7,8 +7,7 @@ import com.vet.view.table.TableModel;
 
 import java.util.ArrayList;
 
-import static com.vet.DAO.impl.TratamentoDAO.getAnimalNomeFromTratamento;
-import static com.vet.DAO.impl.TratamentoDAO.getClienteNomeFromTratamento;
+import com.vet.DAO.impl.TratamentoDAO;
 
 public class TratamentoTableModel extends TableModel {
 
@@ -31,13 +30,6 @@ public class TratamentoTableModel extends TableModel {
 
     @Override
     public void addItem(Model model) {
-        Tratamento tratamento = (Tratamento) model;
-        standardAddItem(new TratamentoTable(
-                tratamento.getId(),
-                tratamento.getDataInicio(),
-                tratamento.getDataFim(),
-                getClienteNomeFromTratamento(tratamento),
-                getAnimalNomeFromTratamento(tratamento)
-        ));
+        standardAddItem(TratamentoDAO.buildTratamentoTableFromTratamento((Tratamento) model));
     }
 }
