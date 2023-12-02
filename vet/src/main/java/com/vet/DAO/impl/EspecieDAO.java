@@ -26,9 +26,8 @@ public class EspecieDAO extends DAO<Especie> {
     public static Model insert(String nome) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("INSERT INTO especie (nome, ativo) VALUES (?,?)");
+            stmt = DAO.getConnection().prepareStatement("INSERT INTO especie (nome) VALUES (?)");
             stmt.setString(1, nome);
-            stmt.setInt(2, 1);
             executeUpdate(stmt);
         } catch (SQLException ex) {
             Logger.getLogger(EspecieDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -39,9 +38,8 @@ public class EspecieDAO extends DAO<Especie> {
     public static void update(Especie model) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("UPDATE especie SET nome=?, ativo=? WHERE id=?");
+            stmt = DAO.getConnection().prepareStatement("UPDATE especie SET nome=? WHERE id=?");
             stmt.setString(1, model.getNome());
-            stmt.setInt(3, Integer.parseInt(model.getAtivo()));
             stmt.setInt(2, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
@@ -55,12 +53,12 @@ public class EspecieDAO extends DAO<Especie> {
     }
 
     public Model build(ResultSet rs) throws SQLException {
-        return new Especie(rs.getInt("id"), rs.getString("nome"), String.valueOf(rs.getInt("ativo")));
+        return new Especie(rs.getInt("id"), rs.getString("nome"));
     }
 
     @Override
     public String[] getAllToComboBox() {
-        List<Especie> all = retrieve("SELECT * FROM especie WHERE ativo = 1", "especie").stream().map(Especie.class::cast).toList();
+        List<Especie> all = retrieve("SELECT * FROM especie", "especie").stream().map(Especie.class::cast).toList();
 
         return buildToComboBox(all);
     }

@@ -1,9 +1,7 @@
 package com.vet.controller;
 
 import com.vet.DAO.impl.*;
-import com.vet.model.impl.Animal;
-import com.vet.model.impl.Cliente;
-import com.vet.model.impl.Veterinario;
+import com.vet.model.impl.*;
 
 import javax.swing.*;
 import java.sql.Date;
@@ -198,5 +196,99 @@ public final class Controller {
 
     public static String[] getAllClientesToComboBox() {
         return ClienteDAO.getInstance().getAllToComboBox();
+    }
+
+    public static String[] getAllClientesInactive() {
+        List<Cliente> all = ClienteDAO.getAllInactive();
+
+        return ClienteDAO.getInstance().buildToComboBox(all);
+    }
+
+    public static String[] getAllEspeciesToComboBox() {
+        return EspecieDAO.getInstance().getAllToComboBox();
+    }
+
+    public static String[] getAllAnimaisToComboBox() {
+        return AnimalDAO.getInstance().getAllToComboBox();
+    }
+
+    public static String[] getAllAnimaisInactive() {
+        List<Animal> all = AnimalDAO.getAllInactive();
+
+        return AnimalDAO.getInstance().buildToComboBox(all);
+    }
+
+    public static String[] getAllVeterinariosToComboBox() {
+        return VeterinarioDAO.getInstance().getAllToComboBox();
+    }
+
+    public static String[] getAllVeterinariosInactive() {
+        List<Veterinario> all = VeterinarioDAO.getAllInactive();
+
+        return VeterinarioDAO.getInstance().buildToComboBox(all);
+    }
+
+    public static String[] getAllTratamentosToComboBox() {
+        return TratamentoDAO.getInstance().getAllToComboBox();
+    }
+
+    public static String[] getAllConsultasUnfinished() {
+        List<Consulta> all = ConsultaDAO.getAllUnfinished();
+
+        return ConsultaDAO.getInstance().buildToComboBox(all);
+    }
+
+    public static String[] getAllConsultasToComboBox() {
+        return ConsultaDAO.getInstance().getAllToComboBox();
+    }
+
+    public static void desativarCliente(Object id) {
+        ClienteDAO.desativarCliente(getIdFromIdString(id));
+    }
+
+    public static void ativarCliente(Object id) {
+        ClienteDAO.ativarCliente(getIdFromIdString(id));
+    }
+
+    public static void atualizarEspecie(Object id, String nome) {
+        Especie especie = EspecieDAO.getInstance().get(getIdFromIdString(id));
+        especie.setNome(nome);
+        EspecieDAO.update(especie);
+    }
+
+    public static void desativarAnimal(Object id) {
+        AnimalDAO.desativarAnimal(getIdFromIdString(id));
+    }
+
+    public static void ativarAnimal(Object id) {
+        AnimalDAO.ativarAnimal(getIdFromIdString(id));
+    }
+
+    public static void desativarVeterinario(Object id) {
+        VeterinarioDAO.desativarVeterinario(getIdFromIdString(id));
+    }
+
+    public static void ativarVeterinario(Object id) {
+        VeterinarioDAO.ativarVeterinario(getIdFromIdString(id));
+    }
+
+    public static void finalizarConsulta(Object id) {
+        ConsultaDAO.finalizarConsulta(getIdFromIdString(id));
+    }
+
+    public static void finalizarTratamento(Object id) {
+        TratamentoDAO.finalizarTratamento(getIdFromIdString(id));
+    }
+
+    public static boolean addTratamentoIndeterminado(Object diaInicio, Object mesInicio, Object anoInicio, Object idAnimal) {
+        try{
+            Date dataInicio = new Date((Integer)diaInicio, (Integer)mesInicio, (Integer)anoInicio);
+            TratamentoDAO.insert(dataInicio, null, getIdFromIdString(idAnimal));
+            return true;
+        }catch (Error e){
+            showMessageDialog(null, "Data de início do Tratamento inválida!", "Erro", JOptionPane.WARNING_MESSAGE);
+            System.err.println(e.getMessage());
+            return false;
+        }
     }
 }

@@ -45,6 +45,22 @@ public class VeterinarioDAO extends DAO<Veterinario> {
         return DAO.retrieve("SELECT * FROM veterinario WHERE UPPER(nome) LIKE UPPER('%" + nome + "%')", "veterinario");
     }
 
+    public static List<Veterinario> getAllInactive() {
+        return retrieve("SELECT * FROM veterinario where ativo = 0", "veterinario").stream().map(Veterinario.class::cast).toList();
+    }
+
+    public static void desativarVeterinario(Integer id) {
+        Veterinario veterinario = getInstance().get(id);
+        veterinario.setAtivo("0");
+        update(veterinario);
+    }
+
+    public static void ativarVeterinario(Integer id) {
+        Veterinario veterinario = getInstance().get(id);
+        veterinario.setAtivo("1");
+        update(veterinario);
+    }
+
     public Model build(ResultSet rs) throws SQLException {
         return new Veterinario(rs.getInt("id"), rs.getString("nome"), rs.getString("endereco"), rs.getString("cep"), rs.getString("email"), rs.getString("telefone"), String.valueOf(rs.getInt("ativo")));
     }

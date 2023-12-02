@@ -62,6 +62,22 @@ public class ClienteDAO extends DAO<Cliente> {
         }
     }
 
+    public static List<Cliente> getAllInactive() {
+        return retrieve("SELECT * FROM cliente WHERE ativo = 0", "cliente").stream().map(Cliente.class::cast).toList();
+    }
+
+    public static void desativarCliente(Integer id) {
+        Cliente cliente = getInstance().get(id);
+        cliente.setAtivo("0");
+        update(cliente);
+    }
+
+    public static void ativarCliente(Integer id) {
+        Cliente cliente = getInstance().get(id);
+        cliente.setAtivo("1");
+        update(cliente);
+    }
+
     @Override
     public Cliente get(int id) {
         return (Cliente) DAO.retrieveById("cliente", id);

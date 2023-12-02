@@ -136,7 +136,7 @@ public abstract class DAO<MODEL> {
             stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS animal( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR, ano_nascimento INTEGER, sexo VARCHAR, id_especie INTEGER, id_cliente INTEGER, ativo INTEGER);");
             executeUpdate(stmt);
             // Table especie:
-            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS especie( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR, ativo INTEGER);");
+            stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS especie( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR);");
             executeUpdate(stmt);
             // Table veterinario:
             stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS veterinario( id INTEGER PRIMARY KEY AUTO_INCREMENT, nome VARCHAR, endereco VARCHAR, cep VARCHAR, email VARCHAR, telefone VARCHAR, ativo INTEGER); ");

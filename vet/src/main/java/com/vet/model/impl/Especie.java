@@ -12,14 +12,12 @@ import lombok.Setter;
 public class Especie extends Model {
     private int id;
     private String nome;
-    private String ativo;
 
     @Override
     public String toString() {
         return "Especie{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", ativo=" + ativo +
                 '}';
     }
 }

@@ -126,6 +126,12 @@ public class TratamentoDAO extends DAO<Tratamento> {
         );
     }
 
+    public static void finalizarTratamento(Integer id) {
+        Tratamento tratamento = getInstance().get(id);
+        tratamento.setDataFim(new Date(new java.util.Date().getTime()));
+        update(tratamento);
+    }
+
     @Override
     public Tratamento get(int id) {
         return (Tratamento) DAO.retrieveById("tratamento", id);

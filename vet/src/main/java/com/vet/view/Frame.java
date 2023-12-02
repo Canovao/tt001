@@ -31,242 +31,233 @@ public class Frame extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        mainTabbedPane = new javax.swing.JTabbedPane();
-        clientePanel = new javax.swing.JPanel();
-        clienteTabbedPane = new javax.swing.JTabbedPane();
-        cadastrarClientePanel = new javax.swing.JPanel();
-        nomeClienteLabel = new javax.swing.JLabel();
+        JTabbedPane mainTabbedPane = new JTabbedPane();
+        JPanel clientePanel = new JPanel();
+        JTabbedPane clienteTabbedPane = new JTabbedPane();
+        JPanel cadastrarClientePanel = new JPanel();
+        JLabel nomeClienteLabel = new JLabel();
         nomeClienteTextField = new javax.swing.JTextField();
-        cepClienteLabel = new javax.swing.JLabel();
+        JLabel cepClienteLabel = new JLabel();
         cepClienteTextField = new javax.swing.JTextField();
-        enderecoClienteLabel = new javax.swing.JLabel();
+        JLabel enderecoClienteLabel = new JLabel();
         enderecoClienteTextField = new javax.swing.JTextField();
-        telefoneClienteLabel = new javax.swing.JLabel();
+        JLabel telefoneClienteLabel = new JLabel();
         telefoneClienteTextField = new javax.swing.JTextField();
         emailClienteTextField = new javax.swing.JTextField();
-        emailClienteLabel = new javax.swing.JLabel();
-        cadastrarClienteButton = new javax.swing.JButton();
-        atualizarClientePanel = new javax.swing.JPanel();
-        atualizarClienteLabel = new javax.swing.JLabel();
+        JLabel emailClienteLabel = new JLabel();
+        JButton cadastrarClienteButton = new JButton();
+        JPanel atualizarClientePanel = new JPanel();
+        JLabel atualizarClienteLabel = new JLabel();
         atualizarClienteComboBox = new javax.swing.JComboBox<>();
-        atualizarNomeClienteLabel = new javax.swing.JLabel();
+        JLabel atualizarNomeClienteLabel = new JLabel();
         atualizarNomeClienteTextField = new javax.swing.JTextField();
-        atualizarCepClienteLabel = new javax.swing.JLabel();
+        JLabel atualizarCepClienteLabel = new JLabel();
         atualizarCepClienteTextField = new javax.swing.JTextField();
-        atualizarEnderecoClienteLabel = new javax.swing.JLabel();
+        JLabel atualizarEnderecoClienteLabel = new JLabel();
         atualizarEnderecoClienteTextField = new javax.swing.JTextField();
-        atualizarTelefoneClienteLabel = new javax.swing.JLabel();
+        JLabel atualizarTelefoneClienteLabel = new JLabel();
         atualizarTelefoneClienteTextField = new javax.swing.JTextField();
-        atualizarEmailClienteLabel = new javax.swing.JLabel();
+        JLabel atualizarEmailClienteLabel = new JLabel();
         atualizarEmailClienteTextField = new javax.swing.JTextField();
-        atualizarClienteButton = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        desativarClienteLabel = new javax.swing.JLabel();
+        JButton atualizarClienteButton = new JButton();
+        JPanel desativarClientePanel = new JPanel();
+        JLabel desativarClienteLabel = new JLabel();
         desativarClienteComboBox = new javax.swing.JComboBox<>();
-        desativarClienteButton = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        ativarClienteLabel = new javax.swing.JLabel();
+        JButton desativarClienteButton = new JButton();
+        JPanel ativarClientePanel = new JPanel();
+        JLabel ativarClienteLabel = new JLabel();
         ativarClienteComboBox = new javax.swing.JComboBox<>();
-        ativarClienteButton = new javax.swing.JButton();
-        clienteScrollPane = new javax.swing.JScrollPane();
-        clienteTable = new javax.swing.JTable();
-        filterByNameClienteLabel = new javax.swing.JLabel();
+        JButton ativarClienteButton = new JButton();
+        JScrollPane clienteScrollPane = new JScrollPane();
+        JTable clienteTable = new JTable();
+        JLabel filterByNameClienteLabel = new JLabel();
         filterByNameClienteTextField = new javax.swing.JTextField();
-        clearFilterByNameClienteButton = new javax.swing.JButton();
-        animalPanel = new javax.swing.JPanel();
-        animalTabbedPane = new javax.swing.JTabbedPane();
-        cadastrarAnimalPanel = new javax.swing.JPanel();
-        especieAnimalLabel = new javax.swing.JLabel();
-        nomeAnimalLabel = new javax.swing.JLabel();
-        tutorLabel = new javax.swing.JLabel();
-        anoNascimentoAnimalLabel = new javax.swing.JLabel();
-        sexoAnimalLabel = new javax.swing.JLabel();
+        JButton clearFilterByNameClienteButton = new JButton();
+        JPanel animalPanel = new JPanel();
+        JTabbedPane animalTabbedPane = new JTabbedPane();
+        JPanel cadastrarAnimalPanel = new JPanel();
+        JLabel especieAnimalLabel = new JLabel();
+        JLabel nomeAnimalLabel = new JLabel();
+        JLabel tutorLabel = new JLabel();
+        JLabel anoNascimentoAnimalLabel = new JLabel();
+        JLabel sexoAnimalLabel = new JLabel();
         nomeAnimalTextField = new javax.swing.JTextField();
-        cadastrarAnimalButton = new javax.swing.JButton();
+        JButton cadastrarAnimalButton = new JButton();
         sexoAnimalComboBox = new javax.swing.JComboBox<>();
         anoNascimentoAnimalSpinner = new javax.swing.JSpinner();
         especieAnimalComboBox = new javax.swing.JComboBox<>();
         tutorComboBox = new javax.swing.JComboBox<>();
-        cadastrarEspeciesPanel = new javax.swing.JPanel();
-        nomeEspecieLabel = new javax.swing.JLabel();
+        JPanel cadastrarEspeciesPanel = new JPanel();
+        JLabel nomeEspecieLabel = new JLabel();
         nomeEspecieTextField = new javax.swing.JTextField();
-        cadastrarEspecieButton = new javax.swing.JButton();
-        atualizarAnimalPanel = new javax.swing.JPanel();
-        atualizarAnimalLabel = new javax.swing.JLabel();
+        JButton cadastrarEspecieButton = new JButton();
+        JPanel atualizarAnimalPanel = new JPanel();
+        JLabel atualizarAnimalLabel = new JLabel();
         atualizarAnimalComboBox = new javax.swing.JComboBox<>();
-        atualizarTutorLabel = new javax.swing.JLabel();
+        JLabel atualizarTutorLabel = new JLabel();
         atualizarTutorComboBox = new javax.swing.JComboBox<>();
-        atualizarEspecieLabel = new javax.swing.JLabel();
+        JLabel atualizarEspecieLabel = new JLabel();
         atualizarEspecieComboBox = new javax.swing.JComboBox<>();
-        atualizarNomeAnimalLabel = new javax.swing.JLabel();
+        JLabel atualizarNomeAnimalLabel = new JLabel();
         atualizarNomeAnimalTextField = new javax.swing.JTextField();
-        atualizarAnoNascimentoAnimalLabel = new javax.swing.JLabel();
+        JLabel atualizarAnoNascimentoAnimalLabel = new JLabel();
         atualizarAnoNascimentoAnimalSpinner = new javax.swing.JSpinner();
-        atualizarSexoAnimalLabel = new javax.swing.JLabel();
+        JLabel atualizarSexoAnimalLabel = new JLabel();
         atualizarSexoAnimalComboBox = new javax.swing.JComboBox<>();
-        atualizarAnimalButton = new javax.swing.JButton();
-        atualizarEspeciesPanel = new javax.swing.JPanel();
-        atualizarNomeEspecieLabel = new javax.swing.JLabel();
+        JButton atualizarAnimalButton = new JButton();
+        JPanel atualizarEspeciesPanel = new JPanel();
+        JLabel atualizarNomeEspecieLabel = new JLabel();
         atualizarNomeEspecieTextField = new javax.swing.JTextField();
-        atualizarNomeEspecieButton = new javax.swing.JButton();
-        selecionarEspecieAtualizarLabel = new javax.swing.JLabel();
+        JButton atualizarNomeEspecieButton = new JButton();
+        JLabel selecionarEspecieAtualizarLabel = new JLabel();
         selecionarEspecieAtualizarComboBox = new javax.swing.JComboBox<>();
-        desativarAnimalPanel = new javax.swing.JPanel();
-        desativarAnimalLabel = new javax.swing.JLabel();
+        JPanel desativarAnimalPanel = new JPanel();
+        JLabel desativarAnimalLabel = new JLabel();
         desativarAnimalComboBox = new javax.swing.JComboBox<>();
-        desativarAnimalButton = new javax.swing.JButton();
-        ativarAnimalPanel = new javax.swing.JPanel();
-        ativarAnimalLabel = new javax.swing.JLabel();
+        JButton desativarAnimalButton = new JButton();
+        JPanel ativarAnimalPanel = new JPanel();
+        JLabel ativarAnimalLabel = new JLabel();
         ativarAnimalComboBox = new javax.swing.JComboBox<>();
-        ativarAnimalButton = new javax.swing.JButton();
-        desativarEspeciePanel = new javax.swing.JPanel();
-        desativarEspecieLabel = new javax.swing.JLabel();
-        desativarEspecieComboBox = new javax.swing.JComboBox<>();
-        desativarEspecieButton = new javax.swing.JButton();
-        ativarEspeciePanel = new javax.swing.JPanel();
-        ativarEspecieLabel = new javax.swing.JLabel();
-        ativarEspecieComboBox = new javax.swing.JComboBox<>();
-        ativarEspecieButton = new javax.swing.JButton();
-        animalScrollPane = new javax.swing.JScrollPane();
-        animalTable = new javax.swing.JTable();
-        filterByNameAnimalLabel = new javax.swing.JLabel();
+        JButton ativarAnimalButton = new JButton();
+        JScrollPane animalScrollPane = new JScrollPane();
+        JTable animalTable = new JTable();
+        JLabel filterByNameAnimalLabel = new JLabel();
         filterByNameAnimalTextField = new javax.swing.JTextField();
-        clearFilterByNameAnimalButton = new javax.swing.JButton();
-        filterByTutorAnimalLabel = new javax.swing.JLabel();
+        JButton clearFilterByNameAnimalButton = new JButton();
+        JLabel filterByTutorAnimalLabel = new JLabel();
         filterByTutorAnimalTextField = new javax.swing.JTextField();
-        clearFilterByTutorAnimalButton = new javax.swing.JButton();
-        veterinarioPanel = new javax.swing.JPanel();
-        veterinarioTabbedPane = new javax.swing.JTabbedPane();
-        cadastrarVeterinario = new javax.swing.JPanel();
-        nomeVeterinarioLabel = new javax.swing.JLabel();
+        JButton clearFilterByTutorAnimalButton = new JButton();
+        JPanel veterinarioPanel = new JPanel();
+        JTabbedPane veterinarioTabbedPane = new JTabbedPane();
+        JPanel cadastrarVeterinarioTabbedPane = new JPanel();
+        JLabel nomeVeterinarioLabel = new JLabel();
         nomeVeterinarioTextField = new javax.swing.JTextField();
-        cepVeterinarioLabel = new javax.swing.JLabel();
+        JLabel cepVeterinarioLabel = new JLabel();
         cepVeterinarioTextField = new javax.swing.JTextField();
-        enderecoVeterinarioLabel = new javax.swing.JLabel();
+        JLabel enderecoVeterinarioLabel = new JLabel();
         enderecoVeterinarioTextField = new javax.swing.JTextField();
-        telefoneVeterinarioLabel = new javax.swing.JLabel();
+        JLabel telefoneVeterinarioLabel = new JLabel();
         telefoneVeterinarioTextField = new javax.swing.JTextField();
         emailVeterinarioTextField = new javax.swing.JTextField();
-        emailVeterinarioLabel = new javax.swing.JLabel();
-        cadastrarVeterinarioButton = new javax.swing.JButton();
-        atualizarVeterinario = new javax.swing.JPanel();
+        JLabel emailVeterinarioLabel = new JLabel();
+        JButton cadastrarVeterinarioButton = new JButton();
+        JPanel atualizarVeterinario = new JPanel();
         atualizarVeterinarioComboBox = new javax.swing.JComboBox<>();
-        atualizarVeterinarioLabel = new javax.swing.JLabel();
-        atualizarVeterinarioButton = new javax.swing.JButton();
+        JLabel atualizarVeterinarioLabel = new JLabel();
+        JButton atualizarVeterinarioButton = new JButton();
         atualizarEmailVeterinarioTextField = new javax.swing.JTextField();
-        atualizarEmailVeterinarioLabel = new javax.swing.JLabel();
+        JLabel atualizarEmailVeterinarioLabel = new JLabel();
         atualizarTelefoneVeterinarioTextField = new javax.swing.JTextField();
-        atualizarTelefoneVeterinarioLabel = new javax.swing.JLabel();
+        JLabel atualizarTelefoneVeterinarioLabel = new JLabel();
         atualizarEnderecoVeterinarioTextField = new javax.swing.JTextField();
-        atualizarEnderecoVeterinarioLabel = new javax.swing.JLabel();
+        JLabel atualizarEnderecoVeterinarioLabel = new JLabel();
         atualizarCepVeterinarioTextField = new javax.swing.JTextField();
-        atualizarCepVeterinarioLabel = new javax.swing.JLabel();
+        JLabel atualizarCepVeterinarioLabel = new JLabel();
         atualizarNomeVeterinarioTextField = new javax.swing.JTextField();
-        atualizarNomeVeterinarioLabel = new javax.swing.JLabel();
-        desativarVeterinarioPanel = new javax.swing.JPanel();
-        desativarVeterinarioLabel = new javax.swing.JLabel();
+        JLabel atualizarNomeVeterinarioLabel = new JLabel();
+        JPanel desativarVeterinarioPanel = new JPanel();
+        JLabel desativarVeterinarioLabel = new JLabel();
         desativarVeterinarioComboBox = new javax.swing.JComboBox<>();
-        desativarVeterinarioButton = new javax.swing.JButton();
-        ativarVeterinarioPanel = new javax.swing.JPanel();
-        ativarVeterinarioLabel = new javax.swing.JLabel();
+        JButton desativarVeterinarioButton = new JButton();
+        JPanel ativarVeterinarioPanel = new JPanel();
+        JLabel ativarVeterinarioLabel = new JLabel();
         ativarVeterinarioComboBox = new javax.swing.JComboBox<>();
-        ativarVeterinarioButton = new javax.swing.JButton();
-        veterinarioScrollPane = new javax.swing.JScrollPane();
-        veterinarioTable = new javax.swing.JTable();
-        filterByNameVeterinarioLabel = new javax.swing.JLabel();
+        JButton ativarVeterinarioButton = new JButton();
+        JScrollPane veterinarioScrollPane = new JScrollPane();
+        JTable veterinarioTable = new JTable();
+        JLabel filterByNameVeterinarioLabel = new JLabel();
         filterByNameVeterinarioTextField = new javax.swing.JTextField();
-        clearFilterByNameVeterinarioButton = new javax.swing.JButton();
-        consultaPanel = new javax.swing.JPanel();
-        consultaTabbedPane = new javax.swing.JTabbedPane();
-        cadastrarConsulta = new javax.swing.JPanel();
-        dataConsultaLabel = new javax.swing.JLabel();
-        relatoConsultaLabel = new javax.swing.JLabel();
-        veterinarioConsultaLabel = new javax.swing.JLabel();
-        cadastrarConsultaButton = new javax.swing.JButton();
-        tratamentoConsultaLabel = new javax.swing.JLabel();
+        JButton clearFilterByNameVeterinarioButton = new JButton();
+        JPanel consultaPanel = new JPanel();
+        JTabbedPane consultaTabbedPane = new JTabbedPane();
+        JPanel cadastrarConsulta = new JPanel();
+        JLabel dataConsultaLabel = new JLabel();
+        JLabel relatoConsultaLabel = new JLabel();
+        JLabel veterinarioConsultaLabel = new JLabel();
+        JButton cadastrarConsultaButton = new JButton();
+        JLabel tratamentoConsultaLabel = new JLabel();
         tratamentoConsultaComboBox = new javax.swing.JComboBox<>();
         veterinarioConsultaComboBox = new javax.swing.JComboBox<>();
         diaConsultaSpinner = new javax.swing.JSpinner();
         mesConsultaSpinner = new javax.swing.JSpinner();
         anoConsultaSpinner = new javax.swing.JSpinner();
-        diaConsultaLabel = new javax.swing.JLabel();
-        mesConsultaLabel = new javax.swing.JLabel();
-        anoConsultaLabel = new javax.swing.JLabel();
-        relatoCadastrarConsultaScrollPane = new javax.swing.JScrollPane();
+        JLabel diaConsultaLabel = new JLabel();
+        JLabel mesConsultaLabel = new JLabel();
+        JLabel anoConsultaLabel = new JLabel();
+        JScrollPane relatoCadastrarConsultaScrollPane = new JScrollPane();
         relatoConsultaTextArea = new javax.swing.JTextArea();
         horarioConsultaSpinner = new javax.swing.JSpinner();
-        horarioConsultaLabel = new javax.swing.JLabel();
-        desativarConsultaPanel = new javax.swing.JPanel();
-        finalizarConsultaLabel = new javax.swing.JLabel();
+        JLabel horarioConsultaLabel = new JLabel();
+        JPanel desativarConsultaPanel = new JPanel();
+        JLabel finalizarConsultaLabel = new JLabel();
         finalizarConsultaComboBox = new javax.swing.JComboBox<>();
-        finalizarConsultaButton = new javax.swing.JButton();
-        consultaScrollPane = new javax.swing.JScrollPane();
-        consultaTable = new javax.swing.JTable();
-        filterByClienteConsultaLabel = new javax.swing.JLabel();
+        JButton finalizarConsultaButton = new JButton();
+        JScrollPane consultaScrollPane = new JScrollPane();
+        JTable consultaTable = new JTable();
+        JLabel filterByClienteConsultaLabel = new JLabel();
         filterByClienteConsultaTextField = new javax.swing.JTextField();
-        clearFilterByClienteConsultaButton = new javax.swing.JButton();
-        filterByVeterinarioConsultaLabel = new javax.swing.JLabel();
+        JButton clearFilterByClienteConsultaButton = new JButton();
+        JLabel filterByVeterinarioConsultaLabel = new JLabel();
         filterByVeterinarioConsultaTextField = new javax.swing.JTextField();
-        clearFilterByVeterinarioConsultaButton = new javax.swing.JButton();
-        filterByAnimalConsultaLabel = new javax.swing.JLabel();
+        JButton clearFilterByVeterinarioConsultaButton = new JButton();
+        JLabel filterByAnimalConsultaLabel = new JLabel();
         filterByAnimalConsultaTextField = new javax.swing.JTextField();
-        clearFilterByAnimalConsultaButton = new javax.swing.JButton();
-        orderByDataConsultaToggleButton = new javax.swing.JToggleButton();
+        JButton clearFilterByAnimalConsultaButton = new JButton();
         orderByTerminadoConsultaToggleButton = new javax.swing.JToggleButton();
-        examePanel = new javax.swing.JPanel();
-        exameTabbedPane = new javax.swing.JTabbedPane();
-        cadastrarExamePanel = new javax.swing.JPanel();
-        descricaoExameLabel = new javax.swing.JLabel();
-        consultaExameLabel = new javax.swing.JLabel();
-        cadastrarExameButton = new javax.swing.JButton();
+        JPanel examePanel = new JPanel();
+        JTabbedPane exameTabbedPane = new JTabbedPane();
+        JPanel cadastrarExamePanel = new JPanel();
+        JLabel descricaoExameLabel = new JLabel();
+        JLabel consultaExameLabel = new JLabel();
+        JButton cadastrarExameButton = new JButton();
         consultaExameComboBox = new javax.swing.JComboBox<>();
-        descricaoCadastrarExamePane = new javax.swing.JScrollPane();
+        JScrollPane descricaoCadastrarExamePane = new JScrollPane();
         descricaoExameTextArea = new javax.swing.JTextArea();
-        exameScrollPane = new javax.swing.JScrollPane();
-        exameTable = new javax.swing.JTable();
-        filterByClienteExameLabel = new javax.swing.JLabel();
+        JScrollPane exameScrollPane = new JScrollPane();
+        JTable exameTable = new JTable();
+        JLabel filterByClienteExameLabel = new JLabel();
         filterByClienteExameTextField = new javax.swing.JTextField();
-        clearFilterByClienteExameButton = new javax.swing.JButton();
-        filterByVeterinarioExameLabel = new javax.swing.JLabel();
+        JButton clearFilterByClienteExameButton = new JButton();
+        JLabel filterByVeterinarioExameLabel = new JLabel();
         filterByVeterinarioExameTextField = new javax.swing.JTextField();
-        clearFilterByVeterinarioExameButton = new javax.swing.JButton();
-        filterByAnimalExameLabel = new javax.swing.JLabel();
+        JButton clearFilterByVeterinarioExameButton = new JButton();
+        JLabel filterByAnimalExameLabel = new JLabel();
         filterByAnimalExameTextField = new javax.swing.JTextField();
-        clearFilterByAnimalExameButton = new javax.swing.JButton();
-        tratamentoPanel = new javax.swing.JPanel();
-        tratamentoTabbedPane = new javax.swing.JTabbedPane();
-        cadastrarTratamentoPanel = new javax.swing.JPanel();
-        dataFimTratamentoLabel = new javax.swing.JLabel();
-        animalTratamentoLabel = new javax.swing.JLabel();
+        JButton clearFilterByAnimalExameButton = new JButton();
+        JPanel tratamentoPanel = new JPanel();
+        JTabbedPane tratamentoTabbedPane = new JTabbedPane();
+        JPanel cadastrarTratamentoPanel = new JPanel();
+        JLabel dataFimTratamentoLabel = new JLabel();
+        JLabel animalTratamentoLabel = new JLabel();
         animalTratamentoComboBox = new javax.swing.JComboBox<>();
-        dataInicioLabel = new javax.swing.JLabel();
-        cadastrarTratamentoButton = new javax.swing.JButton();
+        JLabel dataInicioLabel = new JLabel();
+        JButton cadastrarTratamentoButton = new JButton();
         diaFimTratamentoSpinner = new javax.swing.JSpinner();
-        diaFimTratamentoLabel = new javax.swing.JLabel();
-        mesFimTratamentoLabel = new javax.swing.JLabel();
+        JLabel diaFimTratamentoLabel = new JLabel();
+        JLabel mesFimTratamentoLabel = new JLabel();
         mesFimTratamentoSpinner = new javax.swing.JSpinner();
-        anoFimTratamentoLabel = new javax.swing.JLabel();
+        JLabel anoFimTratamentoLabel = new JLabel();
         anoFimTratamentoSpinner = new javax.swing.JSpinner();
         diaInicioTratamentoSpinner = new javax.swing.JSpinner();
-        diaInicioTratamentoLabel = new javax.swing.JLabel();
-        mesInicioTratamentoLabel = new javax.swing.JLabel();
+        JLabel diaInicioTratamentoLabel = new JLabel();
+        JLabel mesInicioTratamentoLabel = new JLabel();
         mesInicioTratamentoSpinner = new javax.swing.JSpinner();
-        anoInicioTratamentoLabel = new javax.swing.JLabel();
+        JLabel anoInicioTratamentoLabel = new JLabel();
         anoInicioTratamentoSpinner = new javax.swing.JSpinner();
         dataFimTratamentoIndeterminadaCheckBox = new javax.swing.JCheckBox();
-        jPanel1 = new javax.swing.JPanel();
+        JPanel finalizarTratamentoPanel = new JPanel();
         finalizarTratamentoComboBox = new javax.swing.JComboBox<>();
-        finalizarTratamentoLabel = new javax.swing.JLabel();
-        finalizarTratamentoButton = new javax.swing.JButton();
-        tratamentoScrollPane = new javax.swing.JScrollPane();
-        tratamentoTable = new javax.swing.JTable();
-        filterByClienteTratamentoLabel = new javax.swing.JLabel();
+        JLabel finalizarTratamentoLabel = new JLabel();
+        JButton finalizarTratamentoButton = new JButton();
+        JScrollPane tratamentoScrollPane = new JScrollPane();
+        JTable tratamentoTable = new JTable();
+        JLabel filterByClienteTratamentoLabel = new JLabel();
         filterByClienteTratamentoTextField = new javax.swing.JTextField();
-        clearFilterByClienteTratamentoButton = new javax.swing.JButton();
-        filterByAnimalTratamentoLabel = new javax.swing.JLabel();
+        JButton clearFilterByClienteTratamentoButton = new JButton();
+        JLabel filterByAnimalTratamentoLabel = new JLabel();
         filterByAnimalTratamentoTextField = new javax.swing.JTextField();
-        clearFilterByAnimalTratamentoButton = new javax.swing.JButton();
-        logoIcon = new javax.swing.JLabel();
+        JButton clearFilterByAnimalTratamentoButton = new JButton();
+        JLabel logoIcon = new JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -437,8 +428,8 @@ public class Frame extends JFrame {
         desativarClienteButton.setText("Desativar");
         desativarClienteButton.addActionListener(e -> desativarCliente());
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(desativarClientePanel);
+        desativarClientePanel.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -468,7 +459,7 @@ public class Frame extends JFrame {
                 .addContainerGap(434, Short.MAX_VALUE))
         );
 
-        clienteTabbedPane.addTab("Desativar Cliente", jPanel3);
+        clienteTabbedPane.addTab("Desativar Cliente", desativarClientePanel);
 
         ativarClienteLabel.setText("Cliente");
 
@@ -476,8 +467,8 @@ public class Frame extends JFrame {
         ativarClienteButton.setText("Ativar");
         ativarClienteButton.addActionListener(e -> ativarCliente());
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(ativarClientePanel);
+        ativarClientePanel.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
@@ -507,7 +498,7 @@ public class Frame extends JFrame {
                 .addContainerGap(434, Short.MAX_VALUE))
         );
 
-        clienteTabbedPane.addTab("Ativar Cliente", jPanel4);
+        clienteTabbedPane.addTab("Ativar Cliente", ativarClientePanel);
         clienteTabbedPane.addChangeListener(e -> clienteTabbedPaneChangeListener());
 
         clienteTable.setModel(clienteTableModel);
@@ -888,84 +879,6 @@ public class Frame extends JFrame {
 
         animalTabbedPane.addTab("Ativar Animal", ativarAnimalPanel);
 
-        desativarEspecieLabel.setText("Espécie");
-
-        desativarEspecieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
-
-        desativarEspecieButton.setText("Desativar");
-        desativarEspecieButton.addActionListener(e -> desativarEspecie());
-
-        javax.swing.GroupLayout desativarEspeciePanelLayout = new javax.swing.GroupLayout(desativarEspeciePanel);
-        desativarEspeciePanel.setLayout(desativarEspeciePanelLayout);
-        desativarEspeciePanelLayout.setHorizontalGroup(
-            desativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(desativarEspeciePanelLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(desativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(desativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(desativarEspecieComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(desativarEspeciePanelLayout.createSequentialGroup()
-                            .addGap(9, 9, 9)
-                            .addComponent(desativarEspecieLabel)))
-                    .addGroup(desativarEspeciePanelLayout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(desativarEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(71, 71, 71))
-        );
-        desativarEspeciePanelLayout.setVerticalGroup(
-            desativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(desativarEspeciePanelLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(desativarEspecieLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(desativarEspecieComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(desativarEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(389, Short.MAX_VALUE))
-        );
-
-        animalTabbedPane.addTab("Desativar Espécie", desativarEspeciePanel);
-
-        ativarEspecieLabel.setText("Espécie");
-
-        ativarEspecieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
-
-        ativarEspecieButton.setText("Ativar");
-        ativarEspecieButton.addActionListener(e -> ativarEspecie());
-
-        javax.swing.GroupLayout ativarEspeciePanelLayout = new javax.swing.GroupLayout(ativarEspeciePanel);
-        ativarEspeciePanel.setLayout(ativarEspeciePanelLayout);
-        ativarEspeciePanelLayout.setHorizontalGroup(
-            ativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ativarEspeciePanelLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(ativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(ativarEspecieComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(ativarEspeciePanelLayout.createSequentialGroup()
-                            .addGap(9, 9, 9)
-                            .addComponent(ativarEspecieLabel)))
-                    .addGroup(ativarEspeciePanelLayout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(ativarEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(71, 71, 71))
-        );
-        ativarEspeciePanelLayout.setVerticalGroup(
-            ativarEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ativarEspeciePanelLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(ativarEspecieLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ativarEspecieComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(ativarEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(389, Short.MAX_VALUE))
-        );
-
-        animalTabbedPane.addTab("Ativar Espécie", ativarEspeciePanel);
-
         animalTable.setModel(animalTableModel);
         animalScrollPane.setViewportView(animalTable);
 
@@ -1041,8 +954,8 @@ public class Frame extends JFrame {
         cadastrarVeterinarioButton.setText("Cadastrar");
         cadastrarVeterinarioButton.addActionListener(e -> addVeterinario());
 
-        javax.swing.GroupLayout cadastrarVeterinarioLayout = new javax.swing.GroupLayout(cadastrarVeterinario);
-        cadastrarVeterinario.setLayout(cadastrarVeterinarioLayout);
+        javax.swing.GroupLayout cadastrarVeterinarioLayout = new javax.swing.GroupLayout(cadastrarVeterinarioTabbedPane);
+        cadastrarVeterinarioTabbedPane.setLayout(cadastrarVeterinarioLayout);
         cadastrarVeterinarioLayout.setHorizontalGroup(
             cadastrarVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastrarVeterinarioLayout.createSequentialGroup()
@@ -1098,7 +1011,7 @@ public class Frame extends JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        veterinarioTabbedPane.addTab("Cadastrar Veterinário", cadastrarVeterinario);
+        veterinarioTabbedPane.addTab("Cadastrar Veterinário", cadastrarVeterinarioTabbedPane);
         veterinarioTabbedPane.addChangeListener(e -> veterinarioTabbedPaneChangeListener());
 
         atualizarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
@@ -1486,8 +1399,6 @@ public class Frame extends JFrame {
         clearFilterByAnimalConsultaButton.setText("X");
         clearFilterByAnimalConsultaButton.addActionListener(this::clearFilterByAnimalConsultaButtonActionPerformed);
 
-        orderByDataConsultaToggleButton.setText("Ordenar por Data");
-
         orderByTerminadoConsultaToggleButton.setText("Ordenar por Terminado");
         orderByTerminadoConsultaToggleButton.addActionListener(this::orderByTerminadoConsultaToggleButtonActionPerformed);
 
@@ -1526,8 +1437,6 @@ public class Frame extends JFrame {
                                 .addComponent(clearFilterByVeterinarioConsultaButton))
                             .addGroup(consultaPanelLayout.createSequentialGroup()
                                 .addGap(46, 46, 46)
-                                .addComponent(orderByDataConsultaToggleButton)
-                                .addGap(18, 18, 18)
                                 .addComponent(orderByTerminadoConsultaToggleButton)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(consultaTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1549,7 +1458,6 @@ public class Frame extends JFrame {
                     .addComponent(filterByAnimalConsultaLabel)
                     .addComponent(filterByAnimalConsultaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clearFilterByAnimalConsultaButton)
-                    .addComponent(orderByDataConsultaToggleButton)
                     .addComponent(orderByTerminadoConsultaToggleButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(consultaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1828,10 +1736,10 @@ public class Frame extends JFrame {
         finalizarTratamentoLabel.setText("Tratamento");
 
         finalizarTratamentoButton.setText("Finalizar");
-        finalizarTratamentoButton.addActionListener(e -> Controller.finalizarTratamento(finalizarTratamentoComboBox.getSelectedItem()));
+        finalizarTratamentoButton.addActionListener(e -> finalizarTratamento());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(finalizarTratamentoPanel);
+        finalizarTratamentoPanel.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1860,7 +1768,7 @@ public class Frame extends JFrame {
                 .addContainerGap(467, Short.MAX_VALUE))
         );
 
-        tratamentoTabbedPane.addTab("Finalizar Tratamento", jPanel1);
+        tratamentoTabbedPane.addTab("Finalizar Tratamento", finalizarTratamentoPanel);
 
         tratamentoTable.setModel(tratamentoTableModel);
         tratamentoScrollPane.setViewportView(tratamentoTable);
@@ -1953,6 +1861,43 @@ public class Frame extends JFrame {
         this.setTitle("Clínica Veterinária");
     }
 
+
+    private void finalizarTratamento() {
+        Controller.finalizarTratamento(finalizarTratamentoComboBox.getSelectedItem());
+    }
+
+    private void finalizarConsulta() {
+        Controller.finalizarConsulta(finalizarConsultaComboBox.getSelectedItem());
+    }
+
+    private void ativarVeterinario() {
+        Controller.ativarVeterinario(ativarVeterinarioComboBox.getSelectedItem());
+    }
+
+    private void desativarVeterinario() {
+        Controller.desativarVeterinario(desativarVeterinarioComboBox.getSelectedItem());
+    }
+
+    private void ativarAnimal() {
+        Controller.ativarAnimal(ativarAnimalComboBox.getSelectedItem());
+    }
+
+    private void desativarAnimal() {
+        Controller.desativarAnimal(desativarAnimalComboBox.getSelectedItem());
+    }
+
+    private void atualizarEspecie() {
+        Controller.atualizarEspecie(selecionarEspecieAtualizarComboBox.getSelectedItem(), atualizarNomeEspecieTextField.getText());
+    }
+
+    private void ativarCliente() {
+        Controller.ativarCliente(ativarClienteComboBox.getSelectedItem());
+    }
+
+    private void desativarCliente() {
+        Controller.desativarCliente(desativarClienteComboBox.getSelectedItem());
+    }
+
     private void filterByNameClienteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         clienteTableModel.clear();
         clienteTableModel.addListOfItems(ClienteDAO.retrieveBySimilarName(filterByNameClienteTextField.getText()));
@@ -2018,9 +1963,9 @@ public class Frame extends JFrame {
 
     private void orderByTerminadoConsultaToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {
         if(orderByTerminadoConsultaToggleButton.isSelected()){
-            ConsultaDAO.addOrderByClause();
+            ConsultaDAO.addOrderByTerminadoClause();
         } else {
-            ConsultaDAO.removeOrderByClause();
+            ConsultaDAO.removeOrderByTerminadoClause();
         }
     }
 
@@ -2087,244 +2032,82 @@ public class Frame extends JFrame {
         java.awt.EventQueue.invokeLater(() -> new Frame().setVisible(true));
     }
 
-    private javax.swing.JPanel animalPanel;
-    private javax.swing.JScrollPane animalScrollPane;
-    private javax.swing.JTabbedPane animalTabbedPane;
-    private javax.swing.JTable animalTable;
     private javax.swing.JComboBox<String> animalTratamentoComboBox;
-    private javax.swing.JLabel animalTratamentoLabel;
-    private javax.swing.JLabel anoConsultaLabel;
     private javax.swing.JSpinner anoConsultaSpinner;
-    private javax.swing.JLabel anoFimTratamentoLabel;
     private javax.swing.JSpinner anoFimTratamentoSpinner;
-    private javax.swing.JLabel anoInicioTratamentoLabel;
     private javax.swing.JSpinner anoInicioTratamentoSpinner;
-    private javax.swing.JButton ativarAnimalButton;
     private javax.swing.JComboBox<String> ativarAnimalComboBox;
-    private javax.swing.JLabel ativarAnimalLabel;
-    private javax.swing.JPanel ativarAnimalPanel;
-    private javax.swing.JButton ativarClienteButton;
     private javax.swing.JComboBox<String> ativarClienteComboBox;
-    private javax.swing.JLabel ativarClienteLabel;
-    private javax.swing.JButton ativarEspecieButton;
-    private javax.swing.JComboBox<String> ativarEspecieComboBox;
-    private javax.swing.JLabel ativarEspecieLabel;
-    private javax.swing.JPanel ativarEspeciePanel;
-    private javax.swing.JButton ativarVeterinarioButton;
     private javax.swing.JComboBox<String> ativarVeterinarioComboBox;
-    private javax.swing.JLabel ativarVeterinarioLabel;
-    private javax.swing.JPanel ativarVeterinarioPanel;
-    private javax.swing.JButton atualizarAnimalButton;
     private javax.swing.JComboBox<String> atualizarAnimalComboBox;
-    private javax.swing.JLabel atualizarAnimalLabel;
-    private javax.swing.JPanel atualizarAnimalPanel;
-    private javax.swing.JLabel atualizarCepClienteLabel;
     private javax.swing.JTextField atualizarCepClienteTextField;
-    private javax.swing.JLabel atualizarCepVeterinarioLabel;
     private javax.swing.JTextField atualizarCepVeterinarioTextField;
-    private javax.swing.JButton atualizarClienteButton;
     private javax.swing.JComboBox<String> atualizarClienteComboBox;
-    private javax.swing.JLabel atualizarClienteLabel;
-    private javax.swing.JPanel atualizarClientePanel;
-    private javax.swing.JLabel atualizarEmailClienteLabel;
     private javax.swing.JTextField atualizarEmailClienteTextField;
-    private javax.swing.JLabel atualizarEmailVeterinarioLabel;
     private javax.swing.JTextField atualizarEmailVeterinarioTextField;
-    private javax.swing.JLabel atualizarEnderecoClienteLabel;
     private javax.swing.JTextField atualizarEnderecoClienteTextField;
-    private javax.swing.JLabel atualizarEnderecoVeterinarioLabel;
     private javax.swing.JTextField atualizarEnderecoVeterinarioTextField;
     private javax.swing.JComboBox<String> atualizarEspecieComboBox;
-    private javax.swing.JLabel atualizarEspecieLabel;
-    private javax.swing.JPanel atualizarEspeciesPanel;
-    private javax.swing.JLabel atualizarAnoNascimentoAnimalLabel;
     private javax.swing.JSpinner atualizarAnoNascimentoAnimalSpinner;
-    private javax.swing.JLabel atualizarNomeAnimalLabel;
     private javax.swing.JTextField atualizarNomeAnimalTextField;
-    private javax.swing.JLabel atualizarNomeClienteLabel;
     private javax.swing.JTextField atualizarNomeClienteTextField;
-    private javax.swing.JButton atualizarNomeEspecieButton;
-    private javax.swing.JLabel atualizarNomeEspecieLabel;
     private javax.swing.JTextField atualizarNomeEspecieTextField;
-    private javax.swing.JLabel atualizarNomeVeterinarioLabel;
     private javax.swing.JTextField atualizarNomeVeterinarioTextField;
     private javax.swing.JComboBox<String> atualizarSexoAnimalComboBox;
-    private javax.swing.JLabel atualizarSexoAnimalLabel;
-    private javax.swing.JLabel atualizarTelefoneClienteLabel;
     private javax.swing.JTextField atualizarTelefoneClienteTextField;
-    private javax.swing.JLabel atualizarTelefoneVeterinarioLabel;
     private javax.swing.JTextField atualizarTelefoneVeterinarioTextField;
     private javax.swing.JComboBox<String> atualizarTutorComboBox;
-    private javax.swing.JLabel atualizarTutorLabel;
-    private javax.swing.JPanel atualizarVeterinario;
-    private javax.swing.JButton atualizarVeterinarioButton;
     private javax.swing.JComboBox<String> atualizarVeterinarioComboBox;
-    private javax.swing.JLabel atualizarVeterinarioLabel;
-    private javax.swing.JButton cadastrarAnimalButton;
-    private javax.swing.JPanel cadastrarAnimalPanel;
-    private javax.swing.JButton cadastrarClienteButton;
-    private javax.swing.JPanel cadastrarClientePanel;
-    private javax.swing.JPanel cadastrarConsulta;
-    private javax.swing.JButton cadastrarConsultaButton;
-    private javax.swing.JButton cadastrarEspecieButton;
-    private javax.swing.JPanel cadastrarEspeciesPanel;
-    private javax.swing.JButton cadastrarExameButton;
-    private javax.swing.JPanel cadastrarExamePanel;
-    private javax.swing.JButton cadastrarTratamentoButton;
-    private javax.swing.JPanel cadastrarTratamentoPanel;
-    private javax.swing.JPanel cadastrarVeterinario;
-    private javax.swing.JButton cadastrarVeterinarioButton;
-    private javax.swing.JLabel cepClienteLabel;
     private javax.swing.JTextField cepClienteTextField;
-    private javax.swing.JLabel cepVeterinarioLabel;
     private javax.swing.JTextField cepVeterinarioTextField;
-    private javax.swing.JButton clearFilterByAnimalConsultaButton;
-    private javax.swing.JButton clearFilterByAnimalExameButton;
-    private javax.swing.JButton clearFilterByAnimalTratamentoButton;
-    private javax.swing.JButton clearFilterByClienteConsultaButton;
-    private javax.swing.JButton clearFilterByClienteExameButton;
-    private javax.swing.JButton clearFilterByClienteTratamentoButton;
-    private javax.swing.JButton clearFilterByNameAnimalButton;
-    private javax.swing.JButton clearFilterByNameClienteButton;
-    private javax.swing.JButton clearFilterByNameVeterinarioButton;
-    private javax.swing.JButton clearFilterByTutorAnimalButton;
-    private javax.swing.JButton clearFilterByVeterinarioConsultaButton;
-    private javax.swing.JButton clearFilterByVeterinarioExameButton;
-    private javax.swing.JPanel clientePanel;
-    private javax.swing.JScrollPane clienteScrollPane;
-    private javax.swing.JTabbedPane clienteTabbedPane;
-    private javax.swing.JTable clienteTable;
     private javax.swing.JComboBox<String> consultaExameComboBox;
-    private javax.swing.JLabel consultaExameLabel;
-    private javax.swing.JPanel consultaPanel;
-    private javax.swing.JScrollPane consultaScrollPane;
-    private javax.swing.JTabbedPane consultaTabbedPane;
-    private javax.swing.JTable consultaTable;
-    private javax.swing.JLabel dataConsultaLabel;
     private javax.swing.JCheckBox dataFimTratamentoIndeterminadaCheckBox;
-    private javax.swing.JLabel dataFimTratamentoLabel;
-    private javax.swing.JLabel dataInicioLabel;
-    private javax.swing.JButton desativarAnimalButton;
     private javax.swing.JComboBox<String> desativarAnimalComboBox;
-    private javax.swing.JLabel desativarAnimalLabel;
-    private javax.swing.JPanel desativarAnimalPanel;
-    private javax.swing.JButton desativarClienteButton;
     private javax.swing.JComboBox<String> desativarClienteComboBox;
-    private javax.swing.JLabel desativarClienteLabel;
-    private javax.swing.JPanel desativarConsultaPanel;
-    private javax.swing.JButton desativarEspecieButton;
-    private javax.swing.JComboBox<String> desativarEspecieComboBox;
-    private javax.swing.JLabel desativarEspecieLabel;
-    private javax.swing.JPanel desativarEspeciePanel;
-    private javax.swing.JButton desativarVeterinarioButton;
     private javax.swing.JComboBox<String> desativarVeterinarioComboBox;
-    private javax.swing.JLabel desativarVeterinarioLabel;
-    private javax.swing.JPanel desativarVeterinarioPanel;
-    private javax.swing.JScrollPane descricaoCadastrarExamePane;
-    private javax.swing.JLabel descricaoExameLabel;
     private javax.swing.JTextArea descricaoExameTextArea;
-    private javax.swing.JLabel diaConsultaLabel;
     private javax.swing.JSpinner diaConsultaSpinner;
-    private javax.swing.JLabel diaFimTratamentoLabel;
     private javax.swing.JSpinner diaFimTratamentoSpinner;
-    private javax.swing.JLabel diaInicioTratamentoLabel;
     private javax.swing.JSpinner diaInicioTratamentoSpinner;
-    private javax.swing.JLabel emailClienteLabel;
     private javax.swing.JTextField emailClienteTextField;
-    private javax.swing.JLabel emailVeterinarioLabel;
     private javax.swing.JTextField emailVeterinarioTextField;
-    private javax.swing.JLabel enderecoClienteLabel;
     private javax.swing.JTextField enderecoClienteTextField;
-    private javax.swing.JLabel enderecoVeterinarioLabel;
     private javax.swing.JTextField enderecoVeterinarioTextField;
     private javax.swing.JComboBox<String> especieAnimalComboBox;
-    private javax.swing.JLabel especieAnimalLabel;
-    private javax.swing.JPanel examePanel;
-    private javax.swing.JScrollPane exameScrollPane;
-    private javax.swing.JTabbedPane exameTabbedPane;
-    private javax.swing.JTable exameTable;
-    private javax.swing.JLabel filterByAnimalConsultaLabel;
     private javax.swing.JTextField filterByAnimalConsultaTextField;
-    private javax.swing.JLabel filterByAnimalExameLabel;
     private javax.swing.JTextField filterByAnimalExameTextField;
-    private javax.swing.JLabel filterByAnimalTratamentoLabel;
     private javax.swing.JTextField filterByAnimalTratamentoTextField;
-    private javax.swing.JLabel filterByClienteConsultaLabel;
     private javax.swing.JTextField filterByClienteConsultaTextField;
-    private javax.swing.JLabel filterByClienteExameLabel;
     private javax.swing.JTextField filterByClienteExameTextField;
-    private javax.swing.JLabel filterByClienteTratamentoLabel;
     private javax.swing.JTextField filterByClienteTratamentoTextField;
-    private javax.swing.JLabel filterByNameAnimalLabel;
     private javax.swing.JTextField filterByNameAnimalTextField;
-    private javax.swing.JLabel filterByNameClienteLabel;
     private javax.swing.JTextField filterByNameClienteTextField;
-    private javax.swing.JLabel filterByNameVeterinarioLabel;
     private javax.swing.JTextField filterByNameVeterinarioTextField;
-    private javax.swing.JLabel filterByTutorAnimalLabel;
     private javax.swing.JTextField filterByTutorAnimalTextField;
-    private javax.swing.JLabel filterByVeterinarioConsultaLabel;
     private javax.swing.JTextField filterByVeterinarioConsultaTextField;
-    private javax.swing.JLabel filterByVeterinarioExameLabel;
     private javax.swing.JTextField filterByVeterinarioExameTextField;
-    private javax.swing.JButton finalizarConsultaButton;
     private javax.swing.JComboBox<String> finalizarConsultaComboBox;
-    private javax.swing.JLabel finalizarConsultaLabel;
-    private javax.swing.JButton finalizarTratamentoButton;
     private javax.swing.JComboBox<String> finalizarTratamentoComboBox;
-    private javax.swing.JLabel finalizarTratamentoLabel;
-    private javax.swing.JLabel horarioConsultaLabel;
     private javax.swing.JSpinner horarioConsultaSpinner;
-    private javax.swing.JLabel anoNascimentoAnimalLabel;
     private javax.swing.JSpinner anoNascimentoAnimalSpinner;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JLabel logoIcon;
-    private javax.swing.JTabbedPane mainTabbedPane;
-    private javax.swing.JLabel mesConsultaLabel;
     private javax.swing.JSpinner mesConsultaSpinner;
-    private javax.swing.JLabel mesFimTratamentoLabel;
     private javax.swing.JSpinner mesFimTratamentoSpinner;
-    private javax.swing.JLabel mesInicioTratamentoLabel;
     private javax.swing.JSpinner mesInicioTratamentoSpinner;
-    private javax.swing.JLabel nomeAnimalLabel;
     private javax.swing.JTextField nomeAnimalTextField;
-    private javax.swing.JLabel nomeClienteLabel;
     private javax.swing.JTextField nomeClienteTextField;
-    private javax.swing.JLabel nomeEspecieLabel;
     private javax.swing.JTextField nomeEspecieTextField;
-    private javax.swing.JLabel nomeVeterinarioLabel;
     private javax.swing.JTextField nomeVeterinarioTextField;
-    private javax.swing.JToggleButton orderByDataConsultaToggleButton;
     private javax.swing.JToggleButton orderByTerminadoConsultaToggleButton;
-    private javax.swing.JScrollPane relatoCadastrarConsultaScrollPane;
-    private javax.swing.JLabel relatoConsultaLabel;
     private javax.swing.JTextArea relatoConsultaTextArea;
     private javax.swing.JComboBox<String> selecionarEspecieAtualizarComboBox;
-    private javax.swing.JLabel selecionarEspecieAtualizarLabel;
     private javax.swing.JComboBox<String> sexoAnimalComboBox;
-    private javax.swing.JLabel sexoAnimalLabel;
-    private javax.swing.JLabel telefoneClienteLabel;
     private javax.swing.JTextField telefoneClienteTextField;
-    private javax.swing.JLabel telefoneVeterinarioLabel;
     private javax.swing.JTextField telefoneVeterinarioTextField;
     private javax.swing.JComboBox<String> tratamentoConsultaComboBox;
-    private javax.swing.JLabel tratamentoConsultaLabel;
-    private javax.swing.JPanel tratamentoPanel;
-    private javax.swing.JScrollPane tratamentoScrollPane;
-    private javax.swing.JTabbedPane tratamentoTabbedPane;
-    private javax.swing.JTable tratamentoTable;
     private javax.swing.JComboBox<String> tutorComboBox;
-    private javax.swing.JLabel tutorLabel;
     private javax.swing.JComboBox<String> veterinarioConsultaComboBox;
-    private javax.swing.JLabel veterinarioConsultaLabel;
-    private javax.swing.JPanel veterinarioPanel;
-    private javax.swing.JScrollPane veterinarioScrollPane;
-    private javax.swing.JTabbedPane veterinarioTabbedPane;
-    private javax.swing.JTable veterinarioTable;
-    // End of variables declaration//GEN-END:variables
 
+    // Table Models
     private final AnimalTableModel animalTableModel = new AnimalTableModel();
     private final ClienteTableModel clienteTableModel = new ClienteTableModel();
     private final ConsultaTableModel consultaTableModel = new ConsultaTableModel();
@@ -2532,20 +2315,34 @@ public class Frame extends JFrame {
     }
 
     private void addTratamento(){
-        if(
-                Controller.addTratamento(
-                        diaInicioTratamentoSpinner.getValue(),
-                        mesInicioTratamentoSpinner.getValue(),
-                        anoInicioTratamentoSpinner.getValue(),
+        if(dataFimTratamentoIndeterminadaCheckBox.isSelected()){
+            if(
+                    Controller.addTratamentoIndeterminado(
+                            diaInicioTratamentoSpinner.getValue(),
+                            mesInicioTratamentoSpinner.getValue(),
+                            anoInicioTratamentoSpinner.getValue(),
 
-                        diaFimTratamentoSpinner.getValue(),
-                        mesFimTratamentoSpinner.getValue(),
-                        anoFimTratamentoSpinner.getValue(),
+                            animalTratamentoComboBox.getSelectedItem()
+                    )
+            ){
+                flush(TableToFlush.TRATAMENTO);
+            }
+        } else{
+            if(
+                    Controller.addTratamento(
+                            diaInicioTratamentoSpinner.getValue(),
+                            mesInicioTratamentoSpinner.getValue(),
+                            anoInicioTratamentoSpinner.getValue(),
 
-                        animalTratamentoComboBox.getSelectedItem()
-                )
-        ){
-            flush(TableToFlush.TRATAMENTO);
+                            diaFimTratamentoSpinner.getValue(),
+                            mesFimTratamentoSpinner.getValue(),
+                            anoFimTratamentoSpinner.getValue(),
+
+                            animalTratamentoComboBox.getSelectedItem()
+                    )
+            ){
+                flush(TableToFlush.TRATAMENTO);
+            }
         }
     }
 

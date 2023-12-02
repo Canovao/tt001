@@ -1,9 +1,9 @@
 
 n
-java:S1192)"LDefine a constant instead of duplicating this literal "veterinario" 6 times.(ßš¤îûÿÿÿÿ8®Ç·åÀ1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8¯Ç·åÀ1
-l
-java:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆÜ“È8ºÇ·åÀ1
+java:S1192)"LDefine a constant instead of duplicating this literal "veterinario" 7 times.(ßš¤îûÿÿÿÿ8òé ØÂ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8ôé ØÂ1
 q
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¼ªÛ„úÿÿÿÿ8ºÇ·åÀ1
-G	java:S106A"+Replace this use of System.err by a logger.(ØşÿÌ8ÀÇ·åÀ1
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¼ªÛ„úÿÿÿÿ8…ê ØÂ1
+l
+java:S2095G"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆÜ“È8…ê ØÂ1
+G	java:S106Q"+Replace this use of System.err by a logger.(ØşÿÌ8Œê ØÂ1

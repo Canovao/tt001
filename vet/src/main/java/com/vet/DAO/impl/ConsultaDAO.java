@@ -22,7 +22,7 @@ public class ConsultaDAO extends DAO<Consulta> {
     private static String retrieveByClienteName = "";
     private static String retrieveByAnimalName = "";
     private static String retrieveByVeterinarioName = "";
-    private static String orderByClause = null;
+    private static String orderByTerminadoClause = null;
 
     public static ConsultaDAO getInstance(){
         if(instance == null){
@@ -81,7 +81,7 @@ public class ConsultaDAO extends DAO<Consulta> {
 
     private static List<Model> baseRetrieveBy(){
         return buildConsultasTableFromConsultas(
-                doFilterByVeterinarioNameStep(retrieveAll("consulta", orderByClause).stream().map(Consulta.class::cast).toList())
+                doFilterByVeterinarioNameStep(retrieveAll("consulta", orderByTerminadoClause).stream().map(Consulta.class::cast).toList())
         ).stream().map(Model.class::cast).toList();
     }
 
@@ -115,7 +115,7 @@ public class ConsultaDAO extends DAO<Consulta> {
         retrieveByAnimalName = nome;
 
         return buildConsultasTableFromConsultas(
-                doFilterByVeterinarioNameStep(retrieveAll("consulta", orderByClause).stream().map(Consulta.class::cast).toList())
+                doFilterByVeterinarioNameStep(retrieveAll("consulta", orderByTerminadoClause).stream().map(Consulta.class::cast).toList())
         ).stream().map(Model.class::cast).toList();
     }
 
@@ -161,12 +161,12 @@ public class ConsultaDAO extends DAO<Consulta> {
         }
     }
 
-    public static void addOrderByClause() {
-        orderByClause = "terminado ASC";
+    public static void addOrderByTerminadoClause() {
+        orderByTerminadoClause = "terminado ASC";
     }
 
-    public static void removeOrderByClause() {
-        orderByClause = null;
+    public static void removeOrderByTerminadoClause() {
+        orderByTerminadoClause = null;
     }
 
     public static ConsultaTable buildConsultaTableFromConsulta(Consulta consulta) {
@@ -181,6 +181,16 @@ public class ConsultaDAO extends DAO<Consulta> {
                 consulta.getIdTratamento(),
                 (consulta.getTerminado() == 1) ? "Sim": "Não"
         );
+    }
+
+    public static List<Consulta> getAllUnfinished() {
+        return retrieve("SELECT * FROM consulta WHERE terminado = 0", "consulta").stream().map(Consulta.class::cast).toList();
+    }
+
+    public static void finalizarConsulta(Integer id) {
+        Consulta consulta = getInstance().get(id);
+        consulta.setTerminado(1);
+        update(consulta);
     }
 
     @Override

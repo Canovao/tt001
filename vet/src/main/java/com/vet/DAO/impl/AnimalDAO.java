@@ -129,6 +129,22 @@ public class AnimalDAO extends DAO<Animal> {
         );
     }
 
+    public static List<Animal> getAllInactive() {
+        return retrieve("SELECT * FROM animal where ativo = 0", "animal").stream().map(Animal.class::cast).toList();
+    }
+
+    public static void desativarAnimal(Integer id) {
+        Animal animal = getInstance().get(id);
+        animal.setAtivo("0");
+        update(animal);
+    }
+
+    public static void ativarAnimal(Integer id) {
+        Animal animal = getInstance().get(id);
+        animal.setAtivo("1");
+        update(animal);
+    }
+
     @Override
     public Animal get(int id) {
         return (Animal) DAO.retrieveById("animal", id);

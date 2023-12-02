@@ -1,9 +1,9 @@
 
 k
-java:S1192T"IDefine a constant instead of duplicating this literal "consulta" 7 times.(†Ç€èüÿÿÿÿ8»÷“¸Â1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8ð¿Ž¸Â1
+java:S1192T"IDefine a constant instead of duplicating this literal "consulta" 8 times.(¬¿ù¸ÿÿÿÿÿ8¼¯“ÙÂ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8¾¯“ÙÂ1
 m
-java:S2095˜"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ƒ²§ð8ý¿Ž¸Â1
+java:S2095˜"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ƒ²§ð8Ø¯“ÙÂ1
 m
-java:S2095‡"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€ô­¥8ý¿Ž¸Â1
-H	java:S106 "+Replace this use of System.err by a logger.(ØþÿÌ8ŠÀŽ¸Â1
+java:S2095‡"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€ô­¥8Ø¯“ÙÂ1
+H	java:S106 "+Replace this use of System.err by a logger.(ØþÿÌ8å¯“ÙÂ1
