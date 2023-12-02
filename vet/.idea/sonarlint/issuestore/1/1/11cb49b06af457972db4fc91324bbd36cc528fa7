@@ -1,44 +1,44 @@
 
 w
-java:S1192å
-"TDefine a constant instead of duplicating this literal "Filtrar por Cliente" 3 times.(ëÙò¬üÿÿÿÿ8¸¥üØÂ1
+java:S1192Â
+"TDefine a constant instead of duplicating this literal "Filtrar por Cliente" 3 times.(ëÙò¬üÿÿÿÿ8èÓ´ßÂ1
 m
-java:S1192á"JDefine a constant instead of duplicating this literal "Atualizar" 4 times.(ñ—üÿÿÿÿ8¹¥üØÂ1
+java:S1192İ"JDefine a constant instead of duplicating this literal "Atualizar" 4 times.(ñ—üÿÿÿÿ8èÓ´ßÂ1
 j
-java:S1192Ó"GDefine a constant instead of duplicating this literal "Ativar" 3 times.(ıÎñ¾şÿÿÿÿ8¹¥üØÂ1
+java:S1192Ì"GDefine a constant instead of duplicating this literal "Ativar" 3 times.(ıÎñ¾şÿÿÿÿ8èÓ´ßÂ1
 g
-java:S1192»
-"IDefine a constant instead of duplicating this literal "Consulta" 3 times.(ñ¹›ö8¹¥üØÂ1
+java:S1192š
+"IDefine a constant instead of duplicating this literal "Consulta" 3 times.(ñ¹›ö8èÓ´ßÂ1
 j
-java:S1192œ"GDefine a constant instead of duplicating this literal "Animal" 5 times.(İ°µÄşÿÿÿÿ8¹¥üØÂ1
+java:S1192‘"GDefine a constant instead of duplicating this literal "Animal" 5 times.(İ°µÄşÿÿÿÿ8éÓ´ßÂ1
 v
-java:S1192ó
-"SDefine a constant instead of duplicating this literal "Filtrar por Animal" 3 times.(×ÆşÄùÿÿÿÿ8¹¥üØÂ1
+java:S1192Ğ
+"SDefine a constant instead of duplicating this literal "Filtrar por Animal" 3 times.(×ÆşÄùÿÿÿÿ8éÓ´ßÂ1
 h
-java:S1192’"JDefine a constant instead of duplicating this literal "Cadastrar" 7 times.(í¡×«8¹¥üØÂ1
+java:S1192"JDefine a constant instead of duplicating this literal "Cadastrar" 7 times.(í¡×«8éÓ´ßÂ1
 h
-java:S1192¬"JDefine a constant instead of duplicating this literal "Desativar" 3 times.(ÒÚÅ¯8¹¥üØÂ1
+java:S1192¦"JDefine a constant instead of duplicating this literal "Desativar" 3 times.(ÒÚÅ¯8éÓ´ßÂ1
 n
-java:S1192Ğ	"KDefine a constant instead of duplicating this literal "Tratamento" 3 times.(ä²Öûúÿÿÿÿ8¹¥üØÂ1
+java:S1192³	"KDefine a constant instead of duplicating this literal "Tratamento" 3 times.(ä²Öûúÿÿÿÿ8éÓ´ßÂ1
 k
-java:S1192Ô"HDefine a constant instead of duplicating this literal "Cliente" 4 times.(˜„ßÂùÿÿÿÿ8¹¥üØÂ1
+java:S1192Ñ"HDefine a constant instead of duplicating this literal "Cliente" 4 times.(˜„ßÂùÿÿÿÿ8éÓ´ßÂ1
 o
-java:S1192û"QDefine a constant instead of duplicating this literal "Filtrar por nome" 3 times.(Ñ­ÒŠ8¹¥üØÂ1
+java:S1192ô"QDefine a constant instead of duplicating this literal "Filtrar por nome" 3 times.(Ñ­ÒŠ8éÓ´ßÂ1
 l
-java:S1192¦"IDefine a constant instead of duplicating this literal "EspÃ©cie" 3 times.(À´Ûÿÿÿÿÿ8¹¥üØÂ1
+java:S1192Ÿ"IDefine a constant instead of duplicating this literal "EspÃ©cie" 3 times.(À´Ûÿÿÿÿÿ8éÓ´ßÂ1
 k
-java:S1192û"MDefine a constant instead of duplicating this literal "VeterinÃ¡rio" 5 times.(Ó8¹¥üØÂ1
+java:S1192â"MDefine a constant instead of duplicating this literal "VeterinÃ¡rio" 5 times.(Ó8éÓ´ßÂ1
 Ÿ
-java:S1186­"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(·è¦8¦ÏÂÙÂ1
+java:S1186º"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(·è¦8ã¨ØßÂ1
 ¤
-java:S1186±"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ø¯Ó¿ÿÿÿÿÿ8¦ÏÂÙÂ1
+java:S1186¾"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ø¯Ó¿ÿÿÿÿÿ8ã¨ØßÂ1
 ¤
-java:S1186µ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”ÊÔĞşÿÿÿÿ8¦ÏÂÙÂ1
+java:S1186Â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”ÊÔĞşÿÿÿÿ8ã¨ØßÂ1
 Ÿ
-java:S1186¸"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„œşæ8¦ÏÂÙÂ1
+java:S1186Å"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„œşæ8ã¨ØßÂ1
 Ÿ
-java:S1186»"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿è£’8¦ÏÂÙÂ1
+java:S1186È"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿è£’8ã¨ØßÂ1
 Ÿ
-java:S1186¾"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷ûøâ8¦ÏÂÙÂ1
+java:S1186Ë"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷ûøâ8ã¨ØßÂ1
 
-java:S1186Á"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Õ¦ÙT8¦ÏÂÙÂ1
+java:S1186Î"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Õ¦ÙT8ã¨ØßÂ1

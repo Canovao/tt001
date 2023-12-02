@@ -1,14 +1,11 @@
 package com.vet.view;
 
-import com.vet.DAO.impl.*;
 import com.vet.controller.Controller;
 import com.vet.view.table.TableToFlush;
 import com.vet.view.table.impl.*;
 
 import javax.swing.*;
 import java.util.List;
-
-import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
  * Vet's project Main frame
@@ -97,7 +94,7 @@ public class Frame extends JFrame {
         JLabel atualizarTutorLabel = new JLabel();
         atualizarTutorComboBox = new javax.swing.JComboBox<>();
         JLabel atualizarEspecieLabel = new JLabel();
-        atualizarEspecieComboBox = new javax.swing.JComboBox<>();
+        atualizarEspecieAnimalComboBox = new javax.swing.JComboBox<>();
         JLabel atualizarNomeAnimalLabel = new JLabel();
         atualizarNomeAnimalTextField = new javax.swing.JTextField();
         JLabel atualizarAnoNascimentoAnimalLabel = new JLabel();
@@ -339,7 +336,6 @@ public class Frame extends JFrame {
 
         atualizarClienteLabel.setText("Cliente");
 
-        atualizarClienteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
         atualizarNomeClienteLabel.setText("Nome Cliente");
 
         atualizarCepClienteLabel.setText("CEP Cliente");
@@ -423,8 +419,6 @@ public class Frame extends JFrame {
 
         desativarClienteLabel.setText("Cliente");
 
-        desativarClienteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
-
         desativarClienteButton.setText("Desativar");
         desativarClienteButton.addActionListener(e -> desativarCliente());
 
@@ -463,7 +457,6 @@ public class Frame extends JFrame {
 
         ativarClienteLabel.setText("Cliente");
 
-        ativarClienteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllClientesInactive()));
         ativarClienteButton.setText("Ativar");
         ativarClienteButton.addActionListener(e -> ativarCliente());
 
@@ -561,10 +554,6 @@ public class Frame extends JFrame {
         cadastrarAnimalButton.addActionListener(e -> addAnimal());
 
         sexoAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "F" }));
-
-        especieAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
-
-        tutorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
 
         javax.swing.GroupLayout cadastrarAnimalPanelLayout = new javax.swing.GroupLayout(cadastrarAnimalPanel);
         cadastrarAnimalPanel.setLayout(cadastrarAnimalPanelLayout);
@@ -667,15 +656,9 @@ public class Frame extends JFrame {
 
         atualizarAnimalLabel.setText("Animal");
 
-        atualizarAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
-
         atualizarTutorLabel.setText("Cliente tutor do Animal");
 
-        atualizarTutorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
-
         atualizarEspecieLabel.setText("Espécie");
-
-        atualizarEspecieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
 
         atualizarNomeAnimalLabel.setText("Nome Animal");
 
@@ -698,7 +681,7 @@ public class Frame extends JFrame {
                         .addGap(55, 55, 55)
                         .addGroup(atualizarAnimalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(atualizarNomeAnimalTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                            .addComponent(atualizarEspecieComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 300, Short.MAX_VALUE)
+                            .addComponent(atualizarEspecieAnimalComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 300, Short.MAX_VALUE)
                             .addComponent(atualizarAnoNascimentoAnimalSpinner, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(atualizarTutorComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 300, Short.MAX_VALUE)
                             .addComponent(atualizarAnimalComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -733,7 +716,7 @@ public class Frame extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarEspecieLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(atualizarEspecieComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(atualizarEspecieAnimalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(atualizarNomeAnimalLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -759,8 +742,6 @@ public class Frame extends JFrame {
         atualizarNomeEspecieButton.addActionListener(e -> atualizarEspecie());
 
         selecionarEspecieAtualizarLabel.setText("Espécie");
-
-        selecionarEspecieAtualizarComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
 
         javax.swing.GroupLayout atualizarEspeciesPanelLayout = new javax.swing.GroupLayout(atualizarEspeciesPanel);
         atualizarEspeciesPanel.setLayout(atualizarEspeciesPanelLayout);
@@ -803,8 +784,6 @@ public class Frame extends JFrame {
 
         desativarAnimalLabel.setText("Animal");
 
-        desativarAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
-
         desativarAnimalButton.setText("Desativar");
         desativarAnimalButton.addActionListener(e -> desativarAnimal());
 
@@ -841,8 +820,6 @@ public class Frame extends JFrame {
         animalTabbedPane.addTab("Desativar Animal", desativarAnimalPanel);
 
         ativarAnimalLabel.setText("Animal");
-
-        ativarAnimalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllAnimaisInactive()));
 
         ativarAnimalButton.setText("Ativar");
         ativarAnimalButton.addActionListener(e -> ativarAnimal());
@@ -1014,8 +991,6 @@ public class Frame extends JFrame {
         veterinarioTabbedPane.addTab("Cadastrar Veterinário", cadastrarVeterinarioTabbedPane);
         veterinarioTabbedPane.addChangeListener(e -> veterinarioTabbedPaneChangeListener());
 
-        atualizarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
-
         atualizarVeterinarioLabel.setText("Veterinário");
 
         atualizarVeterinarioButton.setText("Atualizar");
@@ -1099,8 +1074,6 @@ public class Frame extends JFrame {
 
         desativarVeterinarioLabel.setText("Veterinário");
 
-        desativarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
-
         desativarVeterinarioButton.setText("Desativar");
         desativarVeterinarioButton.addActionListener(e -> desativarVeterinario());
 
@@ -1137,8 +1110,6 @@ public class Frame extends JFrame {
         veterinarioTabbedPane.addTab("Desativar Veterinário", desativarVeterinarioPanel);
 
         ativarVeterinarioLabel.setText("Veterinário");
-
-        ativarVeterinarioComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllVeterinariosInactive()));
 
         ativarVeterinarioButton.setText("Ativar");
         ativarVeterinarioButton.addActionListener(e -> ativarVeterinario());
@@ -1230,10 +1201,6 @@ public class Frame extends JFrame {
         cadastrarConsultaButton.addActionListener(e -> addConsulta());
 
         tratamentoConsultaLabel.setText("Tratamento");
-
-        tratamentoConsultaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllTratamentosToComboBox()));
-
-        veterinarioConsultaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
 
         diaConsultaSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
 
@@ -1337,8 +1304,6 @@ public class Frame extends JFrame {
         consultaTabbedPane.addChangeListener(e -> consultaTabbedPaneChangeListener());
 
         finalizarConsultaLabel.setText("Consulta");
-
-        finalizarConsultaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllConsultasUnfinished()));
 
         finalizarConsultaButton.setText("Finalizar");
         finalizarConsultaButton.addActionListener(e -> finalizarConsulta());
@@ -1472,8 +1437,6 @@ public class Frame extends JFrame {
         cadastrarExameButton.setText("Cadastrar");
         cadastrarExameButton.addActionListener(e -> addExame());
 
-        consultaExameComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllConsultasToComboBox()));
-
         descricaoExameTextArea.setColumns(20);
         descricaoExameTextArea.setRows(5);
         descricaoCadastrarExamePane.setViewportView(descricaoExameTextArea);
@@ -1604,8 +1567,6 @@ public class Frame extends JFrame {
 
         animalTratamentoLabel.setText("Animal");
 
-        animalTratamentoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
-
         dataInicioLabel.setText("Data Início");
 
         cadastrarTratamentoButton.setText("Cadastrar");
@@ -1731,8 +1692,6 @@ public class Frame extends JFrame {
         tratamentoTabbedPane.addTab("Cadastrar Tratamento", cadastrarTratamentoPanel);
         tratamentoTabbedPane.addChangeListener(e -> tratamentoTabbedPaneChangeListener());
 
-        finalizarTratamentoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Controller.getAllTratamentosUnfinished()));
-
         finalizarTratamentoLabel.setText("Tratamento");
 
         finalizarTratamentoButton.setText("Finalizar");
@@ -1857,7 +1816,8 @@ public class Frame extends JFrame {
         );
 
         pack();
-        flushAll();
+        flushAllTables();
+        flushAllComboBox();
         this.setTitle("Clínica Veterinária");
     }
 
@@ -1900,7 +1860,7 @@ public class Frame extends JFrame {
 
     private void filterByNameClienteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         clienteTableModel.clear();
-        clienteTableModel.addListOfItems(ClienteDAO.retrieveBySimilarName(filterByNameClienteTextField.getText()));
+        clienteTableModel.addListOfItems(Controller.getAllClienteBySimilarName(filterByNameClienteTextField.getText()));
     }
 
     private void clearFilterByNameClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1909,7 +1869,7 @@ public class Frame extends JFrame {
 
     private void filterByNameAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         animalTableModel.clear();
-        animalTableModel.addListOfItems(AnimalDAO.retrieveByAnimalName(filterByNameAnimalTextField.getText()));
+        animalTableModel.addListOfItems(Controller.getAllAnimalBySimilarName(filterByNameAnimalTextField.getText()));
     }
 
     private void clearFilterByNameAnimalButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1918,7 +1878,7 @@ public class Frame extends JFrame {
 
     private void filterByTutorAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         animalTableModel.clear();
-        animalTableModel.addListOfItems(AnimalDAO.retrieveByClienteName(filterByTutorAnimalTextField.getText()));
+        animalTableModel.addListOfItems(Controller.getAllAnimalByTutorName(filterByTutorAnimalTextField.getText()));
     }
 
     private void clearFilterByTutorAnimalButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1927,7 +1887,7 @@ public class Frame extends JFrame {
 
     private void filterByNameVeterinarioTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         veterinarioTableModel.clear();
-        veterinarioTableModel.addListOfItems(VeterinarioDAO.retrieveBySimilarName(filterByNameVeterinarioTextField.getText()));
+        veterinarioTableModel.addListOfItems(Controller.getAllVeterinarioBySimilarName(filterByNameVeterinarioTextField.getText()));
     }
 
     private void clearFilterByNameVeterinarioButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1936,7 +1896,7 @@ public class Frame extends JFrame {
 
     private void filterByClienteConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         consultaTableModel.clear();
-        consultaTableModel.addListOfItems(ConsultaDAO.retrieveByClienteName(filterByClienteConsultaTextField.getText()));
+        consultaTableModel.addListOfItems(Controller.getAllConsultaByClienteName(filterByClienteConsultaTextField.getText()));
     }
 
     private void clearFilterByClienteConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1945,7 +1905,7 @@ public class Frame extends JFrame {
 
     private void filterByVeterinarioConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         consultaTableModel.clear();
-        consultaTableModel.addListOfItems(ConsultaDAO.retrieveByVeterinarioName(filterByVeterinarioConsultaTextField.getText()));
+        consultaTableModel.addListOfItems(Controller.getAllConsultaByVeterinarioName(filterByVeterinarioConsultaTextField.getText()));
     }
 
     private void clearFilterByVeterinarioConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1954,7 +1914,7 @@ public class Frame extends JFrame {
 
     private void filterByAnimalConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         consultaTableModel.clear();
-        consultaTableModel.addListOfItems(ConsultaDAO.retrieveByAnimalName(filterByAnimalConsultaTextField.getText()));
+        consultaTableModel.addListOfItems(Controller.getAllConsultaByAnimalName(filterByAnimalConsultaTextField.getText()));
     }
 
     private void clearFilterByAnimalConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1963,15 +1923,15 @@ public class Frame extends JFrame {
 
     private void orderByTerminadoConsultaToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {
         if(orderByTerminadoConsultaToggleButton.isSelected()){
-            ConsultaDAO.addOrderByTerminadoClause();
+            Controller.addConsultaOrderByTerminadoClause();
         } else {
-            ConsultaDAO.removeOrderByTerminadoClause();
+            Controller.removeConsultaOrderByTerminadoClause();
         }
     }
 
     private void filterByClienteExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         exameTableModel.clear();
-        exameTableModel.addListOfItems(ExameDAO.retrieveByClienteName(filterByClienteExameTextField.getText()));
+        exameTableModel.addListOfItems(Controller.getAllExameByClienteName(filterByClienteExameTextField.getText()));
     }
 
     private void clearFilterByClienteExameButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1980,7 +1940,7 @@ public class Frame extends JFrame {
 
     private void filterByVeterinarioExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         exameTableModel.clear();
-        exameTableModel.addListOfItems(ExameDAO.retrieveByVeterinarioName(filterByVeterinarioExameTextField.getText()));
+        exameTableModel.addListOfItems(Controller.getAllExameByVeterinarioName(filterByVeterinarioExameTextField.getText()));
     }
 
     private void clearFilterByVeterinarioExameButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1989,7 +1949,7 @@ public class Frame extends JFrame {
 
     private void filterByAnimalExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         exameTableModel.clear();
-        exameTableModel.addListOfItems(ExameDAO.retrieveByAnimalName(filterByAnimalExameTextField.getText()));
+        exameTableModel.addListOfItems(Controller.getAllExameByAnimalName(filterByAnimalExameTextField.getText()));
     }
 
     private void clearFilterByAnimalExameButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1998,7 +1958,7 @@ public class Frame extends JFrame {
 
     private void filterByClienteTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         tratamentoTableModel.clear();
-        tratamentoTableModel.addListOfItems(TratamentoDAO.retrieveByClienteName(filterByClienteTratamentoTextField.getText()));
+        tratamentoTableModel.addListOfItems(Controller.getAllTratamentoByClienteName(filterByClienteTratamentoTextField.getText()));
     }
 
     private void clearFilterByClienteTratamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -2007,16 +1967,13 @@ public class Frame extends JFrame {
 
     private void filterByAnimalTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         tratamentoTableModel.clear();
-        tratamentoTableModel.addListOfItems(TratamentoDAO.retrieveByAnimalName(filterByAnimalTratamentoTextField.getText()));
+        tratamentoTableModel.addListOfItems(Controller.getAllTratamentoByAnimalName(filterByAnimalTratamentoTextField.getText()));
     }
 
     private void clearFilterByAnimalTratamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByAnimalTratamentoTextField.setText("");
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
@@ -2032,82 +1989,99 @@ public class Frame extends JFrame {
         java.awt.EventQueue.invokeLater(() -> new Frame().setVisible(true));
     }
 
-    private javax.swing.JComboBox<String> animalTratamentoComboBox;
-    private javax.swing.JSpinner anoConsultaSpinner;
-    private javax.swing.JSpinner anoFimTratamentoSpinner;
-    private javax.swing.JSpinner anoInicioTratamentoSpinner;
-    private javax.swing.JComboBox<String> ativarAnimalComboBox;
-    private javax.swing.JComboBox<String> ativarClienteComboBox;
-    private javax.swing.JComboBox<String> ativarVeterinarioComboBox;
-    private javax.swing.JComboBox<String> atualizarAnimalComboBox;
-    private javax.swing.JTextField atualizarCepClienteTextField;
-    private javax.swing.JTextField atualizarCepVeterinarioTextField;
-    private javax.swing.JComboBox<String> atualizarClienteComboBox;
-    private javax.swing.JTextField atualizarEmailClienteTextField;
-    private javax.swing.JTextField atualizarEmailVeterinarioTextField;
-    private javax.swing.JTextField atualizarEnderecoClienteTextField;
-    private javax.swing.JTextField atualizarEnderecoVeterinarioTextField;
-    private javax.swing.JComboBox<String> atualizarEspecieComboBox;
-    private javax.swing.JSpinner atualizarAnoNascimentoAnimalSpinner;
-    private javax.swing.JTextField atualizarNomeAnimalTextField;
-    private javax.swing.JTextField atualizarNomeClienteTextField;
-    private javax.swing.JTextField atualizarNomeEspecieTextField;
-    private javax.swing.JTextField atualizarNomeVeterinarioTextField;
-    private javax.swing.JComboBox<String> atualizarSexoAnimalComboBox;
-    private javax.swing.JTextField atualizarTelefoneClienteTextField;
-    private javax.swing.JTextField atualizarTelefoneVeterinarioTextField;
-    private javax.swing.JComboBox<String> atualizarTutorComboBox;
-    private javax.swing.JComboBox<String> atualizarVeterinarioComboBox;
-    private javax.swing.JTextField cepClienteTextField;
-    private javax.swing.JTextField cepVeterinarioTextField;
-    private javax.swing.JComboBox<String> consultaExameComboBox;
-    private javax.swing.JCheckBox dataFimTratamentoIndeterminadaCheckBox;
-    private javax.swing.JComboBox<String> desativarAnimalComboBox;
-    private javax.swing.JComboBox<String> desativarClienteComboBox;
-    private javax.swing.JComboBox<String> desativarVeterinarioComboBox;
-    private javax.swing.JTextArea descricaoExameTextArea;
-    private javax.swing.JSpinner diaConsultaSpinner;
-    private javax.swing.JSpinner diaFimTratamentoSpinner;
-    private javax.swing.JSpinner diaInicioTratamentoSpinner;
-    private javax.swing.JTextField emailClienteTextField;
-    private javax.swing.JTextField emailVeterinarioTextField;
-    private javax.swing.JTextField enderecoClienteTextField;
-    private javax.swing.JTextField enderecoVeterinarioTextField;
-    private javax.swing.JComboBox<String> especieAnimalComboBox;
-    private javax.swing.JTextField filterByAnimalConsultaTextField;
-    private javax.swing.JTextField filterByAnimalExameTextField;
-    private javax.swing.JTextField filterByAnimalTratamentoTextField;
-    private javax.swing.JTextField filterByClienteConsultaTextField;
-    private javax.swing.JTextField filterByClienteExameTextField;
-    private javax.swing.JTextField filterByClienteTratamentoTextField;
-    private javax.swing.JTextField filterByNameAnimalTextField;
-    private javax.swing.JTextField filterByNameClienteTextField;
-    private javax.swing.JTextField filterByNameVeterinarioTextField;
-    private javax.swing.JTextField filterByTutorAnimalTextField;
-    private javax.swing.JTextField filterByVeterinarioConsultaTextField;
-    private javax.swing.JTextField filterByVeterinarioExameTextField;
-    private javax.swing.JComboBox<String> finalizarConsultaComboBox;
-    private javax.swing.JComboBox<String> finalizarTratamentoComboBox;
-    private javax.swing.JSpinner horarioConsultaSpinner;
-    private javax.swing.JSpinner anoNascimentoAnimalSpinner;
-    private javax.swing.JSpinner mesConsultaSpinner;
-    private javax.swing.JSpinner mesFimTratamentoSpinner;
-    private javax.swing.JSpinner mesInicioTratamentoSpinner;
-    private javax.swing.JTextField nomeAnimalTextField;
-    private javax.swing.JTextField nomeClienteTextField;
-    private javax.swing.JTextField nomeEspecieTextField;
-    private javax.swing.JTextField nomeVeterinarioTextField;
-    private javax.swing.JToggleButton orderByTerminadoConsultaToggleButton;
-    private javax.swing.JTextArea relatoConsultaTextArea;
-    private javax.swing.JComboBox<String> selecionarEspecieAtualizarComboBox;
-    private javax.swing.JComboBox<String> sexoAnimalComboBox;
-    private javax.swing.JTextField telefoneClienteTextField;
-    private javax.swing.JTextField telefoneVeterinarioTextField;
-    private javax.swing.JComboBox<String> tratamentoConsultaComboBox;
-    private javax.swing.JComboBox<String> tutorComboBox;
-    private javax.swing.JComboBox<String> veterinarioConsultaComboBox;
+    // SPINNER
+    private JSpinner anoConsultaSpinner;
+    private JSpinner anoFimTratamentoSpinner;
+    private JSpinner anoInicioTratamentoSpinner;
+    private JSpinner atualizarAnoNascimentoAnimalSpinner;
+    private JSpinner diaConsultaSpinner;
+    private JSpinner diaFimTratamentoSpinner;
+    private JSpinner diaInicioTratamentoSpinner;
+    private JSpinner horarioConsultaSpinner;
+    private JSpinner anoNascimentoAnimalSpinner;
+    private JSpinner mesConsultaSpinner;
+    private JSpinner mesFimTratamentoSpinner;
+    private JSpinner mesInicioTratamentoSpinner;
 
-    // Table Models
+
+    // TEXT FIELD
+    private JTextField atualizarCepClienteTextField;
+    private JTextField atualizarCepVeterinarioTextField;
+    private JTextField atualizarEmailClienteTextField;
+    private JTextField atualizarEmailVeterinarioTextField;
+    private JTextField atualizarEnderecoClienteTextField;
+    private JTextField atualizarEnderecoVeterinarioTextField;
+    private JTextField atualizarNomeAnimalTextField;
+    private JTextField atualizarNomeClienteTextField;
+    private JTextField atualizarNomeEspecieTextField;
+    private JTextField atualizarNomeVeterinarioTextField;
+    private JTextField atualizarTelefoneClienteTextField;
+    private JTextField atualizarTelefoneVeterinarioTextField;
+    private JTextField cepClienteTextField;
+    private JTextField cepVeterinarioTextField;
+    private JTextField emailClienteTextField;
+    private JTextField emailVeterinarioTextField;
+    private JTextField enderecoClienteTextField;
+    private JTextField enderecoVeterinarioTextField;
+    private JTextField filterByAnimalConsultaTextField;
+    private JTextField filterByAnimalExameTextField;
+    private JTextField filterByAnimalTratamentoTextField;
+    private JTextField filterByClienteConsultaTextField;
+    private JTextField filterByClienteExameTextField;
+    private JTextField filterByClienteTratamentoTextField;
+    private JTextField filterByNameAnimalTextField;
+    private JTextField filterByNameClienteTextField;
+    private JTextField filterByNameVeterinarioTextField;
+    private JTextField filterByTutorAnimalTextField;
+    private JTextField filterByVeterinarioConsultaTextField;
+    private JTextField filterByVeterinarioExameTextField;
+    private JTextField nomeAnimalTextField;
+    private JTextField nomeClienteTextField;
+    private JTextField nomeEspecieTextField;
+    private JTextField nomeVeterinarioTextField;
+    private JTextField telefoneClienteTextField;
+    private JTextField telefoneVeterinarioTextField;
+
+
+    // CHECK BOX
+    private JCheckBox dataFimTratamentoIndeterminadaCheckBox;
+
+
+    // TEXT AREA
+    private JTextArea descricaoExameTextArea;
+    private JTextArea relatoConsultaTextArea;
+
+
+    // TOGGLE BUTTON
+    private JToggleButton orderByTerminadoConsultaToggleButton;
+
+
+    // COMBO BOX
+    private JComboBox<String> animalTratamentoComboBox;
+    private JComboBox<String> ativarAnimalComboBox;
+    private JComboBox<String> ativarClienteComboBox;
+    private JComboBox<String> ativarVeterinarioComboBox;
+    private JComboBox<String> atualizarAnimalComboBox;
+    private JComboBox<String> atualizarClienteComboBox;
+    private JComboBox<String> atualizarEspecieAnimalComboBox;
+    private JComboBox<String> atualizarSexoAnimalComboBox;
+    private JComboBox<String> atualizarTutorComboBox;
+    private JComboBox<String> atualizarVeterinarioComboBox;
+    private JComboBox<String> consultaExameComboBox;
+    private JComboBox<String> desativarAnimalComboBox;
+    private JComboBox<String> desativarClienteComboBox;
+    private JComboBox<String> desativarVeterinarioComboBox;
+    private JComboBox<String> especieAnimalComboBox;
+    private JComboBox<String> finalizarConsultaComboBox;
+    private JComboBox<String> finalizarTratamentoComboBox;
+    private JComboBox<String> selecionarEspecieAtualizarComboBox;
+    private JComboBox<String> sexoAnimalComboBox;
+    private JComboBox<String> tratamentoConsultaComboBox;
+    private JComboBox<String> tutorComboBox;
+    private JComboBox<String> veterinarioConsultaComboBox;
+
+
+    // TABLE MODELS
     private final AnimalTableModel animalTableModel = new AnimalTableModel();
     private final ClienteTableModel clienteTableModel = new ClienteTableModel();
     private final ConsultaTableModel consultaTableModel = new ConsultaTableModel();
@@ -2115,40 +2089,76 @@ public class Frame extends JFrame {
     private final TratamentoTableModel tratamentoTableModel = new TratamentoTableModel();
     private final VeterinarioTableModel veterinarioTableModel = new VeterinarioTableModel();
 
-    private void flushAll(){
-        flush(TableToFlush.CLIENTE);
-        flush(TableToFlush.CONSULTA);
-        flush(TableToFlush.ANIMAL);
-        flush(TableToFlush.EXAME);
-        flush(TableToFlush.VETERINARIO);
-        flush(TableToFlush.TRATAMENTO);
+    private void flushAllComboBox(){
+        // Tratamento
+        animalTratamentoComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
+        finalizarTratamentoComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllTratamentosUnfinished()));
+
+        // Animal
+        atualizarAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
+        ativarAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisInactive()));
+        atualizarTutorComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
+        desativarAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
+        especieAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
+        atualizarEspecieAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
+        tutorComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
+
+        // Cliente
+        ativarClienteComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesInactive()));
+        atualizarClienteComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
+        desativarClienteComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
+
+        // Veterinario
+        ativarVeterinarioComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosInactive()));
+        atualizarVeterinarioComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
+        desativarVeterinarioComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
+
+        // Especie
+        selecionarEspecieAtualizarComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
+
+        // Exame
+        consultaExameComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllConsultasToComboBox()));
+
+        // Consulta
+        finalizarConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllConsultasUnfinished()));
+        tratamentoConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllTratamentosToComboBox()));
+        veterinarioConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
     }
 
-    private void flush(TableToFlush table){
+    private void flushAllTables(){
+        flushTable(TableToFlush.CLIENTE);
+        flushTable(TableToFlush.CONSULTA);
+        flushTable(TableToFlush.ANIMAL);
+        flushTable(TableToFlush.EXAME);
+        flushTable(TableToFlush.VETERINARIO);
+        flushTable(TableToFlush.TRATAMENTO);
+    }
+
+    private void flushTable(TableToFlush table){
         switch (table){
             case ANIMAL -> {
                 animalTableModel.clear();
-                animalTableModel.addListOfItems(AnimalDAO.getInstance().retrieveAll());
+                animalTableModel.addListOfItems(Controller.getAllAnimais());
             }
             case CLIENTE -> {
                 clienteTableModel.clear();
-                clienteTableModel.addListOfItems(ClienteDAO.getInstance().retrieveAll());
+                clienteTableModel.addListOfItems(Controller.getAllClientes());
             }
             case CONSULTA -> {
                 consultaTableModel.clear();
-                consultaTableModel.addListOfItems(ConsultaDAO.getInstance().retrieveAll());
+                consultaTableModel.addListOfItems(Controller.getAllConsultas());
             }
             case EXAME -> {
                 exameTableModel.clear();
-                exameTableModel.addListOfItems(ExameDAO.getInstance().retrieveAll());
+                exameTableModel.addListOfItems(Controller.getAllExames());
             }
             case TRATAMENTO -> {
                 tratamentoTableModel.clear();
-                tratamentoTableModel.addListOfItems(TratamentoDAO.getInstance().retrieveAll());
+                tratamentoTableModel.addListOfItems(Controller.getAllTratamentos());
             }
             case VETERINARIO -> {
                 veterinarioTableModel.clear();
-                veterinarioTableModel.addListOfItems(VeterinarioDAO.getInstance().retrieveAll());
+                veterinarioTableModel.addListOfItems(Controller.getAllVeterinarios());
             }
         }
     }
@@ -2171,7 +2181,7 @@ public class Frame extends JFrame {
                 telefoneClienteTextField.getText()
             )
         ){
-            flush(TableToFlush.CLIENTE);
+            flushTable(TableToFlush.CLIENTE);
         }
     }
 
@@ -2194,7 +2204,7 @@ public class Frame extends JFrame {
                         atualizarTelefoneClienteTextField.getText()
                 )
         ){
-            flush(TableToFlush.CLIENTE);
+            flushTable(TableToFlush.CLIENTE);
         }
     }
 
@@ -2212,9 +2222,10 @@ public class Frame extends JFrame {
                         tutorComboBox.getSelectedItem()
                 )
         ){
-            flush(TableToFlush.ANIMAL);
+            flushTable(TableToFlush.ANIMAL);
         }
     }
+
     private void updateAnimal(){
         List<JTextField> inputs = List.of(
                 atualizarNomeAnimalTextField
@@ -2226,13 +2237,14 @@ public class Frame extends JFrame {
                         atualizarNomeAnimalTextField.getText(),
                         atualizarAnoNascimentoAnimalSpinner.getValue(),
                         atualizarSexoAnimalComboBox.getSelectedItem(),
-                        atualizarEspecieComboBox.getSelectedItem(),
+                        atualizarEspecieAnimalComboBox.getSelectedItem(),
                         atualizarTutorComboBox.getSelectedItem()
                 )
         ){
-            flush(TableToFlush.ANIMAL);
+            flushTable(TableToFlush.ANIMAL);
         }
     }
+
     private void addEspecie(){
         List<JTextField> inputs = List.of(
                 nomeEspecieTextField
@@ -2261,9 +2273,10 @@ public class Frame extends JFrame {
                         telefoneVeterinarioTextField.getText()
                 )
         ){
-            flush(TableToFlush.VETERINARIO);
+            flushTable(TableToFlush.VETERINARIO);
         }
     }
+
     private void updateVeterinario(){
         List<JTextField> inputs = List.of(
                 atualizarNomeVeterinarioTextField,
@@ -2283,7 +2296,7 @@ public class Frame extends JFrame {
                         atualizarTelefoneVeterinarioTextField.getText()
                 )
         ){
-            flush(TableToFlush.VETERINARIO);
+            flushTable(TableToFlush.VETERINARIO);
         }
     }
 
@@ -2299,7 +2312,7 @@ public class Frame extends JFrame {
                         horarioConsultaSpinner.getValue()
                 )
         ){
-            flush(TableToFlush.CONSULTA);
+            flushTable(TableToFlush.CONSULTA);
         }
     }
 
@@ -2310,7 +2323,7 @@ public class Frame extends JFrame {
                         consultaExameComboBox.getSelectedItem()
                 )
         ){
-            flush(TableToFlush.EXAME);
+            flushTable(TableToFlush.EXAME);
         }
     }
 
@@ -2325,7 +2338,7 @@ public class Frame extends JFrame {
                             animalTratamentoComboBox.getSelectedItem()
                     )
             ){
-                flush(TableToFlush.TRATAMENTO);
+                flushTable(TableToFlush.TRATAMENTO);
             }
         } else{
             if(
@@ -2341,7 +2354,7 @@ public class Frame extends JFrame {
                             animalTratamentoComboBox.getSelectedItem()
                     )
             ){
-                flush(TableToFlush.TRATAMENTO);
+                flushTable(TableToFlush.TRATAMENTO);
             }
         }
     }

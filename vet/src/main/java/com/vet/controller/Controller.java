@@ -1,6 +1,7 @@
 package com.vet.controller;
 
 import com.vet.DAO.impl.*;
+import com.vet.model.Model;
 import com.vet.model.impl.*;
 
 import javax.swing.*;
@@ -290,5 +291,85 @@ public final class Controller {
             System.err.println(e.getMessage());
             return false;
         }
+    }
+
+    public static List<Model> getAllAnimais() {
+        return AnimalDAO.getInstance().retrieveAll();
+    }
+
+    public static List<Model> getAllClientes() {
+        return ClienteDAO.getInstance().retrieveAll();
+    }
+
+    public static List<Model> getAllConsultas() {
+        return ConsultaDAO.getInstance().retrieveAll();
+    }
+
+    public static List<Model> getAllExames() {
+        return ExameDAO.getInstance().retrieveAll();
+    }
+
+    public static List<Model> getAllTratamentos() {
+        return TratamentoDAO.getInstance().retrieveAll();
+    }
+
+    public static List<Model> getAllVeterinarios() {
+        return VeterinarioDAO.getInstance().retrieveAll();
+    }
+
+    public static List<Model> getAllClienteBySimilarName(String name) {
+        return ClienteDAO.retrieveBySimilarName(name);
+    }
+
+    public static List<Model> getAllAnimalBySimilarName(String name) {
+        return AnimalDAO.retrieveByAnimalName(name);
+    }
+
+    public static List<Model> getAllAnimalByTutorName(String name) {
+        return AnimalDAO.retrieveByClienteName(name);
+    }
+
+    public static List<Model> getAllVeterinarioBySimilarName(String name) {
+        return VeterinarioDAO.retrieveBySimilarName(name);
+    }
+
+    public static List<Model> getAllConsultaByClienteName(String name) {
+        return ConsultaDAO.retrieveByClienteName(name);
+    }
+
+    public static List<Model> getAllConsultaByVeterinarioName(String name) {
+        return ConsultaDAO.retrieveByVeterinarioName(name);
+    }
+
+    public static List<Model> getAllConsultaByAnimalName(String name) {
+        return ConsultaDAO.retrieveByAnimalName(name);
+    }
+
+    public static void addConsultaOrderByTerminadoClause() {
+        ConsultaDAO.addOrderByTerminadoClause();
+    }
+
+    public static void removeConsultaOrderByTerminadoClause() {
+        ConsultaDAO.removeOrderByTerminadoClause();
+    }
+
+    public static List<Model> getAllExameByClienteName(String name) {
+        return ExameDAO.retrieveByClienteName(name);
+    }
+
+    public static List<Model> getAllExameByVeterinarioName(String name) {
+        return ExameDAO.retrieveByVeterinarioName(name);
+    }
+
+    public static List<Model> getAllExameByAnimalName(String name) {
+        return ExameDAO.retrieveByAnimalName(name);
+    }
+
+    public static List<Model> getAllTratamentoByClienteName(String name) {
+        return TratamentoDAO.retrieveByClienteName(name);
+    }
+
+    public static List<Model> getAllTratamentoByAnimalName(String name) {
+        return TratamentoDAO.retrieveByAnimalName(name);
     }
 }
