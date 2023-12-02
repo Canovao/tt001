@@ -1818,6 +1818,8 @@ public class Frame extends JFrame {
         pack();
         flushAllTables();
         flushAllComboBox();
+        flushAllSpinner();
+        flushAllTextInput();
         this.setTitle("Clínica Veterinária");
     }
 
@@ -2052,6 +2054,22 @@ public class Frame extends JFrame {
     private final TratamentoTableModel tratamentoTableModel = new TratamentoTableModel();
     private final VeterinarioTableModel veterinarioTableModel = new VeterinarioTableModel();
 
+
+    private void flushAllSpinner(){
+        anoConsultaSpinner.setValue(2023);
+        anoFimTratamentoSpinner.setValue(2023);
+        anoInicioTratamentoSpinner.setValue(2023);
+        atualizarAnoNascimentoAnimalSpinner.setValue(2020);
+        diaConsultaSpinner.setValue(1);
+        diaFimTratamentoSpinner.setValue(31);
+        diaInicioTratamentoSpinner.setValue(1);
+        horarioConsultaSpinner.setValue(8);
+        anoNascimentoAnimalSpinner.setValue(2020);
+        mesConsultaSpinner.setValue(1);
+        mesFimTratamentoSpinner.setValue(12);
+        mesInicioTratamentoSpinner.setValue(1);
+    }
+
     private void flushAllTextInput(){
         // Exame
         descricaoExameTextArea.setText("");
@@ -2189,6 +2207,9 @@ public class Frame extends JFrame {
             case VETERINARIO -> {
                 veterinarioTableModel.clear();
                 veterinarioTableModel.addListOfItems(Controller.getAllVeterinarios());
+            }
+            default -> {
+                return;
             }
         }
         flushAllTextInput();

@@ -22,7 +22,7 @@ public class ConsultaTableModel extends TableModel {
         return switch (columnIndex) {
             case 0 -> consulta.getId();
             case 1 -> consulta.getDataConsulta();
-            case 2 -> consulta.getHorario();
+            case 2 -> consulta.getHorario() + "h";
             case 3 -> consulta.getRelato();
             case 4 -> consulta.getCliente();
             case 5 -> consulta.getAnimal();
