@@ -1,7 +1,7 @@
 package com.vet.view;
 
 import com.vet.controller.Controller;
-import com.vet.view.table.TableToFlush;
+import com.vet.view.table.Flush;
 import com.vet.view.table.impl.*;
 
 import javax.swing.*;
@@ -1821,43 +1821,6 @@ public class Frame extends JFrame {
         this.setTitle("Clínica Veterinária");
     }
 
-
-    private void finalizarTratamento() {
-        Controller.finalizarTratamento(finalizarTratamentoComboBox.getSelectedItem());
-    }
-
-    private void finalizarConsulta() {
-        Controller.finalizarConsulta(finalizarConsultaComboBox.getSelectedItem());
-    }
-
-    private void ativarVeterinario() {
-        Controller.ativarVeterinario(ativarVeterinarioComboBox.getSelectedItem());
-    }
-
-    private void desativarVeterinario() {
-        Controller.desativarVeterinario(desativarVeterinarioComboBox.getSelectedItem());
-    }
-
-    private void ativarAnimal() {
-        Controller.ativarAnimal(ativarAnimalComboBox.getSelectedItem());
-    }
-
-    private void desativarAnimal() {
-        Controller.desativarAnimal(desativarAnimalComboBox.getSelectedItem());
-    }
-
-    private void atualizarEspecie() {
-        Controller.atualizarEspecie(selecionarEspecieAtualizarComboBox.getSelectedItem(), atualizarNomeEspecieTextField.getText());
-    }
-
-    private void ativarCliente() {
-        Controller.ativarCliente(ativarClienteComboBox.getSelectedItem());
-    }
-
-    private void desativarCliente() {
-        Controller.desativarCliente(desativarClienteComboBox.getSelectedItem());
-    }
-
     private void filterByNameClienteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         clienteTableModel.clear();
         clienteTableModel.addListOfItems(Controller.getAllClienteBySimilarName(filterByNameClienteTextField.getText()));
@@ -2089,52 +2052,119 @@ public class Frame extends JFrame {
     private final TratamentoTableModel tratamentoTableModel = new TratamentoTableModel();
     private final VeterinarioTableModel veterinarioTableModel = new VeterinarioTableModel();
 
-    private void flushAllComboBox(){
-        // Tratamento
-        animalTratamentoComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
-        finalizarTratamentoComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllTratamentosUnfinished()));
-
-        // Animal
-        atualizarAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
-        ativarAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisInactive()));
-        atualizarTutorComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
-        desativarAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
-        especieAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
-        atualizarEspecieAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
-        tutorComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
-
-        // Cliente
-        ativarClienteComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesInactive()));
-        atualizarClienteComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
-        desativarClienteComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
-
-        // Veterinario
-        ativarVeterinarioComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosInactive()));
-        atualizarVeterinarioComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
-        desativarVeterinarioComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
-
-        // Especie
-        selecionarEspecieAtualizarComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
-
+    private void flushAllTextInput(){
         // Exame
-        consultaExameComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllConsultasToComboBox()));
+        descricaoExameTextArea.setText("");
+        filterByAnimalExameTextField.setText("");
+        filterByClienteExameTextField.setText("");
+        filterByVeterinarioExameTextField.setText("");
 
         // Consulta
-        finalizarConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllConsultasUnfinished()));
-        tratamentoConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllTratamentosToComboBox()));
-        veterinarioConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
+        relatoConsultaTextArea.setText("");
+        filterByAnimalConsultaTextField.setText("");
+        filterByClienteConsultaTextField.setText("");
+        filterByVeterinarioConsultaTextField.setText("");
+
+        // Cliente
+        atualizarCepClienteTextField.setText("");
+        atualizarEmailClienteTextField.setText("");
+        atualizarEnderecoClienteTextField.setText("");
+        atualizarNomeClienteTextField.setText("");
+        atualizarTelefoneClienteTextField.setText("");
+        cepClienteTextField.setText("");
+        emailClienteTextField.setText("");
+        enderecoClienteTextField.setText("");
+        filterByNameClienteTextField.setText("");
+        nomeClienteTextField.setText("");
+        telefoneClienteTextField.setText("");
+
+        // Veterinario
+        atualizarCepVeterinarioTextField.setText("");
+        atualizarEmailVeterinarioTextField.setText("");
+        atualizarEnderecoVeterinarioTextField.setText("");
+        atualizarNomeVeterinarioTextField.setText("");
+        atualizarTelefoneVeterinarioTextField.setText("");
+        cepVeterinarioTextField.setText("");
+        emailVeterinarioTextField.setText("");
+        enderecoVeterinarioTextField.setText("");
+        filterByNameVeterinarioTextField.setText("");
+        nomeVeterinarioTextField.setText("");
+        telefoneVeterinarioTextField.setText("");
+
+        // Animal
+        atualizarNomeAnimalTextField.setText("");
+        filterByNameAnimalTextField.setText("");
+        filterByTutorAnimalTextField.setText("");
+        nomeAnimalTextField.setText("");
+
+        // Especie
+        atualizarNomeEspecieTextField.setText("");
+        nomeEspecieTextField.setText("");
+
+        // Tratamento
+        filterByAnimalTratamentoTextField.setText("");
+        filterByClienteTratamentoTextField.setText("");
+    }
+
+    private void flushAllComboBox(){
+        flushComboBox(Flush.TRATAMENTO);
+        flushComboBox(Flush.ANIMAL);
+        flushComboBox(Flush.CLIENTE);
+        flushComboBox(Flush.VETERINARIO);
+        flushComboBox(Flush.ESPECIE);
+        flushComboBox(Flush.EXAME);
+        flushComboBox(Flush.CONSULTA);
+    }
+
+    private void flushComboBox(Flush comboBox){
+        switch(comboBox){
+            case TRATAMENTO -> {
+                animalTratamentoComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
+                finalizarTratamentoComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllTratamentosUnfinished()));
+            }
+            case ANIMAL -> {
+                atualizarAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
+                ativarAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisInactive()));
+                atualizarTutorComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
+                desativarAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
+                especieAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
+                atualizarEspecieAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
+                tutorComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
+            }
+            case CLIENTE -> {
+                ativarClienteComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesInactive()));
+                atualizarClienteComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
+                desativarClienteComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllClientesToComboBox()));
+            }
+            case VETERINARIO -> {
+                ativarVeterinarioComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosInactive()));
+                atualizarVeterinarioComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
+                desativarVeterinarioComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
+            }
+            case ESPECIE -> {
+                selecionarEspecieAtualizarComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
+            }
+            case EXAME -> {
+                consultaExameComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllConsultasToComboBox()));
+            }
+            case CONSULTA -> {
+                finalizarConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllConsultasUnfinished()));
+                tratamentoConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllTratamentosToComboBox()));
+                veterinarioConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
+            }
+        }
     }
 
     private void flushAllTables(){
-        flushTable(TableToFlush.CLIENTE);
-        flushTable(TableToFlush.CONSULTA);
-        flushTable(TableToFlush.ANIMAL);
-        flushTable(TableToFlush.EXAME);
-        flushTable(TableToFlush.VETERINARIO);
-        flushTable(TableToFlush.TRATAMENTO);
+        flushTable(Flush.CLIENTE);
+        flushTable(Flush.CONSULTA);
+        flushTable(Flush.ANIMAL);
+        flushTable(Flush.EXAME);
+        flushTable(Flush.VETERINARIO);
+        flushTable(Flush.TRATAMENTO);
     }
 
-    private void flushTable(TableToFlush table){
+    private void flushTable(Flush table){
         switch (table){
             case ANIMAL -> {
                 animalTableModel.clear();
@@ -2161,6 +2191,7 @@ public class Frame extends JFrame {
                 veterinarioTableModel.addListOfItems(Controller.getAllVeterinarios());
             }
         }
+        flushAllTextInput();
     }
 
     private void addCliente(){
@@ -2181,7 +2212,7 @@ public class Frame extends JFrame {
                 telefoneClienteTextField.getText()
             )
         ){
-            flushTable(TableToFlush.CLIENTE);
+            flushTable(Flush.CLIENTE);
         }
     }
 
@@ -2204,7 +2235,7 @@ public class Frame extends JFrame {
                         atualizarTelefoneClienteTextField.getText()
                 )
         ){
-            flushTable(TableToFlush.CLIENTE);
+            flushTable(Flush.CLIENTE);
         }
     }
 
@@ -2222,7 +2253,7 @@ public class Frame extends JFrame {
                         tutorComboBox.getSelectedItem()
                 )
         ){
-            flushTable(TableToFlush.ANIMAL);
+            flushTable(Flush.ANIMAL);
         }
     }
 
@@ -2241,7 +2272,7 @@ public class Frame extends JFrame {
                         atualizarTutorComboBox.getSelectedItem()
                 )
         ){
-            flushTable(TableToFlush.ANIMAL);
+            flushTable(Flush.ANIMAL);
         }
     }
 
@@ -2273,7 +2304,7 @@ public class Frame extends JFrame {
                         telefoneVeterinarioTextField.getText()
                 )
         ){
-            flushTable(TableToFlush.VETERINARIO);
+            flushTable(Flush.VETERINARIO);
         }
     }
 
@@ -2296,7 +2327,7 @@ public class Frame extends JFrame {
                         atualizarTelefoneVeterinarioTextField.getText()
                 )
         ){
-            flushTable(TableToFlush.VETERINARIO);
+            flushTable(Flush.VETERINARIO);
         }
     }
 
@@ -2312,7 +2343,7 @@ public class Frame extends JFrame {
                         horarioConsultaSpinner.getValue()
                 )
         ){
-            flushTable(TableToFlush.CONSULTA);
+            flushTable(Flush.CONSULTA);
         }
     }
 
@@ -2323,7 +2354,7 @@ public class Frame extends JFrame {
                         consultaExameComboBox.getSelectedItem()
                 )
         ){
-            flushTable(TableToFlush.EXAME);
+            flushTable(Flush.EXAME);
         }
     }
 
@@ -2338,7 +2369,7 @@ public class Frame extends JFrame {
                             animalTratamentoComboBox.getSelectedItem()
                     )
             ){
-                flushTable(TableToFlush.TRATAMENTO);
+                flushTable(Flush.TRATAMENTO);
             }
         } else{
             if(
@@ -2354,19 +2385,64 @@ public class Frame extends JFrame {
                             animalTratamentoComboBox.getSelectedItem()
                     )
             ){
-                flushTable(TableToFlush.TRATAMENTO);
+                flushTable(Flush.TRATAMENTO);
             }
         }
     }
 
-    private void clienteTabbedPaneChangeListener(){
+    private void finalizarTratamento() {
+        Controller.finalizarTratamento(finalizarTratamentoComboBox.getSelectedItem());
+        flushTable(Flush.TRATAMENTO);
+    }
 
+    private void finalizarConsulta() {
+        Controller.finalizarConsulta(finalizarConsultaComboBox.getSelectedItem());
+        flushTable(Flush.CONSULTA);
+    }
+
+    private void ativarVeterinario() {
+        Controller.ativarVeterinario(ativarVeterinarioComboBox.getSelectedItem());
+        flushTable(Flush.VETERINARIO);
+    }
+
+    private void desativarVeterinario() {
+        Controller.desativarVeterinario(desativarVeterinarioComboBox.getSelectedItem());
+        flushTable(Flush.VETERINARIO);
+    }
+
+    private void ativarAnimal() {
+        Controller.ativarAnimal(ativarAnimalComboBox.getSelectedItem());
+        flushTable(Flush.ANIMAL);
+    }
+
+    private void desativarAnimal() {
+        Controller.desativarAnimal(desativarAnimalComboBox.getSelectedItem());
+        flushTable(Flush.ANIMAL);
+    }
+
+    private void atualizarEspecie() {
+        Controller.atualizarEspecie(selecionarEspecieAtualizarComboBox.getSelectedItem(), atualizarNomeEspecieTextField.getText());
+        flushTable(Flush.ANIMAL);
+    }
+
+    private void ativarCliente() {
+        Controller.ativarCliente(ativarClienteComboBox.getSelectedItem());
+        flushTable(Flush.CLIENTE);
+    }
+
+    private void desativarCliente() {
+        Controller.desativarCliente(desativarClienteComboBox.getSelectedItem());
+        flushTable(Flush.CLIENTE);
     }
 
     private void mainTabbedPaneChangeListener(){
 
     }
 
+
+    private void clienteTabbedPaneChangeListener(){
+
+    }
     private void animalTabbedPaneChangeListener(){
 
     }
