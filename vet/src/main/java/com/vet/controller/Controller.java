@@ -89,7 +89,7 @@ public final class Controller {
         for(var item: inputs){
             if(item.isEmpty() || item.isBlank()){
                 proceed = false;
-                showMessageDialog(null, errorMessage, "Erro", JOptionPane.WARNING_MESSAGE);
+                showMessageDialog(null, errorMessage, "Erro", JOptionPane.ERROR_MESSAGE);
                 break;
             }
         }
@@ -147,16 +147,21 @@ public final class Controller {
 
     public static boolean addConsulta(Object dia, Object mes, Object ano, String relato, Object idVeterinario, Object idTratamento, Object horario) {
         if (relato.isEmpty() || relato.isBlank()) {
-            showMessageDialog(null, "Ao cadastrar uma Consulta\nTodos os campos devem ser preenchidos!", "Erro", JOptionPane.WARNING_MESSAGE);
+            showMessageDialog(null, "Ao cadastrar uma Consulta\nTodos os campos devem ser preenchidos!", "Erro", JOptionPane.ERROR_MESSAGE);
             return false;
         } else {
-            try{
-                Date data = new Date((Integer)dia, (Integer)mes, (Integer)ano);
-                ConsultaDAO.insert(relato, data, getIdFromIdString(idVeterinario), getIdFromIdString(idTratamento), (Integer)horario, 0);
-                return true;
-            }catch (Error e){
-                showMessageDialog(null, "Data da Consulta inválida!", "Erro", JOptionPane.WARNING_MESSAGE);
-                System.err.println(e.getMessage());
+            Date data = new Date((Integer)dia, (Integer)mes, (Integer)ano);
+            if(ConsultaDAO.retrieveByVeterinarioDiaHorario(getIdFromIdString(idVeterinario), data, (Integer)horario).isEmpty()){
+                try{
+                    ConsultaDAO.insert(relato, data, getIdFromIdString(idVeterinario), getIdFromIdString(idTratamento), (Integer)horario, 0);
+                    return true;
+                }catch (Error e){
+                    showMessageDialog(null, "Data da Consulta inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
+                    System.err.println(e.getMessage());
+                    return false;
+                }
+            } else {
+                showMessageDialog(null, "Ao cadastrar uma Consulta\nO veterinário, dia e horário não podem se repetir!", "Erro", JOptionPane.ERROR_MESSAGE);
                 return false;
             }
         }
@@ -164,7 +169,7 @@ public final class Controller {
 
     public static boolean addExame(String descricao, Object idConsulta) {
         if (descricao.isEmpty() || descricao.isBlank()) {
-            showMessageDialog(null, "Ao cadastrar um Exame\nTodos os campos devem ser preenchidos!", "Erro", JOptionPane.WARNING_MESSAGE);
+            showMessageDialog(null, "Ao cadastrar um Exame\nTodos os campos devem ser preenchidos!", "Erro", JOptionPane.ERROR_MESSAGE);
             ExameDAO.insert(descricao, getIdFromIdString(idConsulta));
             return true;
         } else {
@@ -180,12 +185,12 @@ public final class Controller {
                 TratamentoDAO.insert(dataInicio, dataFim, getIdFromIdString(idAnimal));
                 return true;
             }catch (Error e){
-                showMessageDialog(null, "Data de fim do Tratamento inválida!", "Erro", JOptionPane.WARNING_MESSAGE);
+                showMessageDialog(null, "Data de fim do Tratamento inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
                 System.err.println(e.getMessage());
                 return false;
             }
         }catch (Error e){
-            showMessageDialog(null, "Data de início do Tratamento inválida!", "Erro", JOptionPane.WARNING_MESSAGE);
+            showMessageDialog(null, "Data de início do Tratamento inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
             System.err.println(e.getMessage());
             return false;
         }
@@ -287,7 +292,7 @@ public final class Controller {
             TratamentoDAO.insert(dataInicio, null, getIdFromIdString(idAnimal));
             return true;
         }catch (Error e){
-            showMessageDialog(null, "Data de início do Tratamento inválida!", "Erro", JOptionPane.WARNING_MESSAGE);
+            showMessageDialog(null, "Data de início do Tratamento inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
             System.err.println(e.getMessage());
             return false;
         }

@@ -10,6 +10,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -104,6 +105,9 @@ public class ConsultaDAO extends DAO<Consulta> {
                 .toList();
     }
 
+    public static List<Consulta> retrieveByVeterinarioDiaHorario(int idVeterinario, Date dia, int horario){
+        return retrieve(MessageFormat.format("SELECT * FROM consulta where id_veterinario = {0} AND data_consulta = {1} AND horario = {2}", idVeterinario, dia, horario), "consulta").stream().map(Consulta.class::cast).toList();
+    }
 
     public static List<Model> retrieveByVeterinarioName(String nome){
         retrieveByVeterinarioName = nome;
