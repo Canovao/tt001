@@ -155,7 +155,7 @@ public final class Controller {
                 try{
                     ConsultaDAO.insert(relato, data, getIdFromIdString(idVeterinario), getIdFromIdString(idTratamento), (Integer)horario, 0);
                     return true;
-                }catch (Error e){
+                }catch (Exception e){
                     showMessageDialog(null, "Data da Consulta inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
                     System.err.println(e.getMessage());
                     return false;
@@ -184,12 +184,12 @@ public final class Controller {
                 Date dataFim = new Date((Integer)diaFim, (Integer)mesFim, (Integer)anoFim);
                 TratamentoDAO.insert(dataInicio, dataFim, getIdFromIdString(idAnimal));
                 return true;
-            }catch (Error e){
+            }catch (Exception e){
                 showMessageDialog(null, "Data de fim do Tratamento inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
                 System.err.println(e.getMessage());
                 return false;
             }
-        }catch (Error e){
+        }catch (Exception e){
             showMessageDialog(null, "Data de início do Tratamento inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
             System.err.println(e.getMessage());
             return false;
@@ -291,7 +291,7 @@ public final class Controller {
             Date dataInicio = new Date((Integer)diaInicio, (Integer)mesInicio, (Integer)anoInicio);
             TratamentoDAO.insert(dataInicio, null, getIdFromIdString(idAnimal));
             return true;
-        }catch (Error e){
+        }catch (Exception e){
             showMessageDialog(null, "Data de início do Tratamento inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
             System.err.println(e.getMessage());
             return false;

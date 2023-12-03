@@ -3,21 +3,13 @@ X
 java:S1141·"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ëÁúıÂ1
 O
 java:S1874™",Remove this use of "Date"; it is deprecated.(ñüô‹ÿÿÿÿÿ8“ÂúıÂ1
-D
-java:S1181"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ8•ÂúıÂ1
 M	java:S106 "+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8–ÂúıÂ1
-D
-java:S1181À"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ8–ÂúıÂ1
 J
 java:S1874¶",Remove this use of "Date"; it is deprecated.(úÈ·¡8–ÂúıÂ1
-D
-java:S1181»"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ8ªÂúıÂ1
 J
 java:S1874¸",Remove this use of "Date"; it is deprecated.(Îà™8–ÂúıÂ1
 M	java:S106½"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8—ÂúıÂ1
 M	java:S106Â"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8«ÂúıÂ1
-D
-java:S1181¦"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ8¥–üıÂ1
 J
 java:S1874£",Remove this use of "Date"; it is deprecated.(úÈ·¡8«ÂúıÂ1
 M	java:S106¨"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8¥–üıÂ1
