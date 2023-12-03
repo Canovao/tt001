@@ -183,7 +183,7 @@ public class Frame extends JFrame {
         JLabel anoConsultaLabel = new JLabel();
         JScrollPane relatoCadastrarConsultaScrollPane = new JScrollPane();
         relatoConsultaTextArea = new javax.swing.JTextArea();
-        horarioConsultaSpinner = new javax.swing.JSpinner();
+        horarioConsultaComboBox = new javax.swing.JComboBox<>();
         JLabel horarioConsultaLabel = new JLabel();
         JPanel desativarConsultaPanel = new JPanel();
         JLabel finalizarConsultaLabel = new JLabel();
@@ -1218,6 +1218,8 @@ public class Frame extends JFrame {
         relatoConsultaTextArea.setRows(5);
         relatoCadastrarConsultaScrollPane.setViewportView(relatoConsultaTextArea);
 
+        horarioConsultaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8", "9", "10", "11", "12", "13", "14", "15", "16", "17" }));
+
         horarioConsultaLabel.setText("Horário");
 
         javax.swing.GroupLayout cadastrarConsultaLayout = new javax.swing.GroupLayout(cadastrarConsulta);
@@ -1238,7 +1240,7 @@ public class Frame extends JFrame {
                                     .addComponent(tratamentoConsultaLabel)
                                     .addComponent(veterinarioConsultaLabel)))
                             .addComponent(veterinarioConsultaComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(horarioConsultaSpinner, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(horarioConsultaComboBox, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGroup(cadastrarConsultaLayout.createSequentialGroup()
                             .addGap(93, 93, 93)
                             .addComponent(cadastrarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1282,7 +1284,7 @@ public class Frame extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(horarioConsultaLabel)
                 .addGap(12, 12, 12)
-                .addComponent(horarioConsultaSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(horarioConsultaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(relatoConsultaLabel)
                 .addGap(11, 11, 11)
@@ -1962,7 +1964,6 @@ public class Frame extends JFrame {
     private JSpinner diaConsultaSpinner;
     private JSpinner diaFimTratamentoSpinner;
     private JSpinner diaInicioTratamentoSpinner;
-    private JSpinner horarioConsultaSpinner;
     private JSpinner anoNascimentoAnimalSpinner;
     private JSpinner mesConsultaSpinner;
     private JSpinner mesFimTratamentoSpinner;
@@ -2044,6 +2045,7 @@ public class Frame extends JFrame {
     private JComboBox<String> tratamentoConsultaComboBox;
     private JComboBox<String> tutorComboBox;
     private JComboBox<String> veterinarioConsultaComboBox;
+    private JComboBox<String> horarioConsultaComboBox;
 
 
     // TABLE MODELS
@@ -2063,7 +2065,6 @@ public class Frame extends JFrame {
         diaConsultaSpinner.setValue(1);
         diaFimTratamentoSpinner.setValue(31);
         diaInicioTratamentoSpinner.setValue(1);
-        horarioConsultaSpinner.setValue(8);
         anoNascimentoAnimalSpinner.setValue(2020);
         mesConsultaSpinner.setValue(1);
         mesFimTratamentoSpinner.setValue(12);
@@ -2361,7 +2362,7 @@ public class Frame extends JFrame {
                         relatoConsultaTextArea.getText(),
                         veterinarioConsultaComboBox.getSelectedItem(),
                         tratamentoConsultaComboBox.getSelectedItem(),
-                        horarioConsultaSpinner.getValue()
+                        horarioConsultaComboBox.getSelectedItem()
                 )
         ){
             flushTable(Flush.CONSULTA);
@@ -2456,6 +2457,7 @@ public class Frame extends JFrame {
         flushTable(Flush.CLIENTE);
     }
 
+
     private void mainTabbedPaneChangeListener(){
         flushAllTextInput();
         flushAllSpinner();
@@ -2464,33 +2466,21 @@ public class Frame extends JFrame {
 
 
     private void clienteTabbedPaneChangeListener(){
-        flushAllTextInput();
-        flushAllSpinner();
-        flushAllComboBox();
+        mainTabbedPaneChangeListener();
     }
     private void animalTabbedPaneChangeListener(){
-        flushAllTextInput();
-        flushAllSpinner();
-        flushAllComboBox();
+        mainTabbedPaneChangeListener();
     }
     private void veterinarioTabbedPaneChangeListener(){
-        flushAllTextInput();
-        flushAllSpinner();
-        flushAllComboBox();
+        mainTabbedPaneChangeListener();
     }
     private void consultaTabbedPaneChangeListener(){
-        flushAllTextInput();
-        flushAllSpinner();
-        flushAllComboBox();
+        mainTabbedPaneChangeListener();
     }
     private void exameTabbedPaneChangeListener(){
-        flushAllTextInput();
-        flushAllSpinner();
-        flushAllComboBox();
+        mainTabbedPaneChangeListener();
     }
     private void tratamentoTabbedPaneChangeListener(){
-        flushAllTextInput();
-        flushAllSpinner();
-        flushAllComboBox();
+        mainTabbedPaneChangeListener();
     }
 }

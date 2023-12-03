@@ -2,10 +2,10 @@
 i
 java:S1192/"GDefine a constant instead of duplicating this literal "animal" 7 times.(ÔÆû‘ùÿÿÿÿ8øá†ØÂ1
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8úá†ØÂ1
-l
-java:S2095j"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(İÂ’è8”â†ØÂ1
 q
 java:S2095$"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(äóùùÿÿÿÿ8”â†ØÂ1
+l
+java:S2095j"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(İÂ’è8”â†ØÂ1
 G	java:S106t"+Replace this use of System.err by a logger.(ØşÿÌ8¢â†ØÂ1
 Y
 java:S1128"7Remove this unused import 'com.vet.model.impl.Especie'.(‰¤äèøÿÿÿÿ8Øÿ–éÂ1
