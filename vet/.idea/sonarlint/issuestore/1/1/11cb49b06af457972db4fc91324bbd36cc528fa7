@@ -1,48 +1,46 @@
 
 w
 java:S1192Â
-"TDefine a constant instead of duplicating this literal "Filtrar por Cliente" 3 times.(ëÙò¬üÿÿÿÿ8„€øàÂ1
+"TDefine a constant instead of duplicating this literal "Filtrar por Cliente" 3 times.(ëÙò¬üÿÿÿÿ8ú½˜éÂ1
 m
-java:S1192İ"JDefine a constant instead of duplicating this literal "Atualizar" 4 times.(ñ—üÿÿÿÿ8„€øàÂ1
+java:S1192İ"JDefine a constant instead of duplicating this literal "Atualizar" 4 times.(ñ—üÿÿÿÿ8ú½˜éÂ1
 j
-java:S1192Ì"GDefine a constant instead of duplicating this literal "Ativar" 3 times.(ıÎñ¾şÿÿÿÿ8„€øàÂ1
+java:S1192Ì"GDefine a constant instead of duplicating this literal "Ativar" 3 times.(ıÎñ¾şÿÿÿÿ8ú½˜éÂ1
 g
 java:S1192š
-"IDefine a constant instead of duplicating this literal "Consulta" 3 times.(ñ¹›ö8…€øàÂ1
+"IDefine a constant instead of duplicating this literal "Consulta" 3 times.(ñ¹›ö8û½˜éÂ1
 j
-java:S1192‘"GDefine a constant instead of duplicating this literal "Animal" 5 times.(İ°µÄşÿÿÿÿ8…€øàÂ1
+java:S1192‘"GDefine a constant instead of duplicating this literal "Animal" 5 times.(İ°µÄşÿÿÿÿ8û½˜éÂ1
 v
 java:S1192Ğ
-"SDefine a constant instead of duplicating this literal "Filtrar por Animal" 3 times.(×ÆşÄùÿÿÿÿ8…€øàÂ1
+"SDefine a constant instead of duplicating this literal "Filtrar por Animal" 3 times.(×ÆşÄùÿÿÿÿ8û½˜éÂ1
 h
-java:S1192"JDefine a constant instead of duplicating this literal "Cadastrar" 7 times.(í¡×«8…€øàÂ1
+java:S1192"JDefine a constant instead of duplicating this literal "Cadastrar" 7 times.(í¡×«8û½˜éÂ1
 h
-java:S1192¦"JDefine a constant instead of duplicating this literal "Desativar" 3 times.(ÒÚÅ¯8…€øàÂ1
+java:S1192¦"JDefine a constant instead of duplicating this literal "Desativar" 3 times.(ÒÚÅ¯8ü½˜éÂ1
 n
-java:S1192³	"KDefine a constant instead of duplicating this literal "Tratamento" 3 times.(ä²Öûúÿÿÿÿ8…€øàÂ1
+java:S1192³	"KDefine a constant instead of duplicating this literal "Tratamento" 3 times.(ä²Öûúÿÿÿÿ8ü½˜éÂ1
 k
-java:S1192Ñ"HDefine a constant instead of duplicating this literal "Cliente" 4 times.(˜„ßÂùÿÿÿÿ8…€øàÂ1
+java:S1192Ñ"HDefine a constant instead of duplicating this literal "Cliente" 4 times.(˜„ßÂùÿÿÿÿ8ü½˜éÂ1
 o
-java:S1192ô"QDefine a constant instead of duplicating this literal "Filtrar por nome" 3 times.(Ñ­ÒŠ8…€øàÂ1
+java:S1192ô"QDefine a constant instead of duplicating this literal "Filtrar por nome" 3 times.(Ñ­ÒŠ8ü½˜éÂ1
 l
-java:S1192Ÿ"IDefine a constant instead of duplicating this literal "EspÃ©cie" 3 times.(À´Ûÿÿÿÿÿ8…€øàÂ1
+java:S1192Ÿ"IDefine a constant instead of duplicating this literal "EspÃ©cie" 3 times.(À´Ûÿÿÿÿÿ8ı½˜éÂ1
 k
-java:S1192â"MDefine a constant instead of duplicating this literal "VeterinÃ¡rio" 5 times.(Ó8…€øàÂ1
-¤
-java:S1186›"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ø¯Ó¿ÿÿÿÿÿ8…øàÂ1
-Ÿ
-java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(·è¦8…øàÂ1
-¤
-java:S1186£"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”ÊÔĞşÿÿÿÿ8…øàÂ1
-Ÿ
-java:S1186¦"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„œşæ8…øàÂ1
-Ÿ
-java:S1186©"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿è£’8…øàÂ1
-Ÿ
-java:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷ûøâ8…øàÂ1
-
-java:S1186¯"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Õ¦ÙT8…øàÂ1
+java:S1192â"MDefine a constant instead of duplicating this literal "VeterinÃ¡rio" 5 times.(Ó8ı½˜éÂ1
+Œ
+java:S4144¢"nUpdate this method so that its implementation is not identical to "mainTabbedPaneChangeListener" on line 2459.(·è¦8ÂÂ™éÂ1
+‘
+java:S4144§"nUpdate this method so that its implementation is not identical to "mainTabbedPaneChangeListener" on line 2459.(”ÊÔĞşÿÿÿÿ8³…™éÂ1
+Œ
+java:S4144¬"nUpdate this method so that its implementation is not identical to "mainTabbedPaneChangeListener" on line 2459.(„œşæ8´…™éÂ1
+Œ
+java:S4144±"nUpdate this method so that its implementation is not identical to "mainTabbedPaneChangeListener" on line 2459.(¿è£’8´…™éÂ1
+Œ
+java:S4144¶"nUpdate this method so that its implementation is not identical to "mainTabbedPaneChangeListener" on line 2459.(÷ûøâ8µ…™éÂ1
+‹
+java:S4144»"nUpdate this method so that its implementation is not identical to "mainTabbedPaneChangeListener" on line 2459.(Õ¦ÙT8µ…™éÂ1
 ?
-java:S6205ò"Remove this redundant block.(ÖÆª‹üÿÿÿÿ8ü…øàÂ1
+java:S6205ò"Remove this redundant block.(ÖÆª‹üÿÿÿÿ8ÇÊ˜éÂ1
 9
-java:S6205õ"Remove this redundant block.(Ûğ¢T8ü…øàÂ1
+java:S6205õ"Remove this redundant block.(Ûğ¢T8ÇÊ˜éÂ1

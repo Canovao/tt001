@@ -2457,26 +2457,40 @@ public class Frame extends JFrame {
     }
 
     private void mainTabbedPaneChangeListener(){
-
+        flushAllTextInput();
+        flushAllSpinner();
+        flushAllComboBox();
     }
 
 
     private void clienteTabbedPaneChangeListener(){
-
+        flushAllTextInput();
+        flushAllSpinner();
+        flushAllComboBox();
     }
     private void animalTabbedPaneChangeListener(){
-
+        flushAllTextInput();
+        flushAllSpinner();
+        flushAllComboBox();
     }
     private void veterinarioTabbedPaneChangeListener(){
-
+        flushAllTextInput();
+        flushAllSpinner();
+        flushAllComboBox();
     }
     private void consultaTabbedPaneChangeListener(){
-
+        flushAllTextInput();
+        flushAllSpinner();
+        flushAllComboBox();
     }
     private void exameTabbedPaneChangeListener(){
-
+        flushAllTextInput();
+        flushAllSpinner();
+        flushAllComboBox();
     }
     private void tratamentoTabbedPaneChangeListener(){
-
+        flushAllTextInput();
+        flushAllSpinner();
+        flushAllComboBox();
     }
 }

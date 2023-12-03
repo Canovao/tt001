@@ -7,3 +7,5 @@ java:S2095j"OUse try-with-resources or close this "PreparedStatement" in a "fin
 q
 java:S2095$"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(äóùùÿÿÿÿ8”â†ØÂ1
 G	java:S106t"+Replace this use of System.err by a logger.(ØşÿÌ8¢â†ØÂ1
+Y
+java:S1128"7Remove this unused import 'com.vet.model.impl.Especie'.(‰¤äèøÿÿÿÿ8Øÿ–éÂ1
