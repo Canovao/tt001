@@ -1,15 +1,15 @@
 
-T
-java:S5993"9Change the visibility of this constructor to "protected".(˜¶×­ıÿÿÿÿ
-C
-java:S1948"(Make "vDados" transient or serializable.(¹¢İÎüÿÿÿÿ
+[
+java:S5993"9Change the visibility of this constructor to "protected".(˜¶×­ıÿÿÿÿ8¸ÀÓ‡Ã1
+J
+java:S1948"(Make "vDados" transient or serializable.(¹¢İÎüÿÿÿÿ8¸ÀÓ‡Ã1
 M
-java:S1128"+Remove this unused import 'java.awt.Point'.(îŞ˜Úüÿÿÿÿ8í×‹çÀ1
+java:S1128"+Remove this unused import 'java.awt.Point'.(îŞ˜Úüÿÿÿÿ8¾ÀÓ‡Ã1
 L
-java:S1128"/Remove this unused import 'java.awt.Rectangle'.(¾ª¸û8í×‹çÀ1
+java:S1128"/Remove this unused import 'java.awt.Rectangle'.(¾ª¸û8¾ÀÓ‡Ã1
 K
-java:S1128"/Remove this unused import 'javax.swing.JTable'.(›ğº8í×‹çÀ1
+java:S1128"/Remove this unused import 'javax.swing.JTable'.(›ğº8¾ÀÓ‡Ã1
 O
-java:S1128	"2Remove this unused import 'javax.swing.JViewport'.(”·¢Ê8í×‹çÀ1
+java:S1128"2Remove this unused import 'javax.swing.JViewport'.(”·¢Ê8¾ÀÓ‡Ã1
 W
-java:S1128":Remove this unused import 'javax.swing.table.TableColumn'.(ŞÂ®§8¨‘‹çÀ1
+java:S1128":Remove this unused import 'javax.swing.table.TableColumn'.(ŞÂ®§8¾ÀÓ‡Ã1

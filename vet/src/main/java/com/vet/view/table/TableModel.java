@@ -1,9 +1,12 @@
 package com.vet.view.table;
 
 import com.vet.model.Model;
+import com.vet.model.impl.Consulta;
+import com.vet.model.impl.table.ConsultaTable;
 
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.util.Comparator;
 import java.util.List;
 import javax.swing.JTable;
 import javax.swing.JViewport;
@@ -54,8 +57,27 @@ public abstract class TableModel extends AbstractTableModel {
 
     public void addListOfItems(List<Model> itens) {
         this.clear();
-        for (Model item : itens){
-            this.addItem(item);
+
+        if(!itens.isEmpty() && itens.get(0) instanceof ConsultaTable){
+            List<Model> ordered = itens.stream()
+                .sorted(Comparator.comparing(model -> ((ConsultaTable) model).getDataConsulta()).reversed())
+                .toList();
+
+            for (Model item : ordered){
+                this.addItem(item);
+            }
+        } else if (!itens.isEmpty() && itens.get(0) instanceof Consulta) {
+            List<Model> ordered = itens.stream()
+                    .sorted(Comparator.comparing(model -> ((Consulta) model).getDataConsulta()).reversed())
+                    .toList();
+
+            for (Model item : ordered){
+                this.addItem(item);
+            }
+        } else {
+            for (Model item : itens){
+                this.addItem(item);
+            }
         }
     }
 
