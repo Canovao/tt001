@@ -1,5 +1,6 @@
 package com.vet.view.table.impl;
 
+import com.vet.DAO.impl.AnimalDAO;
 import com.vet.model.Model;
 import com.vet.model.impl.*;
 import com.vet.model.impl.table.ConsultaTable;
@@ -35,6 +36,10 @@ public class ConsultaTableModel extends TableModel {
 
     @Override
     public void addItem(Model model) {
-        standardAddItem(ConsultaDAO.buildConsultaTableFromConsulta((Consulta) model));
+        try{
+            standardAddItem(ConsultaDAO.buildConsultaTableFromConsulta((Consulta) model));
+        } catch (ClassCastException e){
+            standardAddItem(model);
+        }
     }
 }

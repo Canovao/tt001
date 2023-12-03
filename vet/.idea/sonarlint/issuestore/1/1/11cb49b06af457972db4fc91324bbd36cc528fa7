@@ -1,34 +1,36 @@
 
 w
-java:S1192»
+java:S1192¼
 "TDefine a constant instead of duplicating this literal "Filtrar por Cliente" 3 times.(ëÙò¬üÿÿÿÿ8›˜ÓıÂ1
 m
-java:S1192Ô"JDefine a constant instead of duplicating this literal "Atualizar" 4 times.(ñ—üÿÿÿÿ8›˜ÓıÂ1
+java:S1192Õ"JDefine a constant instead of duplicating this literal "Atualizar" 4 times.(ñ—üÿÿÿÿ8›˜ÓıÂ1
 j
-java:S1192Ã"GDefine a constant instead of duplicating this literal "Ativar" 3 times.(ıÎñ¾şÿÿÿÿ8›˜ÓıÂ1
+java:S1192Ä"GDefine a constant instead of duplicating this literal "Ativar" 3 times.(ıÎñ¾şÿÿÿÿ8›˜ÓıÂ1
 g
-java:S1192“
+java:S1192”
 "IDefine a constant instead of duplicating this literal "Consulta" 3 times.(ñ¹›ö8œ˜ÓıÂ1
 j
-java:S1192ˆ"GDefine a constant instead of duplicating this literal "Animal" 5 times.(İ°µÄşÿÿÿÿ8œ˜ÓıÂ1
+java:S1192‰"GDefine a constant instead of duplicating this literal "Animal" 5 times.(İ°µÄşÿÿÿÿ8œ˜ÓıÂ1
 v
-java:S1192É
+java:S1192Ê
 "SDefine a constant instead of duplicating this literal "Filtrar por Animal" 3 times.(×ÆşÄùÿÿÿÿ8œ˜ÓıÂ1
 h
-java:S1192†"JDefine a constant instead of duplicating this literal "Cadastrar" 7 times.(í¡×«8˜ÓıÂ1
+java:S1192‡"JDefine a constant instead of duplicating this literal "Cadastrar" 7 times.(í¡×«8˜ÓıÂ1
 h
-java:S1192"JDefine a constant instead of duplicating this literal "Desativar" 3 times.(ÒÚÅ¯8˜ÓıÂ1
+java:S1192"JDefine a constant instead of duplicating this literal "Desativar" 3 times.(ÒÚÅ¯8˜ÓıÂ1
 n
-java:S1192ª	"KDefine a constant instead of duplicating this literal "Tratamento" 3 times.(ä²Öûúÿÿÿÿ8˜ÓıÂ1
+java:S1192«	"KDefine a constant instead of duplicating this literal "Tratamento" 3 times.(ä²Öûúÿÿÿÿ8˜ÓıÂ1
 k
-java:S1192È"HDefine a constant instead of duplicating this literal "Cliente" 4 times.(˜„ßÂùÿÿÿÿ8˜ÓıÂ1
+java:S1192É"HDefine a constant instead of duplicating this literal "Cliente" 4 times.(˜„ßÂùÿÿÿÿ8˜ÓıÂ1
 o
-java:S1192ë"QDefine a constant instead of duplicating this literal "Filtrar por nome" 3 times.(Ñ­ÒŠ8˜ÓıÂ1
+java:S1192ì"QDefine a constant instead of duplicating this literal "Filtrar por nome" 3 times.(Ñ­ÒŠ8˜ÓıÂ1
 l
-java:S1192–"IDefine a constant instead of duplicating this literal "EspÃ©cie" 3 times.(À´Ûÿÿÿÿÿ8˜ÓıÂ1
+java:S1192—"IDefine a constant instead of duplicating this literal "EspÃ©cie" 3 times.(À´Ûÿÿÿÿÿ8˜ÓıÂ1
 k
-java:S1192Ù"MDefine a constant instead of duplicating this literal "VeterinÃ¡rio" 5 times.(Ó8˜ÓıÂ1
+java:S1192Ú"MDefine a constant instead of duplicating this literal "VeterinÃ¡rio" 5 times.(Ó8˜ÓıÂ1
 ?
-java:S6205ê"Remove this redundant block.(ÖÆª‹üÿÿÿÿ8¶¡ÓıÂ1
+java:S6205ø"Remove this redundant block.(ÖÆª‹üÿÿÿÿ8ö¹Ø€Ã1
 9
-java:S6205í"Remove this redundant block.(Ûğ¢T8·¡ÓıÂ1
+java:S6205û"Remove this redundant block.(Ûğ¢T8÷¹Ø€Ã1
+T
+java:S1128"7Remove this unused import 'java.awt.event.ActionEvent'.(Úù“‘8„ºØ€Ã1

@@ -106,7 +106,7 @@ public class ConsultaDAO extends DAO<Consulta> {
     }
 
     public static List<Consulta> retrieveByVeterinarioDiaHorario(int idVeterinario, Date dia, int horario){
-        return retrieve(MessageFormat.format("SELECT * FROM consulta where id_veterinario = {0} AND data_consulta = {1} AND horario = {2}", idVeterinario, dia, horario), "consulta").stream().map(Consulta.class::cast).toList();
+        return retrieveByVeterinarioDiaHorarioDAO(idVeterinario, dia, horario).stream().map(Consulta.class::cast).toList();
     }
 
     public static List<Model> retrieveByVeterinarioName(String nome){
@@ -153,12 +153,13 @@ public class ConsultaDAO extends DAO<Consulta> {
     public static void update(Consulta model) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("UPDATE consulta SET relato=?, data_consulta=?, id_tratamento=?, id_veterinario=? WHERE id=?");
+            stmt = DAO.getConnection().prepareStatement("UPDATE consulta SET relato=?, data_consulta=?, id_tratamento=?, id_veterinario=?, terminado = ? WHERE id=?");
             stmt.setString(1, model.getRelato());
             stmt.setDate(2, model.getDataConsulta());
             stmt.setInt(3, model.getIdTratamento());
             stmt.setInt(4, model.getIdVeterinario());
-            stmt.setInt(5, model.getId());
+            stmt.setInt(5, model.getTerminado());
+            stmt.setInt(6, model.getId());
             executeUpdate(stmt);
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());

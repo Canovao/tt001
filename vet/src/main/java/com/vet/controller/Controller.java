@@ -6,6 +6,10 @@ import com.vet.model.impl.*;
 
 import javax.swing.*;
 import java.sql.Date;
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.temporal.TemporalField;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -150,38 +154,47 @@ public final class Controller {
             showMessageDialog(null, "Ao cadastrar uma Consulta\nTodos os campos devem ser preenchidos!", "Erro", JOptionPane.ERROR_MESSAGE);
             return false;
         } else {
-            Date data = new Date((Integer)dia, (Integer)mes, (Integer)ano);
-            if(ConsultaDAO.retrieveByVeterinarioDiaHorario(getIdFromIdString(idVeterinario), data, (Integer)horario).isEmpty()){
-                try{
-                    ConsultaDAO.insert(relato, data, getIdFromIdString(idVeterinario), getIdFromIdString(idTratamento), (Integer)horario, 0);
+            try {
+                LocalDate localDate = LocalDate.of((Integer) ano, (Integer) mes, (Integer) dia);
+
+                Date data = Date.valueOf(localDate);
+
+                if (ConsultaDAO.retrieveByVeterinarioDiaHorario(getIdFromIdString(idVeterinario), data, Integer.parseInt((String) horario)).isEmpty()) {
+                    ConsultaDAO.insert(relato, data, getIdFromIdString(idTratamento), getIdFromIdString(idVeterinario), Integer.parseInt((String) horario), 0);
                     return true;
-                }catch (Exception e){
-                    showMessageDialog(null, "Data da Consulta inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
-                    System.err.println(e.getMessage());
+                } else {
+                    showMessageDialog(null, "Ao cadastrar uma Consulta\nO veterinário, dia e horário não podem se repetir!", "Erro", JOptionPane.ERROR_MESSAGE);
                     return false;
                 }
-            } else {
-                showMessageDialog(null, "Ao cadastrar uma Consulta\nO veterinário, dia e horário não podem se repetir!", "Erro", JOptionPane.ERROR_MESSAGE);
+            } catch (DateTimeException | NumberFormatException e) {
+                showMessageDialog(null, "Data da Consulta inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
+                System.err.println(e.getMessage());
                 return false;
             }
         }
     }
 
     public static boolean addExame(String descricao, Object idConsulta) {
-        if (descricao.isEmpty() || descricao.isBlank()) {
-            showMessageDialog(null, "Ao cadastrar um Exame\nTodos os campos devem ser preenchidos!", "Erro", JOptionPane.ERROR_MESSAGE);
+        if (!descricao.isEmpty() || !descricao.isBlank()) {
             ExameDAO.insert(descricao, getIdFromIdString(idConsulta));
             return true;
         } else {
+            showMessageDialog(null, "Ao cadastrar um Exame\nTodos os campos devem ser preenchidos!", "Erro", JOptionPane.ERROR_MESSAGE);
             return false;
         }
     }
 
     public static boolean addTratamento(Object diaInicio, Object mesInicio, Object anoInicio, Object diaFim, Object mesFim, Object anoFim, Object idAnimal) {
         try{
-            Date dataInicio = new Date((Integer)diaInicio, (Integer)mesInicio, (Integer)anoInicio);
+            LocalDate localDate = LocalDate.of((Integer)anoInicio, (Integer)mesInicio, (Integer)diaInicio);
+
+            Date dataInicio = Date.valueOf(localDate);
+
             try{
-                Date dataFim = new Date((Integer)diaFim, (Integer)mesFim, (Integer)anoFim);
+                localDate = LocalDate.of((Integer)anoFim, (Integer)mesFim, (Integer)diaFim);
+
+                Date dataFim = Date.valueOf(localDate);
+
                 TratamentoDAO.insert(dataInicio, dataFim, getIdFromIdString(idAnimal));
                 return true;
             }catch (Exception e){
@@ -288,7 +301,10 @@ public final class Controller {
 
     public static boolean addTratamentoIndeterminado(Object diaInicio, Object mesInicio, Object anoInicio, Object idAnimal) {
         try{
-            Date dataInicio = new Date((Integer)diaInicio, (Integer)mesInicio, (Integer)anoInicio);
+            LocalDate localDate = LocalDate.of((Integer)anoInicio, (Integer)mesInicio, (Integer)diaInicio);
+
+            Date dataInicio = Date.valueOf(localDate);
+
             TratamentoDAO.insert(dataInicio, null, getIdFromIdString(idAnimal));
             return true;
         }catch (Exception e){

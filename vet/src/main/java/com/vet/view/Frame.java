@@ -5,6 +5,7 @@ import com.vet.view.table.Flush;
 import com.vet.view.table.impl.*;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.util.List;
 
 /**
@@ -1823,6 +1824,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByNameClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByNameClienteTextField.setText("");
+        flushTable(Flush.CLIENTE);
     }
 
     private void filterByNameAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1832,6 +1834,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByNameAnimalButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByNameAnimalTextField.setText("");
+        flushTable(Flush.ANIMAL);
     }
 
     private void filterByTutorAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1841,6 +1844,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByTutorAnimalButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByTutorAnimalTextField.setText("");
+        flushTable(Flush.ANIMAL);
     }
 
     private void filterByNameVeterinarioTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1850,6 +1854,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByNameVeterinarioButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByNameVeterinarioTextField.setText("");
+        flushTable(Flush.VETERINARIO);
     }
 
     private void filterByClienteConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1859,6 +1864,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByClienteConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByClienteConsultaTextField.setText("");
+        flushTable(Flush.CONSULTA);
     }
 
     private void filterByVeterinarioConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1868,6 +1874,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByVeterinarioConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByVeterinarioConsultaTextField.setText("");
+        flushTable(Flush.CONSULTA);
     }
 
     private void filterByAnimalConsultaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1877,6 +1884,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByAnimalConsultaButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByAnimalConsultaTextField.setText("");
+        flushTable(Flush.CONSULTA);
     }
 
     private void orderByTerminadoConsultaToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1885,6 +1893,7 @@ public class Frame extends JFrame {
         } else {
             Controller.removeConsultaOrderByTerminadoClause();
         }
+        consultaTableModel.addListOfItems(Controller.getAllConsultaByAnimalName(filterByAnimalConsultaTextField.getText()));
     }
 
     private void filterByClienteExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1894,6 +1903,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByClienteExameButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByClienteExameTextField.setText("");
+        flushTable(Flush.EXAME);
     }
 
     private void filterByVeterinarioExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1903,6 +1913,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByVeterinarioExameButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByVeterinarioExameTextField.setText("");
+        flushTable(Flush.EXAME);
     }
 
     private void filterByAnimalExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1912,6 +1923,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByAnimalExameButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByClienteTratamentoTextField.setText("");
+        flushTable(Flush.EXAME);
     }
 
     private void filterByClienteTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1921,6 +1933,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByClienteTratamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByClienteTratamentoTextField.setText("");
+        flushTable(Flush.TRATAMENTO);
     }
 
     private void filterByAnimalTratamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1930,6 +1943,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByAnimalTratamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByAnimalTratamentoTextField.setText("");
+        flushTable(Flush.TRATAMENTO);
     }
 
     public static void main(String[] args) {
@@ -2205,6 +2219,7 @@ public class Frame extends JFrame {
             }
         }
         flushAllTextInput();
+        flushAllComboBox();
     }
 
     private void addCliente(){

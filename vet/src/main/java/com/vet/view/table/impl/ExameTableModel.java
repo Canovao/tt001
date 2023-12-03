@@ -1,5 +1,6 @@
 package com.vet.view.table.impl;
 
+import com.vet.DAO.impl.ConsultaDAO;
 import com.vet.model.Model;
 import com.vet.model.impl.*;
 import com.vet.model.impl.table.ExameTable;
@@ -32,6 +33,10 @@ public class ExameTableModel extends TableModel {
 
     @Override
     public void addItem(Model model) {
-        standardAddItem(ExameDAO.buildExameTableFromExame((Exame) model));
+        try{
+            standardAddItem(ExameDAO.buildExameTableFromExame((Exame) model));
+        } catch (ClassCastException e){
+            standardAddItem(model);
+        }
     }
 }

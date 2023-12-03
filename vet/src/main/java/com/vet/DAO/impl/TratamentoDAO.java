@@ -91,7 +91,7 @@ public class TratamentoDAO extends DAO<Tratamento> {
     public static Model insert(Date dataInicio, Date dataFim, int idAnimal) {
         try {
             PreparedStatement stmt;
-            stmt = DAO.getConnection().prepareStatement("INSERT INTO tratamento (dataInicio, dataFim, idAnimal) VALUES (?,?,?)");
+            stmt = DAO.getConnection().prepareStatement("INSERT INTO tratamento (data_inicio, data_fim, id_Animal) VALUES (?,?,?)");
             stmt.setDate(1, dataInicio);
             stmt.setDate(2, dataFim);
             stmt.setInt(3, idAnimal);
@@ -121,8 +121,8 @@ public class TratamentoDAO extends DAO<Tratamento> {
                 tratamento.getId(),
                 tratamento.getDataInicio(),
                 tratamento.getDataFim(),
-                getClienteNomeFromTratamento(tratamento),
-                getAnimalNomeFromTratamento(tratamento)
+                getAnimalNomeFromTratamento(tratamento),
+                getClienteNomeFromTratamento(tratamento)
         );
     }
 
@@ -138,7 +138,7 @@ public class TratamentoDAO extends DAO<Tratamento> {
     }
 
     public Model build(ResultSet rs) throws SQLException {
-        return new Tratamento(rs.getInt("id"), rs.getDate("data_fim"), rs.getDate("data_inicio"), rs.getInt("id_animal"));
+        return new Tratamento(rs.getInt("id"), rs.getDate("data_inicio"), rs.getDate("data_fim"), rs.getInt("id_animal"));
     }
 
     @Override
@@ -176,7 +176,7 @@ public class TratamentoDAO extends DAO<Tratamento> {
     }
 
     public String[] getAllUnfinished(){
-        List<Tratamento> all = retrieve("SELECT * FROM tratamento WHERE data_fim = null", "tratamento").stream().map(Tratamento.class::cast).toList();
+        List<Tratamento> all = retrieve("SELECT * FROM tratamento WHERE data_fim is null", "tratamento").stream().map(Tratamento.class::cast).toList();
 
         return buildToComboBox(all);
     }

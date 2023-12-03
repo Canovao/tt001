@@ -33,6 +33,10 @@ public class AnimalTableModel extends TableModel {
 
     @Override
     public void addItem(Model model) {
-        standardAddItem(AnimalDAO.buildAnimalTableFromAnimal((Animal) model));
+        try{
+            standardAddItem(AnimalDAO.buildAnimalTableFromAnimal((Animal) model));
+        } catch (ClassCastException e){
+            standardAddItem(model);
+        }
     }
 }

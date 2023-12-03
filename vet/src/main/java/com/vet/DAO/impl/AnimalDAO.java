@@ -63,8 +63,12 @@ public class AnimalDAO extends DAO<Animal> {
                 }
             }
 
-            for (var item : animaisToRemove) {
-                animais.remove(item);
+            if(animaisToRemove.size() == animais.size()){
+                return new ArrayList<>();
+            }else {
+                for (var item : animaisToRemove) {
+                    animais.remove(item);
+                }
             }
         }
         return animais;

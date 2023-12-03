@@ -2,8 +2,10 @@
 j
 java:S1192)"HDefine a constant instead of duplicating this literal "cliente" 7 times.(ÜÂìÿÿÿÿÿ8ºí×Â1
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8»í×Â1
-l
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(™Ëõ8Òí×Â1
 k
 java:S20953"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¾Æ‡;8Òí×Â1
+l
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(™Ëõ8Òí×Â1
 G	java:S106="+Replace this use of System.err by a logger.(ØşÿÌ8İí×Â1
+S
+java:S1128"6Remove this unused import 'com.vet.model.impl.Animal'.(¤åšº8ãŠ¡şÂ1

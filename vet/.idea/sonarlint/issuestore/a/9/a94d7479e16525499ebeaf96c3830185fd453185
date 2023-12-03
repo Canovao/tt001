@@ -1,9 +1,11 @@
 
 k
-java:S1192U"IDefine a constant instead of duplicating this literal "consulta" 9 times.(¬¿ù¸ÿÿÿÿÿ8Îˆ÷ıÂ1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8Ğˆ÷ıÂ1
+java:S1192U"IDefine a constant instead of duplicating this literal "consulta" 8 times.(¬¿ù¸ÿÿÿÿÿ8©ÕÇÿÂ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8¬ÕÇÿÂ1
 m
-java:S2095‹"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€ô­¥8ôˆ÷ıÂ1
-m
-java:S2095œ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ƒ²§ğ8óˆ÷ıÂ1
-H	java:S106¤"+Replace this use of System.err by a logger.(ØşÿÌ8…‰÷ıÂ1
+java:S2095‹"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€ô­¥8ËÕÇÿÂ1
+r
+java:S2095œ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Í¯Ë¤øÿÿÿÿ8ËÕÇÿÂ1
+H	java:S106¥"+Replace this use of System.err by a logger.(ØşÿÌ8ÜÕÇÿÂ1
+Q
+java:S1128"4Remove this unused import 'java.text.MessageFormat'.(Íğûå8™æÇ€Ã1

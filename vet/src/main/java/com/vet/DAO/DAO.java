@@ -3,6 +3,7 @@ package com.vet.DAO;
 
 import com.vet.DAO.impl.*;
 import com.vet.model.Model;
+import com.vet.model.impl.Consulta;
 
 import java.sql.*;
 import java.text.MessageFormat;
@@ -62,6 +63,31 @@ public abstract class DAO<MODEL> {
         return (dataList.isEmpty() ? null : dataList.get(0));
     }
 
+    protected static List<Consulta> retrieveByVeterinarioDiaHorarioDAO(int idVeterinario, Date dia, int horario){
+        try{
+            String query = "SELECT * FROM consulta WHERE id_veterinario = ? AND data_consulta = ? AND horario = ?";
+            PreparedStatement pstmt = con.prepareStatement(query);
+
+            pstmt.setInt(1, idVeterinario);
+            pstmt.setDate(2, dia);
+            pstmt.setInt(3, horario);
+
+            ResultSet resultSet = pstmt.executeQuery();
+
+            List<Consulta> consultas = new ArrayList<>();
+            while (resultSet.next()) {
+                consultas.add((Consulta) DAO.buildObject(resultSet, "consulta"));
+            }
+
+            resultSet.close();
+            pstmt.close();
+
+            return consultas;
+        } catch (SQLException e){
+            return new ArrayList<>();
+        }
+    }
+
     protected static List<Model> retrieve(String query, String table) {
         List<Model> dataList = new ArrayList<>();
         ResultSet rs = getResultSet(query);
@@ -71,6 +97,8 @@ public abstract class DAO<MODEL> {
             }
         } catch (SQLException e) {
             System.err.println("Exception: " + e.getMessage());
+        } catch (NullPointerException e){
+            return new ArrayList<>();
         }
         return dataList;
     }
