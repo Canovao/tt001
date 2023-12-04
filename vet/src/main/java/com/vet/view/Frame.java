@@ -3,9 +3,9 @@ package com.vet.view;
 import com.vet.controller.Controller;
 import com.vet.view.table.Flush;
 import com.vet.view.table.impl.*;
+import com.vet.view.table.TableModel;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
 import java.util.List;
 
 /**
@@ -95,11 +95,15 @@ public class Frame extends JFrame {
         atualizarSexoAnimalComboBox = new javax.swing.JComboBox<>();
         JButton atualizarAnimalButton = new JButton();
         JPanel atualizarEspeciesPanel = new JPanel();
+        JPanel removerEspeciesPanel = new JPanel();
         JLabel atualizarNomeEspecieLabel = new JLabel();
         atualizarNomeEspecieTextField = new javax.swing.JTextField();
         JButton atualizarNomeEspecieButton = new JButton();
+        JButton removerEspecieButton = new JButton();
         JLabel selecionarEspecieAtualizarLabel = new JLabel();
+        JLabel selecionarEspecieRemoverLabel = new JLabel();
         selecionarEspecieAtualizarComboBox = new javax.swing.JComboBox<>();
+        selecionarEspecieRemoverComboBox = new javax.swing.JComboBox<>();
         JPanel desativarAnimalPanel = new JPanel();
         JLabel desativarAnimalLabel = new JLabel();
         desativarAnimalComboBox = new javax.swing.JComboBox<>();
@@ -178,9 +182,13 @@ public class Frame extends JFrame {
         horarioConsultaComboBox = new javax.swing.JComboBox<>();
         JLabel horarioConsultaLabel = new JLabel();
         JPanel desativarConsultaPanel = new JPanel();
+        JPanel removerConsultaPanel = new JPanel();
         JLabel finalizarConsultaLabel = new JLabel();
+        JLabel removerConsultaLabel = new JLabel();
         finalizarConsultaComboBox = new javax.swing.JComboBox<>();
-        JButton finalizarConsultaButton = new JButton();
+        removerConsultaComboBox = new javax.swing.JComboBox<>();
+        JButton terminarConsultaButton = new JButton();
+        JButton removerConsultaButton = new JButton();
         JScrollPane consultaScrollPane = new JScrollPane();
         JTable consultaTable = new JTable();
         JLabel filterByClienteConsultaLabel = new JLabel();
@@ -196,10 +204,14 @@ public class Frame extends JFrame {
         JPanel examePanel = new JPanel();
         JTabbedPane exameTabbedPane = new JTabbedPane();
         JPanel cadastrarExamePanel = new JPanel();
+        JPanel removerExamePanel = new JPanel();
         JLabel descricaoExameLabel = new JLabel();
+        JLabel removerExameLabel = new JLabel();
         JLabel consultaExameLabel = new JLabel();
         JButton cadastrarExameButton = new JButton();
+        JButton removerExameButton = new JButton();
         consultaExameComboBox = new javax.swing.JComboBox<>();
+        removerExameComboBox = new JComboBox<>();
         JScrollPane descricaoCadastrarExamePane = new JScrollPane();
         descricaoExameTextArea = new javax.swing.JTextArea();
         JScrollPane exameScrollPane = new JScrollPane();
@@ -217,16 +229,23 @@ public class Frame extends JFrame {
         JTabbedPane tratamentoTabbedPane = new JTabbedPane();
         JPanel cadastrarTratamentoPanel = new JPanel();
         JLabel dataFimTratamentoLabel = new JLabel();
+        JLabel dataFimFinalizarTratamentoLabel = new JLabel();
         JLabel animalTratamentoLabel = new JLabel();
         animalTratamentoComboBox = new javax.swing.JComboBox<>();
         JLabel dataInicioLabel = new JLabel();
         JButton cadastrarTratamentoButton = new JButton();
         diaFimTratamentoSpinner = new javax.swing.JSpinner();
+        diaFimFinalizarTratamentoSpinner = new JSpinner();
         JLabel diaFimTratamentoLabel = new JLabel();
+        JLabel diaFimFinalizarTratamentoLabel = new JLabel();
         JLabel mesFimTratamentoLabel = new JLabel();
+        JLabel mesFimFinalizarTratamentoLabel = new JLabel();
         mesFimTratamentoSpinner = new javax.swing.JSpinner();
+        mesFimFinalizarTratamentoSpinner = new JSpinner();
         JLabel anoFimTratamentoLabel = new JLabel();
+        JLabel anoFimFinalizarTratamentoLabel = new JLabel();
         anoFimTratamentoSpinner = new javax.swing.JSpinner();
+        anoFimFinalizarTratamentoSpinner = new JSpinner();
         diaInicioTratamentoSpinner = new javax.swing.JSpinner();
         JLabel diaInicioTratamentoLabel = new JLabel();
         JLabel mesInicioTratamentoLabel = new JLabel();
@@ -235,9 +254,13 @@ public class Frame extends JFrame {
         anoInicioTratamentoSpinner = new javax.swing.JSpinner();
         dataFimTratamentoIndeterminadaCheckBox = new javax.swing.JCheckBox();
         JPanel finalizarTratamentoPanel = new JPanel();
+        JPanel removerTratamentoPanel = new JPanel();
         finalizarTratamentoComboBox = new javax.swing.JComboBox<>();
+        removerTratamentoComboBox = new JComboBox<>();
         JLabel finalizarTratamentoLabel = new JLabel();
+        JLabel removerTratamentoLabel = new JLabel();
         JButton finalizarTratamentoButton = new JButton();
+        JButton removerTratamentoButton = new JButton();
         JScrollPane tratamentoScrollPane = new JScrollPane();
         JTable tratamentoTable = new JTable();
         JLabel filterByClienteTratamentoLabel = new JLabel();
@@ -733,7 +756,11 @@ public class Frame extends JFrame {
         atualizarNomeEspecieButton.setText("Atualizar");
         atualizarNomeEspecieButton.addActionListener(e -> atualizarEspecie());
 
+        removerEspecieButton.setText("Remover");
+        removerEspecieButton.addActionListener(e -> removerEspecie());
+
         selecionarEspecieAtualizarLabel.setText("Espécie");
+        selecionarEspecieRemoverLabel.setText("Remover Espécie");
 
         javax.swing.GroupLayout atualizarEspeciesPanelLayout = new javax.swing.GroupLayout(atualizarEspeciesPanel);
         atualizarEspeciesPanel.setLayout(atualizarEspeciesPanelLayout);
@@ -773,6 +800,39 @@ public class Frame extends JFrame {
         );
 
         animalTabbedPane.addTab("Atualizar Espécies", atualizarEspeciesPanel);
+
+        javax.swing.GroupLayout removerEspeciePanelLayout = new javax.swing.GroupLayout(removerEspeciesPanel);
+        removerEspeciesPanel.setLayout(removerEspeciePanelLayout);
+
+        removerEspeciePanelLayout.setHorizontalGroup(
+                removerEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(removerEspeciePanelLayout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addGroup(removerEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(removerEspeciePanelLayout.createSequentialGroup()
+                                                .addGap(93, 93, 93)
+                                                .addComponent(removerEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(removerEspeciePanelLayout.createSequentialGroup()
+                                                .addGap(6, 6, 6)
+                                                .addGroup(removerEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(selecionarEspecieRemoverComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(selecionarEspecieRemoverLabel))))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        removerEspeciePanelLayout.setVerticalGroup(
+                removerEspeciePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(removerEspeciePanelLayout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(selecionarEspecieRemoverLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(selecionarEspecieRemoverComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(removerEspecieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        animalTabbedPane.addTab("Remover Espécie", removerEspeciesPanel);
 
         desativarAnimalLabel.setText("Animal");
 
@@ -1298,9 +1358,13 @@ public class Frame extends JFrame {
         consultaTabbedPane.addChangeListener(e -> consultaTabbedPaneChangeListener());
 
         finalizarConsultaLabel.setText("Consulta");
+        removerConsultaLabel.setText("Remover");
 
-        finalizarConsultaButton.setText("Finalizar");
-        finalizarConsultaButton.addActionListener(e -> finalizarConsulta());
+        terminarConsultaButton.setText("Terminar");
+        terminarConsultaButton.addActionListener(e -> finalizarConsulta());
+
+        removerConsultaButton.setText("Remover");
+        removerConsultaButton.addActionListener(e -> removerConsulta());
 
         javax.swing.GroupLayout desativarConsultaPanelLayout = new javax.swing.GroupLayout(desativarConsultaPanel);
         desativarConsultaPanel.setLayout(desativarConsultaPanelLayout);
@@ -1317,7 +1381,7 @@ public class Frame extends JFrame {
                                 .addComponent(finalizarConsultaLabel))))
                     .addGroup(desativarConsultaPanelLayout.createSequentialGroup()
                         .addGap(158, 158, 158)
-                        .addComponent(finalizarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(terminarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         desativarConsultaPanelLayout.setVerticalGroup(
@@ -1328,11 +1392,43 @@ public class Frame extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(finalizarConsultaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(finalizarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(terminarConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        consultaTabbedPane.addTab("Finalizar Consulta", desativarConsultaPanel);
+        consultaTabbedPane.addTab("Terminar Consulta", desativarConsultaPanel);
+
+        javax.swing.GroupLayout removerConsultaPanelLayout = new javax.swing.GroupLayout(removerConsultaPanel);
+        removerConsultaPanel.setLayout(removerConsultaPanelLayout);
+        removerConsultaPanelLayout.setHorizontalGroup(
+                removerConsultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(removerConsultaPanelLayout.createSequentialGroup()
+                                .addGroup(removerConsultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(removerConsultaPanelLayout.createSequentialGroup()
+                                                .addGap(59, 59, 59)
+                                                .addGroup(removerConsultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(removerConsultaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGroup(removerConsultaPanelLayout.createSequentialGroup()
+                                                                .addGap(9, 9, 9)
+                                                                .addComponent(removerConsultaLabel))))
+                                        .addGroup(removerConsultaPanelLayout.createSequentialGroup()
+                                                .addGap(158, 158, 158)
+                                                .addComponent(removerConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        removerConsultaPanelLayout.setVerticalGroup(
+                removerConsultaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(removerConsultaPanelLayout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(removerConsultaLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(removerConsultaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(removerConsultaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        consultaTabbedPane.addTab("Remover Consulta", removerConsultaPanel);
 
         consultaTable.setModel(consultaTableModel);
         consultaScrollPane.setViewportView(consultaTable);
@@ -1425,11 +1521,15 @@ public class Frame extends JFrame {
         mainTabbedPane.addTab("Consulta", consultaPanel);
 
         descricaoExameLabel.setText("Descrição");
+        removerExameLabel.setText("Remover Exame");
 
         consultaExameLabel.setText("Consulta");
 
         cadastrarExameButton.setText("Cadastrar");
         cadastrarExameButton.addActionListener(e -> addExame());
+
+        removerExameButton.setText("Remover");
+        removerExameButton.addActionListener(e -> removerExame());
 
         descricaoExameTextArea.setColumns(20);
         descricaoExameTextArea.setRows(5);
@@ -1475,6 +1575,40 @@ public class Frame extends JFrame {
 
         exameTabbedPane.addTab("Cadastrar Exame", cadastrarExamePanel);
         exameTabbedPane.addChangeListener(e -> exameTabbedPaneChangeListener());
+
+        javax.swing.GroupLayout removerExameLayout = new javax.swing.GroupLayout(removerExamePanel);
+        removerExamePanel.setLayout(removerExameLayout);
+
+        removerExameLayout.setHorizontalGroup(
+                removerExameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(removerExameLayout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addGroup(removerExameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(removerExameComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(removerExameLayout.createSequentialGroup()
+                                                .addGap(8, 8, 8)
+                                                .addComponent(removerExameLabel)))
+                                .addContainerGap(46, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, removerExameLayout.createSequentialGroup()
+                                .addContainerGap(157, Short.MAX_VALUE)
+                                .addComponent(removerExameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(157, 157, 157))
+        );
+
+        removerExameLayout.setVerticalGroup(
+                removerExameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(removerExameLayout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(removerExameLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(removerExameComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(removerExameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(467, Short.MAX_VALUE))
+        );
+
+
+        exameTabbedPane.addTab("Remover Exame", removerExamePanel);
 
         exameTable.setModel(exameTableModel);
         exameScrollPane.setViewportView(exameTable);
@@ -1558,6 +1692,7 @@ public class Frame extends JFrame {
         mainTabbedPane.addTab("Exame", examePanel);
 
         dataFimTratamentoLabel.setText("Data fim");
+        dataFimFinalizarTratamentoLabel.setText("Data fim");
 
         animalTratamentoLabel.setText("Animal");
 
@@ -1567,16 +1702,22 @@ public class Frame extends JFrame {
         cadastrarTratamentoButton.addActionListener(e -> addTratamento());
 
         diaFimTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
+        diaFimFinalizarTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
 
         diaFimTratamentoLabel.setText("Dia");
+        diaFimFinalizarTratamentoLabel.setText("Dia");
 
         mesFimTratamentoLabel.setText("Mês");
+        mesFimFinalizarTratamentoLabel.setText("Mês");
 
         mesFimTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
+        mesFimFinalizarTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
 
         anoFimTratamentoLabel.setText("Ano");
+        anoFimFinalizarTratamentoLabel.setText("Ano");
 
         anoFimTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
+        anoFimFinalizarTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
 
         diaInicioTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
 
@@ -1591,6 +1732,7 @@ public class Frame extends JFrame {
         anoInicioTratamentoSpinner.setMinimumSize(new java.awt.Dimension(80, 22));
 
         dataFimTratamentoIndeterminadaCheckBox.setText("Data fim Indeterminada");
+        dataFimTratamentoIndeterminadaCheckBox.setSelected(true);
 
         javax.swing.GroupLayout cadastrarTratamentoPanelLayout = new javax.swing.GroupLayout(cadastrarTratamentoPanel);
         cadastrarTratamentoPanel.setLayout(cadastrarTratamentoPanelLayout);
@@ -1687,41 +1829,104 @@ public class Frame extends JFrame {
         tratamentoTabbedPane.addChangeListener(e -> tratamentoTabbedPaneChangeListener());
 
         finalizarTratamentoLabel.setText("Tratamento");
+        removerTratamentoLabel.setText("Remover tratamento");
 
         finalizarTratamentoButton.setText("Finalizar");
         finalizarTratamentoButton.addActionListener(e -> finalizarTratamento());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(finalizarTratamentoPanel);
-        finalizarTratamentoPanel.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(finalizarTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(finalizarTratamentoLabel))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(finalizarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(46, Short.MAX_VALUE))
+        removerTratamentoButton.setText("Remover");
+        removerTratamentoButton.addActionListener(e -> removerTratamento());
+
+        javax.swing.GroupLayout finalizarTratamentoLayout = new javax.swing.GroupLayout(finalizarTratamentoPanel);
+        finalizarTratamentoPanel.setLayout(finalizarTratamentoLayout);
+        finalizarTratamentoLayout.setHorizontalGroup(
+                finalizarTratamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(finalizarTratamentoLayout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addGroup(finalizarTratamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(finalizarTratamentoLayout.createSequentialGroup()
+                                                .addGroup(finalizarTratamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(finalizarTratamentoComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGroup(finalizarTratamentoLayout.createSequentialGroup()
+                                                                .addComponent(finalizarTratamentoLabel)
+                                                                .addGap(0, 0, Short.MAX_VALUE))
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, finalizarTratamentoLayout.createSequentialGroup()
+                                                                .addGroup(finalizarTratamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addGroup(finalizarTratamentoLayout.createSequentialGroup()
+                                                                                .addComponent(dataFimFinalizarTratamentoLabel)
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                                .addComponent(diaFimFinalizarTratamentoLabel))
+                                                                        .addComponent(diaFimFinalizarTratamentoSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addGroup(finalizarTratamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addComponent(mesFimFinalizarTratamentoSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(mesFimFinalizarTratamentoLabel))
+                                                                .addGap(6, 6, 6)
+                                                                .addGroup(finalizarTratamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addComponent(anoFimFinalizarTratamentoSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(anoFimFinalizarTratamentoLabel))))
+                                                .addGap(59, 59, 59))))
+                        .addGroup(finalizarTratamentoLayout.createSequentialGroup()
+                                .addGap(150, 150, 150)
+                                .addComponent(finalizarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(finalizarTratamentoLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(finalizarTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(finalizarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(467, Short.MAX_VALUE))
+        finalizarTratamentoLayout.setVerticalGroup(
+                finalizarTratamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(finalizarTratamentoLayout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addGroup(finalizarTratamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(diaFimFinalizarTratamentoLabel)
+                                        .addComponent(mesFimFinalizarTratamentoLabel)
+                                        .addComponent(anoFimFinalizarTratamentoLabel)
+                                        .addComponent(dataFimFinalizarTratamentoLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(finalizarTratamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(diaFimFinalizarTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(mesFimFinalizarTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(anoFimFinalizarTratamentoSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(finalizarTratamentoLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(finalizarTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(finalizarTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tratamentoTabbedPane.addTab("Finalizar Tratamento", finalizarTratamentoPanel);
+
+        javax.swing.GroupLayout removerTratamentoGroup = new javax.swing.GroupLayout(removerTratamentoPanel);
+        removerTratamentoPanel.setLayout(removerTratamentoGroup);
+        removerTratamentoGroup.setHorizontalGroup(
+                removerTratamentoGroup.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(removerTratamentoGroup.createSequentialGroup()
+                                .addGroup(removerTratamentoGroup.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(removerTratamentoGroup.createSequentialGroup()
+                                                .addGap(47, 47, 47)
+                                                .addGroup(removerTratamentoGroup.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(removerTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGroup(removerTratamentoGroup.createSequentialGroup()
+                                                                .addGap(8, 8, 8)
+                                                                .addComponent(removerTratamentoLabel))))
+                                        .addGroup(removerTratamentoGroup.createSequentialGroup()
+                                                .addGap(157, 157, 157)
+                                                .addComponent(removerTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(46, Short.MAX_VALUE))
+        );
+        removerTratamentoGroup.setVerticalGroup(
+                removerTratamentoGroup.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(removerTratamentoGroup.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(removerTratamentoLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(removerTratamentoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(removerTratamentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(467, Short.MAX_VALUE))
+        );
+
+        tratamentoTabbedPane.addTab("Remover Tratamento", removerTratamentoPanel);
 
         tratamentoTable.setModel(tratamentoTableModel);
         tratamentoScrollPane.setViewportView(tratamentoTable);
@@ -1817,6 +2022,16 @@ public class Frame extends JFrame {
         this.setTitle("Clínica Veterinária");
     }
 
+    private void removerConsulta() {
+        Controller.removerConsulta(removerConsultaComboBox.getSelectedItem());
+        flushAllTables();
+    }
+
+    private void removerExame() {
+        Controller.removerExame(removerExameComboBox.getSelectedItem());
+        flushAllTables();
+    }
+
     private void filterByNameClienteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
         clienteTableModel.clear();
         clienteTableModel.addListOfItems(Controller.getAllClienteBySimilarName(filterByNameClienteTextField.getText()));
@@ -1824,7 +2039,7 @@ public class Frame extends JFrame {
 
     private void clearFilterByNameClienteButtonActionPerformed(java.awt.event.ActionEvent evt) {
         filterByNameClienteTextField.setText("");
-        flushTable(Flush.CLIENTE);
+        flushAllTables();
     }
 
     private void filterByNameAnimalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1889,11 +2104,11 @@ public class Frame extends JFrame {
 
     private void orderByTerminadoConsultaToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {
         if(orderByTerminadoConsultaToggleButton.isSelected()){
-            Controller.addConsultaOrderByTerminadoClause();
+            TableModel.addConsultaOrderByTerminado();
         } else {
-            Controller.removeConsultaOrderByTerminadoClause();
+            TableModel.removeConsultaOrderByTerminado();
         }
-        consultaTableModel.addListOfItems(Controller.getAllConsultaByAnimalName(filterByAnimalConsultaTextField.getText()));
+        flushTable(Flush.CONSULTA);
     }
 
     private void filterByClienteExameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1964,14 +2179,17 @@ public class Frame extends JFrame {
     // SPINNER
     private JSpinner anoConsultaSpinner;
     private JSpinner anoFimTratamentoSpinner;
+    private JSpinner anoFimFinalizarTratamentoSpinner;
     private JSpinner anoInicioTratamentoSpinner;
     private JSpinner atualizarAnoNascimentoAnimalSpinner;
     private JSpinner diaConsultaSpinner;
     private JSpinner diaFimTratamentoSpinner;
+    private JSpinner diaFimFinalizarTratamentoSpinner;
     private JSpinner diaInicioTratamentoSpinner;
     private JSpinner anoNascimentoAnimalSpinner;
     private JSpinner mesConsultaSpinner;
     private JSpinner mesFimTratamentoSpinner;
+    private JSpinner mesFimFinalizarTratamentoSpinner;
     private JSpinner mesInicioTratamentoSpinner;
 
 
@@ -2039,13 +2257,17 @@ public class Frame extends JFrame {
     private JComboBox<String> atualizarTutorComboBox;
     private JComboBox<String> atualizarVeterinarioComboBox;
     private JComboBox<String> consultaExameComboBox;
+    private JComboBox<String> removerExameComboBox;
     private JComboBox<String> desativarAnimalComboBox;
     private JComboBox<String> desativarClienteComboBox;
     private JComboBox<String> desativarVeterinarioComboBox;
     private JComboBox<String> especieAnimalComboBox;
     private JComboBox<String> finalizarConsultaComboBox;
+    private JComboBox<String> removerConsultaComboBox;
     private JComboBox<String> finalizarTratamentoComboBox;
+    private JComboBox<String> removerTratamentoComboBox;
     private JComboBox<String> selecionarEspecieAtualizarComboBox;
+    private JComboBox<String> selecionarEspecieRemoverComboBox;
     private JComboBox<String> sexoAnimalComboBox;
     private JComboBox<String> tratamentoConsultaComboBox;
     private JComboBox<String> tutorComboBox;
@@ -2065,14 +2287,17 @@ public class Frame extends JFrame {
     private void flushAllSpinner(){
         anoConsultaSpinner.setValue(2023);
         anoFimTratamentoSpinner.setValue(2023);
+        anoFimFinalizarTratamentoSpinner.setValue(2023);
         anoInicioTratamentoSpinner.setValue(2023);
         atualizarAnoNascimentoAnimalSpinner.setValue(2020);
         diaConsultaSpinner.setValue(1);
         diaFimTratamentoSpinner.setValue(31);
+        diaFimFinalizarTratamentoSpinner.setValue(31);
         diaInicioTratamentoSpinner.setValue(1);
         anoNascimentoAnimalSpinner.setValue(2020);
         mesConsultaSpinner.setValue(1);
         mesFimTratamentoSpinner.setValue(12);
+        mesFimFinalizarTratamentoSpinner.setValue(12);
         mesInicioTratamentoSpinner.setValue(1);
     }
 
@@ -2131,6 +2356,7 @@ public class Frame extends JFrame {
     }
 
     private void flushAllComboBox(){
+        dataFimTratamentoIndeterminadaCheckBox.setSelected(true);
         flushComboBox(Flush.TRATAMENTO);
         flushComboBox(Flush.ANIMAL);
         flushComboBox(Flush.CLIENTE);
@@ -2145,6 +2371,7 @@ public class Frame extends JFrame {
             case TRATAMENTO -> {
                 animalTratamentoComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
                 finalizarTratamentoComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllTratamentosUnfinished()));
+                removerTratamentoComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllTratamentosFinished()));
             }
             case ANIMAL -> {
                 atualizarAnimalComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllAnimaisToComboBox()));
@@ -2167,12 +2394,15 @@ public class Frame extends JFrame {
             }
             case ESPECIE -> {
                 selecionarEspecieAtualizarComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
+                selecionarEspecieRemoverComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllEspeciesToComboBox()));
             }
             case EXAME -> {
                 consultaExameComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllConsultasToComboBox()));
+                removerExameComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllExamesToComboBox()));
             }
             case CONSULTA -> {
                 finalizarConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllConsultasUnfinished()));
+                removerConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllConsultasToComboBox()));
                 tratamentoConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllTratamentosToComboBox()));
                 veterinarioConsultaComboBox.setModel(new DefaultComboBoxModel<>(Controller.getAllVeterinariosToComboBox()));
             }
@@ -2418,49 +2648,64 @@ public class Frame extends JFrame {
         }
     }
 
+    private void removerEspecie(){
+        Controller.removerEspecie(selecionarEspecieRemoverComboBox.getSelectedItem());
+        flushAllTables();
+    }
+
+    private void removerTratamento(){
+        Controller.removerTratamento(removerTratamentoComboBox.getSelectedItem());
+        flushAllTables();
+    }
+
     private void finalizarTratamento() {
-        Controller.finalizarTratamento(finalizarTratamentoComboBox.getSelectedItem());
-        flushTable(Flush.TRATAMENTO);
+        Controller.finalizarTratamento(
+                finalizarTratamentoComboBox.getSelectedItem(),
+                diaFimFinalizarTratamentoSpinner.getValue(),
+                mesFimFinalizarTratamentoSpinner.getValue(),
+                anoFimFinalizarTratamentoSpinner.getValue()
+        );
+        flushAllTables();
     }
 
     private void finalizarConsulta() {
         Controller.finalizarConsulta(finalizarConsultaComboBox.getSelectedItem());
-        flushTable(Flush.CONSULTA);
+        flushAllTables();
     }
 
     private void ativarVeterinario() {
         Controller.ativarVeterinario(ativarVeterinarioComboBox.getSelectedItem());
-        flushTable(Flush.VETERINARIO);
+        flushAllTables();
     }
 
     private void desativarVeterinario() {
         Controller.desativarVeterinario(desativarVeterinarioComboBox.getSelectedItem());
-        flushTable(Flush.VETERINARIO);
+        flushAllTables();
     }
 
     private void ativarAnimal() {
         Controller.ativarAnimal(ativarAnimalComboBox.getSelectedItem());
-        flushTable(Flush.ANIMAL);
+        flushAllTables();
     }
 
     private void desativarAnimal() {
         Controller.desativarAnimal(desativarAnimalComboBox.getSelectedItem());
-        flushTable(Flush.ANIMAL);
+        flushAllTables();
     }
 
     private void atualizarEspecie() {
         Controller.atualizarEspecie(selecionarEspecieAtualizarComboBox.getSelectedItem(), atualizarNomeEspecieTextField.getText());
-        flushTable(Flush.ANIMAL);
+        flushAllTables();
     }
 
     private void ativarCliente() {
         Controller.ativarCliente(ativarClienteComboBox.getSelectedItem());
-        flushTable(Flush.CLIENTE);
+        flushAllTables();
     }
 
     private void desativarCliente() {
         Controller.desativarCliente(desativarClienteComboBox.getSelectedItem());
-        flushTable(Flush.CLIENTE);
+        flushAllTables();
     }
 
 

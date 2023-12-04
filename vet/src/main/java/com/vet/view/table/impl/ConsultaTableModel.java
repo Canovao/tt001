@@ -1,6 +1,7 @@
 package com.vet.view.table.impl;
 
 import com.vet.DAO.impl.AnimalDAO;
+import com.vet.DAO.impl.TratamentoDAO;
 import com.vet.model.Model;
 import com.vet.model.impl.*;
 import com.vet.model.impl.table.ConsultaTable;
@@ -28,7 +29,7 @@ public class ConsultaTableModel extends TableModel {
             case 4 -> consulta.getCliente();
             case 5 -> consulta.getAnimal();
             case 6 -> consulta.getVeterinario();
-            case 7 -> consulta.getIdTratamento();
+            case 7 -> consulta.getIdTratamento() + "|" + TratamentoDAO.getInstance().get(consulta.getIdTratamento()).getDataInicio();
             case 8 -> consulta.getTerminado();
             default -> throw new IndexOutOfBoundsException("columnIndex out of bounds");
         };

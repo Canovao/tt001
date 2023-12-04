@@ -1,11 +1,11 @@
 
-m
-java:S1192A"KDefine a constant instead of duplicating this literal "tratamento" 7 times.(ÃæÖÈüÿÿÿÿ8×é×ØÂ1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8Ùé×ØÂ1
+n
+java:S1192A"LDefine a constant instead of duplicating this literal "tratamento" 10 times.(ÃæÖÈüÿÿÿÿ8ø±Œ·Ã1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8ù±Œ·Ã1
 k
-java:S2095l"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(«­ÊP8åé×ØÂ1
+java:S2095l"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(«­ÊP8‹²Œ·Ã1
 l
-java:S2095^"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(•››—8åé×ØÂ1
-G	java:S106s"+Replace this use of System.err by a logger.(ØşÿÌ8ïé×ØÂ1
+java:S2095^"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(•››—8‹²Œ·Ã1
+G	java:S106s"+Replace this use of System.err by a logger.(ØşÿÌ8“²Œ·Ã1
 O
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8õû–éÂ1
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8ş‰·Ã1

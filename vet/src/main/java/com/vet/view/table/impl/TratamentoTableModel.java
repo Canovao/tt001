@@ -24,7 +24,7 @@ public class TratamentoTableModel extends TableModel {
         return switch (columnIndex) {
             case 0 -> tratamento.getId();
             case 1 -> tratamento.getDataInicio();
-            case 2 -> tratamento.getDataFim();
+            case 2 -> (tratamento.getDataFim() == null) ? "Não finalizado" : tratamento.getDataFim();
             case 3 -> tratamento.getAnimal();
             case 4 -> tratamento.getCliente();
             default -> throw new IndexOutOfBoundsException("columnIndex out of bounds");

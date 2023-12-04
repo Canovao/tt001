@@ -150,6 +150,10 @@ public class ExameDAO extends DAO<Exame> {
         );
     }
 
+    public static void remove(Integer id) {
+        deleteById(getInstance().get(id), "exame");
+    }
+
     @Override
     public Exame get(int id) {
         return (Exame) DAO.retrieveById("exame", id);

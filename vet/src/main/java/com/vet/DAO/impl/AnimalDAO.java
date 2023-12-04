@@ -149,6 +149,10 @@ public class AnimalDAO extends DAO<Animal> {
         update(animal);
     }
 
+    public static List<Animal> getAllClienteAnimal(int idCliente) {
+        return retrieve("SELECT * FROM animal WHERE id_cliente = " + idCliente, "animal").stream().map(Animal.class::cast).toList();
+    }
+
     @Override
     public Animal get(int id) {
         return (Animal) DAO.retrieveById("animal", id);

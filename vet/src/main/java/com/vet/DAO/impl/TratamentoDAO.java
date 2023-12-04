@@ -126,10 +126,18 @@ public class TratamentoDAO extends DAO<Tratamento> {
         );
     }
 
-    public static void finalizarTratamento(Integer id) {
+    public static void finalizarTratamento(Integer id, Date data) {
         Tratamento tratamento = getInstance().get(id);
-        tratamento.setDataFim(new Date(new java.util.Date().getTime()));
+        tratamento.setDataFim(data);
         update(tratamento);
+    }
+
+    public static void remove(Integer id) {
+        deleteById(getInstance().get(id), "tratamento");
+    }
+
+    public static List<Tratamento> getAllAnimalTratamentos(int idAnimal) {
+        return retrieve("SELECT * FROM tratamento where id_animal = " + idAnimal, "tratamento").stream().map(Tratamento.class::cast).toList();
     }
 
     @Override
@@ -177,6 +185,12 @@ public class TratamentoDAO extends DAO<Tratamento> {
 
     public String[] getAllUnfinished(){
         List<Tratamento> all = retrieve("SELECT * FROM tratamento WHERE data_fim is null", "tratamento").stream().map(Tratamento.class::cast).toList();
+
+        return buildToComboBox(all);
+    }
+
+    public String[] getAllFinished() {
+        List<Tratamento> all = retrieve("SELECT * FROM tratamento WHERE data_fim is not null", "tratamento").stream().map(Tratamento.class::cast).toList();
 
         return buildToComboBox(all);
     }

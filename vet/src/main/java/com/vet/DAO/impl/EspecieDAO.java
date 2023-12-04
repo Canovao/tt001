@@ -47,6 +47,10 @@ public class EspecieDAO extends DAO<Especie> {
         }
     }
 
+    public static void remove(Integer id) {
+        deleteById(getInstance().get(id), "especie");
+    }
+
     @Override
     public Especie get(int id) {
         return (Especie) DAO.retrieveById("especie", id);

@@ -1,11 +1,13 @@
 package com.vet.view.table;
 
 import com.vet.model.Model;
-import com.vet.model.impl.Consulta;
+import com.vet.model.impl.*;
+import com.vet.model.impl.table.AnimalTable;
 import com.vet.model.impl.table.ConsultaTable;
 
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import javax.swing.JTable;
@@ -18,9 +20,19 @@ public abstract class TableModel extends AbstractTableModel {
     protected List<Model> vDados;
     protected String[] colunas;
 
+    private static boolean orderByTerminado = false;
+
     public TableModel(List<Model> vDados, String[] colunas) {
         this.colunas = colunas;
         this.vDados = vDados;
+    }
+
+    public static void addConsultaOrderByTerminado() {
+        orderByTerminado = true;
+    }
+
+    public static void removeConsultaOrderByTerminado() {
+        orderByTerminado = false;
     }
 
     @Override
@@ -69,6 +81,59 @@ public abstract class TableModel extends AbstractTableModel {
         } else if (!itens.isEmpty() && itens.get(0) instanceof Consulta) {
             List<Model> ordered = itens.stream()
                     .sorted(Comparator.comparing(model -> ((Consulta) model).getDataConsulta()).reversed())
+                    .toList();
+            if(orderByTerminado){
+                ordered = ordered.stream()
+                        .sorted(Comparator.comparing(model -> ((Consulta) model).getTerminado()).reversed())
+                        .toList();
+            } else {
+                ordered = ordered.stream()
+                        .sorted(Comparator.comparing(model -> ((Consulta) model).getTerminado()))
+                        .toList();
+            }
+
+            for (Model item : ordered){
+                this.addItem(item);
+            }
+        }else if (!itens.isEmpty() && itens.get(0) instanceof ConsultaTable) {
+            List<Model> ordered = itens.stream()
+                    .sorted(Comparator.comparing(model -> ((ConsultaTable) model).getDataConsulta()).reversed())
+                    .toList();
+
+            if(orderByTerminado){
+                ordered = ordered.stream()
+                        .sorted(Comparator.comparing(model -> ((ConsultaTable) model).getTerminado()).reversed())
+                        .toList();
+            } else {
+                ordered = ordered.stream()
+                        .sorted(Comparator.comparing(model -> ((ConsultaTable) model).getTerminado()))
+                        .toList();
+            }
+
+            for (Model item : ordered){
+                this.addItem(item);
+            }
+        } else if (!itens.isEmpty() && itens.get(0) instanceof Cliente) {
+            List<Model> ordered = itens.stream()
+                    .sorted(Comparator.comparing(model -> ((Cliente) model).getAtivo()).reversed())
+                    .toList();
+
+            for (Model item : ordered){
+                this.addItem(item);
+            }
+        } else if (!itens.isEmpty() && itens.get(0) instanceof Veterinario) {
+            List<Model> ordered = itens.stream()
+                    .sorted(Comparator.comparing(model -> ((Veterinario) model).getAtivo()).reversed())
+                    .toList();
+
+            for (Model item : ordered){
+                this.addItem(item);
+            }
+        } else if ((!itens.isEmpty() && itens.get(0) instanceof Animal) ||
+                (!itens.isEmpty() && itens.get(0) instanceof AnimalTable)
+        ) {
+            List<Model> ordered = itens.stream()
+                    .sorted(Comparator.comparing(model -> ((Animal) model).getAtivo()).reversed())
                     .toList();
 
             for (Model item : ordered){

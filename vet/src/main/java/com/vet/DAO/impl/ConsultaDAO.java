@@ -23,7 +23,6 @@ public class ConsultaDAO extends DAO<Consulta> {
     private static String retrieveByClienteName = "";
     private static String retrieveByAnimalName = "";
     private static String retrieveByVeterinarioName = "";
-    private static String orderByTerminadoClause = null;
 
     public static ConsultaDAO getInstance(){
         if(instance == null){
@@ -82,7 +81,7 @@ public class ConsultaDAO extends DAO<Consulta> {
 
     private static List<Model> baseRetrieveBy(){
         return buildConsultasTableFromConsultas(
-                doFilterByVeterinarioNameStep(retrieveAll("consulta", orderByTerminadoClause).stream().map(Consulta.class::cast).toList())
+                doFilterByVeterinarioNameStep(retrieveAll("consulta").stream().map(Consulta.class::cast).toList())
         ).stream().map(Model.class::cast).toList();
     }
 
@@ -119,7 +118,7 @@ public class ConsultaDAO extends DAO<Consulta> {
         retrieveByAnimalName = nome;
 
         return buildConsultasTableFromConsultas(
-                doFilterByVeterinarioNameStep(retrieveAll("consulta", orderByTerminadoClause).stream().map(Consulta.class::cast).toList())
+                doFilterByVeterinarioNameStep(retrieveAll("consulta").stream().map(Consulta.class::cast).toList())
         ).stream().map(Model.class::cast).toList();
     }
 
@@ -166,14 +165,6 @@ public class ConsultaDAO extends DAO<Consulta> {
         }
     }
 
-    public static void addOrderByTerminadoClause() {
-        orderByTerminadoClause = "terminado ASC";
-    }
-
-    public static void removeOrderByTerminadoClause() {
-        orderByTerminadoClause = null;
-    }
-
     public static ConsultaTable buildConsultaTableFromConsulta(Consulta consulta) {
         return new ConsultaTable(
                 consulta.getId(),
@@ -196,6 +187,18 @@ public class ConsultaDAO extends DAO<Consulta> {
         Consulta consulta = getInstance().get(id);
         consulta.setTerminado(1);
         update(consulta);
+    }
+
+    public static void remove(int idConsulta) {
+        deleteById(getInstance().get(idConsulta), "consulta");
+    }
+
+    public static List<Consulta> getAllTratamentoConsulta(int id) {
+        return retrieve("SELECT * FROM consulta WHERE id_tratamento = " + id, "consulta").stream().map(Consulta.class::cast).toList();
+    }
+
+    public static List<Consulta> getAllVeterinarioConsulta(int idVeterinario) {
+        return retrieve("SELECT * FROM consulta WHERE id_veterinario = " + idVeterinario, "consulta").stream().map(Consulta.class::cast).toList();
     }
 
     @Override

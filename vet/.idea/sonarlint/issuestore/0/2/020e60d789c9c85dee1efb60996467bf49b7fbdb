@@ -6,10 +6,10 @@ b
 java:S2259_"@A "NullPointerException" could be thrown; "rs" is nullable here.(íôÚÇşÿÿÿÿ8†ü×ÿÂ1
 q
 java:S2095E"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(å›çêûÿÿÿÿ8ÔºŞÿÂ1
-i
-java:S2095z"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8†ü×ÿÂ1
 j
 java:S2095Š"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8†ü×ÿÂ1
+i
+java:S2095z"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡üøœşÿÿÿÿ8†ü×ÿÂ1
 e	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ñ¥ˆ½8ˆü×ÿÂ1
 C	java:S131$""Add a default case to this switch.(™¶àØÿÿÿÿÿ8‹ü×ÿÂ1
 G	java:S106."+Replace this use of System.err by a logger.(ØşÿÌ8Œü×ÿÂ1

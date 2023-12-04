@@ -262,11 +262,25 @@ public final class Controller {
     }
 
     public static void desativarCliente(Object id) {
-        ClienteDAO.desativarCliente(getIdFromIdString(id));
+        int idCliente = getIdFromIdString(id);
+        ClienteDAO.desativarCliente(idCliente);
+
+        var allAnimais = AnimalDAO.getAllClienteAnimal(idCliente);
+
+        for(var item: allAnimais){
+            desativarAnimal(item.getId() + "| ");
+        }
     }
 
     public static void ativarCliente(Object id) {
-        ClienteDAO.ativarCliente(getIdFromIdString(id));
+        int idCliente = getIdFromIdString(id);
+        ClienteDAO.ativarCliente(idCliente);
+
+        var allAnimais = AnimalDAO.getAllClienteAnimal(idCliente);
+
+        for(var item: allAnimais){
+            ativarAnimal(item.getId() + "| ");
+        }
     }
 
     public static void atualizarEspecie(Object id, String nome) {
@@ -276,7 +290,19 @@ public final class Controller {
     }
 
     public static void desativarAnimal(Object id) {
-        AnimalDAO.desativarAnimal(getIdFromIdString(id));
+        int idAnimal = getIdFromIdString(id);
+        AnimalDAO.desativarAnimal(idAnimal);
+        var tratamentosDoAnimal = TratamentoDAO.getAllAnimalTratamentos(idAnimal);
+
+        for(var item: tratamentosDoAnimal){
+            var allConsulta = ConsultaDAO.getAllTratamentoConsulta(item.getId());
+
+            for(var consulta: allConsulta){
+                removerConsulta(consulta.getId() + "| ");
+            }
+
+            removerTratamento(item.getId() + "| ");
+        }
     }
 
     public static void ativarAnimal(Object id) {
@@ -284,7 +310,14 @@ public final class Controller {
     }
 
     public static void desativarVeterinario(Object id) {
-        VeterinarioDAO.desativarVeterinario(getIdFromIdString(id));
+        int idVeterinario = getIdFromIdString(id);
+        VeterinarioDAO.desativarVeterinario(idVeterinario);
+
+        var allConsultas = ConsultaDAO.getAllVeterinarioConsulta(idVeterinario);
+
+        for(var item: allConsultas){
+            removerConsulta(item.getId() + "| ");
+        }
     }
 
     public static void ativarVeterinario(Object id) {
@@ -295,8 +328,17 @@ public final class Controller {
         ConsultaDAO.finalizarConsulta(getIdFromIdString(id));
     }
 
-    public static void finalizarTratamento(Object id) {
-        TratamentoDAO.finalizarTratamento(getIdFromIdString(id));
+    public static void finalizarTratamento(Object id, Object diaFim, Object mesFim, Object anoFim) {
+        try{
+            LocalDate localDate = LocalDate.of((Integer) anoFim, (Integer) mesFim, (Integer) diaFim);
+
+            Date data = Date.valueOf(localDate);
+
+            TratamentoDAO.finalizarTratamento(getIdFromIdString(id), data);
+        }catch(Exception e){
+            showMessageDialog(null, "Data de fim do Tratamento inválida!", "Erro", JOptionPane.ERROR_MESSAGE);
+            System.err.println(e.getMessage());
+        }
     }
 
     public static boolean addTratamentoIndeterminado(Object diaInicio, Object mesInicio, Object anoInicio, Object idAnimal) {
@@ -366,14 +408,6 @@ public final class Controller {
         return ConsultaDAO.retrieveByAnimalName(name);
     }
 
-    public static void addConsultaOrderByTerminadoClause() {
-        ConsultaDAO.addOrderByTerminadoClause();
-    }
-
-    public static void removeConsultaOrderByTerminadoClause() {
-        ConsultaDAO.removeOrderByTerminadoClause();
-    }
-
     public static List<Model> getAllExameByClienteName(String name) {
         return ExameDAO.retrieveByClienteName(name);
     }
@@ -392,5 +426,67 @@ public final class Controller {
 
     public static List<Model> getAllTratamentoByAnimalName(String name) {
         return TratamentoDAO.retrieveByAnimalName(name);
+    }
+
+    public static String[] getAllTratamentosFinished() {
+        return TratamentoDAO.getInstance().getAllFinished();
+    }
+
+    public static void removerTratamento(Object id) {
+        var all = ConsultaDAO.getInstance().retrieveAll();
+        boolean canRemove = true;
+
+        for(var item: all){
+            if (((Consulta) item).getIdTratamento() == getIdFromIdString(id)){
+                canRemove = false;
+                break;
+            }
+        }
+
+        if(canRemove){
+            TratamentoDAO.remove(getIdFromIdString(id));
+        } else{
+            showMessageDialog(null, "Tratamento não pode ser excluído pois há uma consulta dessa tratamento\nremova a consulta antes", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    public static String[] getAllExamesToComboBox() {
+        return ExameDAO.getInstance().getAllToComboBox();
+    }
+
+    public static void removerExame(Object id) {
+        ExameDAO.remove(getIdFromIdString(id));
+    }
+
+    public static void removerConsulta(Object id) {
+        int idConsulta = getIdFromIdString(id);
+        var allExames = ExameDAO.getInstance().retrieveAll().stream().map(Exame.class::cast).toList();
+
+        for(var item: allExames){
+            if(item.getIdConsulta() == idConsulta){
+                ExameDAO.remove(item.getId());
+            }
+        }
+
+        ConsultaDAO.remove(idConsulta);
+    }
+
+    public static void removerEspecie(Object id) {
+        int idEspecie = getIdFromIdString(id);
+        var allAnimals = AnimalDAO.getInstance().retrieveAll().stream().map(Animal.class::cast).toList();
+        boolean canRemove = true;
+
+        for(var item: allAnimals){
+            if(item.getIdEspecie() == idEspecie){
+                canRemove = false;
+                break;
+            }
+        }
+
+        if(canRemove){
+            EspecieDAO.remove(getIdFromIdString(id));
+        } else{
+            showMessageDialog(null, "Espécie não pode ser excluída pois há animais dessa espécie\natualize os animais antes", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }

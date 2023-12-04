@@ -1,11 +1,13 @@
 
-k
-java:S1192U"IDefine a constant instead of duplicating this literal "consulta" 8 times.(¬¿ù¸ÿÿÿÿÿ8©ÕÇÿÂ1
+f
+java:S1192T"JDefine a constant instead of duplicating this literal "consulta" 11 times.(¾Á48©ÕÇÿÂ1
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»ºŒÖøÿÿÿÿ8¬ÕÇÿÂ1
-m
-java:S2095‹"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€ô­¥8ËÕÇÿÂ1
 r
-java:S2095œ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Í¯Ë¤øÿÿÿÿ8ËÕÇÿÂ1
-H	java:S106¥"+Replace this use of System.err by a logger.(ØşÿÌ8ÜÕÇÿÂ1
+java:S2095›"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Í¯Ë¤øÿÿÿÿ8ËÕÇÿÂ1
+m
+java:S2095Š"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(€ô­¥8ËÕÇÿÂ1
+H	java:S106¤"+Replace this use of System.err by a logger.(ØşÿÌ8ÜÕÇÿÂ1
 Q
-java:S1128"4Remove this unused import 'java.text.MessageFormat'.(Íğûå8™æÇ€Ã1
+java:S1128"4Remove this unused import 'java.text.MessageFormat'.(Íğûå8Ş‡Ä·Ã1
+M
+java:S1144^"0Remove this unused private "retrieveAll" method.(ıùıç8Ù´Ã1

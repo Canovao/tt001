@@ -1,15 +1,24 @@
 
+¢
+java:S1862b"„This branch can not be reached because the condition duplicates a previous condition in the same sequence of "if/else if" statements(ÛÏ˜°8¯Øó´Ã1
 [
-java:S5993"9Change the visibility of this constructor to "protected".(˜¶×­ýÿÿÿÿ8¸ÀÓ‡Ã1
+java:S5993"9Change the visibility of this constructor to "protected".(˜¶×­ýÿÿÿÿ8Ì–ë´Ã1
 J
-java:S1948"(Make "vDados" transient or serializable.(¹¢ÝÎüÿÿÿÿ8¸ÀÓ‡Ã1
+java:S1948"(Make "vDados" transient or serializable.(¹¢ÝÎüÿÿÿÿ8Ì–ë´Ã1
+o
+java:S3776F"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(ˆø®ç8Ð–ë´Ã1
 M
-java:S1128"+Remove this unused import 'java.awt.Point'.(îÞ˜Úüÿÿÿÿ8¾ÀÓ‡Ã1
+java:S1128"+Remove this unused import 'java.awt.Point'.(îÞ˜Úüÿÿÿÿ8Ö–ë´Ã1
 L
-java:S1128"/Remove this unused import 'java.awt.Rectangle'.(¾ª¸û8¾ÀÓ‡Ã1
+java:S1128	"/Remove this unused import 'java.awt.Rectangle'.(¾ª¸û8Ö–ë´Ã1
+M
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ö–ë´Ã1
 K
-java:S1128"/Remove this unused import 'javax.swing.JTable'.(›ðº8¾ÀÓ‡Ã1
+java:S1128"/Remove this unused import 'javax.swing.JTable'.(›ðº8Ö–ë´Ã1
 O
-java:S1128"2Remove this unused import 'javax.swing.JViewport'.(”·¢Ê8¾ÀÓ‡Ã1
+java:S1128"2Remove this unused import 'javax.swing.JViewport'.(”·¢Ê8Ö–ë´Ã1
 W
-java:S1128":Remove this unused import 'javax.swing.table.TableColumn'.(ÞÂ®§8¾ÀÓ‡Ã1
+java:S1128":Remove this unused import 'javax.swing.table.TableColumn'.(ÞÂ®§8Ö–ë´Ã1
+ã
+java:S6541F"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 70 to 64, Complexity from 24 to 14, Nesting Level from 3 to 2, Number of Variables from 18 to 6.(ˆø®ç8ÐØó´Ã1
